@@ -1,0 +1,258 @@
+{
+  "student_id": "stu_grade_01",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 16,
+  "average_mastery_percent": 85.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.85,
+    "Epsilon-Delta Definition": 0.85,
+    "Foundational Principles": 0.85,
+    "Practical Application": 0.85,
+    "Advanced Application 3": 0.85
+  },
+  "known_weak_areas": [
+    "Foundational Principles",
+    "Practical Application",
+    "Advanced Application 3"
+  ],
+  "weak_areas": [
+    "Foundational Principles",
+    "Practical Application",
+    "Advanced Application 3"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:49.863712+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:10.072201+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.319676+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:23.334786+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:43.681004+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T20:05:06.272368+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T21:04:39.509504+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:21:23.898359+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:25:03.811946+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:26:47.784313+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:35:50.820529+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:44:40.252655+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:49:58.771991+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:52:08.039584+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T10:58:35.445162+00:00"
+    },
+    {
+      "lesson_id": "les_calc_grading",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-01T11:06:26.580129+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_calc_grading"
+  ],
+  "total_time_spent_min": 240,
+  "created_at": "2026-08-31T19:57:49.857507+00:00",
+  "updated_at": "2026-09-01T11:06:26.580179+00:00"
+}

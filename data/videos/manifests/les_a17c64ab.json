@@ -1,0 +1,269 @@
+{
+  "lesson_id": "les_a17c64ab",
+  "video_id": "les_a17c64ab",
+  "plan_id": "plan_523b41e150",
+  "title": "Lesson on SDEresume",
+  "video_url": "/api/v1/video/stream/les_a17c64ab.mp4",
+  "total_duration_sec": 256.94,
+  "duration_sec": 256.94,
+  "language": "hi",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Lesson on SDEresume",
+      "start_sec": 0.0,
+      "end_sec": 20.02,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Pranjal Yadav",
+      "start_sec": 20.02,
+      "end_sec": 91.34,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Walkthrough & Applied Demonstration: Pranjal Yadav",
+      "start_sec": 91.34,
+      "end_sec": 110.9,
+      "type": "SegmentType.DEMONSTRATION"
+    },
+    {
+      "title": "Understanding Check: Pranjal Yadav",
+      "start_sec": 110.9,
+      "end_sec": 123.05,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Pranjal Yadav",
+      "start_sec": 123.05,
+      "end_sec": 187.63,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Pranjal Yadav",
+      "start_sec": 187.63,
+      "end_sec": 199.78,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Pranjal Yadav",
+      "start_sec": 199.78,
+      "end_sec": 235.92,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Lesson on SDEresume",
+      "start_sec": 235.92,
+      "end_sec": 256.94,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Lesson on SDEresume",
+      "start_sec": 0.0,
+      "end_sec": 20.02,
+      "duration_sec": 20.02,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_78eb2f4a9d47b884.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Pranjal Yadav",
+      "start_sec": 20.02,
+      "end_sec": 91.34,
+      "duration_sec": 71.33,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_0f2136713332084f.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.DEMONSTRATION",
+      "title": "Walkthrough & Applied Demonstration: Pranjal Yadav",
+      "start_sec": 91.34,
+      "end_sec": 110.9,
+      "duration_sec": 19.56,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_5e116d9be6b42e39.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Pranjal Yadav",
+      "start_sec": 110.9,
+      "end_sec": 123.05,
+      "duration_sec": 12.14,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_c46a866da1c0f580.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Pranjal Yadav",
+      "start_sec": 123.05,
+      "end_sec": 187.63,
+      "duration_sec": 64.58,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_a79ce45c752f7dec.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Pranjal Yadav",
+      "start_sec": 187.63,
+      "end_sec": 199.78,
+      "duration_sec": 12.14,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_06_seg_006.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_c46a866da1c0f580.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Pranjal Yadav",
+      "start_sec": 199.78,
+      "end_sec": 235.92,
+      "duration_sec": 36.14,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_07_seg_007.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_43fe23d56ed45b8b.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Lesson on SDEresume",
+      "start_sec": 235.92,
+      "end_sec": 256.94,
+      "duration_sec": 21.02,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_a17c64ab_seg_08_seg_008.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_4683fe362a6afdbe.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 116.97,
+      "concept": "Pranjal Yadav",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        },
+        "prompt": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?"
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 193.7,
+      "concept": "Pranjal Yadav",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        },
+        "prompt": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?"
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 116.97,
+      "concept": "Pranjal Yadav",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        },
+        "prompt": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?"
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 193.7,
+      "concept": "Pranjal Yadav",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        },
+        "prompt": "\u092a\u093e\u092f\u0925\u0928 \u092e\u0947\u0902, `numbers = [10, 20, 30]` \u092e\u0947\u0902 `numbers[0]` \u0915\u094d\u092f\u093e \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0917\u093e?"
+      }
+    }
+  ],
+  "created_at": "2026-09-01T18:42:55.515026+00:00"
+}

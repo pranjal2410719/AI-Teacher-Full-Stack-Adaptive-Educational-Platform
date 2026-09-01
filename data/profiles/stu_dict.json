@@ -1,0 +1,239 @@
+{
+  "student_id": "stu_dict",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 16,
+  "average_mastery_percent": 85.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.85,
+    "Epsilon-Delta Definition": 0.85,
+    "Foundational Principles": 0.85,
+    "Practical Application": 0.85
+  },
+  "known_weak_areas": [
+    "Foundational Principles",
+    "Practical Application"
+  ],
+  "weak_areas": [
+    "Foundational Principles",
+    "Practical Application"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T19:57:50.250003+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T19:58:07.057395+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T19:59:04.869311+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T19:59:23.823309+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T19:59:43.877678+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T20:05:03.302996+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-08-31T21:04:36.547190+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:21:19.413518+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:24:59.051912+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:26:43.484011+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:35:41.902152+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:44:30.573588+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:49:50.863604+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:51:47.495702+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T10:58:29.682789+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-01T11:06:18.278415+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_dict_ans"
+  ],
+  "total_time_spent_min": 240,
+  "created_at": "2026-08-31T19:57:50.233997+00:00",
+  "updated_at": "2026-09-01T11:06:18.278476+00:00"
+}

@@ -1,0 +1,4 @@
+file 'avatar_intro.mp4'
+file 'math_slide_segment.mp4'
+file 'code_slide_segment.mp4'
+file 'avatar_outro.mp4'

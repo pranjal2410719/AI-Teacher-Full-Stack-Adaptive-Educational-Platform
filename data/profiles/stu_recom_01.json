@@ -1,0 +1,256 @@
+{
+  "student_id": "stu_recom_01",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 16,
+  "average_mastery_percent": 85.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.85,
+    "Epsilon-Delta Definition": 0.85,
+    "Secant vs Tangent Slope Interpretation": 0.85
+  },
+  "known_weak_areas": [
+    "Secant vs Tangent Slope Interpretation",
+    "Foundational Limits",
+    "Epsilon-Delta Definition"
+  ],
+  "weak_areas": [
+    "Secant vs Tangent Slope Interpretation",
+    "Foundational Limits",
+    "Epsilon-Delta Definition"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T19:57:49.897590+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T19:58:10.101667+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T19:59:04.514759+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T19:59:23.403835+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T19:59:43.718286+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T20:05:06.328393+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-08-31T21:04:39.540412+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:21:23.948416+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:25:03.858889+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:26:47.830763+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:35:50.890281+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:44:40.437589+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:49:58.836020+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:52:08.110154+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T10:58:35.500610+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-01T11:06:26.694658+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_calculus_limits"
+  ],
+  "total_time_spent_min": 240,
+  "created_at": "2026-08-31T19:57:49.892092+00:00",
+  "updated_at": "2026-09-01T11:06:26.694708+00:00"
+}

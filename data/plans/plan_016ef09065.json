@@ -1,0 +1,483 @@
+{
+  "plan_id": "plan_016ef09065",
+  "title": "Mastering Full-Stack Web Architecture",
+  "target_duration_sec": 10800,
+  "level": "advanced",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_99bdb9a790",
+  "topic": "Mastering Full-Stack Web Architecture",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "advanced",
+    "language": "en",
+    "time_budget_min": 180,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Full-Stack Web Architecture",
+      "duration_sec": 572,
+      "script": "Hello and welcome to this advanced masterclass on Mastering Full-Stack Web Architecture. In this session, we will examine the rigorous mathematical foundations, structural invariants, and complex edge-case trade-offs governing this domain. Let's begin with the formal principles.",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 1079,
+      "script": "Let us examine the core mechanics of 'Topic Overview & Objectives'. The critical structural pillars include: Topic: Full-Stack Web Architecture\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Full-Stack Web Architecture' in subject area: 'General'... Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Full-Stack Web Architecture\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Full-Stack Web Architecture' in subject area: 'General'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 953,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Worked Mathematical Demonstration: Step-by-Step",
+        "bullet_points": [
+          "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+          "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+          "Step 3: Constant term derivative is 0",
+          "Result: f'(x) = 6x + 5"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f(x) = 3x^2 + 5x - 4",
+          "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+          "f'(x) = 6x + 5"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 286,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. For f(x) = |x|, what is the value of f'(0)?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.'. The critical structural pillars include: Concept: Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Full-Stack Web Architecture' in subject area: 'General'.. Key Principles:\n- Definition and motivation of 'Full-Stack Web Architecture' in subject area: 'General'. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Key Principles:\n- Definition and motivation of 'Full-Stack Web Architecture' in subject area: 'General'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 286,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.. For f(x) = |x|, what is the value of f'(0)?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.'. The critical structural pillars include: Concept: Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'. Description:\nWorked walkthrough demonstrating 'Full-Stack Web Architecture' in subject area: 'General'. in practice with clear derivations. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'",
+          "Description:\nWorked walkthrough demonstrating 'Full-Stack Web Architecture' in subject area: 'General'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 286,
+      "script": "Let's pause here for a quick concept check on Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.. For f(x) = |x|, what is the value of f'(0)?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_3",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      },
+      "concept_id": "checkpoint_3",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_009",
+      "order": 9,
+      "segment_type": "visual_concept",
+      "title": "Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.'. The critical structural pillars include: Concept: Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'. Description:\nFrequent student pitfalls and diagnostic methods to master 'Full-Stack Web Architecture' in subject area: 'General'.. Key Principles:\n- Distinction between surface similarities and true mechanics\n- Verification checkpoints to self-correct errors\n- Real-world synthesis and advanced extensions. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'",
+          "Description:\nFrequent student pitfalls and diagnostic methods to master 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Key Principles:\n- Distinction between surface similarities and true mechanics\n- Verification checkpoints to self-correct errors\n- Real-world synthesis and advanced extensions"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_4",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0003"
+      ]
+    },
+    {
+      "segment_id": "seg_010",
+      "order": 10,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+      "duration_sec": 286,
+      "script": "Let's pause here for a quick concept check on Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.. For f(x) = |x|, what is the value of f'(0)?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_4",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      },
+      "concept_id": "checkpoint_4",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_011",
+      "order": 11,
+      "segment_type": "visual_concept",
+      "title": "Diagnostic Checks & Misconceptions",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Diagnostic Checks & Misconceptions'. The critical structural pillars include: Diagnostic Questions & Review:\n\nQ: What is the primary defining characteristic of 'Full-Stack Web Architecture' in subject area: 'General'.. A: The fundamental rule and structural mechanism governing 'Full-Stack Web Architecture' in subject area: 'General'.. Q: What is a common error made when first applying 'Full-Stack Web Architecture' in subject area: 'General'.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Diagnostic Checks & Misconceptions",
+        "bullet_points": [
+          "Diagnostic Questions & Review:\n\nQ: What is the primary defining characteristic of 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "A: The fundamental rule and structural mechanism governing 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Q: What is a common error made when first applying 'Full-Stack Web Architecture' in subject area: 'General'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_5",
+      "grounding_citations": [
+        "chk_top_99bdb9a790_0004"
+      ]
+    },
+    {
+      "segment_id": "seg_012",
+      "order": 12,
+      "segment_type": "visual_concept",
+      "title": "Multi-Variable Derivations and Vector Calculus",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Multi-Variable Derivations and Vector Calculus'. The critical structural pillars include: Gradient vector as direction of steepest ascent: \\nabla f. Hessian matrix test for local extrema and saddle points. Chain rule generalized to vector-valued multivariable functions. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Multi-Variable Derivations and Vector Calculus",
+        "bullet_points": [
+          "Gradient vector as direction of steepest ascent: \\nabla f",
+          "Hessian matrix test for local extrema and saddle points",
+          "Chain rule generalized to vector-valued multivariable functions"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_6",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_013",
+      "order": 13,
+      "segment_type": "visual_concept",
+      "title": "Theoretical Convergence and Optimization Bounds",
+      "duration_sec": 1080,
+      "script": "Let us examine the core mechanics of 'Theoretical Convergence and Optimization Bounds'. The critical structural pillars include: Constrained optimization using Lagrange multipliers: \\nabla f = \\lambda \\nabla g. Convex function global minimum uniqueness theorems. Second-order sufficiency conditions and Lipschitz continuity. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Theoretical Convergence and Optimization Bounds",
+        "bullet_points": [
+          "Constrained optimization using Lagrange multipliers: \\nabla f = \\lambda \\nabla g",
+          "Convex function global minimum uniqueness theorems",
+          "Second-order sufficiency conditions and Lipschitz continuity"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "\\nabla f(\\mathbf{x}) = \\left[ \\frac{\\partial f}{\\partial x_1}, \\dots, \\frac{\\partial f}{\\partial x_n} \\right]^T",
+          "f(\\mathbf{x}) \\approx f(\\mathbf{a}) + \\nabla f(\\mathbf{a})^T (\\mathbf{x}-\\mathbf{a}) + \\frac{1}{2} (\\mathbf{x}-\\mathbf{a})^T \\mathbf{H}(\\mathbf{a}) (\\mathbf{x}-\\mathbf{a})"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_7",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_014",
+      "order": 14,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Full-Stack Web Architecture",
+      "duration_sec": 572,
+      "script": "Fantastic job! In this lesson on Mastering Full-Stack Web Architecture, we covered Topic Overview & Objectives, Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'., Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'., Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'., Diagnostic Checks & Misconceptions, Multi-Variable Derivations and Vector Calculus, Theoretical Convergence and Optimization Bounds. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Mastering Full-Stack Web Architecture",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+          "Diagnostic Checks & Misconceptions",
+          "Multi-Variable Derivations and Vector Calculus",
+          "Theoretical Convergence and Optimization Bounds"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 10800,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Full-Stack Web Architecture' in subject area: 'General'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Full-Stack Web Architecture' in subject area: 'General'.",
+    "Understand core principles of Common Misconceptions and Best Practices in 'Full-Stack Web Architecture' in subject area: 'General'.",
+    "Understand core principles of Diagnostic Checks & Misconceptions",
+    "Understand core principles of Multi-Variable Derivations and Vector Calculus",
+    "Understand core principles of Theoretical Convergence and Optimization Bounds",
+    "Analyze formal theoretical derivations and edge case behavior in Mastering Full-Stack Web Architecture"
+  ],
+  "created_at": "2026-08-31T19:36:05.154694+00:00",
+  "updated_at": null
+}

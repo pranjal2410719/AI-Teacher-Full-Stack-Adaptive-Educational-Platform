@@ -1,0 +1,150 @@
+{
+  "session_id": "ses_hi_01",
+  "student_id": "stu_default",
+  "language": "hi",
+  "current_level": "intermediate",
+  "interaction_history": [
+    {
+      "timestamp": "2026-08-31T19:55:41.980480+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": false,
+      "score": 0.4,
+      "misconception": "Incomplete grasp of foundational definition."
+    },
+    {
+      "timestamp": "2026-08-31T19:56:08.325828+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-08-31T19:58:06.983094+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-08-31T19:59:43.632676+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-08-31T20:05:03.226778+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-08-31T21:04:36.482331+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:21:19.216754+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:24:58.955288+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:26:43.403949+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:35:41.478730+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:44:30.450615+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:49:50.754148+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:51:46.808970+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:58:29.584574+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T11:06:18.156526+00:00",
+      "question_id": "q_hi_01",
+      "student_answer": "\u0938\u0940\u092e\u093e \u0915\u093e \u0905\u0938\u094d\u0924\u093f\u0924\u094d\u0935 \u0924\u092d\u0940 \u0939\u094b\u0924\u093e \u0939\u0948 \u091c\u092c \u092c\u093e\u090f\u0901 \u0914\u0930 \u0926\u093e\u090f\u0901 \u092a\u0915\u094d\u0937 \u0915\u0940 \u0938\u0940\u092e\u093e\u090f\u0901 \u0938\u092e\u093e\u0928 \u0939\u094b\u0902\u0964",
+      "concept": "Limits",
+      "is_correct": true,
+      "score": 0.92,
+      "misconception": null
+    }
+  ],
+  "diagnosed_misconceptions": [],
+  "resolved_misconceptions": [
+    "Incomplete grasp of foundational definition."
+  ],
+  "active_question_id": null,
+  "created_at": "2026-08-31T19:55:41.979553+00:00",
+  "updated_at": "2026-09-01T11:06:18.156630+00:00"
+}

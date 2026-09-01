@@ -1,0 +1,452 @@
+{
+  "timestamp": "2026-09-01T11:07:57Z",
+  "total_tests": 63,
+  "passed": 63,
+  "failed": 0,
+  "skipped": 0,
+  "duration_sec": 14.03,
+  "all_passed": true,
+  "results": [
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_dynamic_quiz_generation_for_lesson",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.025,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_quiz_submission_and_rubric_scoring",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0433,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_learning_report_strengths_and_weaknesses",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0466,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_persistent_student_profile_update",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0608,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_next_step_recommendation_engine",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.037,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_assessment_profile_feature.py::test_new_guest_student_profile_default",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.015,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_pdf_document_upload",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0227,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_docx_document_upload",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0257,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_pptx_document_upload",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0233,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_txt_document_upload",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0216,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_topic_parametric_ingestion",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0218,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_ingestion_feature.py::test_rag_semantic_query_grounding",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0421,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_student_correct_answer_evaluation",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0191,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_student_misconception_diagnosis_and_analogy",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0175,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_follow_up_question_generation",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.018,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_mid_session_multilingual_language_switching",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0169,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_side_panel_rag_tutor_chat",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0171,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_interactive_loop_feature.py::test_adversarial_prompt_injection_handling",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0216,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_lesson_plan_generation_from_document",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0419,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_lesson_plan_generation_from_topic",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0414,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_duration_scaling_short_vs_long",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0685,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_learner_level_adaptation_beginner_vs_advanced",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0635,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_visual_slide_specifications_generation",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0465,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_planning_feature.py::test_lesson_plan_crud_and_editing",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.062,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_trigger_video_generation_for_plan",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0349,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_video_generation_task_status_tracking",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0817,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_video_manifest_structure_and_url",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0803,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_video_chapters_and_segment_timing",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0676,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_video_pause_checkpoint_markers",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0635,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier1_feature_coverage/test_video_pipeline_feature.py::test_video_multilingual_voice_selection",
+      "tier": 1,
+      "status": "PASSED",
+      "duration_sec": 0.0689,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_empty_0byte_file_upload_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0188,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_corrupt_format_file_upload_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0201,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_unsupported_file_extension_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0232,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_nonexistent_plan_id_returns_404",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0165,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_nonexistent_video_task_returns_404",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0188,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_corrupt_and_empty_inputs.py::test_nonexistent_video_manifest_returns_404",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0155,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_duration_and_level_bounds.py::test_ultra_short_1min_time_budget",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0314,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_duration_and_level_bounds.py::test_maximum_180min_time_budget",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.029,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_duration_and_level_bounds.py::test_zero_or_negative_duration_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.024,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_duration_and_level_bounds.py::test_excessive_duration_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0459,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_duration_and_level_bounds.py::test_invalid_educational_level_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0438,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_multilingual_unicode.py::test_hindi_devanagari_topic_ingestion",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0238,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_multilingual_unicode.py::test_hindi_answer_evaluation",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0284,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_multilingual_unicode.py::test_math_special_symbols_in_rag_query",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0371,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_resilience_and_injection.py::test_blank_whitespace_topic_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0208,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_resilience_and_injection.py::test_symbol_only_topic_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0224,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_resilience_and_injection.py::test_blank_student_answer_rejected",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0234,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier2_boundary_corner/test_resilience_and_injection.py::test_adversarial_prompt_injection_resistance",
+      "tier": 2,
+      "status": "PASSED",
+      "duration_sec": 0.0194,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier3_cross_feature/test_doc_to_video_manifest_flow.py::test_full_pipeline_doc_to_video_manifest",
+      "tier": 3,
+      "status": "PASSED",
+      "duration_sec": 0.0831,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier3_cross_feature/test_interactive_misconception_cycle.py::test_full_interactive_misconception_resolution_cycle",
+      "tier": 3,
+      "status": "PASSED",
+      "duration_sec": 0.0349,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier3_cross_feature/test_multilingual_switch_flow.py::test_mid_session_multilingual_switch_flow",
+      "tier": 3,
+      "status": "PASSED",
+      "duration_sec": 0.1216,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier3_cross_feature/test_topic_to_quiz_profile_cycle.py::test_topic_to_quiz_and_profile_cycle",
+      "tier": 3,
+      "status": "PASSED",
+      "duration_sec": 0.1179,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier4_real_world_scenarios/test_scenario_biology_cells.py::test_scenario_biology_cell_structure_and_diagrams",
+      "tier": 4,
+      "status": "PASSED",
+      "duration_sec": 0.1473,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier4_real_world_scenarios/test_scenario_cs_bst.py::test_scenario_college_cs_binary_search_trees",
+      "tier": 4,
+      "status": "PASSED",
+      "duration_sec": 0.1873,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier4_real_world_scenarios/test_scenario_history_timeline.py::test_scenario_history_industrial_revolution_timeline",
+      "tier": 4,
+      "status": "PASSED",
+      "duration_sec": 0.246,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier4_real_world_scenarios/test_scenario_math_hindi.py::test_scenario_high_school_math_in_hindi",
+      "tier": 4,
+      "status": "PASSED",
+      "duration_sec": 0.1345,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_concurrency_race.py::TestAdversarialConcurrencyAndRace::test_concurrent_answer_evaluations",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.1418,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_concurrency_race.py::TestAdversarialConcurrencyAndRace::test_concurrent_quiz_submissions_same_student",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0839,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_payload_fuzzing.py::TestAdversarialSecurityAndFuzzing::test_sql_injection_in_profile_lookup",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0175,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_payload_fuzzing.py::TestAdversarialSecurityAndFuzzing::test_xss_script_injection_in_student_answer",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0191,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_payload_fuzzing.py::TestAdversarialSecurityAndFuzzing::test_fuzzing_huge_buffer_in_topic_prompt",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0189,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_unicode_and_polyglot.py::TestAdversarialUnicodePolyglot::test_hindi_devanagari_flow",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0338,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/tier5_adversarial_hardening/test_adversarial_unicode_and_polyglot.py::TestAdversarialUnicodePolyglot::test_mathematical_latex_symbols_in_chat",
+      "tier": 5,
+      "status": "PASSED",
+      "duration_sec": 0.0169,
+      "error": null
+    }
+  ]
+}

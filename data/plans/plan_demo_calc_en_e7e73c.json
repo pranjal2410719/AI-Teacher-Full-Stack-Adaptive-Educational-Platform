@@ -1,0 +1,245 @@
+{
+  "plan_id": "plan_demo_calc_en_e7e73c",
+  "title": "Calculus: Limits, Derivatives & The Fundamental Theorem",
+  "target_duration_sec": 165,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": null,
+  "topic_id": null,
+  "topic": null,
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 5,
+    "prior_knowledge": null,
+    "learning_goal": "Master core differential and integral calculus",
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_01_intro",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Welcome to Calculus: The Mathematics of Change",
+      "duration_sec": 25,
+      "script": "Welcome to today's masterclass in Calculus. I am Professor Alexander, and today we are unlocking one of humanity's greatest intellectual achievements: the Fundamental Theorem of Calculus. Calculus gives us the universal mathematical language to understand how quantities continuously change, from the trajectories of orbiting spacecraft to the instant rates of chemical reactions. Let us begin our exploration of derivatives and integrals.",
+      "visual_spec": {
+        "visual_type": "general_slide",
+        "subject_domain": "math",
+        "headline": "Calculus: Foundations of Continuous Mathematics",
+        "bullet_points": [
+          "Differential Calculus: Instantaneous rates of change",
+          "Integral Calculus: Accumulation and area under curves",
+          "The Fundamental Theorem: Connecting slope and area"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": null,
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_02_derivatives",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "The Derivative: Limits and Instantaneous Rates",
+      "duration_sec": 30,
+      "script": "Let us define the derivative formally. When we look at a continuous function f of x, the average rate of change between two points is the difference quotient: f of x plus h, minus f of x, divided by h. As h approaches zero, this secant slope converges to the exact tangent slope at point x. Notice the power rule on your screen: the derivative of x to the n-th power equals n times x to the power n minus 1. This fundamental formula enables us to compute instantaneous velocity and optimization gradients instantly.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Definition of the Derivative & Power Rule",
+        "bullet_points": [
+          "Difference Quotient: Secant slope between x and x+h",
+          "Limit Definition: Tangent slope as h approaches 0",
+          "Standard Power Rule: d/dx [x^n] = n * x^(n-1)"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}",
+          "\\frac{d}{dx}\\left(x^n\\right) = n x^{n-1}",
+          "\\frac{d}{dx}\\left(\\sin x\\right) = \\cos x, \\quad \\frac{d}{dx}\\left(e^{kx}\\right) = k e^{kx}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": null,
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_03_checkpoint1",
+      "order": 3,
+      "segment_type": "checkpoint_question",
+      "title": "Interactive Checkpoint: Differentiating Polynomials",
+      "duration_sec": 25,
+      "script": "Now let us pause and check your understanding. Consider the quadratic position function: f of x equals 3 x squared minus 5 x plus 7. Applying the power rule to each term individually, what is the exact first derivative f prime of x? Take a moment to examine the options on your screen.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Checkpoint: Differentiate f(x) = 3x^2 - 5x + 7",
+        "bullet_points": [
+          "Apply the power rule term by term",
+          "Recall that the derivative of a constant term is zero",
+          "Select the correct derivative function f'(x)"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f(x) = 3x^2 - 5x + 7",
+          "f'(x) = \\frac{d}{dx}[3x^2] - \\frac{d}{dx}[5x] + \\frac{d}{dx}[7]"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": {
+        "question_id": "q_calc_diff_01",
+        "question_text": "What is the first derivative of f(x) = 3x^2 - 5x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "6x - 5",
+          "3x - 5",
+          "6x + 7",
+          "6x^2 - 5"
+        ],
+        "correct_answer": "6x - 5",
+        "explanation": "Differentiating 3x^2 yields 6x, differentiating -5x yields -5, and the constant 7 differentiates to 0, giving f'(x) = 6x - 5.",
+        "concept": "Polynomial Differentiation",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      },
+      "concept_id": null,
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_04_integration",
+      "order": 4,
+      "segment_type": "visual_concept",
+      "title": "Integration & The Fundamental Theorem",
+      "duration_sec": 35,
+      "script": "Next, we move to the inverse operation: definite integration. Integration calculates the net accumulated area under a curve between bounds a and b by summing infinitely many infinitesimal rectangles. The Fundamental Theorem of Calculus establishes that differentiation and integration are exact inverse processes. If capital F is an antiderivative of little f, the definite integral from a to b of f of x dx equals capital F of b minus capital F of a. This single theorem bridges static geometry with dynamic motion.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "The Fundamental Theorem of Calculus",
+        "bullet_points": [
+          "Riemann Sums: Sum of f(x_i) * delta_x as n -> infinity",
+          "Part 1: d/dx [ integral_a^x f(t) dt ] = f(x)",
+          "Part 2: integral_a^b f(x) dx = F(b) - F(a)"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\int_{a}^{b} f(x) \\, dx = F(b) - F(a), \\quad \\text{where } F'(x) = f(x)",
+          "\\frac{d}{dx} \\left[ \\int_{a}^{x} f(t) \\, dt \\right] = f(x)",
+          "\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": null,
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_05_checkpoint2",
+      "order": 5,
+      "segment_type": "checkpoint_question",
+      "title": "Interactive Checkpoint: Definite Integration",
+      "duration_sec": 25,
+      "script": "Let us verify your integration skills with an interactive question. Evaluate the definite integral of 2 x dx from 0 to 4. Find the antiderivative, evaluate at upper bound 4 and lower bound 0, and select the final numerical area.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Checkpoint: Compute Definite Integral",
+        "bullet_points": [
+          "Find the antiderivative of 2x -> x^2",
+          "Evaluate F(4) - F(0) = 4^2 - 0^2",
+          "Enter the resulting accumulated area"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\int_{0}^{4} 2x \\, dx = \\left[ x^2 \\right]_{0}^{4} = ?"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": {
+        "question_id": "q_calc_int_02",
+        "question_text": "Evaluate the definite integral of 2x dx from x = 0 to x = 4.",
+        "question_type": "mcq",
+        "options": [
+          "16",
+          "8",
+          "32",
+          "4"
+        ],
+        "correct_answer": "16",
+        "explanation": "The antiderivative of 2x is x^2. Evaluating from 0 to 4 gives 4^2 - 0^2 = 16.",
+        "concept": "Definite Integration",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      },
+      "concept_id": null,
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_06_summary",
+      "order": 6,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Recap and Mastery Path",
+      "duration_sec": 25,
+      "script": "Outstanding work today! You have mastered both sides of the calculus landscape: using derivatives to analyze instantaneous rates of change, and using definite integrals to calculate accumulated totals and areas. Together, these concepts form the foundation for all modern engineering, machine learning, and quantitative science. Head over to the Quiz tab now to complete your diagnostic assessment and update your learning profile. Keep learning!",
+      "visual_spec": {
+        "visual_type": "general_slide",
+        "subject_domain": "math",
+        "headline": "Calculus Mastery Summary",
+        "bullet_points": [
+          "Mastered Derivatives: Power rule and tangent slopes",
+          "Mastered Integrals: Fundamental theorem and accumulated area",
+          "Next Step: Complete the post-lesson assessment quiz"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": null,
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 165,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [],
+  "created_at": "2026-09-01T10:38:52.695516+00:00",
+  "updated_at": null
+}

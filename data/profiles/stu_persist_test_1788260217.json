@@ -1,0 +1,60 @@
+{
+  "student_id": "stu_persist_test_1788260217",
+  "name": "Alice Wonder",
+  "preferred_language": "hi",
+  "preferred_level": "advanced",
+  "total_lessons_completed": 2,
+  "average_mastery_percent": 90.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.95,
+    "Epsilon-Delta Definition": 0.95,
+    "Trigonometric Derivatives": 0.95,
+    "Power Rule": 0.85,
+    "Product Rule": 0.85,
+    "Chain Rule Composite Functions": 0.85
+  },
+  "known_weak_areas": [
+    "Indeterminate Forms",
+    "Trigonometric Derivatives",
+    "Chain Rule Composite Functions"
+  ],
+  "weak_areas": [
+    "Indeterminate Forms",
+    "Trigonometric Derivatives",
+    "Chain Rule Composite Functions"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_math_01",
+      "score": 95.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Trigonometric Derivatives"
+      ],
+      "date": "2026-09-01T10:56:57.152904+00:00"
+    },
+    {
+      "lesson_id": "les_math_02",
+      "score": 85.0,
+      "strong_concepts": [
+        "Power Rule",
+        "Product Rule"
+      ],
+      "weak_concepts": [
+        "Chain Rule Composite Functions"
+      ],
+      "date": "2026-09-01T10:56:57.184987+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_math_01",
+    "les_math_02"
+  ],
+  "total_time_spent_min": 30,
+  "created_at": "2026-09-01T10:56:57.100767+00:00",
+  "updated_at": "2026-09-01T10:56:57.185044+00:00"
+}

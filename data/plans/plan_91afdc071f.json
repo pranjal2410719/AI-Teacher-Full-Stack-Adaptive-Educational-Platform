@@ -1,0 +1,277 @@
+{
+  "plan_id": "plan_91afdc071f",
+  "title": "Mastering Calculus Limits and Derivatives",
+  "target_duration_sec": 900,
+  "level": "intermediate",
+  "language": "hi",
+  "document_id": null,
+  "topic_id": "top_5fe6322636",
+  "topic": "Mastering Calculus Limits and Derivatives",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "p_hi",
+    "level": "intermediate",
+    "language": "hi",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Calculus Limits and Derivatives",
+      "duration_sec": 60,
+      "script": "नमस्ते! आज के पाठ में हम Mastering Calculus Limits and Derivatives को विस्तार से और व्यावहारिक उदाहरणों के साथ समझेंगे। हम इसके मुख्य नियमों, व्यावहारिक समाधानों और महत्वपूर्ण प्रश्नों का अभ्यास करेंगे। चलिए शुरू करते हैं!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_5fe6322636_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "आइए अब 'Topic Overview & Objectives' को समझते हैं। यहाँ मुख्य रूप से तीन बातें ध्यान में रखनी हैं: Topic: Calculus Limits and Derivatives\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Calculus Limits and Derivatives' in subject area: 'math'..। जब आप इसे व्यवहार में लागू करते हैं, तो यह सीधे समस्याओं को हल करने में मदद करता है।",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Calculus Limits and Derivatives\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Calculus Limits and Derivatives' in subject area: 'math'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_5fe6322636_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "आइए अब एक व्यावहारिक उदाहरण देखते हैं। स्क्रीन पर दिखाए गए स्टेप-बाय-स्टेप वॉकथ्रू पर ध्यान दें। पहले चरण में हम प्रारंभिक मान स्थापित करते हैं, दूसरे में मुख्य प्रक्रिया लागू करते हैं, और अंत में परिणाम की पुष्टि करते हैं।",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Worked Mathematical Demonstration: Step-by-Step",
+        "bullet_points": [
+          "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+          "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+          "Step 3: Constant term derivative is 0",
+          "Result: f'(x) = 6x + 5"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f(x) = 3x^2 + 5x - 4",
+          "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+          "f'(x) = 6x + 5"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_5fe6322636_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Topic Overview & Objectives पर एक त्वरित समझ की जांच करते हैं। f(x) = 5x^3 - 4x + 7 का अवकलज क्या है?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "f(x) = 5x^3 - 4x + 7 का अवकलज क्या है?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+      "duration_sec": 170,
+      "script": "आइए अब 'Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.' को समझते हैं। यहाँ मुख्य रूप से तीन बातें ध्यान में रखनी हैं: Concept: Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Calculus Limits and Derivatives' in subject area: 'math'.. Key Principles:\n- Definition and motivation of 'Calculus Limits and Derivatives' in subject area: 'math'। जब आप इसे व्यवहार में लागू करते हैं, तो यह सीधे समस्याओं को हल करने में मदद करता है।",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Calculus Limits and Derivatives' in subject area: 'math'.",
+          "Key Principles:\n- Definition and motivation of 'Calculus Limits and Derivatives' in subject area: 'math'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_5fe6322636_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'. पर एक त्वरित समझ की जांच करते हैं। f(x) = 5x^3 - 4x + 7 का अवकलज क्या है?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "f(x) = 5x^3 - 4x + 7 का अवकलज क्या है?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'.",
+      "duration_sec": 170,
+      "script": "आइए अब 'Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'.' को समझते हैं। यहाँ मुख्य रूप से तीन बातें ध्यान में रखनी हैं: Concept: Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'. Description:\nWorked walkthrough demonstrating 'Calculus Limits and Derivatives' in subject area: 'math'. in practice with clear derivations। जब आप इसे व्यवहार में लागू करते हैं, तो यह सीधे समस्याओं को हल करने में मदद करता है।",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'",
+          "Description:\nWorked walkthrough demonstrating 'Calculus Limits and Derivatives' in subject area: 'math'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_5fe6322636_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Calculus Limits and Derivatives",
+      "duration_sec": 60,
+      "script": "बहुत बढ़िया! आज हमने Mastering Calculus Limits and Derivatives के मुख्य पहलुओं को सफलतापूर्वक पूरा किया, जिसमें Topic Overview & Objectives, Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'., Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'. शामिल हैं। इन प्रमुख नियमों को याद रखें और अगले अभ्यास सत्र के लिए तैयार रहें। शानदार काम!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Mastering Calculus Limits and Derivatives",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+          "Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Calculus Limits and Derivatives' in subject area: 'math'.",
+    "Apply standard problem-solving patterns in Mastering Calculus Limits and Derivatives"
+  ],
+  "created_at": "2026-09-01T10:55:16.619406+00:00",
+  "updated_at": null
+}

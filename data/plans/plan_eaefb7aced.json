@@ -1,0 +1,338 @@
+{
+  "plan_id": "plan_eaefb7aced",
+  "title": "Mastering Newton's Laws of Motion",
+  "target_duration_sec": 900,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_4905bce940",
+  "topic": "Mastering Newton's Laws of Motion",
+  "subject_domain": "physics",
+  "learner_profile": {
+    "student_id": "std_100",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Newton's Laws of Motion",
+      "duration_sec": 60,
+      "script": "Welcome to today's lesson on Mastering Newton's Laws of Motion! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_4905bce940_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Newton's Laws of Motion\nCategory: physics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Newton's Laws of Motion' in subject area: 'physics'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Newton's Laws of Motion\nCategory: physics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Newton's Laws of Motion' in subject area: 'physics'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Topic Overview & Objectives requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_4905bce940_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "comparison_table",
+        "subject_domain": "physics",
+        "headline": "Applied Step-by-Step Walkthrough",
+        "bullet_points": [
+          "Step 1: Frame the initial conditions and boundary variables",
+          "Step 2: Execute the core transformation mechanism",
+          "Step 3: Verify the outcome against diagnostic criteria"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Step",
+          "Action Performed",
+          "Expected Observable State"
+        ],
+        "table_rows": [
+          [
+            "1. Initialization",
+            "Define variables and prerequisites",
+            "System in baseline state"
+          ],
+          [
+            "2. Execution",
+            "Apply core formula or algorithmic process",
+            "State undergoes transition"
+          ],
+          [
+            "3. Verification",
+            "Compare result to reference benchmark",
+            "Optimal verified solution"
+          ]
+        ],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_4905bce940_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the foundational principle underlying Topic Overview & Objectives?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the foundational principle underlying Topic Overview & Objectives?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Topic Overview & Objectives requires following structured core principles and systematic steps.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.'. The key concepts to master here are: Concept: Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Newton's Laws of Motion' in subject area: 'physics'.. Key Principles:\n- Definition and motivation of 'Newton's Laws of Motion' in subject area: 'physics'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Newton's Laws of Motion' in subject area: 'physics'.",
+          "Key Principles:\n- Definition and motivation of 'Newton's Laws of Motion' in subject area: 'physics'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'. requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_4905bce940_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.. What is the foundational principle underlying Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the foundational principle underlying Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'. requires following structured core principles and systematic steps.",
+        "concept": "Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'.",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'.'. The key concepts to master here are: Concept: Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'. Description:\nWorked walkthrough demonstrating 'Newton's Laws of Motion' in subject area: 'physics'. in practice with clear derivations. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'",
+          "Description:\nWorked walkthrough demonstrating 'Newton's Laws of Motion' in subject area: 'physics'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'. requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_4905bce940_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Newton's Laws of Motion",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Mastering Newton's Laws of Motion, we covered Topic Overview & Objectives, Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'., Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "physics",
+        "headline": "Key Takeaways: Mastering Newton's Laws of Motion",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+          "Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Newton's Laws of Motion' in subject area: 'physics'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Newton's Laws of Motion' in subject area: 'physics'.",
+    "Apply standard problem-solving patterns in Mastering Newton's Laws of Motion"
+  ],
+  "created_at": "2026-08-31T19:35:28.048697+00:00",
+  "updated_at": null
+}

@@ -1,0 +1,1800 @@
+{
+  "timestamp": "2026-08-31T19:28:22Z",
+  "milestone": "Milestone 1",
+  "benchmark_modes": {
+    "pure_vector_alpha_1.0": {
+      "alpha": 1.0,
+      "recall_at_1": 0.7826,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr": 0.8841,
+      "precision_at_3": 0.3333,
+      "distractor_intrusion_rate_percent": 100.0,
+      "latency": {
+        "mean_ms": 1.804,
+        "p50_ms": 1.66,
+        "p95_ms": 2.629,
+        "p99_ms": 3.056,
+        "max_ms": 3.168
+      },
+      "query_details": [
+        {
+          "query": "Einstein photoelectric effect threshold frequency work function Planck",
+          "type": "exact_lexical",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 2.286,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Heisenberg uncertainty principle position and momentum reduced Planck constant",
+          "type": "exact_lexical",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "bio_krebs_cycle",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.638,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Red-black tree invariants root black node rotations color flips",
+          "type": "exact_lexical",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.715,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Dijkstra algorithm min-priority queue edge relaxation non-negative weights",
+          "type": "exact_lexical",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 2.098,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Transformer scaled dot-product attention softmax Q K V",
+          "type": "exact_lexical",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "math_taylor_series",
+            "distractor_lexical_trap_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 1.58,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "CRISPR Cas9 single guide RNA PAM sequence double-strand break",
+          "type": "exact_lexical",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "distractor_taylor_swift"
+          ],
+          "rank": 1,
+          "latency_ms": 1.602,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Citric acid cycle Krebs mitochondrial matrix acetyl-CoA NADH ATP",
+          "type": "exact_lexical",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "distractor_keyword_stuffing_crispr",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.422,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Taylor series expansion Lagrange remainder Maclaurin power series",
+          "type": "exact_lexical",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "cs_transformer_attention"
+          ],
+          "rank": 2,
+          "latency_ms": 1.436,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Characteristic polynomial determinant eigenvalues and eigenvectors diagonalization",
+          "type": "exact_lexical",
+          "expected": "math_eigenvalues",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_lexical_trap_dijkstra",
+            "distractor_keyword_stuffing_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.393,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "How light quanta eject electrons from metallic surfaces depending on color rather than brightness",
+          "type": "paraphrased_semantic",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "cs_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 1.651,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Fundamental quantum impossibility of simultaneously measuring where a particle is located and how fast it travels",
+          "type": "paraphrased_semantic",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_double_slit",
+            "math_taylor_series"
+          ],
+          "rank": 1,
+          "latency_ms": 1.845,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Self-balancing hierarchical search structure with chromatic constraints ensuring logarithmic depth",
+          "type": "paraphrased_semantic",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "phys_double_slit",
+            "cs_red_black_tree"
+          ],
+          "rank": 3,
+          "latency_ms": 1.612,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Greedy routing procedure finding least costly trajectories across network nodes without negative links",
+          "type": "paraphrased_semantic",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "bio_crispr",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 1.986,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Neural mechanism calculating pairwise token relevance scores normalized by square root dimension",
+          "type": "paraphrased_semantic",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "bio_krebs_cycle",
+            "phys_heisenberg"
+          ],
+          "rank": 1,
+          "latency_ms": 1.66,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Targeted molecular scissors cutting double-stranded cellular genetic code guided by synthetic sequences",
+          "type": "paraphrased_semantic",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "bio_krebs_cycle",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 2.659,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Cellular respiration pathway turning acetate into carbon dioxide while generating reducing equivalents",
+          "type": "paraphrased_semantic",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_crispr",
+            "bio_krebs_cycle",
+            "cs_transformer_attention"
+          ],
+          "rank": 2,
+          "latency_ms": 3.168,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Approximating smooth continuous mathematical curves through infinite polynomial summation around a baseline",
+          "type": "paraphrased_semantic",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_taylor_series",
+            "bio_krebs_cycle",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.824,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "dijkstra algorithm shortest path min-heap",
+          "type": "adversarial_trap",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "distractor_lexical_trap_dijkstra",
+            "cs_dijkstra",
+            "cs_transformer_attention"
+          ],
+          "rank": 2,
+          "latency_ms": 1.757,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "crispr cas9 guide rna double strand break endonuclease",
+          "type": "adversarial_trap",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "distractor_taylor_swift"
+          ],
+          "rank": 1,
+          "latency_ms": 1.535,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "photoelectric effect work function frequency",
+          "type": "adversarial_trap",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.182,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "red-black tree node rotations balance",
+          "type": "adversarial_trap",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.259,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "taylor series power expansion remainder polynomial",
+          "type": "adversarial_trap",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "cs_transformer_attention"
+          ],
+          "rank": 2,
+          "latency_ms": 1.813,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "\u092a\u094c\u0927\u094b\u0902 \u092e\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u0930\u094d\u0923\u0939\u0930\u093f\u0924",
+          "type": "multilingual_hindi",
+          "expected": "hindi_photosynthesis",
+          "retrieved_top3": [
+            "hindi_photosynthesis",
+            "phys_heisenberg",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.367,
+          "distractor_trap_in_top3": false
+        }
+      ]
+    },
+    "pure_bm25_alpha_0.0": {
+      "alpha": 0.0,
+      "recall_at_1": 0.8261,
+      "recall_at_3": 0.913,
+      "recall_at_5": 0.9565,
+      "mrr": 0.8732,
+      "precision_at_3": 0.3043,
+      "distractor_intrusion_rate_percent": 100.0,
+      "latency": {
+        "mean_ms": 2.115,
+        "p50_ms": 1.833,
+        "p95_ms": 3.534,
+        "p99_ms": 3.757,
+        "max_ms": 3.809
+      },
+      "query_details": [
+        {
+          "query": "Einstein photoelectric effect threshold frequency work function Planck",
+          "type": "exact_lexical",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "phys_heisenberg"
+          ],
+          "rank": 1,
+          "latency_ms": 1.578,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Heisenberg uncertainty principle position and momentum reduced Planck constant",
+          "type": "exact_lexical",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_photoelectric",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 1.55,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Red-black tree invariants root black node rotations color flips",
+          "type": "exact_lexical",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 2.54,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Dijkstra algorithm min-priority queue edge relaxation non-negative weights",
+          "type": "exact_lexical",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 2.914,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Transformer scaled dot-product attention softmax Q K V",
+          "type": "exact_lexical",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "distractor_taylor_swift",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 3.174,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "CRISPR Cas9 single guide RNA PAM sequence double-strand break",
+          "type": "exact_lexical",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "cs_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 3.574,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Citric acid cycle Krebs mitochondrial matrix acetyl-CoA NADH ATP",
+          "type": "exact_lexical",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "math_eigenvalues",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 3.809,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Taylor series expansion Lagrange remainder Maclaurin power series",
+          "type": "exact_lexical",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_taylor_series",
+            "distractor_taylor_swift",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.518,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Characteristic polynomial determinant eigenvalues and eigenvectors diagonalization",
+          "type": "exact_lexical",
+          "expected": "math_eigenvalues",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_cross_domain_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.96,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "How light quanta eject electrons from metallic surfaces depending on color rather than brightness",
+          "type": "paraphrased_semantic",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "phys_double_slit",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.652,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Fundamental quantum impossibility of simultaneously measuring where a particle is located and how fast it travels",
+          "type": "paraphrased_semantic",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "cs_red_black_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 2.831,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Self-balancing hierarchical search structure with chromatic constraints ensuring logarithmic depth",
+          "type": "paraphrased_semantic",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "cs_transformer_attention",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 2.394,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Greedy routing procedure finding least costly trajectories across network nodes without negative links",
+          "type": "paraphrased_semantic",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 4,
+          "latency_ms": 1.964,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Neural mechanism calculating pairwise token relevance scores normalized by square root dimension",
+          "type": "paraphrased_semantic",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "distractor_cross_domain_tree",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.774,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Targeted molecular scissors cutting double-stranded cellular genetic code guided by synthetic sequences",
+          "type": "paraphrased_semantic",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.743,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Cellular respiration pathway turning acetate into carbon dioxide while generating reducing equivalents",
+          "type": "paraphrased_semantic",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "cs_transformer_attention",
+            "bio_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.634,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Approximating smooth continuous mathematical curves through infinite polynomial summation around a baseline",
+          "type": "paraphrased_semantic",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_taylor_swift",
+            "math_taylor_series"
+          ],
+          "rank": 3,
+          "latency_ms": 1.812,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "dijkstra algorithm shortest path min-heap",
+          "type": "adversarial_trap",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.833,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "crispr cas9 guide rna double strand break endonuclease",
+          "type": "adversarial_trap",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.689,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "photoelectric effect work function frequency",
+          "type": "adversarial_trap",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "math_taylor_series"
+          ],
+          "rank": 1,
+          "latency_ms": 1.149,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "red-black tree node rotations balance",
+          "type": "adversarial_trap",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.1,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "taylor series power expansion remainder polynomial",
+          "type": "adversarial_trap",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "math_eigenvalues"
+          ],
+          "rank": 2,
+          "latency_ms": 1.976,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "\u092a\u094c\u0927\u094b\u0902 \u092e\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u0930\u094d\u0923\u0939\u0930\u093f\u0924",
+          "type": "multilingual_hindi",
+          "expected": "hindi_photosynthesis",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "distractor_cross_domain_tree",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": -1,
+          "latency_ms": 1.488,
+          "distractor_trap_in_top3": false
+        }
+      ]
+    },
+    "hybrid_alpha_0.6": {
+      "alpha": 0.6,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "recall_at_5": 1.0,
+      "mrr": 0.9167,
+      "precision_at_3": 0.3188,
+      "distractor_intrusion_rate_percent": 100.0,
+      "latency": {
+        "mean_ms": 1.721,
+        "p50_ms": 1.599,
+        "p95_ms": 2.589,
+        "p99_ms": 2.727,
+        "max_ms": 2.754
+      },
+      "query_details": [
+        {
+          "query": "Einstein photoelectric effect threshold frequency work function Planck",
+          "type": "exact_lexical",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "phys_heisenberg"
+          ],
+          "rank": 1,
+          "latency_ms": 1.665,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Heisenberg uncertainty principle position and momentum reduced Planck constant",
+          "type": "exact_lexical",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_photoelectric",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.547,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Red-black tree invariants root black node rotations color flips",
+          "type": "exact_lexical",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.549,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Dijkstra algorithm min-priority queue edge relaxation non-negative weights",
+          "type": "exact_lexical",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.502,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Transformer scaled dot-product attention softmax Q K V",
+          "type": "exact_lexical",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "math_taylor_series",
+            "distractor_lexical_trap_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 1.495,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "CRISPR Cas9 single guide RNA PAM sequence double-strand break",
+          "type": "exact_lexical",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 2.198,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Citric acid cycle Krebs mitochondrial matrix acetyl-CoA NADH ATP",
+          "type": "exact_lexical",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "math_eigenvalues",
+            "distractor_keyword_stuffing_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 2.232,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Taylor series expansion Lagrange remainder Maclaurin power series",
+          "type": "exact_lexical",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_taylor_series",
+            "distractor_taylor_swift",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.378,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Characteristic polynomial determinant eigenvalues and eigenvectors diagonalization",
+          "type": "exact_lexical",
+          "expected": "math_eigenvalues",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_lexical_trap_dijkstra",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.599,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "How light quanta eject electrons from metallic surfaces depending on color rather than brightness",
+          "type": "paraphrased_semantic",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "phys_double_slit",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.13,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Fundamental quantum impossibility of simultaneously measuring where a particle is located and how fast it travels",
+          "type": "paraphrased_semantic",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "cs_red_black_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 2.629,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Self-balancing hierarchical search structure with chromatic constraints ensuring logarithmic depth",
+          "type": "paraphrased_semantic",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "cs_transformer_attention",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.922,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Greedy routing procedure finding least costly trajectories across network nodes without negative links",
+          "type": "paraphrased_semantic",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 4,
+          "latency_ms": 2.215,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Neural mechanism calculating pairwise token relevance scores normalized by square root dimension",
+          "type": "paraphrased_semantic",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "distractor_cross_domain_tree",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.751,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Targeted molecular scissors cutting double-stranded cellular genetic code guided by synthetic sequences",
+          "type": "paraphrased_semantic",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.688,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Cellular respiration pathway turning acetate into carbon dioxide while generating reducing equivalents",
+          "type": "paraphrased_semantic",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "cs_transformer_attention",
+            "bio_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.583,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Approximating smooth continuous mathematical curves through infinite polynomial summation around a baseline",
+          "type": "paraphrased_semantic",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_taylor_swift",
+            "math_taylor_series"
+          ],
+          "rank": 3,
+          "latency_ms": 1.638,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "dijkstra algorithm shortest path min-heap",
+          "type": "adversarial_trap",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.129,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "crispr cas9 guide rna double strand break endonuclease",
+          "type": "adversarial_trap",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.289,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "photoelectric effect work function frequency",
+          "type": "adversarial_trap",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.241,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "red-black tree node rotations balance",
+          "type": "adversarial_trap",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.112,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "taylor series power expansion remainder polynomial",
+          "type": "adversarial_trap",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "math_eigenvalues"
+          ],
+          "rank": 2,
+          "latency_ms": 1.33,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "\u092a\u094c\u0927\u094b\u0902 \u092e\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u0930\u094d\u0923\u0939\u0930\u093f\u0924",
+          "type": "multilingual_hindi",
+          "expected": "hindi_photosynthesis",
+          "retrieved_top3": [
+            "hindi_photosynthesis",
+            "phys_heisenberg",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.754,
+          "distractor_trap_in_top3": false
+        }
+      ]
+    },
+    "hybrid_alpha_0.75": {
+      "alpha": 0.75,
+      "recall_at_1": 0.8261,
+      "recall_at_3": 0.9565,
+      "recall_at_5": 1.0,
+      "mrr": 0.8949,
+      "precision_at_3": 0.3188,
+      "distractor_intrusion_rate_percent": 100.0,
+      "latency": {
+        "mean_ms": 1.752,
+        "p50_ms": 1.708,
+        "p95_ms": 2.691,
+        "p99_ms": 2.825,
+        "max_ms": 2.858
+      },
+      "query_details": [
+        {
+          "query": "Einstein photoelectric effect threshold frequency work function Planck",
+          "type": "exact_lexical",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "phys_heisenberg"
+          ],
+          "rank": 1,
+          "latency_ms": 1.732,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Heisenberg uncertainty principle position and momentum reduced Planck constant",
+          "type": "exact_lexical",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_photoelectric",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.951,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Red-black tree invariants root black node rotations color flips",
+          "type": "exact_lexical",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.509,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Dijkstra algorithm min-priority queue edge relaxation non-negative weights",
+          "type": "exact_lexical",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.78,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Transformer scaled dot-product attention softmax Q K V",
+          "type": "exact_lexical",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "math_taylor_series",
+            "distractor_lexical_trap_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 1.408,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "CRISPR Cas9 single guide RNA PAM sequence double-strand break",
+          "type": "exact_lexical",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "distractor_taylor_swift"
+          ],
+          "rank": 1,
+          "latency_ms": 1.631,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Citric acid cycle Krebs mitochondrial matrix acetyl-CoA NADH ATP",
+          "type": "exact_lexical",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "math_eigenvalues",
+            "distractor_keyword_stuffing_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.392,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Taylor series expansion Lagrange remainder Maclaurin power series",
+          "type": "exact_lexical",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_taylor_series",
+            "distractor_taylor_swift",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.578,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Characteristic polynomial determinant eigenvalues and eigenvectors diagonalization",
+          "type": "exact_lexical",
+          "expected": "math_eigenvalues",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_lexical_trap_dijkstra",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.777,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "How light quanta eject electrons from metallic surfaces depending on color rather than brightness",
+          "type": "paraphrased_semantic",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "phys_double_slit",
+            "distractor_negation_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 2.705,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Fundamental quantum impossibility of simultaneously measuring where a particle is located and how fast it travels",
+          "type": "paraphrased_semantic",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_double_slit",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.858,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Self-balancing hierarchical search structure with chromatic constraints ensuring logarithmic depth",
+          "type": "paraphrased_semantic",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "cs_transformer_attention",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.667,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Greedy routing procedure finding least costly trajectories across network nodes without negative links",
+          "type": "paraphrased_semantic",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_taylor_swift",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 4,
+          "latency_ms": 1.864,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Neural mechanism calculating pairwise token relevance scores normalized by square root dimension",
+          "type": "paraphrased_semantic",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "distractor_cross_domain_tree",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.83,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Targeted molecular scissors cutting double-stranded cellular genetic code guided by synthetic sequences",
+          "type": "paraphrased_semantic",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.708,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Cellular respiration pathway turning acetate into carbon dioxide while generating reducing equivalents",
+          "type": "paraphrased_semantic",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "cs_transformer_attention",
+            "bio_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.712,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Approximating smooth continuous mathematical curves through infinite polynomial summation around a baseline",
+          "type": "paraphrased_semantic",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_taylor_swift",
+            "math_taylor_series"
+          ],
+          "rank": 3,
+          "latency_ms": 2.011,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "dijkstra algorithm shortest path min-heap",
+          "type": "adversarial_trap",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "distractor_lexical_trap_dijkstra",
+            "cs_dijkstra",
+            "cs_transformer_attention"
+          ],
+          "rank": 2,
+          "latency_ms": 1.698,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "crispr cas9 guide rna double strand break endonuclease",
+          "type": "adversarial_trap",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "distractor_taylor_swift"
+          ],
+          "rank": 1,
+          "latency_ms": 1.407,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "photoelectric effect work function frequency",
+          "type": "adversarial_trap",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.17,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "red-black tree node rotations balance",
+          "type": "adversarial_trap",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.141,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "taylor series power expansion remainder polynomial",
+          "type": "adversarial_trap",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "math_eigenvalues"
+          ],
+          "rank": 2,
+          "latency_ms": 1.206,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "\u092a\u094c\u0927\u094b\u0902 \u092e\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u0930\u094d\u0923\u0939\u0930\u093f\u0924",
+          "type": "multilingual_hindi",
+          "expected": "hindi_photosynthesis",
+          "retrieved_top3": [
+            "hindi_photosynthesis",
+            "phys_heisenberg",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.56,
+          "distractor_trap_in_top3": false
+        }
+      ]
+    },
+    "hybrid_alpha_0.3": {
+      "alpha": 0.3,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "recall_at_5": 1.0,
+      "mrr": 0.9167,
+      "precision_at_3": 0.3188,
+      "distractor_intrusion_rate_percent": 100.0,
+      "latency": {
+        "mean_ms": 1.84,
+        "p50_ms": 1.691,
+        "p95_ms": 2.679,
+        "p99_ms": 3.124,
+        "max_ms": 3.248
+      },
+      "query_details": [
+        {
+          "query": "Einstein photoelectric effect threshold frequency work function Planck",
+          "type": "exact_lexical",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "phys_heisenberg"
+          ],
+          "rank": 1,
+          "latency_ms": 1.58,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Heisenberg uncertainty principle position and momentum reduced Planck constant",
+          "type": "exact_lexical",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "phys_photoelectric",
+            "bio_krebs_cycle"
+          ],
+          "rank": 1,
+          "latency_ms": 1.483,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Red-black tree invariants root black node rotations color flips",
+          "type": "exact_lexical",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.407,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Dijkstra algorithm min-priority queue edge relaxation non-negative weights",
+          "type": "exact_lexical",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.469,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Transformer scaled dot-product attention softmax Q K V",
+          "type": "exact_lexical",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "math_taylor_series",
+            "distractor_lexical_trap_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 1.545,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "CRISPR Cas9 single guide RNA PAM sequence double-strand break",
+          "type": "exact_lexical",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "cs_dijkstra"
+          ],
+          "rank": 1,
+          "latency_ms": 2.648,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Citric acid cycle Krebs mitochondrial matrix acetyl-CoA NADH ATP",
+          "type": "exact_lexical",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "math_eigenvalues",
+            "distractor_keyword_stuffing_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.582,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Taylor series expansion Lagrange remainder Maclaurin power series",
+          "type": "exact_lexical",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_taylor_series",
+            "distractor_taylor_swift",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.444,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Characteristic polynomial determinant eigenvalues and eigenvectors diagonalization",
+          "type": "exact_lexical",
+          "expected": "math_eigenvalues",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_lexical_trap_dijkstra",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.097,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "How light quanta eject electrons from metallic surfaces depending on color rather than brightness",
+          "type": "paraphrased_semantic",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "phys_double_slit",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 2.127,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Fundamental quantum impossibility of simultaneously measuring where a particle is located and how fast it travels",
+          "type": "paraphrased_semantic",
+          "expected": "phys_heisenberg",
+          "retrieved_top3": [
+            "phys_heisenberg",
+            "cs_red_black_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 3.248,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Self-balancing hierarchical search structure with chromatic constraints ensuring logarithmic depth",
+          "type": "paraphrased_semantic",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "cs_transformer_attention",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 2.603,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Greedy routing procedure finding least costly trajectories across network nodes without negative links",
+          "type": "paraphrased_semantic",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree"
+          ],
+          "rank": 4,
+          "latency_ms": 2.682,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Neural mechanism calculating pairwise token relevance scores normalized by square root dimension",
+          "type": "paraphrased_semantic",
+          "expected": "cs_transformer_attention",
+          "retrieved_top3": [
+            "cs_transformer_attention",
+            "distractor_cross_domain_tree",
+            "math_eigenvalues"
+          ],
+          "rank": 1,
+          "latency_ms": 1.936,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Targeted molecular scissors cutting double-stranded cellular genetic code guided by synthetic sequences",
+          "type": "paraphrased_semantic",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.755,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Cellular respiration pathway turning acetate into carbon dioxide while generating reducing equivalents",
+          "type": "paraphrased_semantic",
+          "expected": "bio_krebs_cycle",
+          "retrieved_top3": [
+            "bio_krebs_cycle",
+            "cs_transformer_attention",
+            "bio_crispr"
+          ],
+          "rank": 1,
+          "latency_ms": 1.691,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "Approximating smooth continuous mathematical curves through infinite polynomial summation around a baseline",
+          "type": "paraphrased_semantic",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "math_eigenvalues",
+            "distractor_taylor_swift",
+            "math_taylor_series"
+          ],
+          "rank": 3,
+          "latency_ms": 2.069,
+          "distractor_trap_in_top3": false
+        },
+        {
+          "query": "dijkstra algorithm shortest path min-heap",
+          "type": "adversarial_trap",
+          "expected": "cs_dijkstra",
+          "retrieved_top3": [
+            "cs_dijkstra",
+            "distractor_lexical_trap_dijkstra",
+            "cs_transformer_attention"
+          ],
+          "rank": 1,
+          "latency_ms": 1.174,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "crispr cas9 guide rna double strand break endonuclease",
+          "type": "adversarial_trap",
+          "expected": "bio_crispr",
+          "retrieved_top3": [
+            "bio_crispr",
+            "distractor_keyword_stuffing_crispr",
+            "phys_double_slit"
+          ],
+          "rank": 1,
+          "latency_ms": 1.334,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "photoelectric effect work function frequency",
+          "type": "adversarial_trap",
+          "expected": "phys_photoelectric",
+          "retrieved_top3": [
+            "phys_photoelectric",
+            "distractor_negation_photoelectric",
+            "math_taylor_series"
+          ],
+          "rank": 1,
+          "latency_ms": 1.194,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "red-black tree node rotations balance",
+          "type": "adversarial_trap",
+          "expected": "cs_red_black_tree",
+          "retrieved_top3": [
+            "cs_red_black_tree",
+            "distractor_cross_domain_tree",
+            "phys_photoelectric"
+          ],
+          "rank": 1,
+          "latency_ms": 1.421,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "taylor series power expansion remainder polynomial",
+          "type": "adversarial_trap",
+          "expected": "math_taylor_series",
+          "retrieved_top3": [
+            "distractor_taylor_swift",
+            "math_taylor_series",
+            "math_eigenvalues"
+          ],
+          "rank": 2,
+          "latency_ms": 2.09,
+          "distractor_trap_in_top3": true
+        },
+        {
+          "query": "\u092a\u094c\u0927\u094b\u0902 \u092e\u0947\u0902 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u0930\u094d\u0923\u0939\u0930\u093f\u0924",
+          "type": "multilingual_hindi",
+          "expected": "hindi_photosynthesis",
+          "retrieved_top3": [
+            "hindi_photosynthesis",
+            "phys_heisenberg",
+            "cs_red_black_tree"
+          ],
+          "rank": 1,
+          "latency_ms": 1.744,
+          "distractor_trap_in_top3": false
+        }
+      ]
+    }
+  },
+  "category_summary": {
+    "exact_lexical": {
+      "count": 9,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "avg_latency_ms": 1.685
+    },
+    "paraphrased_semantic": {
+      "count": 8,
+      "recall_at_1": 0.75,
+      "recall_at_3": 0.875,
+      "mrr": 0.8229,
+      "avg_latency_ms": 1.945
+    },
+    "adversarial_trap": {
+      "count": 5,
+      "recall_at_1": 0.8,
+      "recall_at_3": 1.0,
+      "mrr": 0.9,
+      "avg_latency_ms": 1.22
+    },
+    "multilingual_hindi": {
+      "count": 1,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "avg_latency_ms": 2.754
+    }
+  },
+  "scaling_benchmarks": [
+    {
+      "corpus_size": 10,
+      "build_time_ms": 136.41,
+      "peak_memory_kb": 331.89,
+      "latency": {
+        "mean_ms": 1.388,
+        "p50_ms": 1.268,
+        "p95_ms": 2.118,
+        "p99_ms": 2.343,
+        "max_ms": 2.465
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.78,
+        "matrix_dot_product_ms": 0.326,
+        "bm25_score_ms": 0.231
+      },
+      "sla_5ms_pass": true
+    },
+    {
+      "corpus_size": 50,
+      "build_time_ms": 702.47,
+      "peak_memory_kb": 1567.61,
+      "latency": {
+        "mean_ms": 2.228,
+        "p50_ms": 1.845,
+        "p95_ms": 4.356,
+        "p99_ms": 5.306,
+        "max_ms": 5.376
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.871,
+        "matrix_dot_product_ms": 0.495,
+        "bm25_score_ms": 0.804
+      },
+      "sla_5ms_pass": true
+    },
+    {
+      "corpus_size": 100,
+      "build_time_ms": 1370.02,
+      "peak_memory_kb": 3133.12,
+      "latency": {
+        "mean_ms": 2.698,
+        "p50_ms": 2.56,
+        "p95_ms": 4.16,
+        "p99_ms": 5.344,
+        "max_ms": 5.967
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.8,
+        "matrix_dot_product_ms": 0.655,
+        "bm25_score_ms": 1.172
+      },
+      "sla_5ms_pass": true
+    },
+    {
+      "corpus_size": 250,
+      "build_time_ms": 3520.53,
+      "peak_memory_kb": 7840.55,
+      "latency": {
+        "mean_ms": 4.823,
+        "p50_ms": 4.239,
+        "p95_ms": 8.946,
+        "p99_ms": 11.849,
+        "max_ms": 11.981
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.769,
+        "matrix_dot_product_ms": 1.128,
+        "bm25_score_ms": 2.831
+      },
+      "sla_5ms_pass": false
+    },
+    {
+      "corpus_size": 500,
+      "build_time_ms": 6561.5,
+      "peak_memory_kb": 15698.91,
+      "latency": {
+        "mean_ms": 8.071,
+        "p50_ms": 7.722,
+        "p95_ms": 12.737,
+        "p99_ms": 13.652,
+        "max_ms": 13.827
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.769,
+        "matrix_dot_product_ms": 1.974,
+        "bm25_score_ms": 5.183
+      },
+      "sla_5ms_pass": false
+    },
+    {
+      "corpus_size": 1000,
+      "build_time_ms": 13734.84,
+      "peak_memory_kb": 31415.43,
+      "latency": {
+        "mean_ms": 16.853,
+        "p50_ms": 16.195,
+        "p95_ms": 35.001,
+        "p99_ms": 38.157,
+        "max_ms": 38.78
+      },
+      "breakdown": {
+        "dense_projection_ms": 0.812,
+        "matrix_dot_product_ms": 3.784,
+        "bm25_score_ms": 12.026
+      },
+      "sla_5ms_pass": false
+    }
+  ],
+  "alpha_sensitivity": [
+    {
+      "alpha": 0.0,
+      "recall_at_1": 0.8261,
+      "recall_at_3": 0.913,
+      "mrr": 0.8623
+    },
+    {
+      "alpha": 0.1,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.2,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.3,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.4,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.5,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.6,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.7,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 0.9565,
+      "mrr": 0.9058
+    },
+    {
+      "alpha": 0.8,
+      "recall_at_1": 0.8261,
+      "recall_at_3": 0.9565,
+      "mrr": 0.8841
+    },
+    {
+      "alpha": 0.9,
+      "recall_at_1": 0.8696,
+      "recall_at_3": 1.0,
+      "mrr": 0.9348
+    },
+    {
+      "alpha": 1.0,
+      "recall_at_1": 0.7826,
+      "recall_at_3": 1.0,
+      "mrr": 0.8841
+    }
+  ],
+  "verdict": "REJECT"
+}

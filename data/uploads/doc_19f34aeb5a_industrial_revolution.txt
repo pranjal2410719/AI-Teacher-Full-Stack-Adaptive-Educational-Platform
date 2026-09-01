@@ -1,0 +1,21 @@
+The Industrial Revolution: Transformations in Energy, Labor, and Global Society (1760-1850)
+
+Overview & Origins in Great Britain:
+The Industrial Revolution was the historic transition from agrarian, handcrafted economies to industrial systems dominated by mechanized manufacture, fossil-fuel power, and factory production. Originating in Great Britain during the late 18th century, several converging catalysts facilitated this transformation:
+1. Vast domestic coal and iron ore deposits situated close to navigable rivers and seaports.
+2. Agricultural Revolution innovations (enclosure acts, crop rotation, selective breeding) releasing surplus agrarian labor.
+3. Access to global colonial markets and raw materials (such as raw cotton from the Americas and India).
+4. Stable legal and financial institutions protecting patent property rights and enabling capital investment.
+
+Key Innovations and Mechanization:
+- Textile Industry: The Flying Shuttle (John Kay, 1733), Spinning Jenny (James Hargreaves, 1764), and Water Frame (Richard Arkwright, 1769) multiplied yarn and cloth production exponentially.
+- Steam Power: James Watt's separate condenser steam engine (patented 1769) transformed thermal energy from burning coal into continuous rotary mechanical power, liberating factories from dependence on river water wheels.
+- Metallurgy: Abraham Darby and Henry Cort's puddling process allowed coke-smelted pig iron to be refined into durable wrought iron for bridges, rails, and steam boilers.
+- Transportation Revolution: George Stephenson's Rocket (1829) and the expansion of railways connected industrial hubs like Manchester and Liverpool, accelerating raw material intake and manufactured goods distribution.
+
+Social and Economic Consequences:
+- Rapid Urbanization: Populations migrated from rural villages to industrial cities (e.g., Manchester, Birmingham, Leeds), leading to dense tenement housing, sanitation crises, and cholera outbreaks.
+- The Factory System: Work shifted from seasonal, artisanal rhythms to strict, clock-disciplined 12-to-16 hour shifts under dangerous mechanical conditions.
+- Child and Female Labor: Widespread employment of women and children in textile mills and coal mines due to lower wage costs and dexterous fingers for machinery.
+- Social Legislation and Resistance: The Luddite movement (1811-1816) destroyed automated looms in protest of wage degradation. In response to investigative parliamentary commissions, Britain passed the Factory Act of 1833 (regulating child working hours) and Mines Act of 1842.
+- Rise of Industrial Capitalism and Socialist Critique: Karl Marx and Friedrich Engels observed Manchester textile conditions, formulating historical materialism and 'The Communist Manifesto' (1848) in response to bourgeois capital accumulation and proletarian exploitation.

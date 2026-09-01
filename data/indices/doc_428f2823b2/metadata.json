@@ -1,0 +1,15 @@
+{
+  "document_id": "doc_428f2823b2",
+  "filename": "ml_algorithms.txt",
+  "file_type": "txt",
+  "file_size_bytes": 178,
+  "total_pages": 2,
+  "chunk_count": 2,
+  "extracted_summary": "Summary of ml_algorithms.txt: Neural networks use backpropagation and gradient descent to minimize loss functions in deep learning.\n\nDecision trees split data using Gini impurity and information gain entropy.",
+  "created_at": "2026-08-31T19:25:11.568448+00:00",
+  "status": "ready",
+  "metadata_extra": {
+    "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_428f2823b2_ml_algorithms.txt",
+    "total_sections": 2
+  }
+}

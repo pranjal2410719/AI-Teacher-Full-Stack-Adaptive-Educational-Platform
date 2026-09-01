@@ -1,0 +1,5 @@
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_90446109_seg_01_seg_001.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_90446109_seg_02_seg_002.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_90446109_seg_03_seg_003.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_90446109_seg_04_seg_004.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_90446109_seg_05_seg_005.mp4'

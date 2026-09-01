@@ -1,0 +1,248 @@
+{
+  "student_id": "stu_rapid_01",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 15,
+  "average_mastery_percent": 85.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.85,
+    "Epsilon-Delta Definition": 0.85,
+    "Foundational Principles": 0.85,
+    "Practical Application": 0.85,
+    "Advanced Application 3": 0.85
+  },
+  "known_weak_areas": [
+    "Foundational Principles",
+    "Practical Application",
+    "Advanced Application 3"
+  ],
+  "weak_areas": [
+    "Foundational Principles",
+    "Practical Application",
+    "Advanced Application 3"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_rapid_0",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:50.275985+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_1",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:50.285192+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_2",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:50.294416+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_3",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:50.304140+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_4",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:57:50.313844+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_0",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:07.086594+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_1",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:07.109014+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_2",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:07.125498+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_3",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:07.139926+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_4",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:58:07.152744+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_0",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.882520+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_1",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.892109+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_2",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.903061+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_3",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.912621+00:00"
+    },
+    {
+      "lesson_id": "les_rapid_4",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "date": "2026-08-31T19:59:04.921462+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_rapid_0",
+    "les_rapid_1",
+    "les_rapid_2",
+    "les_rapid_3",
+    "les_rapid_4"
+  ],
+  "total_time_spent_min": 225,
+  "created_at": "2026-08-31T19:57:50.269546+00:00",
+  "updated_at": "2026-08-31T19:59:04.921496+00:00"
+}

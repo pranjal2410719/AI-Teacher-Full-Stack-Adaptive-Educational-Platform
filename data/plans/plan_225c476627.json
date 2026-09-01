@@ -1,0 +1,443 @@
+{
+  "plan_id": "plan_225c476627",
+  "title": "Lesson on SDEresume",
+  "target_duration_sec": 3300,
+  "level": "advanced",
+  "language": "en",
+  "document_id": "doc_7c411542d0",
+  "topic_id": null,
+  "topic": "Lesson on SDEresume",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "stu_default",
+    "level": "advanced",
+    "language": "en",
+    "time_budget_min": 55,
+    "prior_knowledge": "",
+    "learning_goal": "",
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on SDEresume",
+      "duration_sec": 175,
+      "script": "Hello and welcome to this advanced masterclass on Lesson on SDEresume. In this session, we will examine the rigorous mathematical foundations, structural invariants, and complex edge-case trade-offs governing this domain. Let's begin with the formal principles.",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 331,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: Pranjal Yadav\nKanpur, Uttar Pradesh | 2k24.cs1l.2410719@gmail.com | Portfolio | GitHub | LinkedIn | LeetCode\nEducation\nPranveer Singh Institute of Technology (PSIT), Kanpur, UP Expected May 2028\nBachelor of Technology in Computer Science & Engineering CGPA: 6.9/10 (through Sem IV)\nTechnical Skills\n Languages: JavaScript (ES6+), TypeScript, Python\n Frontend: React 19, Next.js 16, Tailwind CSS, HTML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modu. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "Pranjal Yadav\nKanpur, Uttar Pradesh | 2k24.cs1l.2410719@gmail.com | Portfolio | GitHub | LinkedIn | LeetCode\nEducation\nPranveer Singh Institute of Technology (PSIT), Kanpur, UP Expected May 2028\nBachelor of Technology in Computer Science & Engineering CGPA: 6.9/10 (through Sem IV)\nTechnical Skills\n Languages: JavaScript (ES6+), TypeScript, Python\n Frontend: React 19, Next.js 16, Tailwind CSS, HTML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modu"
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Pranjal Yadav",
+      "duration_sec": 291,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 87,
+      "script": "Let's pause here for a quick concept check on Pranjal Yadav. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: ML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modular Architecture,\nSandboxing & Isolation Patterns\n Data & Auth: PostgreSQL, Prisma ORM, Supabase, JWT-based Auth\n Tools & Cloud: Git, GitHub, VS Code, Netlify, Vercel, Postman, CI-style Build Pipelines\nFull-Stack & Web Projects\ndev-mcp — AI Engineering Operating System (MCP Server) GitHub\n Architected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (sessi. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "ML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modular Architecture,\nSandboxing & Isolation Patterns\n Data & Auth: PostgreSQL, Prisma ORM, Supabase, JWT-based Auth\n Tools & Cloud: Git, GitHub, VS Code, Netlify, Vercel, Postman, CI-style Build Pipelines\nFull-Stack & Web Projects\ndev-mcp — AI Engineering Operating System (MCP Server) GitHub\n Architected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (sessi"
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 87,
+      "script": "Let's pause here for a quick concept check on Pranjal Yadav. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: ected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (session\norchestration, task backlog, PRD validation, Git ops, sandboxed file I/O) to give AI coding agents persistent, stateful\nproject context.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "ected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (session\norchestration, task backlog, PRD validation, Git ops, sandboxed file I/O) to give AI coding agents persistent, stateful\nproject context."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 87,
+      "script": "Let's pause here for a quick concept check on Pranjal Yadav. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_3",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_3",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_009",
+      "order": 9,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include:  Designed a multi-tenant sibling-workspace isolation architecture — each project gets a self-contained ”Project\nBrain” (.project brain/) with independent context, backlog, and history to prevent cross-workspace state leakage.  Implemented a 3-tier safety/permission system (safe, trusted, lab) with path-jailing (Path.relative to), a regex-based\ndestructive-command blocklist, and workspace-locked file operations to sandbox untrusted AI-driven code execution.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          " Designed a multi-tenant sibling-workspace isolation architecture — each project gets a self-contained ”Project\nBrain” (.project brain/) with independent context, backlog, and history to prevent cross-workspace state leakage",
+          " Implemented a 3-tier safety/permission system (safe, trusted, lab) with path-jailing (Path.relative to), a regex-based\ndestructive-command blocklist, and workspace-locked file operations to sandbox untrusted AI-driven code execution."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_4",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0003"
+      ]
+    },
+    {
+      "segment_id": "seg_010",
+      "order": 10,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 87,
+      "script": "Let's pause here for a quick concept check on Pranjal Yadav. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_4",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_4",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_011",
+      "order": 11,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: mmand blocklist, and workspace-locked file operations to sandbox untrusted AI-driven code execution.  Stack: Python, FastMCP, CLI tooling, JSON-based state management, Git automation\nGitVibe — Developer Personality Analytics Platform Live Demo | GitHub\n Built a Next.js 16 app that transforms GitHub commit history and activity into data-driven developer personas using\na deterministic Mulberry32 PRNG and Shannon-entropy-based statistical engine, requiring no backend database.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "mmand blocklist, and workspace-locked file operations to sandbox untrusted AI-driven code execution",
+          " Stack: Python, FastMCP, CLI tooling, JSON-based state management, Git automation\nGitVibe — Developer Personality Analytics Platform Live Demo | GitHub\n Built a Next.js 16 app that transforms GitHub commit history and activity into data-driven developer personas using\na deterministic Mulberry32 PRNG and Shannon-entropy-based statistical engine, requiring no backend database."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_5",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0004"
+      ]
+    },
+    {
+      "segment_id": "seg_012",
+      "order": 12,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: inistic Mulberry32 PRNG and Shannon-entropy-based statistical engine, requiring no backend database.  Designed a hybrid ISR/SPA architecture with a multi-leg parallel data aggregator, in-flight request coalescing, and\nsliding-window API rate limiting; built high-DPI PNG identity-card export and dynamic OpenGraph image generation.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "inistic Mulberry32 PRNG and Shannon-entropy-based statistical engine, requiring no backend database",
+          " Designed a hybrid ISR/SPA architecture with a multi-leg parallel data aggregator, in-flight request coalescing, and\nsliding-window API rate limiting; built high-DPI PNG identity-card export and dynamic OpenGraph image generation."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_6",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0005"
+      ]
+    },
+    {
+      "segment_id": "seg_013",
+      "order": 13,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 330,
+      "script": "Let us examine the core mechanics of 'Pranjal Yadav'. The critical structural pillars include: w API rate limiting; built high-DPI PNG identity-card export and dynamic OpenGraph image generation.  Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4, GitHub REST API\nBraynix Studios — Agency Portfolio Platform Live Demo | GitHub\n Built a responsive studio landing page with scroll animations (Intersection Observer API) and Formspree-based lead\ngeneration.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "w API rate limiting; built high-DPI PNG identity-card export and dynamic OpenGraph image generation",
+          " Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4, GitHub REST API\nBraynix Studios — Agency Portfolio Platform Live Demo | GitHub\n Built a responsive studio landing page with scroll animations (Intersection Observer API) and Formspree-based lead\ngeneration."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_7",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0006"
+      ]
+    },
+    {
+      "segment_id": "seg_014",
+      "order": 14,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Lesson on SDEresume",
+      "duration_sec": 175,
+      "script": "Fantastic job! In this lesson on Lesson on SDEresume, we covered Pranjal Yadav, Pranjal Yadav, Pranjal Yadav, Pranjal Yadav, Pranjal Yadav, Pranjal Yadav, Pranjal Yadav. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Lesson on SDEresume",
+        "bullet_points": [
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 3300,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Analyze formal theoretical derivations and edge case behavior in Lesson on SDEresume"
+  ],
+  "created_at": "2026-09-01T18:42:56.304938+00:00",
+  "updated_at": null
+}

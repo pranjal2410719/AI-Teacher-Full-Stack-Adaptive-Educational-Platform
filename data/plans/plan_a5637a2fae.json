@@ -1,0 +1,173 @@
+{
+  "plan_id": "plan_a5637a2fae",
+  "title": "Mastering Calculus Limits and Derivatives",
+  "target_duration_sec": 300,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_c983251d8c",
+  "topic": "Mastering Calculus Limits and Derivatives",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "scale_tester",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 5,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Calculus Limits and Derivatives",
+      "duration_sec": 30,
+      "script": "Welcome to today's lesson on Mastering Calculus Limits and Derivatives! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_c983251d8c_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 105,
+      "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Calculus Limits and Derivatives\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Calculus Limits and Derivatives' in subject area: 'math'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Calculus Limits and Derivatives\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Calculus Limits and Derivatives' in subject area: 'math'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_c983251d8c_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 30,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+      "duration_sec": 105,
+      "script": "Now let's break down 'Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.'. The key concepts to master here are: Concept: Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Calculus Limits and Derivatives' in subject area: 'math'.. Key Principles:\n- Definition and motivation of 'Calculus Limits and Derivatives' in subject area: 'math'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Calculus Limits and Derivatives' in subject area: 'math'.",
+          "Key Principles:\n- Definition and motivation of 'Calculus Limits and Derivatives' in subject area: 'math'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_c983251d8c_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Calculus Limits and Derivatives",
+      "duration_sec": 30,
+      "script": "Fantastic job! In this lesson on Mastering Calculus Limits and Derivatives, we covered Topic Overview & Objectives, Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Mastering Calculus Limits and Derivatives",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 300,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Calculus Limits and Derivatives' in subject area: 'math'.",
+    "Apply standard problem-solving patterns in Mastering Calculus Limits and Derivatives"
+  ],
+  "created_at": "2026-09-01T10:55:15.573150+00:00",
+  "updated_at": null
+}

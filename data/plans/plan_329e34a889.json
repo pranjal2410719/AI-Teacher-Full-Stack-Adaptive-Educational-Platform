@@ -1,0 +1,278 @@
+{
+  "plan_id": "plan_329e34a889",
+  "title": "Mastering सौर ऊर्जा और प्रकाश संश्लेषण",
+  "target_duration_sec": 900,
+  "level": "beginner",
+  "language": "hi",
+  "document_id": null,
+  "topic_id": "top_e5ac206bea",
+  "topic": "Mastering सौर ऊर्जा और प्रकाश संश्लेषण",
+  "subject_domain": "biology",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "hi",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering सौर ऊर्जा और प्रकाश संश्लेषण",
+      "duration_sec": 60,
+      "script": "नमस्ते! Mastering सौर ऊर्जा और प्रकाश संश्लेषण के इस आसान और रोचक पाठ में आपका बहुत-बहुत स्वागत है। हम इसे सरल भाषा और वास्तविक जीवन के उदाहरणों से समझेंगे ताकि आपके सभी संदेह दूर हो सकें। आइए सीखते हैं!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_e5ac206bea_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Topic Overview & Objectives'। इसे आसानी से ऐसे समझें: Topic: सौर ऊर्जा और प्रकाश संश्लेषण\nCategory: biology\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'..। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "diagram",
+        "subject_domain": "biology",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: सौर ऊर्जा और प्रकाश संश्लेषण\nCategory: biology\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": "graph TD\n    A[Light Energy + 6 H2O] --> B[Thylakoid Membrane]\n    B --> C[Light Reactions: ATP + NADPH Produced]\n    C --> D[Stroma: Calvin Cycle]\n    D --> E[6 CO2 Fixed into Glucose C6H12O6]\n    B --> F[Oxygen Released as Byproduct]",
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Biological Fact: Chlorophyll a and b absorb blue and red light while reflecting green wavelengths."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_e5ac206bea_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "आइए अब एक व्यावहारिक उदाहरण देखते हैं। स्क्रीन पर दिखाए गए स्टेप-बाय-स्टेप वॉकथ्रू पर ध्यान दें। पहले चरण में हम प्रारंभिक मान स्थापित करते हैं, दूसरे में मुख्य प्रक्रिया लागू करते हैं, और अंत में परिणाम की पुष्टि करते हैं।",
+      "visual_spec": {
+        "visual_type": "comparison_table",
+        "subject_domain": "biology",
+        "headline": "Applied Step-by-Step Walkthrough",
+        "bullet_points": [
+          "Step 1: Frame the initial conditions and boundary variables",
+          "Step 2: Execute the core transformation mechanism",
+          "Step 3: Verify the outcome against diagnostic criteria"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Step",
+          "Action Performed",
+          "Expected Observable State"
+        ],
+        "table_rows": [
+          [
+            "1. Initialization",
+            "Define variables and prerequisites",
+            "System in baseline state"
+          ],
+          [
+            "2. Execution",
+            "Apply core formula or algorithmic process",
+            "State undergoes transition"
+          ],
+          [
+            "3. Verification",
+            "Compare result to reference benchmark",
+            "Optimal verified solution"
+          ]
+        ],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_e5ac206bea_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Topic Overview & Objectives पर एक त्वरित समझ की जांच करते हैं। Topic Overview & Objectives का मुख्य आधारभूत सिद्धांत क्या है?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "Topic Overview & Objectives का मुख्य आधारभूत सिद्धांत क्या है?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Topic Overview & Objectives requires following structured core principles and systematic steps.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.'। इसे आसानी से ऐसे समझें: Concept: Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.. Key Principles:\n- Definition and motivation of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "diagram",
+        "subject_domain": "biology",
+        "headline": "Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+          "Key Principles:\n- Definition and motivation of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": "graph TD\n    A[Light Energy + 6 H2O] --> B[Thylakoid Membrane]\n    B --> C[Light Reactions: ATP + NADPH Produced]\n    C --> D[Stroma: Calvin Cycle]\n    D --> E[6 CO2 Fixed into Glucose C6H12O6]\n    B --> F[Oxygen Released as Byproduct]",
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Biological Fact: Chlorophyll a and b absorb blue and red light while reflecting green wavelengths."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_e5ac206bea_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. पर एक त्वरित समझ की जांच करते हैं। Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. का मुख्य आधारभूत सिद्धांत क्या है?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. का मुख्य आधारभूत सिद्धांत क्या है?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. requires following structured core principles and systematic steps.",
+        "concept": "Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.'। इसे आसानी से ऐसे समझें: Concept: Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. Description:\nWorked walkthrough demonstrating 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. in practice with clear derivations। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "diagram",
+        "subject_domain": "biology",
+        "headline": "Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'",
+          "Description:\nWorked walkthrough demonstrating 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": "graph TD\n    A[Light Energy + 6 H2O] --> B[Thylakoid Membrane]\n    B --> C[Light Reactions: ATP + NADPH Produced]\n    C --> D[Stroma: Calvin Cycle]\n    D --> E[6 CO2 Fixed into Glucose C6H12O6]\n    B --> F[Oxygen Released as Byproduct]",
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Biological Fact: Chlorophyll a and b absorb blue and red light while reflecting green wavelengths."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_e5ac206bea_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering सौर ऊर्जा और प्रकाश संश्लेषण",
+      "duration_sec": 60,
+      "script": "बहुत बढ़िया! आज हमने Mastering सौर ऊर्जा और प्रकाश संश्लेषण के मुख्य पहलुओं को सफलतापूर्वक पूरा किया, जिसमें Topic Overview & Objectives, Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'., Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'. शामिल हैं। इन प्रमुख नियमों को याद रखें और अगले अभ्यास सत्र के लिए तैयार रहें। शानदार काम!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "biology",
+        "headline": "Key Takeaways: Mastering सौर ऊर्जा और प्रकाश संश्लेषण",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+          "Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'सौर ऊर्जा और प्रकाश संश्लेषण' in subject area: 'biology'.",
+    "Build intuitive foundational understanding of Mastering सौर ऊर्जा और प्रकाश संश्लेषण"
+  ],
+  "created_at": "2026-09-01T10:58:32.518011+00:00",
+  "updated_at": null
+}

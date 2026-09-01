@@ -1,0 +1,22 @@
+{
+  "session_id": "ses_rest_f8e726",
+  "student_id": "stu_default",
+  "language": "en",
+  "current_level": "intermediate",
+  "interaction_history": [
+    {
+      "timestamp": "2026-09-01T10:59:35.767640+00:00",
+      "question_id": "q_math_01",
+      "student_answer": "Tangent line slope is the limit of secant slopes as delta x approaches zero.",
+      "concept": "Calculus Limits",
+      "is_correct": true,
+      "score": 0.95,
+      "misconception": null
+    }
+  ],
+  "diagnosed_misconceptions": [],
+  "resolved_misconceptions": [],
+  "active_question_id": null,
+  "created_at": "2026-09-01T10:59:35.765588+00:00",
+  "updated_at": "2026-09-01T10:59:35.767722+00:00"
+}

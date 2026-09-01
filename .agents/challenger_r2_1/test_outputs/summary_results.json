@@ -1,0 +1,215 @@
+{
+  "timestamp": "2026-09-01T10:57:38Z",
+  "agent": "challenger_r2_1",
+  "suites": {
+    "tts_synthesis": {
+      "results": [
+        {
+          "test": "Standard English Technical Synthesis",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_49c71fe246dc50c8.mp3",
+          "duration": 9.048,
+          "size_bytes": 72384,
+          "codec": "mp3"
+        },
+        {
+          "test": "Hindi Devanagari Technical Script",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_ad7627c21fe45ebb.mp3",
+          "duration": 9.72,
+          "size_bytes": 77760,
+          "codec": "mp3"
+        },
+        {
+          "test": "Hinglish Code-Switching & Technical Mix",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_49573a77478cdb4b.mp3",
+          "duration": 12.12,
+          "size_bytes": 96960,
+          "codec": "mp3"
+        },
+        {
+          "test": "Long Script (>1000 characters stress test)",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_fd39e3739e47f31d.mp3",
+          "duration": 49.92,
+          "size_bytes": 399360,
+          "codec": "mp3"
+        },
+        {
+          "test": "Empty & Whitespace-Only Fallback",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_7acf14d3b196dcdd.mp3",
+          "duration": 2.472,
+          "size_bytes": 19776,
+          "codec": "mp3"
+        },
+        {
+          "test": "Unsupported Language Code Fallback",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/tts_408831e7577ee593.mp3",
+          "duration": 7.968,
+          "size_bytes": 63744,
+          "codec": "mp3"
+        },
+        {
+          "test": "Offline Synthesized Waveform Fallback",
+          "status": "PASS",
+          "file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/tts/test_offline_7.wav",
+          "duration": 5.0,
+          "size_bytes": 220544,
+          "codec": "pcm_s16le"
+        }
+      ],
+      "elapsed_sec": 16.14,
+      "total": 7,
+      "passed": 7
+    },
+    "visual_slides_hindi": {
+      "results": [
+        {
+          "test": "Math Slide with LaTeX & Devanagari Hindi Text",
+          "status": "PASS",
+          "image_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_test_1.png",
+          "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_clip_test_1.mp4",
+          "duration": 8.066667,
+          "resolution": "1280x720"
+        },
+        {
+          "test": "Computer Science Slide with Code & Hindi Comments",
+          "status": "PASS",
+          "image_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_test_2.png",
+          "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_clip_test_2.mp4",
+          "duration": 8.184,
+          "resolution": "1280x720"
+        },
+        {
+          "test": "Biology Cellular Diagram with Hindi Callouts",
+          "status": "PASS",
+          "image_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_test_3.png",
+          "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_clip_test_3.mp4",
+          "duration": 7.32,
+          "resolution": "1280x720"
+        },
+        {
+          "test": "History Chronological Timeline with Hindi Milestones",
+          "status": "PASS",
+          "image_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_test_4.png",
+          "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_clip_test_4.mp4",
+          "duration": 7.866667,
+          "resolution": "1280x720"
+        },
+        {
+          "test": "Extreme Boundary: Super Long Text & Special Characters",
+          "status": "PASS",
+          "image_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_test_5.png",
+          "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/slides/slide_clip_test_5.mp4",
+          "duration": 16.266667,
+          "resolution": "1280x720"
+        }
+      ],
+      "elapsed_sec": 34.4,
+      "total": 5,
+      "passed": 5
+    },
+    "video_pipeline_manifest": {
+      "results": [
+        {
+          "test": "English Calculus Hybrid Video",
+          "status": "PASS",
+          "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/les_11439aa9.mp4",
+          "duration": 23.050667,
+          "segments": 3,
+          "pause_markers": 1,
+          "language": "en"
+        },
+        {
+          "test": "Hindi CS Hybrid Video",
+          "status": "PASS",
+          "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/les_d8589336.mp4",
+          "duration": 23.762667,
+          "segments": 3,
+          "pause_markers": 1,
+          "language": "hi"
+        }
+      ],
+      "elapsed_sec": 66.62,
+      "total": 2,
+      "passed": 2
+    },
+    "interaction_language_switch": {
+      "results": [
+        {
+          "test": "Deliberate Wrong Answer & Misconception Diagnosis",
+          "status": "PASS"
+        },
+        {
+          "test": "Mid-Session Language Switch & Context Retention",
+          "status": "PASS"
+        },
+        {
+          "test": "Hindi Devanagari Answer Evaluation & Misconception Resolution",
+          "status": "PASS"
+        },
+        {
+          "test": "Adversarial Prompt Injection Defense",
+          "status": "PASS"
+        },
+        {
+          "test": "Side-Panel AI Tutor Chat & Language Sensitivity",
+          "status": "PASS"
+        },
+        {
+          "test": "Extreme Long Text Boundary Handling",
+          "status": "PASS"
+        }
+      ],
+      "elapsed_sec": 0.21,
+      "total": 6,
+      "passed": 6
+    },
+    "api_adversarial_stress": {
+      "results": [
+        {
+          "test": "Video Gen Non-Existent Plan 404",
+          "status": "PASS"
+        },
+        {
+          "test": "Video Status Non-Existent Task 404",
+          "status": "PASS"
+        },
+        {
+          "test": "Video Manifest Non-Existent 404",
+          "status": "PASS"
+        },
+        {
+          "test": "Empty Answer 422 Validation",
+          "status": "PASS"
+        },
+        {
+          "test": "Empty Target Language 422 Validation",
+          "status": "PASS"
+        },
+        {
+          "test": "Empty Chat Message 422 Validation",
+          "status": "PASS"
+        },
+        {
+          "test": "Valid REST Interactive Evaluation & Session Persistence",
+          "status": "PASS"
+        }
+      ],
+      "elapsed_sec": 0.41,
+      "total": 7,
+      "passed": 7
+    }
+  },
+  "summary": {
+    "total_tests": 27,
+    "total_passed": 27,
+    "total_failed": 0,
+    "pass_rate_percent": 100.0,
+    "total_elapsed_sec": 117.78,
+    "verdict": "APPROVE"
+  }
+}

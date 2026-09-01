@@ -1,0 +1,259 @@
+{
+  "plan_id": "plan_bb6f475c0c",
+  "title": "Mastering Advanced Sorting Algorithms",
+  "target_duration_sec": 900,
+  "level": "advanced",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_95dd683d40",
+  "topic": "Mastering Algorithm Sorting Techniques",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Algorithm Sorting Techniques",
+      "duration_sec": 60,
+      "script": "Hello and welcome! Today, we are going to explore Mastering Algorithm Sorting Techniques in a clear, intuitive, and fun way. We will use everyday analogies and visual breakdowns so you can grasp the fundamental ideas easily. Let's jump right in!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_95dd683d40_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 2,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_95dd683d40_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 3,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Topic Overview & Objectives'. Here is the simple intuition behind it: Topic: Algorithm Sorting Techniques\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Algorithm Sorting Techniques' in subject area: 'General'... Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Algorithm Sorting Techniques\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Algorithm Sorting Techniques' in subject area: 'General'.."
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_95dd683d40_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.'. Here is the simple intuition behind it: Concept: Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Algorithm Sorting Techniques' in subject area: 'General'.. Key Principles:\n- Definition and motivation of 'Algorithm Sorting Techniques' in subject area: 'General'. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Algorithm Sorting Techniques' in subject area: 'General'.",
+          "Key Principles:\n- Definition and motivation of 'Algorithm Sorting Techniques' in subject area: 'General'"
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_95dd683d40_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.. In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'.'. Here is the simple intuition behind it: Concept: Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'. Description:\nWorked walkthrough demonstrating 'Algorithm Sorting Techniques' in subject area: 'General'. in practice with clear derivations. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'",
+          "Description:\nWorked walkthrough demonstrating 'Algorithm Sorting Techniques' in subject area: 'General'",
+          "in practice with clear derivations"
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_95dd683d40_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Algorithm Sorting Techniques",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Mastering Algorithm Sorting Techniques, we covered Topic Overview & Objectives, Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'., Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Mastering Algorithm Sorting Techniques",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+          "Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Algorithm Sorting Techniques' in subject area: 'General'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Algorithm Sorting Techniques' in subject area: 'General'.",
+    "Build intuitive foundational understanding of Mastering Algorithm Sorting Techniques"
+  ],
+  "created_at": "2026-09-01T10:21:22.529675+00:00",
+  "updated_at": "2026-09-01T10:21:22.539572+00:00"
+}

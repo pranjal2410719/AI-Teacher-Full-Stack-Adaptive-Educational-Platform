@@ -1,0 +1,53 @@
+{
+  "quiz_id": "quiz_a360046f",
+  "lesson_id": "les_rapid_2",
+  "student_id": "stu_rapid_7c8d7f",
+  "title": "Post-Lesson Mastery Assessment: Lesson les_rapid_2",
+  "questions": [
+    {
+      "question_id": "quiz_q1",
+      "type": "mcq",
+      "prompt": "Which core principle is fundamental to understanding Lesson les_rapid_2?",
+      "options": [
+        "A: Systematic decomposition from first principles and foundational definitions",
+        "B: Memorization without underlying conceptual mechanism",
+        "C: Arbitrary ad-hoc guessing",
+        "D: Ignoring boundary conditions"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Foundational Principles",
+      "points": 1,
+      "explanation": "First principles understanding provides a robust mental model."
+    },
+    {
+      "question_id": "quiz_q2",
+      "type": "short_answer",
+      "prompt": "Summarize the most important practical takeaway from Lesson les_rapid_2.",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Understanding the core invariant and applying it to problem solving.",
+      "concept": "Practical Application",
+      "points": 1,
+      "explanation": "Application of theory to real-world scenarios."
+    },
+    {
+      "question_id": "quiz_q3",
+      "type": "mcq",
+      "prompt": "Conceptual Review Question 3 for Lesson les_rapid_2",
+      "options": [
+        "A: Accurate theoretical invariant",
+        "B: Common distractor misconception",
+        "C: Inverted rule",
+        "D: Undefined edge"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Advanced Application 3",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    }
+  ],
+  "total_points": 3,
+  "created_at": "2026-09-01T10:51:47.789962+00:00"
+}

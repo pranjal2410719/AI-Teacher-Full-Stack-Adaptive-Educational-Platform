@@ -1,0 +1,255 @@
+{
+  "plan_id": "plan_baf70bb63d",
+  "title": "Lesson on binary search trees",
+  "target_duration_sec": 900,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": "doc_d070564e51",
+  "topic_id": null,
+  "topic": "Lesson on binary search trees",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "test_verifier",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on binary search trees",
+      "duration_sec": 60,
+      "script": "Welcome to today's lesson on Lesson on binary search trees! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_doc_d070564e51_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Data Structures: Binary Search Trees (BST)",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Data Structures: Binary Search Trees (BST)'. The key concepts to master here are: Subject: Computer Science / Algorithms | Target Level: College / Intermediate. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Data Structures: Binary Search Trees (BST)",
+        "bullet_points": [
+          "Subject: Computer Science / Algorithms | Target Level: College / Intermediate"
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_doc_d070564e51_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Data Structures: Binary Search Trees (BST)",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_doc_d070564e51_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Data Structures: Binary Search Trees (BST)",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Data Structures: Binary Search Trees (BST). Why does binary search require the input array to be sorted beforehand?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "Why does binary search require the input array to be sorted beforehand?",
+        "question_type": "mcq",
+        "options": [
+          "A) To discard half of the remaining elements by comparing with the middle element",
+          "B) To make memory allocation faster",
+          "C) Because arrays cannot store unsorted numbers",
+          "D) To convert the array into a hash map"
+        ],
+        "correct_answer": "A",
+        "explanation": "Binary search relies on order to determine whether the target lies in the left or right partition.",
+        "concept": "Data Structures: Binary Search Trees (BST)",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Sorting does not change array memory allocation speed.",
+          "C": "Arrays can store unsorted elements."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "1. Definition and Binary Search Tree Invariant",
+      "duration_sec": 170,
+      "script": "Now let's break down '1. Definition and Binary Search Tree Invariant'. The key concepts to master here are: A Binary Search Tree (BST) is a hierarchical binary tree data structure where each node contains a key, and satisfies the binary search invariant: for any node N, all keys in N's left subtree are strictly less than N.key, and all keys in N's right subtree are strictly greater than N.key (assuming unique keys).. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "1. Definition and Binary Search Tree Invariant",
+        "bullet_points": [
+          "A Binary Search Tree (BST) is a hierarchical binary tree data structure where each node contains a key, and satisfies the binary search invariant: for any node N, all keys in N's left subtree are strictly less than N.key, and all keys in N's right subtree are strictly greater than N.key (assuming unique keys)."
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_doc_d070564e51_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: 1. Definition and Binary Search Tree Invariant",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on 1. Definition and Binary Search Tree Invariant. Why does binary search require the input array to be sorted beforehand?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "Why does binary search require the input array to be sorted beforehand?",
+        "question_type": "mcq",
+        "options": [
+          "A) To discard half of the remaining elements by comparing with the middle element",
+          "B) To make memory allocation faster",
+          "C) Because arrays cannot store unsorted numbers",
+          "D) To convert the array into a hash map"
+        ],
+        "correct_answer": "A",
+        "explanation": "Binary search relies on order to determine whether the target lies in the left or right partition.",
+        "concept": "1. Definition and Binary Search Tree Invariant",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Sorting does not change array memory allocation speed.",
+          "C": "Arrays can store unsorted elements."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "2. Node Structure in Python",
+      "duration_sec": 170,
+      "script": "Now let's break down '2. Node Structure in Python'. The key concepts to master here are: class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "2. Node Structure in Python",
+        "bullet_points": [
+          "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right"
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_doc_d070564e51_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Lesson on binary search trees",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Lesson on binary search trees, we covered Data Structures: Binary Search Trees (BST), 1. Definition and Binary Search Tree Invariant, 2. Node Structure in Python. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Lesson on binary search trees",
+        "bullet_points": [
+          "Data Structures: Binary Search Trees (BST)",
+          "1. Definition and Binary Search Tree Invariant",
+          "2. Node Structure in Python"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Data Structures: Binary Search Trees (BST)",
+    "Understand core principles of 1. Definition and Binary Search Tree Invariant",
+    "Understand core principles of 2. Node Structure in Python",
+    "Apply standard problem-solving patterns in Lesson on binary search trees"
+  ],
+  "created_at": "2026-09-01T10:55:15.485180+00:00",
+  "updated_at": null
+}

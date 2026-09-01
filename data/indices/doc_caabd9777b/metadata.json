@@ -1,0 +1,15 @@
+{
+  "document_id": "doc_caabd9777b",
+  "filename": "large_algo_doc.txt",
+  "file_type": "txt",
+  "file_size_bytes": 60778,
+  "total_pages": 500,
+  "chunk_count": 500,
+  "extracted_summary": "Parametric Educational Analysis:\n- Thorough conceptual explanation grounded in standard curriculum principles.\n- Detailed breakdown addressing core mechanics, concrete examples, and diagnostic checks.\n- Formulated to facilitate structured comprehension and step-by-step mastery.",
+  "created_at": "2026-08-31T19:48:51.059361+00:00",
+  "status": "ready",
+  "metadata_extra": {
+    "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_caabd9777b_large_algo_doc.txt",
+    "total_sections": 500
+  }
+}

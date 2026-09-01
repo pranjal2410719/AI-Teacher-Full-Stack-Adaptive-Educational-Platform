@@ -1,0 +1,165 @@
+{
+  "lesson_id": "les_061d6f09",
+  "video_id": "les_061d6f09",
+  "plan_id": "plan_59f7b47742",
+  "title": "Mastering Calculus Limits and Geometric Derivatives",
+  "video_url": "/api/v1/video/stream/les_061d6f09.mp4",
+  "total_duration_sec": 122.59,
+  "duration_sec": 122.59,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Mastering Calculus Limits and Geometric Derivatives",
+      "start_sec": 0.0,
+      "end_sec": 18.1,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.1,
+      "end_sec": 49.22,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 49.22,
+      "end_sec": 59.35,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Foundational Principles of 'Calculus Limits and Geometric Derivatives' in subject area: 'math'.",
+      "start_sec": 59.35,
+      "end_sec": 100.73,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Mastering Calculus Limits and Geometric Derivatives",
+      "start_sec": 100.73,
+      "end_sec": 122.59,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Mastering Calculus Limits and Geometric Derivatives",
+      "start_sec": 0.0,
+      "end_sec": 18.1,
+      "duration_sec": 18.1,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_061d6f09_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_4d27a1eaee6cafa4.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.1,
+      "end_sec": 49.22,
+      "duration_sec": 31.13,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_061d6f09_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_a613561b85c49571.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 49.22,
+      "end_sec": 59.35,
+      "duration_sec": 10.13,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_061d6f09_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_bc2af92dd332c525.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Foundational Principles of 'Calculus Limits and Geometric Derivatives' in subject area: 'math'.",
+      "start_sec": 59.35,
+      "end_sec": 100.73,
+      "duration_sec": 41.38,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_061d6f09_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_12f7025a4f33b3bd.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Mastering Calculus Limits and Geometric Derivatives",
+      "start_sec": 100.73,
+      "end_sec": 122.59,
+      "duration_sec": 21.86,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_061d6f09_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_3b6d0e68cd9b0dba.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_003",
+      "timestamp_sec": 54.28,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_003",
+      "timestamp_sec": 54.28,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    }
+  ],
+  "created_at": "2026-08-31T19:44:58.246910+00:00"
+}

@@ -1,0 +1,255 @@
+{
+  "plan_id": "plan_523b41e150",
+  "title": "Lesson on SDEresume",
+  "target_duration_sec": 900,
+  "level": "beginner",
+  "language": "hi",
+  "document_id": "doc_7c411542d0",
+  "topic_id": null,
+  "topic": "Lesson on SDEresume",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "stu_default",
+    "level": "beginner",
+    "language": "hi",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on SDEresume",
+      "duration_sec": 60,
+      "script": "नमस्ते! Lesson on SDEresume के इस आसान और रोचक पाठ में आपका बहुत-बहुत स्वागत है। हम इसे सरल भाषा और वास्तविक जीवन के उदाहरणों से समझेंगे ताकि आपके सभी संदेह दूर हो सकें। आइए सीखते हैं!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Pranjal Yadav'। इसे आसानी से ऐसे समझें: Pranjal Yadav\nKanpur, Uttar Pradesh | 2k24.cs1l.2410719@gmail.com | Portfolio | GitHub | LinkedIn | LeetCode\nEducation\nPranveer Singh Institute of Technology (PSIT), Kanpur, UP Expected May 2028\nBachelor of Technology in Computer Science & Engineering CGPA: 6.9/10 (through Sem IV)\nTechnical Skills\n Languages: JavaScript (ES6+), TypeScript, Python\n Frontend: React 19, Next.js 16, Tailwind CSS, HTML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modu। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "Pranjal Yadav\nKanpur, Uttar Pradesh | 2k24.cs1l.2410719@gmail.com | Portfolio | GitHub | LinkedIn | LeetCode\nEducation\nPranveer Singh Institute of Technology (PSIT), Kanpur, UP Expected May 2028\nBachelor of Technology in Computer Science & Engineering CGPA: 6.9/10 (through Sem IV)\nTechnical Skills\n Languages: JavaScript (ES6+), TypeScript, Python\n Frontend: React 19, Next.js 16, Tailwind CSS, HTML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modu"
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Pranjal Yadav",
+      "duration_sec": 150,
+      "script": "आइए अब एक व्यावहारिक उदाहरण देखते हैं। स्क्रीन पर दिखाए गए स्टेप-बाय-स्टेप वॉकथ्रू पर ध्यान दें। पहले चरण में हम प्रारंभिक मान स्थापित करते हैं, दूसरे में मुख्य प्रक्रिया लागू करते हैं, और अंत में परिणाम की पुष्टि करते हैं।",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Pranjal Yadav पर एक त्वरित समझ की जांच करते हैं। पायथन में, `numbers = [10, 20, 30]` में `numbers[0]` क्या आउटपुट देगा?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "पायथन में, `numbers = [10, 20, 30]` में `numbers[0]` क्या आउटपुट देगा?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Pranjal Yadav'। इसे आसानी से ऐसे समझें: ML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modular Architecture,\nSandboxing & Isolation Patterns\n Data & Auth: PostgreSQL, Prisma ORM, Supabase, JWT-based Auth\n Tools & Cloud: Git, GitHub, VS Code, Netlify, Vercel, Postman, CI-style Build Pipelines\nFull-Stack & Web Projects\ndev-mcp — AI Engineering Operating System (MCP Server) GitHub\n Architected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (sessi। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "ML5/CSS3\n Backend & System Design: Node.js, Express.js, RESTful API Design, Microservice-style Modular Architecture,\nSandboxing & Isolation Patterns\n Data & Auth: PostgreSQL, Prisma ORM, Supabase, JWT-based Auth\n Tools & Cloud: Git, GitHub, VS Code, Netlify, Vercel, Postman, CI-style Build Pipelines\nFull-Stack & Web Projects\ndev-mcp — AI Engineering Operating System (MCP Server) GitHub\n Architected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (sessi"
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Pranjal Yadav",
+      "duration_sec": 60,
+      "script": "आइए यहाँ Pranjal Yadav पर एक त्वरित समझ की जांच करते हैं। पायथन में, `numbers = [10, 20, 30]` में `numbers[0]` क्या आउटपुट देगा?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "पायथन में, `numbers = [10, 20, 30]` में `numbers[0]` क्या आउटपुट देगा?",
+        "question_type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Pranjal Yadav",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Pranjal Yadav",
+      "duration_sec": 170,
+      "script": "अब आइए देखें 'Pranjal Yadav'। इसे आसानी से ऐसे समझें: ected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (session\norchestration, task backlog, PRD validation, Git ops, sandboxed file I/O) to give AI coding agents persistent, stateful\nproject context.। यह ठीक वैसे ही काम करता है जैसे हमारे दैनिक जीवन में एक आसान नियम काम करता है!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Pranjal Yadav",
+        "bullet_points": [
+          "ected a Python-based Model Context Protocol (MCP) server exposing 70+ tools across 11 modules (session\norchestration, task backlog, PRD validation, Git ops, sandboxed file I/O) to give AI coding agents persistent, stateful\nproject context."
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_doc_7c411542d0_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Lesson on SDEresume",
+      "duration_sec": 60,
+      "script": "बहुत बढ़िया! आज हमने Lesson on SDEresume के मुख्य पहलुओं को सफलतापूर्वक पूरा किया, जिसमें Pranjal Yadav, Pranjal Yadav, Pranjal Yadav शामिल हैं। इन प्रमुख नियमों को याद रखें और अगले अभ्यास सत्र के लिए तैयार रहें। शानदार काम!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Lesson on SDEresume",
+        "bullet_points": [
+          "Pranjal Yadav",
+          "Pranjal Yadav",
+          "Pranjal Yadav"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Understand core principles of Pranjal Yadav",
+    "Build intuitive foundational understanding of Lesson on SDEresume"
+  ],
+  "created_at": "2026-09-01T18:40:08.452296+00:00",
+  "updated_at": null
+}

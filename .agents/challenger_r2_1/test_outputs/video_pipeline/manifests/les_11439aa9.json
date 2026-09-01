@@ -1,0 +1,111 @@
+{
+  "lesson_id": "les_11439aa9",
+  "video_id": "les_11439aa9",
+  "plan_id": "plan_math_en_5a1121",
+  "title": "Introduction to Calculus: Limits & Rates of Change",
+  "video_url": "/api/v1/video/stream/les_11439aa9.mp4",
+  "total_duration_sec": 22.99,
+  "duration_sec": 22.99,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Welcome to Calculus",
+      "start_sec": 0.0,
+      "end_sec": 7.63,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Limits & Secant Slopes",
+      "start_sec": 7.63,
+      "end_sec": 15.5,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Calculus Summary & Takeaways",
+      "start_sec": 15.5,
+      "end_sec": 22.99,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_01_intro",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Welcome to Calculus",
+      "start_sec": 0.0,
+      "end_sec": 7.63,
+      "duration_sec": 7.63,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/clips/les_11439aa9_seg_01_seg_01_intro.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/audio/tts_d98f3c6cf1d47f7a.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_02_math_slide",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Limits & Secant Slopes",
+      "start_sec": 7.63,
+      "end_sec": 15.5,
+      "duration_sec": 7.87,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/clips/les_11439aa9_seg_02_seg_02_math_slide.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/audio/tts_2b0db55c83e996e1.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_03_summary",
+      "order": 3,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Calculus Summary & Takeaways",
+      "start_sec": 15.5,
+      "end_sec": 22.99,
+      "duration_sec": 7.49,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/clips/les_11439aa9_seg_03_seg_03_summary.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/.agents/challenger_r2_1/test_outputs/video_pipeline/audio/tts_68faf44fc25dcd64.mp3",
+      "visual_type": null
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_calc_01",
+      "checkpoint_id": "chk_seg_02_math_slide",
+      "timestamp_sec": 11.57,
+      "concept": "Secant vs Tangent Slope",
+      "question": {
+        "question_id": "chk_calc_01",
+        "question_text": "What does the slope of the secant line represent compared to the tangent line?",
+        "question_type": "short_answer",
+        "options": [],
+        "correct_answer": "Secant represents average rate of change over an interval, while tangent represents instantaneous rate of change.",
+        "explanation": "Secant slope connects two points across delta t; tangent slope is the instantaneous limit as delta t approaches zero.",
+        "concept": "Secant vs Tangent Slope",
+        "difficulty": "medium",
+        "misconception_distractors": {},
+        "prompt": "What does the slope of the secant line represent compared to the tangent line?"
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_calc_01",
+      "checkpoint_id": "chk_seg_02_math_slide",
+      "timestamp_sec": 11.57,
+      "concept": "Secant vs Tangent Slope",
+      "question": {
+        "question_id": "chk_calc_01",
+        "question_text": "What does the slope of the secant line represent compared to the tangent line?",
+        "question_type": "short_answer",
+        "options": [],
+        "correct_answer": "Secant represents average rate of change over an interval, while tangent represents instantaneous rate of change.",
+        "explanation": "Secant slope connects two points across delta t; tangent slope is the instantaneous limit as delta t approaches zero.",
+        "concept": "Secant vs Tangent Slope",
+        "difficulty": "medium",
+        "misconception_distractors": {},
+        "prompt": "What does the slope of the secant line represent compared to the tangent line?"
+      }
+    }
+  ],
+  "created_at": "2026-09-01T10:59:00.696393+00:00"
+}

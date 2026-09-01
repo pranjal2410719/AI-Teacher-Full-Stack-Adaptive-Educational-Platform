@@ -1,0 +1,31 @@
+{
+  "session_id": "ses_math_corr",
+  "student_id": "stu_default",
+  "language": "en",
+  "current_level": "intermediate",
+  "interaction_history": [
+    {
+      "timestamp": "2026-09-01T10:55:16.627407+00:00",
+      "question_id": "q_calc_01",
+      "student_answer": "Both left-hand and right-hand limits must exist and be strictly equal to each other.",
+      "concept": "Foundational Limits",
+      "is_correct": true,
+      "score": 0.95,
+      "misconception": null
+    },
+    {
+      "timestamp": "2026-09-01T10:56:56.942054+00:00",
+      "question_id": "q_calc_01",
+      "student_answer": "Both left-hand and right-hand limits must exist and be strictly equal to each other.",
+      "concept": "Foundational Limits",
+      "is_correct": true,
+      "score": 0.95,
+      "misconception": null
+    }
+  ],
+  "diagnosed_misconceptions": [],
+  "resolved_misconceptions": [],
+  "active_question_id": null,
+  "created_at": "2026-09-01T10:55:16.622494+00:00",
+  "updated_at": "2026-09-01T10:56:56.942135+00:00"
+}

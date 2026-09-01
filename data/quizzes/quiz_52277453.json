@@ -1,0 +1,53 @@
+{
+  "quiz_id": "quiz_52277453",
+  "lesson_id": "les_calculus_01",
+  "student_id": "stu_persistent_5519ac",
+  "title": "Post-Lesson Mastery Assessment: Lesson les_calculus_01",
+  "questions": [
+    {
+      "question_id": "quiz_q1",
+      "type": "mcq",
+      "prompt": "Under what mathematical condition does a two-sided limit lim_{x->c} f(x) exist?",
+      "options": [
+        "A: Both left-hand and right-hand limits exist and are strictly equal",
+        "B: The function value f(c) must be strictly non-zero",
+        "C: The derivative f'(c) must be positive everywhere",
+        "D: The secant line slope must equal zero"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Foundational Limits",
+      "points": 1,
+      "explanation": "A two-sided limit exists if and only if both one-sided limits exist and agree."
+    },
+    {
+      "question_id": "quiz_q2",
+      "type": "mcq",
+      "prompt": "What is the geometric difference between a secant line and a tangent line?",
+      "options": [
+        "A: A secant line connects two points (average rate); a tangent touches at one point (instantaneous rate)",
+        "B: A secant line is always horizontal while a tangent line is always vertical",
+        "C: A secant line requires delta t -> 0, while a tangent line does not",
+        "D: There is no mathematical distinction between secant and tangent slopes"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Secant vs Tangent Slope Interpretation",
+      "points": 1,
+      "explanation": "The secant slope represents average rate of change over an interval, while the tangent slope is the instantaneous derivative."
+    },
+    {
+      "question_id": "quiz_q3",
+      "type": "short_answer",
+      "prompt": "State the formal epsilon-delta definition of a limit in your own words.",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "For every epsilon > 0, there exists a delta > 0 such that 0 < |x - c| < delta implies |f(x) - L| < epsilon.",
+      "concept": "Epsilon-Delta Definition",
+      "points": 1,
+      "explanation": "Epsilon controls the vertical tolerance around L, and delta controls the horizontal neighborhood around c."
+    }
+  ],
+  "total_points": 3,
+  "created_at": "2026-09-01T10:35:50.860473+00:00"
+}

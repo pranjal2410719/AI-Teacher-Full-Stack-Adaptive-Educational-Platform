@@ -1,0 +1,78 @@
+{
+  "student_id": "stu_eval_test",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 4,
+  "average_mastery_percent": 66.6,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Epsilon-Delta Definition": 1.0,
+    "Foundational Limits": 1.0,
+    "Secant vs Tangent Slope Interpretation": 1.0
+  },
+  "known_weak_areas": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "weak_areas": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 33.3,
+      "strong_concepts": [
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "date": "2026-09-01T10:55:16.690500+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 33.3,
+      "strong_concepts": [
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "date": "2026-09-01T10:55:45.965040+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 100.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "date": "2026-09-01T10:56:14.524438+00:00"
+    },
+    {
+      "lesson_id": "les_calculus_limits",
+      "score": 100.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "date": "2026-09-01T10:56:56.991949+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_calculus_limits"
+  ],
+  "total_time_spent_min": 60,
+  "created_at": "2026-09-01T10:55:16.664973+00:00",
+  "updated_at": "2026-09-01T10:56:56.991995+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "document_id": "doc_f12811e1e6",
+  "filename": "fake.docx",
+  "file_type": "docx",
+  "file_size_bytes": 56,
+  "total_pages": 1,
+  "chunk_count": 1,
+  "extracted_summary": "Summary of fake.docx: Empty DOCX document: fake.docx.",
+  "created_at": "2026-08-31T19:32:46.737985+00:00",
+  "status": "ready",
+  "metadata_extra": {
+    "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_f12811e1e6_fake.docx",
+    "total_sections": 0
+  }
+}
