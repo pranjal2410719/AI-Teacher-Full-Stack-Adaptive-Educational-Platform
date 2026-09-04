@@ -5,7 +5,7 @@
 [![Architecture Tier](https://img.shields.io/badge/Architecture-5--Tier%20Modular-purple.svg)](#system-architecture-overview)
 [![Video Engine](https://img.shields.io/badge/Video%20Pipeline-FFmpeg%20720p%2030fps-rose.svg)](#hybrid-video-generation-pipeline-r3)
 
-Welcome to the comprehensive architectural documentation for the **AI Teacher** platform. This document provides an in-depth exploration of the system's design, component interactions, pedagogical state machines, media rendering pipelines, and technical decision rationale.
+Welcome to the comprehensive architectural documentation for the **ApniHelp** platform. This document provides an in-depth exploration of the system's design, component interactions, pedagogical state machines, media rendering pipelines, and technical decision rationale.
 
 ---
 
@@ -39,7 +39,7 @@ Welcome to the comprehensive architectural documentation for the **AI Teacher** 
 
 Traditional online educational video delivery is inherently passive, linear, and non-adaptive. If a student struggles with a prerequisite concept, the video continues uninterrupted, leading to cognitive disengagement.
 
-The **AI Teacher** platform solves this fundamental limitation by combining:
+The **ApniHelp** platform solves this fundamental limitation by combining:
 1. **RAG-Grounded Parametric & Document Ingestion**: Eliminating hallucinations by grounding lesson plans in uploaded course materials (PDF, DOCX, PPTX, TXT) or verified syllabus structures.
 2. **Pedagogical Duration Scaling**: Dynamically structuring learning modules whether the student has 5 minutes for a quick summary or 60 minutes for a deep dive.
 3. **Hybrid Neural Video Synthesis**: Merging human teacher rapport (via 2.5D audio-driven viseme avatars) with rich, subject-aware technical visuals (LaTeX math equations, syntax-highlighted IDE windows, biological cell callouts, chronological timelines).
@@ -71,9 +71,9 @@ The entire architecture is engineered around the complete cognitive model of exp
 
 ## 3. Visual Architecture Diagram
 
-The AI Teacher platform is organized into five decoupled tiers:
+The ApniHelp platform is organized into five decoupled tiers:
 
-![AI Teacher System Architecture](architecture_diagram.png)
+![ApniHelp System Architecture](architecture_diagram.png)
 
 *Vector format available for high-DPI scaling: [architecture_diagram.svg](architecture_diagram.svg).*
 

@@ -1,5 +1,5 @@
 """
-AI Teacher Core Platform - FastAPI Application Entry Point.
+ApniHelp Core Platform - FastAPI Application Entry Point.
 """
 
 import logging
@@ -23,13 +23,13 @@ from backend.app.services.assessment_service import assessment_service
 from backend.app.services.profile_service import profile_service
 from backend.app.services.llm_client import llm_client
 
-logger = logging.getLogger("ai_teacher.main")
+logger = logging.getLogger("apnihelp.main")
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
-    description="Full-Stack AI Teacher Educational Platform API powering adaptive human-teaching loops.",
+    description="ApniHelp Full-Stack Educational Platform API powering adaptive human-teaching loops.",
     docs_url="/docs",
     redoc_url="/redoc"
 )
@@ -90,7 +90,7 @@ async def health_check():
 @app.get("/", tags=["Root"])
 async def root():
     return {
-        "message": "Welcome to AI Teacher Core Server",
+        "message": "Welcome to ApniHelp Core Server",
         "version": settings.app_version,
         "docs": "/docs",
         "health": "/api/v1/health"

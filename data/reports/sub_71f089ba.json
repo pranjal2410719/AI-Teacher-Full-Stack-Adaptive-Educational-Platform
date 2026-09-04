@@ -1,0 +1,49 @@
+{
+  "submission_id": "sub_71f089ba",
+  "quiz_id": "quiz_c5a1e9dd",
+  "student_id": "stu_challenger_e2e_b394884a",
+  "lesson_id": "plan_1d4fb8b9d9",
+  "score_percent": 66.7,
+  "total_points_earned": 2.0,
+  "total_points_possible": 3.0,
+  "strong_concepts": [
+    "Foundational Limits",
+    "Epsilon-Delta Definition"
+  ],
+  "weak_concepts": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "misconceptions_resolved": [
+    "Resolved secant line confusion via trip analogy"
+  ],
+  "misconceptions_identified": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "recommended_revision": "Review geometric tangent slope visualization",
+  "recommended_next_topics": [
+    {
+      "topic": "Product and Quotient Rules in Calculus",
+      "level": "intermediate",
+      "rationale": "Direct continuation of derivative differentiation rules.",
+      "prerequisite_concepts": [
+        "Foundational Limits",
+        "Derivative Definition"
+      ]
+    },
+    {
+      "topic": "Chain Rule for Composite Functions",
+      "level": "intermediate",
+      "rationale": "Essential prerequisite for trigonometric and exponential derivatives.",
+      "prerequisite_concepts": [
+        "Power Rule",
+        "Function Composition"
+      ]
+    }
+  ],
+  "suggested_next_topics": [
+    "Product and Quotient Rules in Calculus",
+    "Chain Rule for Composite Functions"
+  ],
+  "learning_report_summary": "Diagnostic Assessment completed with 66.7% mastery. You showed exceptional grasp of Foundational Limits, Epsilon-Delta Definition.",
+  "created_at": "2026-09-04T18:38:27.762404+00:00"
+}

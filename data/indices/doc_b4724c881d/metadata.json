@@ -1,0 +1,15 @@
+{
+  "document_id": "doc_b4724c881d",
+  "filename": "fake.pptx",
+  "file_type": "pptx",
+  "file_size_bytes": 360,
+  "total_pages": 1,
+  "chunk_count": 1,
+  "extracted_summary": "Summary of fake.pptx: Empty presentation: fake.pptx.",
+  "created_at": "2026-09-02T11:22:18.699477+00:00",
+  "status": "ready",
+  "metadata_extra": {
+    "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_b4724c881d_fake.pptx",
+    "total_sections": 0
+  }
+}

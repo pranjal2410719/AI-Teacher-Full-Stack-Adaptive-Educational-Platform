@@ -1,154 +1,119 @@
 # Original User Request
 
-## 2026-08-31T19:12:07Z
+## 2026-09-02T11:03:46Z
 
-Build a full-stack **AI Teacher** web application for the AI Innovation Hackathon 2026. The system ingests uploaded educational materials (PDF, DOCX, PPT, TXT, etc.) or accepts a free-text topic, then delivers personalized, adaptive, multilingual lessons through an AI-generated hybrid video experience — following a genuine human teaching loop: **Understand → Plan → Explain → Demonstrate → Question → Evaluate → Adapt → Continue**.
+Perform a deep, real-user audit of the AI Teacher Adaptive Learning Platform — a full-stack app with a React/Vite frontend and FastAPI backend. Simulate the entire user journey end-to-end across the critical 4-stage path, find every broken flow, UI inconsistency, backend error, and logic gap, then fix them in-place and verify the full loop works from start to finish.
 
 Working directory: /home/dev/Desktop/projects/AI-InnovationHackathon
-Integrity mode: demo
 
-### Stack Constraints (explicitly requested)
-- **LLM**: Free-tier cloud APIs only — Groq free tier and/or Google AI Studio (Gemini) free tier. No paid APIs.
-- **TTS / Voice**: gTTS or edge-tts (multilingual, open-source/free).
-- **Talking Avatar**: Local open-source lip-sync model — SadTalker, Wav2Lip, or LatentSync (image + audio → talking head video).
-- **Avatar format**: Hybrid — talking avatar for lesson intro and summary segments; rich AI-generated visual slides (diagrams, equations, code, timelines, images) for concept explanation segments.
-- **Frontend**: React / Next.js.
-- **Backend**: Python (FastAPI or similar).
-- **Quality bar**: Hackathon demo quality — impressive, working prototype; minor rough edges acceptable.
+Integrity mode: benchmark
+
+---
+
+## Context
+
+The app is a 5-tab pipeline: **Ingestion → Lesson Plan → Video & Checks → Quiz & Report → Profile & Analytics**.
+
+Key files:
+- Frontend entry: `frontend/src/App.tsx`
+- API layer: `frontend/src/services/api.ts` (base: `/api/v1`)
+- All tabs: `frontend/src/components/{Ingestion,Planner,VideoPlayer,Assessment,Analytics}/`
+- Backend: FastAPI at `localhost:8000` (already running)
+- Frontend dev server: run with `cd frontend && npm run dev` (port 5173) if needed
+- Build: `cd frontend && npm run build`
+
+The 5 stages and what each does:
+1. **Ingestion** — Upload doc (PDF/DOCX/PPTX) OR type a topic → `POST /api/v1/materials/upload` or `POST /api/v1/materials/topic`
+2. **Lesson Plan** — ProfileModal auto-opens → user sets level/language → `POST /api/v1/lessons/plan` → editable plan
+3. **Video & Checks** — `POST /api/v1/lessons/generate-video` → async poll → video player with pause markers *(skip for audit — treat as best-effort)*
+4. **Quiz & Report** — `POST /api/v1/assessment/generate` + `POST /api/v1/assessment/submit` → LearningReport
+5. **Analytics** — `GET /api/v1/profile/{id}` + `GET /api/v1/profile/{id}/recommendations` → AnalyticsDashboard
+
+Note: A previous audit run was interrupted by a server restart. The `.agents/` directory in the working directory contains leftover scaffolding from the previous run — ignore it and start fresh.
 
 ---
 
 ## Requirements
 
-### R1. Learning Material Ingestion & RAG
-The system must accept uploaded educational files (PDF, DOCX, PPT/PPTX, TXT) and plain-text topic inputs. When material is uploaded, the system must parse and chunk it, embed it into a vector store, and use RAG to ground all lesson content in the uploaded source — minimizing hallucination. When no file is uploaded, the system generates lesson content from the LLM's parametric knowledge for the stated topic.
+### R1. Backend API Audit
+Test every API endpoint used by the frontend against the running backend at `localhost:8000`. For each endpoint: send a realistic request, check the response shape matches what the frontend's TypeScript types expect, and document any mismatch, 4xx/5xx error, missing field, or wrong data type. Fix backend issues found.
 
-### R2. Personalized Lesson Planning
-Before generating any video, the system must collect a learner profile: educational level (beginner / intermediate / advanced), preferred language, available time, and optionally prior knowledge or learning objective. From this profile and the source material, the system must generate a structured lesson plan — covering which concepts to teach, in what order, at what depth, with what examples and visuals — adapted to the time budget (e.g., 5 min → key concepts only; 60 min → full lesson with examples, questions, assessment).
+### R2. Frontend Flow Audit
+Simulate the full user journey through the critical path (Ingestion → Lesson Plan → Quiz & Report → Analytics) by reading the component code and tracing state transitions in `App.tsx`. Identify: broken tab transitions, missing loading/error states, uncaught promise rejections, state that never gets set, components that never render due to a guard condition being wrong, and any dead ends where the user cannot proceed. Fix all issues found.
 
-### R3. AI Teaching Video Generation (Hybrid)
-The system must produce a teaching video composed of:
-- **Talking avatar segments**: A local lip-sync model (SadTalker / Wav2Lip / LatentSync) applied to a static avatar image + TTS audio, used for the lesson intro, concept transitions, and summary.
-- **Visual explanation slides**: AI-generated subject-aware visuals rendered as video frames — e.g., equations + step-by-step solutions for math, labeled diagrams for biology, code blocks + execution flow for programming, timelines for history. These slides are narrated by TTS voice.
-- Video segments are stitched together (e.g., via MoviePy or FFmpeg) into a single downloadable/streamable lesson video.
-- The system must support multilingual TTS (at minimum English and Hindi) using gTTS or edge-tts, matching the learner's chosen language.
+### R3. UI Consistency & Integrity
+The app uses a strict dark slate theme (`bg-slate-950`/`slate-900` backgrounds, `purple`/`indigo` brand, `emerald` accent, `amber` warnings). Audit every component for: hardcoded light colors that break the theme (`#fdfbf9`, `#2b1a07`, cream/brown tones), missing hover states on interactive elements, buttons that look like divs or vice-versa, and missing empty states. Fix all inconsistencies to match the theme established in `Header.tsx` and the already-redesigned `AnalyticsDashboard.tsx`.
 
-### R4. Interactive & Adaptive Teaching Loop
-The system must not simply play a video and stop. During or after lesson segments, it must:
-- Ask the student conceptual, MCQ, short-answer, or problem-solving questions at appropriate points.
-- Evaluate the student's text response using the LLM.
-- Detect incorrect answers and misconceptions, and generate a re-explanation (different analogy or example) rather than just marking wrong.
-- Adapt the next lesson segment's difficulty and depth based on the student's performance so far.
-- Maintain full lesson context across the interaction (language switches, follow-up questions, re-explanations).
-- Support multilingual interaction: student can switch language mid-lesson (e.g., "explain this in Hindi") and the system must continue in the new language.
+### R4. Adaptive Loop Integrity
+Verify the feedback loop closes correctly: after a quiz is submitted, the learner profile is updated with mastery scores and weak areas, and the Analytics tab shows the correct updated data including AI recommendations. Trace the data from `POST /assessment/submit` → profile update → `GET /profile/{id}/recommendations` and confirm no data is dropped or stale. Fix any breaks.
 
-### R5. Assessment, Learning Profile & Next-Step Recommendation
-After completing a lesson, the system must:
-- Conduct a final quiz (mix of MCQ and short-answer).
-- Generate a learning report: score, strong concepts, weak concepts, misconceptions identified, recommended revision, and suggested next topic.
-- Persist a student learning profile (local storage or simple DB) containing topics studied, scores, weak areas, and learning history.
-- Use the profile to personalize future sessions (e.g., skip already-mastered concepts, flag previously weak areas for reinforcement).
+### R5. Rebuild and Git Push
+After all fixes are applied, run `cd /home/dev/Desktop/projects/AI-InnovationHackathon/frontend && npm run build` and confirm it exits with code 0 and zero TypeScript errors. Then commit all changes with a descriptive message and push to `origin main`.
 
 ---
 
 ## Acceptance Criteria
 
-### Document Ingestion & RAG
-- [ ] Uploading a PDF/DOCX/PPT file results in a lesson grounded in that document's content, not fabricated facts.
-- [ ] A question about uploaded material returns an answer sourced from the document (verifiable by checking against the file).
-- [ ] Topic-only mode (no file) produces a structured lesson without errors.
+### Backend API Health
+- [ ] All 10 API endpoints used by the frontend return responses that structurally match the TypeScript types in `frontend/src/types/index.ts`
+- [ ] No endpoint returns a 500 error on a valid realistic request
+- [ ] Missing or incorrect fields in responses are identified and fixed
 
-### Lesson Planning & Personalization
-- [ ] Selecting "beginner" vs "advanced" produces visibly different lesson depth and vocabulary.
-- [ ] A 5-minute time budget produces a shorter, narrower lesson than a 60-minute budget on the same topic.
-- [ ] The lesson plan (concept list, order, depth) is shown to the user before video generation begins.
+### Frontend Flow Completeness
+- [ ] The user can complete the full critical path (Ingestion → Plan → Quiz → Analytics) without hitting a dead end, crash, or blank screen
+- [ ] Every tab transition in `App.tsx` is guarded correctly — no tab renders with `null` data
+- [ ] All async operations (API calls) have loading states and error handling visible to the user
 
-### Video Generation
-- [ ] The system produces a complete stitched video file for a lesson (no broken segments, no silent audio).
-- [ ] The video contains at least one talking-avatar segment and at least one visual-slide segment.
-- [ ] The TTS audio is intelligible and in the selected language (English and Hindi at minimum).
-- [ ] Subject-aware visuals are used: math lessons include rendered equations; code lessons include syntax-highlighted code blocks; at least 2 different subject types are demonstrated.
+### UI Consistency
+- [ ] Zero components use `#fdfbf9`, `#2b1a07`, or any cream/brown hardcoded color
+- [ ] Every clickable element (button, card, recommendation) has a visible hover state
+- [ ] All empty states show an icon + descriptive message (no blank white boxes)
 
-### Interactive Teaching Loop
-- [ ] The system pauses at least once during a lesson to ask the student a question.
-- [ ] A deliberately wrong answer triggers a re-explanation, not just "incorrect."
-- [ ] Switching language mid-session (e.g., typing "explain in Hindi") results in the next response in Hindi.
-- [ ] After a wrong answer followed by re-explanation, the system asks a follow-up question to re-evaluate understanding.
+### Adaptive Loop
+- [ ] After quiz submission, `profile.concept_mastery`, `profile.known_weak_areas`, and `profile.average_mastery_percent` reflect the quiz results when the Analytics tab loads
+- [ ] `GET /profile/{id}/recommendations` returns at least one recommendation after a lesson is completed
+- [ ] Clicking a recommendation in the Analytics tab successfully restarts the flow from Ingestion with the recommended topic pre-filled
 
-### Assessment & Profile
-- [ ] A final quiz is generated after lesson completion.
-- [ ] A learning report is displayed with score, strong/weak concepts, and a next-topic recommendation.
-- [ ] The student profile is saved and loaded correctly across sessions (revisiting the app shows past topics/scores).
+### Build & Deploy
+- [ ] `npm run build` exits with code 0 and no TypeScript errors
+- [ ] All changes committed to `origin/main` with a clear commit message describing what was fixed
 
-### End-to-End Demo Flow
-- [ ] The full journey works without errors: upload/topic → learner profile → lesson plan → video → interaction → assessment → report.
-- [ ] The application runs locally with a single setup command (e.g., `docker-compose up` or documented `pip install` + `npm install` + run script).
-
----
-
-*Expecting this to run as a full team build — a multi-component project (ingestion, planning, video pipeline, interactive loop, profile) that benefits from parallel work across components.*
-
----
-
-## 2026-09-01T10:07:31Z
+## 2026-09-04T17:43:33Z
 
 # Teamwork Project Prompt — Draft
 
-> Status: Step 1 — Eliciting project idea
-> Goal: Craft prompt → get user approval → delegate to teamwork_preview
-> Requested team: [none — teamwork routes from the description]
+> Status: Step 2 — Defining requirements
+> Goal: craft prompt → get user approval → delegate to teamwork_preview
+> Requested team: [none — default]
 
-[Project description — 1-2 sentences]
+Project description: ApniHelp is a full‑stack adaptive educational platform that generates short explanatory videos from provided documents. It should generate videos quickly (≤20 seconds of processing per minute of output), present a single “Generate Video” button, use a light colour theme (white, yellow, gray, dark blue), and display a photorealistic AI teacher avatar.
 
-Working directory: [TBD]
-
-## Requirements
-
-### R1. [TBD]
-
-### R2. [TBD]
-
-## Acceptance Criteria
-
-### [TBD]
-- [ ] [TBD]
-
----
-*Next: when approved → delegate via invoke_subagent (see Delegation Protocol)*
-
----
-
-## 2026-09-01T10:12:52Z
-
-# Teamwork Project Prompt — Draft
-
-> Status: Step 1 — Eliciting project idea
-> Goal: Craft prompt → get user approval → delegate to teamwork_preview
-> Requested team: [none — teamwork routes from the description]
-
-An AI Teacher platform that ingests educational materials or topics, creates personalized lesson plans, generates multilingual AI‑avatar video lessons, interacts with the student, and provides assessment and learning‑path recommendations.
-
-Working directory: /home/dev/teamwork_projects/ai_teacher
+Working directory: ~/teamwork_projects/apnihelp
 
 ## Requirements
 
-### R1. Ingest uploaded material (PDF, DOCX, PPTX, TXT) or a user‑provided topic, and generate a structured lesson plan respecting learner level, available time, and selected language.
+### R1. Video generation performance
+The system must generate a video in ≤20 seconds of processing for each minute of final video length (e.g., a 5‑minute video ≤100 seconds, 10‑minute ≤200 seconds).
 
-### R2. Produce a human‑like AI‑avatar video that includes synthesized speech, on‑screen text, diagrams, and pause points for interactive questions; support multiple languages via TTS.
+### R2. UI simplicity
+The frontend must expose a single “Generate Video” button that triggers the whole pipeline for any uploaded document or input.
 
-### R3. Provide comprehensive, readable documentation covering project overview, architecture diagram, API specification, setup and deployment instructions, usage examples, and guidelines for generating demo videos. Documentation must be in Markdown, include a `README.md` and a `docs/` folder with separate sections, and be formatted for easy navigation (TOC, headings, code snippets).
+### R3. Light visual theme
+The UI colour palette shall be a light theme based on a mixture of white, yellow, gray, and dark blue.
+
+### R4. AI teacher avatar
+The video presenter must be a photorealistic human‑like AI teacher image generated via an image model, not a cartoon illustration.
+
+### R5. Project naming
+All branding, repository names, and displayed titles shall use the name “ApniHelp”.
 
 ## Acceptance Criteria
 
-### Verification
-
-- [ ] All unit and end‑to‑end tests pass inside the Docker environment.
-- [ ] Backend and frontend Dockerfiles exist and `docker‑compose up` launches the full system without errors.
-- [ ] Running `./run.sh` (or Docker) on a sample topic generates a video ≥2 minutes with interactive checkpoints.
-- [ ] README includes clear setup, deployment, and demo‑video generation steps, and passes a spell‑check.
-- [ ] `docs/` contains an architecture diagram (PNG/SVG) and API reference, and all internal links work.
-- [ ] Multilingual video generation works for at least English and Hindi.
+- [ ] Video generation time meets R1 for test videos of 5 min and 10 min.
+- [ ] The UI shows only one button labeled “Generate Video” and no other manual steps.
+- [ ] The UI colour scheme matches the specified light palette across all pages.
+- [ ] The generated video features a photorealistic teacher avatar that syncs with the narration.
+- [ ] All visible project titles and repo names are “ApniHelp”.
 
 ---
 *Next: when approved → delegate via invoke_subagent (see Delegation Protocol)*
-

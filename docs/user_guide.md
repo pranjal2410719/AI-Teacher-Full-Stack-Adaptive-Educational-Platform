@@ -5,7 +5,7 @@
 [![Demo Video](https://img.shields.io/badge/Demo%20Video-%E2%89%A52%20Min%20with%20Checkpoints-rose.svg)](#generating-demo-videos--hackathon-evaluations)
 [![Multilingual](https://img.shields.io/badge/Languages-English%20%7C%20Hindi-blue.svg)](multilingual_support.md)
 
-Welcome to the **AI Teacher User Guide**. This document provides an end-to-end walkthrough of the complete learning journey, from document ingestion to personalized video playback, interactive checkpoint resolution, diagnostic quiz grading, and long-term profile analytics. It also includes comprehensive instructions for generating and evaluating demo videos.
+Welcome to the **ApniHelp User Guide**. This document provides an end-to-end walkthrough of the complete learning journey, from document ingestion to personalized video playback, interactive checkpoint resolution, diagnostic quiz grading, and long-term profile analytics. It also includes comprehensive instructions for generating and evaluating demo videos.
 
 ---
 
@@ -32,7 +32,7 @@ Welcome to the **AI Teacher User Guide**. This document provides an end-to-end w
 
 ## 1. User Journey Overview
 
-The AI Teacher platform replaces traditional passive video watching with an active, adaptive learning experience structured around the 8-phase human teaching loop:
+The ApniHelp platform replaces traditional passive video watching with an active, adaptive learning experience structured around the 8-phase human teaching loop:
 
 ```
 [Upload / Topic] ──► [Profile Setup] ──► [Plan Review] ──► [Hybrid Video] ──► [In-Video Checkpoint]
@@ -79,7 +79,7 @@ Before generating video assets, the **Visual Lesson Plan Reviewer** presents an 
 
 ### Step 4: Watch the Hybrid Neural Video
 The synthesized lesson plays inside the custom interactive HTML5 video player:
-- **Avatar Segments (Intro & Summary)**: The AI Teacher avatar appears with audio-synchronized lip-sync visemes, natural eye blinking, subtle breathing bobbing, and a live studio HUD.
+- **Avatar Segments (Intro & Summary)**: The ApniHelp avatar appears with audio-synchronized lip-sync visemes, natural eye blinking, subtle breathing bobbing, and a live studio HUD.
 - **Visual Slide Segments (Core Theory)**: High-resolution slides display domain-specific visuals (typeset LaTeX formulas, syntax-highlighted IDE windows with complexity badges, cellular diagrams, or timelines) synchronized with neural voice narration.
 - **Timeline & Chapter Navigation**: Click chapter markers on the scrub bar to jump between topics with instant HTTP 206 byte-range seeking.
 

@@ -5,7 +5,7 @@
 [![Languages](https://img.shields.io/badge/Languages-English%20%7C%20Hindi%20(Devanagari)-orange.svg)](#multilingual-architecture--design-principles)
 [![Mid-Session Switch](https://img.shields.io/badge/Language%20Switch-State--Preserving-purple.svg)](#mid-session-dynamic-language-switching)
 
-This document details the multilingual engineering and localization architecture of the **AI Teacher** platform, explaining how the system provides native-quality instruction in English and Hindi across neural speech synthesis, avatar lip-sync, visual slide typography, interactive misconception evaluation, and dynamic mid-session language switching.
+This document details the multilingual engineering and localization architecture of the **ApniHelp** platform, explaining how the system provides native-quality instruction in English and Hindi across neural speech synthesis, avatar lip-sync, visual slide typography, interactive misconception evaluation, and dynamic mid-session language switching.
 
 ---
 
@@ -31,7 +31,7 @@ This document details the multilingual engineering and localization architecture
 
 Equal access to high-quality STEM education requires breaking linguistic barriers. Traditional educational content is predominantly produced in English, while learners in regional language environments struggle with technical comprehension.
 
-The AI Teacher platform is engineered from the ground up for native multilingual pedagogy:
+The ApniHelp platform is engineered from the ground up for native multilingual pedagogy:
 1. **No Linguistic Degradation**: Explanations in Hindi utilize natural pedagogical phrasing (e.g., *सीमा (Limit)*, *सांतत्य (Continuity)*, *अवकलन (Differentiation)*) while preserving mathematical rigor.
 2. **Synchronized Multilingual Media**: Video slides render native Devanagari typography paired with neural voice synthesis.
 3. **Conversational Fluidity**: Students can switch languages at any moment during a lesson without losing their place, concept mastery history, or active misconception diagnoses.
@@ -126,7 +126,7 @@ Learners can switch instruction language at any time during playback using the `
 When switching language:
 1. **No Reset**: The student does NOT restart the lesson or lose progress.
 2. **Context Migration**: The active concept, session history, and misconception logs remain intact.
-3. **Localized Summary**: The AI Teacher generates an instant translated recap in the new language to anchor the transition.
+3. **Localized Summary**: ApniHelp generates an instant translated recap in the new language to anchor the transition.
 4. **Subsequent Interaction**: All subsequent checkpoint questions, tutor chat responses, and final quiz questions are delivered in the new target language.
 
 ### Language Switch Execution Flow

@@ -1,0 +1,618 @@
+{
+  "plan_id": "plan_449412b9e3",
+  "title": "Mastering Physics: Quantum Superposition",
+  "target_duration_sec": 3600,
+  "level": "advanced",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_45ffb92468",
+  "topic": "Mastering Physics: Quantum Superposition",
+  "subject_domain": "physics",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "advanced",
+    "language": "en",
+    "time_budget_min": 60,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Physics: Quantum Superposition",
+      "duration_sec": 191,
+      "script": "Hello and welcome to this advanced masterclass on Mastering Physics: Quantum Superposition. In this session, we will examine the rigorous mathematical foundations, structural invariants, and complex edge-case trade-offs governing this domain. Let's begin with the formal principles.",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Topic Overview & Objectives'. The critical structural pillars include: Topic: Physics: Quantum Superposition\nCategory: physics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Physics: Quantum Superposition' in subject area: 'physics'... Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Physics: Quantum Superposition\nCategory: physics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Physics: Quantum Superposition' in subject area: 'physics'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Topic Overview & Objectives requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 318,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "comparison_table",
+        "subject_domain": "physics",
+        "headline": "Applied Step-by-Step Walkthrough",
+        "bullet_points": [
+          "Step 1: Frame the initial conditions and boundary variables",
+          "Step 2: Execute the core transformation mechanism",
+          "Step 3: Verify the outcome against diagnostic criteria"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Step",
+          "Action Performed",
+          "Expected Observable State"
+        ],
+        "table_rows": [
+          [
+            "1. Initialization",
+            "Define variables and prerequisites",
+            "System in baseline state"
+          ],
+          [
+            "2. Execution",
+            "Apply core formula or algorithmic process",
+            "State undergoes transition"
+          ],
+          [
+            "3. Verification",
+            "Compare result to reference benchmark",
+            "Optimal verified solution"
+          ]
+        ],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 95,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the foundational principle underlying Topic Overview & Objectives?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the foundational principle underlying Topic Overview & Objectives?",
+        "prompt": "What is the foundational principle underlying Topic Overview & Objectives?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Understanding Topic Overview & Objectives requires following structured core principles and systematic steps.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.'. The critical structural pillars include: Concept: Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Physics: Quantum Superposition' in subject area: 'physics'.. Key Principles:\n- Definition and motivation of 'Physics: Quantum Superposition' in subject area: 'physics'. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Key Principles:\n- Definition and motivation of 'Physics: Quantum Superposition' in subject area: 'physics'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'. requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 95,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.. What is the foundational principle underlying Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the foundational principle underlying Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "prompt": "What is the foundational principle underlying Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Understanding Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'. requires following structured core principles and systematic steps.",
+        "concept": "Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.'. The critical structural pillars include: Concept: Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'. Description:\nWorked walkthrough demonstrating 'Physics: Quantum Superposition' in subject area: 'physics'. in practice with clear derivations. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'",
+          "Description:\nWorked walkthrough demonstrating 'Physics: Quantum Superposition' in subject area: 'physics'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'. requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 95,
+      "script": "Let's pause here for a quick concept check on Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.. What is the foundational principle underlying Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_3",
+        "question_text": "What is the foundational principle underlying Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "prompt": "What is the foundational principle underlying Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Understanding Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'. requires following structured core principles and systematic steps.",
+        "concept": "Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_3",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_009",
+      "order": 9,
+      "segment_type": "visual_concept",
+      "title": "Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.'. The critical structural pillars include: Concept: Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'. Description:\nFrequent student pitfalls and diagnostic methods to master 'Physics: Quantum Superposition' in subject area: 'physics'.. Key Principles:\n- Distinction between surface similarities and true mechanics\n- Verification checkpoints to self-correct errors\n- Real-world synthesis and advanced extensions. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "bullet_points": [
+          "Concept: Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'",
+          "Description:\nFrequent student pitfalls and diagnostic methods to master 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Key Principles:\n- Distinction between surface similarities and true mechanics\n- Verification checkpoints to self-correct errors\n- Real-world synthesis and advanced extensions"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'. requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_4",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0003"
+      ]
+    },
+    {
+      "segment_id": "seg_010",
+      "order": 10,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+      "duration_sec": 95,
+      "script": "Let's pause here for a quick concept check on Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.. What is the foundational principle underlying Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_4",
+        "question_text": "What is the foundational principle underlying Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "prompt": "What is the foundational principle underlying Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Understanding Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'. requires following structured core principles and systematic steps.",
+        "concept": "Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_4",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_011",
+      "order": 11,
+      "segment_type": "visual_concept",
+      "title": "Diagnostic Checks & Misconceptions",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Diagnostic Checks & Misconceptions'. The critical structural pillars include: Diagnostic Questions & Review:\n\nQ: What is the primary defining characteristic of 'Physics: Quantum Superposition' in subject area: 'physics'.. A: The fundamental rule and structural mechanism governing 'Physics: Quantum Superposition' in subject area: 'physics'.. Q: What is a common error made when first applying 'Physics: Quantum Superposition' in subject area: 'physics'.. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Diagnostic Checks & Misconceptions",
+        "bullet_points": [
+          "Diagnostic Questions & Review:\n\nQ: What is the primary defining characteristic of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "A: The fundamental rule and structural mechanism governing 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Q: What is a common error made when first applying 'Physics: Quantum Superposition' in subject area: 'physics'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Diagnostic Checks & Misconceptions requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_5",
+      "grounding_citations": [
+        "chk_top_45ffb92468_0004"
+      ]
+    },
+    {
+      "segment_id": "seg_012",
+      "order": 12,
+      "segment_type": "visual_concept",
+      "title": "Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition'. The critical structural pillars include: Comparing alternative strategies and trade-offs. Self-checking for common conceptual errors. Actionable takeaways for practical mastery. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition",
+        "bullet_points": [
+          "Comparing alternative strategies and trade-offs",
+          "Self-checking for common conceptual errors",
+          "Actionable takeaways for practical mastery"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_6",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_013",
+      "order": 13,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of Mastering Physics: Quantum Superposition",
+      "duration_sec": 360,
+      "script": "Let us examine the core mechanics of 'Foundational Principles of Mastering Physics: Quantum Superposition'. The critical structural pillars include: Primary definitions and terminology. Core axioms and working rules. Fundamental importance in the curriculum. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "general",
+        "headline": "Foundational Principles of Mastering Physics: Quantum Superposition",
+        "bullet_points": [
+          "Primary definitions and terminology",
+          "Core axioms and working rules",
+          "Fundamental importance in the curriculum"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Core Dimension",
+          "Standard Practice",
+          "Strategic Advantage"
+        ],
+        "table_rows": [
+          [
+            "Foundational Axiom",
+            "Direct Rule Execution",
+            "Consistent Reliability"
+          ],
+          [
+            "Applied Method",
+            "Step-by-Step Verification",
+            "Error Prevention"
+          ],
+          [
+            "Synthesis",
+            "Continuous Adaptation",
+            "Long-Term Mastery"
+          ]
+        ],
+        "callout_box": "Core Insight: Mastering Foundational Principles of Mastering Physics: Quantum Superposition requires solid fundamentals and structured self-checks."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_7",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_014",
+      "order": 14,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Physics: Quantum Superposition",
+      "duration_sec": 191,
+      "script": "Fantastic job! In this lesson on Mastering Physics: Quantum Superposition, we covered Topic Overview & Objectives, Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'., Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'., Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'., Diagnostic Checks & Misconceptions, Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition, Foundational Principles of Mastering Physics: Quantum Superposition. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "physics",
+        "headline": "Key Takeaways: Mastering Physics: Quantum Superposition",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+          "Diagnostic Checks & Misconceptions",
+          "Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition",
+          "Foundational Principles of Mastering Physics: Quantum Superposition"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 3600,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Physics: Quantum Superposition' in subject area: 'physics'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+    "Understand core principles of Common Misconceptions and Best Practices in 'Physics: Quantum Superposition' in subject area: 'physics'.",
+    "Understand core principles of Diagnostic Checks & Misconceptions",
+    "Understand core principles of Synthesis, Review, and Diagnostic Applications of Mastering Physics: Quantum Superposition",
+    "Understand core principles of Foundational Principles of Mastering Physics: Quantum Superposition",
+    "Analyze formal theoretical derivations and edge case behavior in Mastering Physics: Quantum Superposition"
+  ],
+  "created_at": "2026-09-04T18:25:25.596647+00:00",
+  "updated_at": null
+}

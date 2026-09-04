@@ -81,7 +81,14 @@ export interface LessonPlan {
   target_duration_sec: number;
   level: LearnerLevel;
   language: string;
+  document_id?: string;
+  topic_id?: string;
+  topic?: string;
+  subject_domain?: string;
   modules: LessonSegmentPlan[];
+  total_actual_duration_sec?: number;
+  prerequisite_refreshers?: string[];
+  learning_objectives?: string[];
   created_at?: string;
   updated_at?: string;
 }

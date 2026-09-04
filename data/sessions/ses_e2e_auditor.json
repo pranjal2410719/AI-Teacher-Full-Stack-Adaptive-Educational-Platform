@@ -1,0 +1,24 @@
+{
+  "session_id": "ses_e2e_auditor",
+  "student_id": "stu_default",
+  "language": "en",
+  "current_level": "intermediate",
+  "interaction_history": [
+    {
+      "timestamp": "2026-09-02T11:20:09.518102+00:00",
+      "question_id": "chk_q_1",
+      "student_answer": "Active transport requires ATP hydrolysis to pump ions against concentration gradient",
+      "concept": "Topic Overview & Objectives",
+      "is_correct": false,
+      "score": 0.4,
+      "misconception": "Incomplete grasp of foundational definition."
+    }
+  ],
+  "diagnosed_misconceptions": [
+    "Incomplete grasp of foundational definition."
+  ],
+  "resolved_misconceptions": [],
+  "active_question_id": null,
+  "created_at": "2026-09-02T11:20:09.472757+00:00",
+  "updated_at": "2026-09-02T11:20:09.518194+00:00"
+}

@@ -1,0 +1,199 @@
+{
+  "lesson_id": "les_65b7c880",
+  "video_id": "les_65b7c880",
+  "plan_id": "plan_r1_bench_10m",
+  "title": "10-Minute ApniHelp Benchmark (600s)",
+  "video_url": "/api/v1/video/stream/les_65b7c880.mp4",
+  "total_duration_sec": 596.0,
+  "duration_sec": 596.0,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Segment 1: Module Overview",
+      "start_sec": 0.0,
+      "end_sec": 59.6,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Segment 2: Mathematical Derivation 2",
+      "start_sec": 59.6,
+      "end_sec": 119.2,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 3: Algorithmic Synthesis 3",
+      "start_sec": 119.2,
+      "end_sec": 178.8,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 4: Mathematical Derivation 4",
+      "start_sec": 178.8,
+      "end_sec": 238.4,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 5: Algorithmic Synthesis 5",
+      "start_sec": 238.4,
+      "end_sec": 298.0,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 6: Mathematical Derivation 6",
+      "start_sec": 298.0,
+      "end_sec": 357.6,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 7: Algorithmic Synthesis 7",
+      "start_sec": 357.6,
+      "end_sec": 417.2,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 8: Mathematical Derivation 8",
+      "start_sec": 417.2,
+      "end_sec": 476.8,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 9: Algorithmic Synthesis 9",
+      "start_sec": 476.8,
+      "end_sec": 536.4,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Segment 10: Lesson Recap",
+      "start_sec": 536.4,
+      "end_sec": 596.0,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_plan_r1_bench_10m_01",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Segment 1: Module Overview",
+      "start_sec": 0.0,
+      "end_sec": 59.6,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_01_seg_plan_r1_bench_10m_01.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_f09f71c146bea47c.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_02",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 2: Mathematical Derivation 2",
+      "start_sec": 59.6,
+      "end_sec": 119.2,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_02_seg_plan_r1_bench_10m_02.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_87203d2c9535e6ce.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_03",
+      "order": 3,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 3: Algorithmic Synthesis 3",
+      "start_sec": 119.2,
+      "end_sec": 178.8,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_03_seg_plan_r1_bench_10m_03.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_2de43b887abf9dee.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_04",
+      "order": 4,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 4: Mathematical Derivation 4",
+      "start_sec": 178.8,
+      "end_sec": 238.4,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_04_seg_plan_r1_bench_10m_04.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_e35202fc316c86db.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_05",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 5: Algorithmic Synthesis 5",
+      "start_sec": 238.4,
+      "end_sec": 298.0,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_05_seg_plan_r1_bench_10m_05.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_719dedc4bac1ce35.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_06",
+      "order": 6,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 6: Mathematical Derivation 6",
+      "start_sec": 298.0,
+      "end_sec": 357.6,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_06_seg_plan_r1_bench_10m_06.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_083ac7ed3c654a2d.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_07",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 7: Algorithmic Synthesis 7",
+      "start_sec": 357.6,
+      "end_sec": 417.2,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_07_seg_plan_r1_bench_10m_07.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_31e19c36128ef182.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_08",
+      "order": 8,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 8: Mathematical Derivation 8",
+      "start_sec": 417.2,
+      "end_sec": 476.8,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_08_seg_plan_r1_bench_10m_08.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_df9cf7c71cb11c44.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_09",
+      "order": 9,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Segment 9: Algorithmic Synthesis 9",
+      "start_sec": 476.8,
+      "end_sec": 536.4,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_09_seg_plan_r1_bench_10m_09.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_4475b15062789221.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "seg_plan_r1_bench_10m_10",
+      "order": 10,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Segment 10: Lesson Recap",
+      "start_sec": 536.4,
+      "end_sec": 596.0,
+      "duration_sec": 59.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_65b7c880_seg_10_seg_plan_r1_bench_10m_10.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_07e9fc99d05c2ba6.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    }
+  ],
+  "pause_markers": [],
+  "pause_checkpoints": [],
+  "created_at": "2026-09-04T18:33:19.672026+00:00"
+}

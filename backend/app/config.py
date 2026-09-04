@@ -1,5 +1,5 @@
 """
-Configuration and Environment Settings for AI Teacher Platform.
+Configuration and Environment Settings for ApniHelp Core Platform.
 """
 
 import os
@@ -16,7 +16,7 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 class Settings(BaseModel):
     # App Information
-    app_name: str = "AI Teacher Core Platform"
+    app_name: str = "ApniHelp Core Platform"
     app_version: str = "1.0.0"
     debug: bool = Field(default_factory=lambda: os.getenv("DEBUG", "false").lower() in ("true", "1", "yes"))
     host: str = Field(default_factory=lambda: os.getenv("HOST", "0.0.0.0"))

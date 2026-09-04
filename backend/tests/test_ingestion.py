@@ -480,7 +480,7 @@ def test_multilingual_hindi_ingestion():
 def test_system_health_and_root_endpoints(client):
     res_root = client.get("/")
     assert res_root.status_code == 200
-    assert "Welcome to AI Teacher" in res_root.json()["message"]
+    assert "Welcome to ApniHelp" in res_root.json()["message"]
 
     res_health = client.get("/api/v1/health")
     assert res_health.status_code == 200

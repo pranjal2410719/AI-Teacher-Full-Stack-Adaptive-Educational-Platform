@@ -1,0 +1,329 @@
+{
+  "plan_id": "plan_b10705b59f",
+  "title": "Mastering Hist: Roman Empire Transition to Republic",
+  "target_duration_sec": 900,
+  "level": "beginner",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_9ebc6f1057",
+  "topic": "Mastering Hist: Roman Empire Transition to Republic",
+  "subject_domain": "history",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Hist: Roman Empire Transition to Republic",
+      "duration_sec": 60,
+      "script": "Hello and welcome! Today, we are going to explore Mastering Hist: Roman Empire Transition to Republic in a clear, intuitive, and fun way. We will use everyday analogies and visual breakdowns so you can grasp the fundamental ideas easily. Let's jump right in!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_9ebc6f1057_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Topic Overview & Objectives'. Here is the simple intuition behind it: Topic: Hist: Roman Empire Transition to Republic\nCategory: history\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Hist: Roman Empire Transition to Republic' in subject area: 'history'... Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "timeline",
+        "subject_domain": "history",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Hist: Roman Empire Transition to Republic\nCategory: history\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [
+          {
+            "year": "Phase 1: Catalyst",
+            "event": "Emergence of deep institutional reform demands and economic crisis"
+          },
+          {
+            "year": "Phase 2: Escalation",
+            "event": "Signing of foundational declaration and mobilization of alliances"
+          },
+          {
+            "year": "Phase 3: Turning Point",
+            "event": "Decisive strategic campaign shifting sovereign authority"
+          },
+          {
+            "year": "Phase 4: Resolution",
+            "event": "Ratification of constitutional treaty and lasting institutional legacy"
+          }
+        ],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Historical Insight: Strategic geographic positioning and economic resilience determined the ultimate treaty outcome."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_9ebc6f1057_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "comparison_table",
+        "subject_domain": "history",
+        "headline": "Applied Step-by-Step Walkthrough",
+        "bullet_points": [
+          "Step 1: Frame the initial conditions and boundary variables",
+          "Step 2: Execute the core transformation mechanism",
+          "Step 3: Verify the outcome against diagnostic criteria"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [
+          "Step",
+          "Action Performed",
+          "Expected Observable State"
+        ],
+        "table_rows": [
+          [
+            "1. Initialization",
+            "Define variables and prerequisites",
+            "System in baseline state"
+          ],
+          [
+            "2. Execution",
+            "Apply core formula or algorithmic process",
+            "State undergoes transition"
+          ],
+          [
+            "3. Verification",
+            "Compare result to reference benchmark",
+            "Optimal verified solution"
+          ]
+        ],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_9ebc6f1057_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the foundational principle underlying Topic Overview & Objectives?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the foundational principle underlying Topic Overview & Objectives?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Topic Overview & Objectives requires following structured core principles and systematic steps.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.'. Here is the simple intuition behind it: Concept: Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.. Key Principles:\n- Definition and motivation of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "timeline",
+        "subject_domain": "history",
+        "headline": "Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+          "Key Principles:\n- Definition and motivation of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [
+          {
+            "year": "Phase 1: Catalyst",
+            "event": "Emergence of deep institutional reform demands and economic crisis"
+          },
+          {
+            "year": "Phase 2: Escalation",
+            "event": "Signing of foundational declaration and mobilization of alliances"
+          },
+          {
+            "year": "Phase 3: Turning Point",
+            "event": "Decisive strategic campaign shifting sovereign authority"
+          },
+          {
+            "year": "Phase 4: Resolution",
+            "event": "Ratification of constitutional treaty and lasting institutional legacy"
+          }
+        ],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Historical Insight: Strategic geographic positioning and economic resilience determined the ultimate treaty outcome."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_9ebc6f1057_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.. What is the foundational principle underlying Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the foundational principle underlying Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.?",
+        "question_type": "mcq",
+        "options": [
+          "A) The primary governing rule and systematic mechanism",
+          "B) Random arbitrary trial and error",
+          "C) Overlooking boundary constraints",
+          "D) Ignoring the foundational definitions"
+        ],
+        "correct_answer": "A",
+        "explanation": "Understanding Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'. requires following structured core principles and systematic steps.",
+        "concept": "Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Systematic methodology replaces random guessing.",
+          "C": "Boundary constraints are critical."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.'. Here is the simple intuition behind it: Concept: Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'. Description:\nWorked walkthrough demonstrating 'Hist: Roman Empire Transition to Republic' in subject area: 'history'. in practice with clear derivations. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "timeline",
+        "subject_domain": "history",
+        "headline": "Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'",
+          "Description:\nWorked walkthrough demonstrating 'Hist: Roman Empire Transition to Republic' in subject area: 'history'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [
+          {
+            "year": "Phase 1: Catalyst",
+            "event": "Emergence of deep institutional reform demands and economic crisis"
+          },
+          {
+            "year": "Phase 2: Escalation",
+            "event": "Signing of foundational declaration and mobilization of alliances"
+          },
+          {
+            "year": "Phase 3: Turning Point",
+            "event": "Decisive strategic campaign shifting sovereign authority"
+          },
+          {
+            "year": "Phase 4: Resolution",
+            "event": "Ratification of constitutional treaty and lasting institutional legacy"
+          }
+        ],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Historical Insight: Strategic geographic positioning and economic resilience determined the ultimate treaty outcome."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_9ebc6f1057_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Hist: Roman Empire Transition to Republic",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Mastering Hist: Roman Empire Transition to Republic, we covered Topic Overview & Objectives, Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'., Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "history",
+        "headline": "Key Takeaways: Mastering Hist: Roman Empire Transition to Republic",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+          "Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Hist: Roman Empire Transition to Republic' in subject area: 'history'.",
+    "Build intuitive foundational understanding of Mastering Hist: Roman Empire Transition to Republic"
+  ],
+  "created_at": "2026-09-02T11:12:33.771479+00:00",
+  "updated_at": null
+}

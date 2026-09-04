@@ -1,0 +1,30 @@
+[
+  {
+    "name": "5-Minute Workload",
+    "target_sec": 300.0,
+    "actual_dur": 363.22,
+    "elapsed_sec": 70.55,
+    "sla_sec": 100.0,
+    "rate_sec_per_min": 11.65,
+    "safety_margin_pct": 29.4,
+    "passed": true,
+    "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/les_a0cb6eed.mp4",
+    "size_mb": 11.63,
+    "resolution": "1280x720",
+    "codecs": "h264/aac"
+  },
+  {
+    "name": "10-Minute Workload",
+    "target_sec": 600.0,
+    "actual_dur": 717.52,
+    "elapsed_sec": 98.56,
+    "sla_sec": 200.0,
+    "rate_sec_per_min": 8.24,
+    "safety_margin_pct": 50.7,
+    "passed": true,
+    "video_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/les_f7ec0331.mp4",
+    "size_mb": 21.07,
+    "resolution": "1280x720",
+    "codecs": "h264/aac"
+  }
+]

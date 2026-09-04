@@ -1,0 +1,170 @@
+{
+  "plan_id": "plan_d9d22c227f",
+  "title": "Mastering Math: Integration by Parts",
+  "target_duration_sec": 300,
+  "level": "beginner",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_5cd7ce195d",
+  "topic": "Mastering Math: Integration by Parts",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "en",
+    "time_budget_min": 5,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Math: Integration by Parts",
+      "duration_sec": 30,
+      "script": "Hello and welcome! Today, we are going to explore Mastering Math: Integration by Parts in a clear, intuitive, and fun way. We will use everyday analogies and visual breakdowns so you can grasp the fundamental ideas easily. Let's jump right in!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_5cd7ce195d_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 105,
+      "script": "Now let's take a look at 'Topic Overview & Objectives'. Here is the simple intuition behind it: Topic: Math: Integration by Parts\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Math: Integration by Parts' in subject area: 'math'... Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Math: Integration by Parts\nCategory: math\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Math: Integration by Parts' in subject area: 'math'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}",
+          "\\text{Rate of Change} = \\frac{\\Delta y}{\\Delta x}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_5cd7ce195d_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 30,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+        "question_type": "mcq",
+        "options": [
+          "A) 60 mph",
+          "B) 0 mph",
+          "C) 120 mph",
+          "D) 30 mph"
+        ],
+        "correct_answer": "A",
+        "explanation": "Steady rate of change is 60 miles divided by 1 hour, which equals 60 miles per hour.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Confused speed with acceleration.",
+          "C": "Multiplied time instead of dividing distance by time."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'.",
+      "duration_sec": 105,
+      "script": "Now let's take a look at 'Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'.'. Here is the simple intuition behind it: Concept: Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Math: Integration by Parts' in subject area: 'math'.. Key Principles:\n- Definition and motivation of 'Math: Integration by Parts' in subject area: 'math'. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Math: Integration by Parts' in subject area: 'math'.",
+          "Key Principles:\n- Definition and motivation of 'Math: Integration by Parts' in subject area: 'math'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}",
+          "\\text{Rate of Change} = \\frac{\\Delta y}{\\Delta x}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_5cd7ce195d_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Math: Integration by Parts",
+      "duration_sec": 30,
+      "script": "Fantastic job! In this lesson on Mastering Math: Integration by Parts, we covered Topic Overview & Objectives, Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Mastering Math: Integration by Parts",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 300,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Math: Integration by Parts' in subject area: 'math'.",
+    "Build intuitive foundational understanding of Mastering Math: Integration by Parts"
+  ],
+  "created_at": "2026-09-02T11:05:56.066413+00:00",
+  "updated_at": null
+}

@@ -1,0 +1,42 @@
+{
+  "student_id": "stu_audit_learner",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 1,
+  "average_mastery_percent": 33.3,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Self-Balancing Tree Invariants": 0.33299999999999996,
+    "BST Worst-Case Degeneracy": 0.33299999999999996,
+    "Tree In-Order Traversal Invariant": 0.33299999999999996
+  },
+  "known_weak_areas": [
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant"
+  ],
+  "weak_areas": [
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "plan_c15488bd0c",
+      "score": 33.3,
+      "strong_concepts": [
+        "Self-Balancing Tree Invariants"
+      ],
+      "weak_concepts": [
+        "BST Worst-Case Degeneracy",
+        "Tree In-Order Traversal Invariant"
+      ],
+      "date": "2026-09-02T11:19:18.565620+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "plan_c15488bd0c"
+  ],
+  "total_time_spent_min": 15,
+  "created_at": "2026-09-02T11:19:18.545196+00:00",
+  "updated_at": "2026-09-02T11:19:18.565714+00:00"
+}

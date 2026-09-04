@@ -1,0 +1,42 @@
+{
+  "student_id": "stu_perfect_match",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 1,
+  "average_mastery_percent": 33.3,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Practical Application": 0.33299999999999996,
+    "Foundational Principles": 0.33299999999999996,
+    "Advanced Application 3": 0.33299999999999996
+  },
+  "known_weak_areas": [
+    "Foundational Principles",
+    "Advanced Application 3"
+  ],
+  "weak_areas": [
+    "Foundational Principles",
+    "Advanced Application 3"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_test_matched",
+      "score": 33.3,
+      "strong_concepts": [
+        "Practical Application"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Advanced Application 3"
+      ],
+      "date": "2026-09-02T11:21:44.559233+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_test_matched"
+  ],
+  "total_time_spent_min": 15,
+  "created_at": "2026-09-02T11:21:44.527463+00:00",
+  "updated_at": "2026-09-02T11:21:44.559290+00:00"
+}

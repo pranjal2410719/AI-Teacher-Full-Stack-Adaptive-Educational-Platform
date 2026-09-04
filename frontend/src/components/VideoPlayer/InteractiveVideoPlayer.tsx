@@ -54,6 +54,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
   const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
   const [isEvaluating, setIsEvaluating] = useState(false);
   const [evalResult, setEvalResult] = useState<AnswerEvaluationResponse | null>(null);
+  const [evalError, setEvalError] = useState<string | null>(null);
   const [followUpAnswer, setFollowUpAnswer] = useState('');
   const [isFollowUpResolved, setIsFollowUpResolved] = useState(false);
 
@@ -77,6 +78,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
             setIsPlaying(false);
             setActiveCheckpoint(marker);
             setEvalResult(null);
+            setEvalError(null);
             setStudentAnswer('');
             setSelectedOptionIndex(null);
             setIsFollowUpResolved(false);
@@ -130,6 +132,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
   const handleAnswerSubmit = async () => {
     if (!activeCheckpoint) return;
     setIsEvaluating(true);
+    setEvalError(null);
 
     let answerText = studentAnswer;
     if (activeCheckpoint.question.type === 'mcq' && selectedOptionIndex !== null) {
@@ -150,6 +153,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
       }
     } catch (err: any) {
       console.error('Answer evaluation failed:', err);
+      setEvalError(err.message || 'Answer evaluation failed. Please try submitting again.');
     } finally {
       setIsEvaluating(false);
     }
@@ -180,7 +184,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
   return (
     <div className="max-w-5xl mx-auto py-6 px-4 space-y-6">
       {/* Video Container Card */}
-      <div className="relative rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl overflow-hidden group aspect-video flex items-center justify-center">
+      <div className="relative rounded-2xl bg-black border border-gray-300 shadow-xl overflow-hidden group aspect-video flex items-center justify-center">
         {/* Video Element */}
         <video
           ref={videoRef}
@@ -191,25 +195,32 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
 
         {/* Checkpoint Question Modal Overlay */}
         {activeCheckpoint && (
-          <div className="absolute inset-0 z-30 bg-slate-950/95 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in">
-            <div className="w-full max-w-2xl bg-slate-900 border border-purple-900/60 rounded-2xl p-6 shadow-2xl space-y-5 max-h-[90%] overflow-y-auto">
+          <div className="absolute inset-0 z-30 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-6 animate-in fade-in">
+            <div className="w-full max-w-2xl bg-white border border-gray-200 rounded-2xl p-6 shadow-2xl space-y-5 max-h-[90%] overflow-y-auto">
               {/* Question Header */}
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <div className="flex items-center gap-2 text-xs text-purple-400 font-bold uppercase tracking-wider">
-                  <HelpCircle className="w-4 h-4" />
+              <div className="flex items-center justify-between border-b border-gray-200 pb-3">
+                <div className="flex items-center gap-2 text-xs text-blue-950 font-bold uppercase tracking-wider">
+                  <HelpCircle className="w-4 h-4 text-blue-900" />
                   <span>In-Video Comprehension Checkpoint</span>
                 </div>
-                <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/40">
+                <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 font-bold">
                   Pause at {formatTime(activeCheckpoint.timestamp_sec)}
                 </span>
               </div>
 
               {/* Question Prompt */}
               <div>
-                <h3 className="text-base font-bold text-slate-100 leading-snug">
+                <h3 className="text-base font-bold text-slate-900 leading-snug">
                   {activeCheckpoint.question.prompt}
                 </h3>
               </div>
+
+              {evalError && (
+                <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <span>{evalError}</span>
+                </div>
+              )}
 
               {/* Form: MCQ or Short Answer */}
               {!evalResult && (
@@ -217,26 +228,27 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                   {activeCheckpoint.question.options ? (
                     <div className="space-y-2">
                       {activeCheckpoint.question.options.map((opt, idx) => (
-                        <div
+                        <button
+                          type="button"
                           key={idx}
                           onClick={() => setSelectedOptionIndex(idx)}
-                          className={`p-3 rounded-xl border text-xs cursor-pointer transition-all flex items-center justify-between ${
+                          className={`w-full p-3.5 rounded-xl border text-xs text-left cursor-pointer transition-all flex items-center justify-between ${
                             selectedOptionIndex === idx
-                              ? 'border-purple-500 bg-purple-950/40 text-purple-200 shadow-md shadow-purple-950/30'
-                              : 'border-slate-800 bg-slate-950/60 text-slate-300 hover:border-slate-700'
+                              ? 'border-2 border-blue-900 bg-blue-50/70 text-blue-950 font-semibold shadow-sm'
+                              : 'border-gray-200 bg-slate-50 text-slate-800 hover:border-blue-400 hover:bg-blue-50/30'
                           }`}
                         >
-                          <span>{opt}</span>
+                          <span className="leading-snug">{opt}</span>
                           <div
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center text-[10px] ${
+                            className={`w-4 h-4 rounded-full border flex items-center justify-center text-[10px] flex-shrink-0 ml-2 ${
                               selectedOptionIndex === idx
-                                ? 'border-purple-500 bg-purple-600 text-white'
-                                : 'border-slate-700'
+                                ? 'border-blue-900 bg-blue-900 text-white'
+                                : 'border-gray-300'
                             }`}
                           >
                             {selectedOptionIndex === idx && '✓'}
                           </div>
-                        </div>
+                        </button>
                       ))}
                     </div>
                   ) : (
@@ -245,7 +257,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                       value={studentAnswer}
                       onChange={(e) => setStudentAnswer(e.target.value)}
                       placeholder="Type your conceptual explanation..."
-                      className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-purple-500 font-sans leading-relaxed"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900 font-sans leading-relaxed shadow-xs"
                     />
                   )}
 
@@ -255,12 +267,12 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                       isEvaluating ||
                       (activeCheckpoint.question.options ? selectedOptionIndex === null : !studentAnswer.trim())
                     }
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:opacity-40 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30 transition-all"
+                    className="w-full py-3.5 rounded-xl bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 disabled:opacity-40 text-slate-950 text-xs font-black flex items-center justify-center gap-2 shadow-md shadow-yellow-500/20 transition-all cursor-pointer"
                   >
                     {isEvaluating ? (
                       <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>Evaluating Response with AI Teacher...</span>
+                        <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
+                        <span>Evaluating Response with ApniHelp...</span>
                       </>
                     ) : (
                       <>
@@ -277,17 +289,17 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                 <div className="space-y-4 animate-in fade-in">
                   {/* Correct Feedback */}
                   {evalResult.is_correct ? (
-                    <div className="p-4 rounded-xl bg-emerald-950/50 border border-emerald-800/60 space-y-3">
-                      <div className="flex items-center gap-2 text-xs font-bold text-emerald-400">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-300 space-y-3">
+                      <div className="flex items-center gap-2 text-xs font-bold text-emerald-800">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                         <span>Mastery Confirmed! (Score: {(evalResult.score * 100).toFixed(0)}%)</span>
                       </div>
-                      <p className="text-xs text-emerald-200/90 leading-relaxed">
+                      <p className="text-xs text-emerald-900 leading-relaxed">
                         {evalResult.feedback}
                       </p>
                       <button
                         onClick={handleResumeVideo}
-                        className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all"
+                        className="w-full py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                       >
                         <Play className="w-3.5 h-3.5 fill-white" />
                         <span>Resume Lesson Video</span>
@@ -297,24 +309,24 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                     /* Misconception Diagnosed + Re-Explanation */
                     <div className="space-y-4">
                       {/* Misconception Tag */}
-                      <div className="p-3.5 rounded-xl bg-amber-950/40 border border-amber-800/50 space-y-1.5">
-                        <div className="flex items-center gap-2 text-xs font-bold text-amber-400">
-                          <AlertTriangle className="w-4 h-4 text-amber-400" />
+                      <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-300 space-y-1.5">
+                        <div className="flex items-center gap-2 text-xs font-bold text-amber-800">
+                          <AlertTriangle className="w-4 h-4 text-amber-600" />
                           <span>Diagnosed Root Misconception</span>
                         </div>
-                        <p className="text-xs text-amber-200 font-medium">
+                        <p className="text-xs text-amber-900 font-medium">
                           {evalResult.misconception_detected || evalResult.misconception}
                         </p>
                       </div>
 
                       {/* Scaffolded Analogy Re-Explanation */}
                       {evalResult.pedagogical_re_explanation && (
-                        <div className="p-4 rounded-xl bg-indigo-950/40 border border-indigo-800/60 space-y-2">
-                          <div className="flex items-center gap-2 text-xs font-bold text-indigo-300">
-                            <Lightbulb className="w-4 h-4 text-indigo-400" />
-                            <span>AI Teacher Scaffolded Re-Explanation & Analogy</span>
+                        <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 space-y-2">
+                          <div className="flex items-center gap-2 text-xs font-bold text-blue-900">
+                            <Lightbulb className="w-4 h-4 text-blue-800" />
+                            <span>ApniHelp Scaffolded Re-Explanation & Analogy</span>
                           </div>
-                          <p className="text-xs text-indigo-100 leading-relaxed font-sans">
+                          <p className="text-xs text-blue-950 leading-relaxed font-sans">
                             {evalResult.pedagogical_re_explanation}
                           </p>
                         </div>
@@ -322,11 +334,11 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
 
                       {/* Follow-up Comprehension Check */}
                       {evalResult.follow_up_question && !isFollowUpResolved && (
-                        <div className="p-4 rounded-xl bg-slate-950 border border-purple-900/40 space-y-3">
-                          <span className="text-[11px] font-bold text-purple-300 uppercase tracking-wider block">
+                        <div className="p-4 rounded-xl bg-slate-50 border border-gray-200 space-y-3">
+                          <span className="text-[11px] font-bold text-blue-900 uppercase tracking-wider block">
                             Targeted Follow-Up Check:
                           </span>
-                          <p className="text-xs text-slate-200 font-medium">
+                          <p className="text-xs text-slate-900 font-medium">
                             {evalResult.follow_up_question.prompt}
                           </p>
                           <input
@@ -334,12 +346,12 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                             value={followUpAnswer}
                             onChange={(e) => setFollowUpAnswer(e.target.value)}
                             placeholder="State your answer now..."
-                            className="w-full px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-100 focus:outline-none focus:border-purple-500"
+                            className="w-full px-3.5 py-2 rounded-lg bg-white border border-gray-300 text-xs text-slate-900 focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900"
                           />
                           <button
                             onClick={handleFollowUpSubmit}
                             disabled={!followUpAnswer.trim()}
-                            className="w-full py-2.5 rounded-lg bg-purple-600 hover:bg-purple-500 disabled:opacity-40 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-md shadow-purple-600/20"
+                            className="w-full py-2.5 rounded-lg bg-blue-900 hover:bg-blue-800 disabled:opacity-40 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm cursor-pointer"
                           >
                             <span>Verify Follow-Up Comprehension</span>
                             <ArrowRight className="w-3.5 h-3.5" />
@@ -349,14 +361,14 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
 
                       {/* Follow-up Resolved Resume CTA */}
                       {isFollowUpResolved && (
-                        <div className="p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-800/60 space-y-2">
-                          <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-bold">
-                            <CheckCircle2 className="w-4 h-4" />
+                        <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-300 space-y-2">
+                          <div className="flex items-center gap-1.5 text-xs text-emerald-800 font-bold">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                             <span>Concept Clarified & Misconception Resolved!</span>
                           </div>
                           <button
                             onClick={handleResumeVideo}
-                            className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all"
+                            className="w-full py-2.5 rounded-xl bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
                           >
                             <Play className="w-3.5 h-3.5 fill-white" />
                             <span>Resume Lesson Video</span>
@@ -382,7 +394,7 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
               step={0.1}
               value={currentTime}
               onChange={handleSeek}
-              className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-500"
+              className="w-full h-1.5 bg-slate-700/80 rounded-lg appearance-none cursor-pointer accent-yellow-400"
             />
             {/* Pause Marker Dots */}
             {manifest.pause_markers?.map((pm, idx) => {
@@ -394,8 +406,8 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                   style={{ left: `${posPercent}%` }}
                   className={`absolute -top-1 w-3 h-3 rounded-full -translate-x-1/2 border transition-all ${
                     isAnswered
-                      ? 'bg-emerald-400 border-emerald-200'
-                      : 'bg-purple-500 border-purple-200 shadow-md shadow-purple-500/80 animate-pulse'
+                      ? 'bg-emerald-400 border-white'
+                      : 'bg-yellow-400 border-white shadow-md shadow-yellow-400/80 animate-pulse'
                   }`}
                   title={`Checkpoint Pause: ${formatTime(pm.timestamp_sec)}`}
                 />
@@ -404,13 +416,13 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
           </div>
 
           {/* Bottom Button Row */}
-          <div className="flex items-center justify-between text-xs text-slate-300">
+          <div className="flex items-center justify-between text-xs text-slate-200">
             <div className="flex items-center gap-3">
               <button
                 onClick={togglePlay}
-                className="p-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white transition-colors shadow-sm"
+                className="p-2 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold transition-colors shadow-sm cursor-pointer"
               >
-                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 fill-white" />}
+                {isPlaying ? <Pause className="w-4 h-4 text-slate-950" /> : <Play className="w-4 h-4 fill-slate-950 text-slate-950" />}
               </button>
 
               <button
@@ -420,12 +432,13 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
                     setCurrentTime(0);
                   }
                 }}
-                className="p-1.5 text-slate-400 hover:text-white"
+                className="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+                title="Reset time to beginning"
               >
                 <RotateCcw className="w-4 h-4" />
               </button>
 
-              <span className="font-mono text-[11px] text-slate-300">
+              <span className="font-mono text-[11px] text-slate-200 font-semibold">
                 {formatTime(currentTime)} / {formatTime(duration)}
               </span>
             </div>
@@ -434,25 +447,25 @@ export const InteractiveVideoPlayer: React.FC<InteractiveVideoPlayerProps> = ({
               {/* Mid-Session Language Switcher */}
               <button
                 onClick={() => onLanguageSwitch(currentLanguage === 'en' ? 'hi' : 'en')}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-[11px] font-semibold text-slate-200 hover:bg-slate-800"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/95 hover:bg-white border border-gray-200 text-[11px] font-bold text-slate-900 transition-colors shadow-sm"
               >
-                <Globe className="w-3.5 h-3.5 text-emerald-400" />
+                <Globe className="w-3.5 h-3.5 text-blue-900" />
                 <span>{currentLanguage === 'en' ? 'हिन्दी में बदलें' : 'Switch to EN'}</span>
               </button>
 
               {/* Side-Panel Tutor Chat Toggle */}
               <button
                 onClick={onToggleTutorChat}
-                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-800/60 text-[11px] font-semibold text-purple-300 hover:bg-purple-900"
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-blue-900 hover:bg-blue-800 text-[11px] font-bold text-white transition-colors shadow-sm"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-purple-400" />
-                <span>AI Tutor Chat</span>
+                <MessageSquare className="w-3.5 h-3.5 text-yellow-400" />
+                <span>ApniHelp Tutor Chat</span>
               </button>
 
               {/* Post-Lesson Quiz CTA */}
               <button
                 onClick={onLessonComplete}
-                className="flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-[11px] font-bold text-white shadow-sm transition-colors"
+                className="flex items-center gap-1 px-3 py-1 rounded-lg bg-yellow-400 hover:bg-yellow-500 text-[11px] font-black text-slate-950 shadow-sm transition-colors cursor-pointer"
               >
                 <Award className="w-3.5 h-3.5" />
                 <span>Take Post-Quiz</span>

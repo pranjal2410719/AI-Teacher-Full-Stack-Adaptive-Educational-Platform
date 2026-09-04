@@ -1,0 +1,167 @@
+{
+  "plan_id": "plan_fe2973f9e0",
+  "title": "Mastering CS: Binary Search Trees",
+  "target_duration_sec": 300,
+  "level": "beginner",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_de447ce013",
+  "topic": "Mastering CS: Binary Search Trees",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "en",
+    "time_budget_min": 5,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering CS: Binary Search Trees",
+      "duration_sec": 30,
+      "script": "Hello and welcome! Today, we are going to explore Mastering CS: Binary Search Trees in a clear, intuitive, and fun way. We will use everyday analogies and visual breakdowns so you can grasp the fundamental ideas easily. Let's jump right in!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_de447ce013_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 105,
+      "script": "Now let's take a look at 'Topic Overview & Objectives'. Here is the simple intuition behind it: Topic: CS: Binary Search Trees\nCategory: computer_science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'CS: Binary Search Trees' in subject area: 'computer_science'... Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: CS: Binary Search Trees\nCategory: computer_science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'CS: Binary Search Trees' in subject area: 'computer_science'.."
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_de447ce013_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 30,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+        "prompt": "In Python, what does `numbers[0]` access in the list `numbers = [10, 20, 30]`?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 0"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Python lists use zero-based indexing, so index 0 points to the very first item (10).",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Assumed 1-based indexing where index 0 would be before the list.",
+          "D": "Confused the index number with the stored value."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'.",
+      "duration_sec": 105,
+      "script": "Now let's take a look at 'Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'.'. Here is the simple intuition behind it: Concept: Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'CS: Binary Search Trees' in subject area: 'computer_science'.. Key Principles:\n- Definition and motivation of 'CS: Binary Search Trees' in subject area: 'computer_science'. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'CS: Binary Search Trees' in subject area: 'computer_science'.",
+          "Key Principles:\n- Definition and motivation of 'CS: Binary Search Trees' in subject area: 'computer_science'"
+        ],
+        "code_content": "# Greet the student and calculate total\nstudent_name = 'Alex'\nscore_1 = 85\nscore_2 = 90\naverage = (score_1 + score_2) / 2\nprint(f'Hello {student_name}, your average is {average}')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_de447ce013_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering CS: Binary Search Trees",
+      "duration_sec": 30,
+      "script": "Fantastic job! In this lesson on Mastering CS: Binary Search Trees, we covered Topic Overview & Objectives, Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Mastering CS: Binary Search Trees",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 300,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'CS: Binary Search Trees' in subject area: 'computer_science'.",
+    "Build intuitive foundational understanding of Mastering CS: Binary Search Trees"
+  ],
+  "created_at": "2026-09-02T11:18:32.153123+00:00",
+  "updated_at": null
+}

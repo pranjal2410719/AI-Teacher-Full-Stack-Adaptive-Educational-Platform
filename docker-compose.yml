@@ -5,7 +5,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: ai_teacher_backend
+    container_name: apnihelp_backend
     ports:
       - "8000:8000"
     volumes:
@@ -20,7 +20,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: ai_teacher_frontend
+    container_name: apnihelp_frontend
     ports:
       - "3000:3000"
     environment:

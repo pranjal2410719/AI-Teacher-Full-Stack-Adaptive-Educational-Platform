@@ -1,0 +1,4 @@
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/prof_seg_0.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/prof_seg_1.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/prof_seg_2.mp4'
+file '/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/prof_seg_3.mp4'

@@ -11,12 +11,13 @@ import math
 import logging
 import subprocess
 from pathlib import Path
-from typing import Optional, Dict, Any, List, Union
+from typing import Optional, Dict, Any, List, Union, Tuple
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 import pygments
 from pygments.lexers import get_lexer_by_name, PythonLexer, guess_lexer
 from pygments.token import Token
@@ -82,9 +83,9 @@ class SlideRenderService:
         # Title
         draw.text((215, 23), title[:65], fill=(255, 255, 255))
 
-        # AI Teacher Logo / Watermark
+        # ApniHelp Logo / Watermark
         draw.rounded_rectangle([self.width - 165, 18, self.width - 30, 52], radius=6, fill=(28, 38, 60))
-        draw.text((self.width - 150, 26), "AI TEACHER", fill=(100, 210, 170))
+        draw.text((self.width - 145, 26), "ApniHelp", fill=(100, 210, 170))
 
         return img, draw
 
@@ -96,6 +97,7 @@ class SlideRenderService:
         # Handle unescaped control chars if any
         clean = clean.replace("\t", r"\to ").replace("\f", r"\frac").replace("\r", "")
         # Ensure common symbols are mathtext compatible
+        clean = clean.replace(r"\implies", r"\Rightarrow").replace(r"\iff", r"\Leftrightarrow")
         if not clean:
             clean = r"f(x) = y"
         return f"${clean}$"
@@ -119,7 +121,8 @@ class SlideRenderService:
         for i, eq in enumerate(eqs[:3]):
             # Render LaTeX equation as an image with Matplotlib
             try:
-                fig = plt.figure(figsize=(6.0, 0.9), dpi=100)
+                fig = Figure(figsize=(6.0, 0.9), dpi=100)
+                canvas = FigureCanvasAgg(fig)
                 fig.patch.set_facecolor("#182236")
                 ax = fig.add_axes([0, 0, 1, 1])
                 ax.set_facecolor("#182236")
@@ -127,8 +130,7 @@ class SlideRenderService:
                 math_text = self._clean_latex_for_mathtext(eq)
                 ax.text(0.5, 0.5, math_text, color="#38bdf8", fontsize=18, ha="center", va="center", weight="bold")
                 buf = io.BytesIO()
-                plt.savefig(buf, format="png", bbox_inches="tight", pad_inches=0.08, facecolor=fig.get_facecolor())
-                plt.close(fig)
+                canvas.print_figure(buf, format="png", bbox_inches="tight", pad_inches=0.08, facecolor=fig.get_facecolor())
                 buf.seek(0)
                 eq_img = Image.open(buf)
 
@@ -162,8 +164,10 @@ class SlideRenderService:
         draw.rounded_rectangle(right_box, radius=12, fill=(20, 28, 44), outline=(45, 65, 100), width=2)
 
         try:
-            fig, ax = plt.subplots(figsize=(5.0, 5.2), dpi=100)
+            fig = Figure(figsize=(5.0, 5.2), dpi=100)
+            canvas = FigureCanvasAgg(fig)
             fig.patch.set_facecolor("#141c2c")
+            ax = fig.add_subplot(111)
             ax.set_facecolor("#0f172a")
 
             # Plot function curve
@@ -192,8 +196,7 @@ class SlideRenderService:
             ax.legend(facecolor="#1e293b", edgecolor="#475569", labelcolor="#f1f5f9", fontsize=9, loc="upper right")
 
             buf = io.BytesIO()
-            plt.savefig(buf, format="png", bbox_inches="tight", pad_inches=0.1, facecolor=fig.get_facecolor())
-            plt.close(fig)
+            canvas.print_figure(buf, format="png", bbox_inches="tight", pad_inches=0.1, facecolor=fig.get_facecolor())
             buf.seek(0)
             plot_img = Image.open(buf)
             img.paste(plot_img, (725, 115))
@@ -549,7 +552,13 @@ class SlideRenderService:
             "-pix_fmt", "yuv420p",
             "-r", str(self.fps),
             "-preset", "ultrafast",
+            "-tune", "stillimage",
+            "-crf", "26",
+            "-threads", "2",
+            "-g", "120",
             "-c:a", "aac",
+            "-ar", "44100",
+            "-ac", "2",
             "-b:a", "128k",
             "-shortest",
             "-movflags", "+faststart",

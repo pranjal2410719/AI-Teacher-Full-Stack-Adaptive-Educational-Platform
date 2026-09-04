@@ -1,0 +1,50 @@
+{
+  "submission_id": "sub_c66076d4",
+  "quiz_id": "quiz_1ed370fb",
+  "student_id": "stu_audit_learner",
+  "lesson_id": "plan_c15488bd0c",
+  "score_percent": 33.3,
+  "total_points_earned": 1.0,
+  "total_points_possible": 3.0,
+  "strong_concepts": [
+    "Self-Balancing Tree Invariants"
+  ],
+  "weak_concepts": [
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant"
+  ],
+  "misconceptions_resolved": [
+    "Resolved secant line confusion via trip analogy"
+  ],
+  "misconceptions_identified": [
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant"
+  ],
+  "recommended_revision": "Review geometric tangent slope visualization",
+  "recommended_next_topics": [
+    {
+      "topic": "AVL Trees and Tree Rotations",
+      "level": "intermediate",
+      "rationale": "Master self-balancing invariants to prevent O(n) degeneracy.",
+      "prerequisite_concepts": [
+        "Binary Search Trees",
+        "Tree Height Invariants"
+      ]
+    },
+    {
+      "topic": "Red-Black Trees and Graph Traversals",
+      "level": "advanced",
+      "rationale": "Industrial standard for ordered maps and sets.",
+      "prerequisite_concepts": [
+        "AVL Trees",
+        "Color Invariants"
+      ]
+    }
+  ],
+  "suggested_next_topics": [
+    "AVL Trees and Tree Rotations",
+    "Red-Black Trees and Graph Traversals"
+  ],
+  "learning_report_summary": "Diagnostic Assessment completed with 33.3% mastery. You showed exceptional grasp of Self-Balancing Tree Invariants.",
+  "created_at": "2026-09-02T11:19:18.541628+00:00"
+}

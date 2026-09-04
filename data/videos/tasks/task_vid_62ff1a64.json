@@ -1,0 +1,21 @@
+{
+  "task_id": "task_vid_62ff1a64",
+  "plan_id": "plan_test_video_concise",
+  "lesson_id": "les_54c08a34",
+  "status": "completed",
+  "progress_percent": 100.0,
+  "current_stage": "ready",
+  "stages_completed": [
+    "tts_audio_synthesis",
+    "avatar_lip_sync",
+    "rendering_visual_slides",
+    "avatar_lip_sync",
+    "rendering_visual_slides",
+    "stitching_ffmpeg"
+  ],
+  "manifest_url": "/api/v1/video/manifest/les_54c08a34",
+  "video_url": "/api/v1/video/stream/les_54c08a34.mp4",
+  "error_message": null,
+  "created_at": "2026-09-02T11:13:09.211394+00:00",
+  "completed_at": "2026-09-02T11:13:22.928929+00:00"
+}

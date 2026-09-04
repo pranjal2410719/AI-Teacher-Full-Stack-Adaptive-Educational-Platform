@@ -1,0 +1,265 @@
+{
+  "plan_id": "plan_30ab79b959",
+  "title": "Mastering CS: Dijkstra Shortest Path",
+  "target_duration_sec": 900,
+  "level": "advanced",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_ecac964ecd",
+  "topic": "Mastering CS: Dijkstra Shortest Path",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "advanced",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering CS: Dijkstra Shortest Path",
+      "duration_sec": 60,
+      "script": "Hello and welcome to this advanced masterclass on Mastering CS: Dijkstra Shortest Path. In this session, we will examine the rigorous mathematical foundations, structural invariants, and complex edge-case trade-offs governing this domain. Let's begin with the formal principles.",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_ecac964ecd_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Let us examine the core mechanics of 'Topic Overview & Objectives'. The critical structural pillars include: Topic: CS: Dijkstra Shortest Path\nCategory: computer_science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'... Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: CS: Dijkstra Shortest Path\nCategory: computer_science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.."
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_ecac964ecd_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_ecac964ecd_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "prompt": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "correct_option_index": 1,
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+      "duration_sec": 170,
+      "script": "Let us examine the core mechanics of 'Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.'. The critical structural pillars include: Concept: Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.. Key Principles:\n- Definition and motivation of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+          "Key Principles:\n- Definition and motivation of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'"
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_ecac964ecd_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.. What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "prompt": "What is the worst-case time complexity of searching in an unbalanced binary search tree?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) O(log N)",
+          "B) O(N)",
+          "C) O(N log N)",
+          "D) O(1)"
+        ],
+        "correct_answer": "B",
+        "correct_option_index": 1,
+        "explanation": "When a BST degenerates into a linked list (completely unbalanced), worst-case search becomes linear O(N).",
+        "concept": "Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed the tree is self-balancing like an AVL or Red-Black tree.",
+          "C": "Confused search with sorting."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+      "duration_sec": 170,
+      "script": "Let us examine the core mechanics of 'Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.'. The critical structural pillars include: Concept: Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'. Description:\nWorked walkthrough demonstrating 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'. in practice with clear derivations. Notice how each invariant guarantees mathematical consistency and prevents failure modes under extreme boundary conditions.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'",
+          "Description:\nWorked walkthrough demonstrating 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'",
+          "in practice with clear derivations"
+        ],
+        "code_content": "def binary_search_recursive(arr: list[int], target: int, low: int, high: int) -> int:\n    # Base case: target not present\n    if low > high:\n        return -1\n    # Avoid integer overflow with midpoint calculation\n    mid = low + (high - low) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] > target:\n        return binary_search_recursive(arr, target, low, mid - 1)\n    else:\n        return binary_search_recursive(arr, target, mid + 1, high)",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_ecac964ecd_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering CS: Dijkstra Shortest Path",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Mastering CS: Dijkstra Shortest Path, we covered Topic Overview & Objectives, Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'., Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Mastering CS: Dijkstra Shortest Path",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+          "Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'CS: Dijkstra Shortest Path' in subject area: 'computer_science'.",
+    "Analyze formal theoretical derivations and edge case behavior in Mastering CS: Dijkstra Shortest Path"
+  ],
+  "created_at": "2026-09-02T11:22:30.249022+00:00",
+  "updated_at": null
+}

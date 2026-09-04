@@ -5,7 +5,7 @@
 [![OpenAPI Spec](https://img.shields.io/badge/OpenAPI-3.1.0-orange.svg)](#api-overview)
 [![Endpoints Documented](https://img.shields.io/badge/Endpoints-25%20Active-purple.svg)](#endpoint-catalog)
 
-Welcome to the comprehensive REST API specification for the **AI Teacher Core Platform**. This document provides detailed contract references, Pydantic schemas, HTTP status codes, JSON payload examples, and executable `curl` commands for all 25 active endpoints.
+Welcome to the comprehensive REST API specification for the **ApniHelp Core Platform**. This document provides detailed contract references, Pydantic schemas, HTTP status codes, JSON payload examples, and executable `curl` commands for all 25 active endpoints.
 
 ---
 
@@ -21,31 +21,31 @@ Welcome to the comprehensive REST API specification for the **AI Teacher Core Pl
   - [3.1 Upload Educational Material (`POST /api/v1/materials/upload`)](#31-upload-educational-material-post-apiv1materialsupload)
   - [3.2 Ingest Parametric Topic (`POST /api/v1/materials/topic`)](#32-ingest-parametric-topic-post-apiv1materialstopic)
   - [3.3 Query RAG Vector Store (`POST /api/v1/materials/query`)](#33-query-rag-vector-store-post-apiv1materialsquery)
-  - [3.4 Get Material Metadata (`GET /api/v1/materials/{doc_id}`)](#34-get-material-metadata-get-apiv1materialsdoc-id)
+  - [3.4 Get Material Metadata (`GET /api/v1/materials/{doc_id}`)](#34-get-material-metadata-get-apiv1materialsdoc_id)
   - [3.5 List All Materials (`GET /api/v1/materials`)](#35-list-all-materials-get-apiv1materials)
 - [4. Lesson Planning & Review (`/api/v1/lessons`)](#4-lesson-planning-review-apiv1lessons)
   - [4.1 Generate Personalized Lesson Plan (`POST /api/v1/lessons/plan`)](#41-generate-personalized-lesson-plan-post-apiv1lessonsplan)
-  - [4.2 Get Saved Lesson Plan (`GET /api/v1/lessons/{plan_id}`)](#42-get-saved-lesson-plan-get-apiv1lessonsplan-id)
-  - [4.3 Update or Reorder Lesson Plan (`PUT /api/v1/lessons/{plan_id}`)](#43-update-or-reorder-lesson-plan-put-apiv1lessonsplan-id)
+  - [4.2 Get Saved Lesson Plan (`GET /api/v1/lessons/{plan_id}`)](#42-get-saved-lesson-plan-get-apiv1lessonsplan_id)
+  - [4.3 Update or Reorder Lesson Plan (`PUT /api/v1/lessons/{plan_id}`)](#43-update-or-reorder-lesson-plan-put-apiv1lessonsplan_id)
   - [4.4 List All Lesson Plans (`GET /api/v1/lessons`)](#44-list-all-lesson-plans-get-apiv1lessons)
 - [5. Hybrid Video Generation & Streaming (`/api/v1/video`)](#5-hybrid-video-generation-streaming-apiv1video)
   - [5.1 Trigger Asynchronous Video Generation (`POST /api/v1/video/generate`)](#51-trigger-asynchronous-video-generation-post-apiv1videogenerate)
-  - [5.2 Poll Video Generation Status (`GET /api/v1/video/status/{task_id}`)](#52-poll-video-generation-status-get-apiv1videostatustask-id)
-  - [5.3 Get Video Manifest (`GET /api/v1/video/manifest/{video_id}`)](#53-get-video-manifest-get-apiv1videomanifestvideo-id)
-  - [5.4 Stream Video with HTTP 206 Range (`GET /api/v1/video/stream/{video_id}`)](#54-stream-video-with-http-206-range-get-apiv1videostreamvideo-id)
+  - [5.2 Poll Video Generation Status (`GET /api/v1/video/status/{task_id}`)](#52-poll-video-generation-status-get-apiv1videostatustask_id)
+  - [5.3 Get Video Manifest (`GET /api/v1/video/manifest/{video_id}`)](#53-get-video-manifest-get-apiv1videomanifestvideo_id)
+  - [5.4 Stream Video with HTTP 206 Range (`GET /api/v1/video/stream/{video_id}`)](#54-stream-video-with-http-206-range-get-apiv1videostreamvideo_id)
 - [6. Interactive Teaching Loop (`/api/v1/interactive`)](#6-interactive-teaching-loop-apiv1interactive)
   - [6.1 Evaluate Checkpoint Answer (`POST /api/v1/interactive/evaluate`)](#61-evaluate-checkpoint-answer-post-apiv1interactiveevaluate)
   - [6.2 Side-Panel AI Tutor Chat (`POST /api/v1/interactive/chat`)](#62-side-panel-ai-tutor-chat-post-apiv1interactivechat)
   - [6.3 Mid-Session Language Switch (`POST /api/v1/interactive/switch-language`)](#63-mid-session-language-switch-post-apiv1interactiveswitch-language)
-  - [6.4 Get Interaction Session State (`GET /api/v1/interactive/session/{session_id}`)](#64-get-interaction-session-state-get-apiv1interactivesessionsession-id)
+  - [6.4 Get Interaction Session State (`GET /api/v1/interactive/session/{session_id}`)](#64-get-interaction-session-state-get-apiv1interactivesessionsession_id)
 - [7. Assessment & Quizzes (`/api/v1/assessment`)](#7-assessment-quizzes-apiv1assessment)
   - [7.1 Generate Post-Lesson Quiz (`POST /api/v1/assessment/generate`)](#71-generate-post-lesson-quiz-post-apiv1assessmentgenerate)
   - [7.2 Submit Quiz for Rubric Grading (`POST /api/v1/assessment/submit`)](#72-submit-quiz-for-rubric-grading-post-apiv1assessmentsubmit)
-  - [7.3 Get Learning Report (`GET /api/v1/assessment/report/{submission_id}`)](#73-get-learning-report-get-apiv1assessmentreportsubmission-id)
+  - [7.3 Get Learning Report (`GET /api/v1/assessment/report/{submission_id}`)](#73-get-learning-report-get-apiv1assessmentreportsubmission_id)
 - [8. Learner Profile & Recommendations (`/api/v1/profile`)](#8-learner-profile-recommendations-apiv1profile)
-  - [8.1 Get Student Profile (`GET /api/v1/profile/{student_id}`)](#81-get-student-profile-get-apiv1profilestudent-id)
-  - [8.2 Update Student Profile (`PUT /api/v1/profile/{student_id}`)](#82-update-student-profile-put-apiv1profilestudent-id)
-  - [8.3 Get Adaptive Topic Recommendations (`GET /api/v1/profile/{student_id}/recommendations`)](#83-get-adaptive-topic-recommendations-get-apiv1profilestudent-idrecommendations)
+  - [8.1 Get Student Profile (`GET /api/v1/profile/{student_id}`)](#81-get-student-profile-get-apiv1profilestudent_id)
+  - [8.2 Update Student Profile (`PUT /api/v1/profile/{student_id}`)](#82-update-student-profile-put-apiv1profilestudent_id)
+  - [8.3 Get Adaptive Topic Recommendations (`GET /api/v1/profile/{student_id}/recommendations`)](#83-get-adaptive-topic-recommendations-get-apiv1profilestudent_idrecommendations)
 - [9. System Health & Diagnostics](#9-system-health-diagnostics)
   - [9.1 System Health Check (`GET /api/v1/health`)](#91-system-health-check-get-apiv1health)
   - [9.2 API Root Discovery (`GET /`)](#92-api-root-discovery-get)
@@ -62,7 +62,7 @@ http://localhost:8000
 All API responses are formatted in UTF-8 JSON. Video streams support HTTP 206 Partial Content byte ranges.
 
 ### Authentication & Rate Limiting
-The AI Teacher API operates in hackathon demo mode with no mandatory API keys for client endpoints. CORS is configured to accept requests from all origins (`allow_origins=["*"]`).
+The ApniHelp API operates in hackathon demo mode with no mandatory API keys for client endpoints. CORS is configured to accept requests from all origins (`allow_origins=["*"]`).
 
 ### Standard HTTP Status Codes
 
@@ -739,7 +739,7 @@ curl -X GET http://localhost:8000/api/v1/health
 ```json
 {
   "status": "healthy",
-  "app_name": "AI Teacher Core Platform",
+  "app_name": "ApniHelp Core Platform",
   "version": "1.0.0",
   "llm_provider": "offline_parametric",
   "tts_provider": "edge-tts",
@@ -761,7 +761,7 @@ Root greeting and documentation discovery endpoint.
 #### Example Response (`200 OK`)
 ```json
 {
-  "message": "Welcome to AI Teacher Core Server",
+  "message": "Welcome to ApniHelp Core Server",
   "version": "1.0.0",
   "docs": "/docs",
   "health": "/api/v1/health"

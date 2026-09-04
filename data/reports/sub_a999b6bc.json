@@ -1,0 +1,38 @@
+{
+  "submission_id": "sub_a999b6bc",
+  "quiz_id": "quiz_54e1575f",
+  "student_id": "stu_falsy_zero_f18231",
+  "lesson_id": "les_zero_test",
+  "score_percent": 85.0,
+  "total_points_earned": 1.0,
+  "total_points_possible": 1.0,
+  "strong_concepts": [
+    "Foundational Limits",
+    "Epsilon-Delta Definition"
+  ],
+  "weak_concepts": [
+    "Foundational Principles"
+  ],
+  "misconceptions_resolved": [
+    "Resolved secant line confusion via trip analogy"
+  ],
+  "misconceptions_identified": [
+    "Foundational Principles"
+  ],
+  "recommended_revision": "Review geometric tangent slope visualization",
+  "recommended_next_topics": [
+    {
+      "topic": "Advanced Applications in Post-Lesson Mastery Assessment: Lesson les_zero_test",
+      "level": "advanced",
+      "rationale": "Expand your conceptual mastery to multi-variable applications.",
+      "prerequisite_concepts": [
+        "Foundational Principles"
+      ]
+    }
+  ],
+  "suggested_next_topics": [
+    "Advanced Applications in Post-Lesson Mastery Assessment: Lesson les_zero_test"
+  ],
+  "learning_report_summary": "Diagnostic Assessment completed with 85.0% mastery. You showed exceptional grasp of Foundational Limits, Epsilon-Delta Definition.",
+  "created_at": "2026-09-04T18:23:35.593432+00:00"
+}

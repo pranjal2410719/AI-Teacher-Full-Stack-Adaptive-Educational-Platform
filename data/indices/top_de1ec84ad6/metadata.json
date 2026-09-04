@@ -1,0 +1,16 @@
+{
+  "document_id": "top_de1ec84ad6",
+  "filename": "Topic: Calculus'; DROP TABLE materials; SELECT * FROM users WHERE '1'='1",
+  "file_type": "topic",
+  "file_size_bytes": 2436,
+  "total_pages": 5,
+  "chunk_count": 5,
+  "extracted_summary": "Comprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Calculus'; DROP TABLE materials; SELECT * FROM users WHERE '1'='1' in subject area: 'Mathematics'..",
+  "created_at": "2026-09-02T11:18:32.256169+00:00",
+  "status": "ready",
+  "metadata_extra": {
+    "topic": "Calculus'; DROP TABLE materials; SELECT * FROM users WHERE '1'='1",
+    "subject_category": "Mathematics",
+    "language": "en"
+  }
+}

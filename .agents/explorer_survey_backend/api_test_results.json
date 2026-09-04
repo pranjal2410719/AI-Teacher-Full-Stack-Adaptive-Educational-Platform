@@ -1,0 +1,1331 @@
+{
+  "GET /api/v1/health": {
+    "status": "SUCCESS",
+    "data": {
+      "status": "healthy",
+      "app_name": "AI Teacher Core Platform",
+      "version": "1.0.0",
+      "llm_provider": "offline_parametric",
+      "tts_provider": "edge-tts",
+      "avatar_engine": "viseme_2_5d",
+      "ffmpeg_available": true,
+      "indexed_documents_count": 2064,
+      "vector_store_active_indices": 0,
+      "total_lesson_plans": 1356,
+      "total_video_manifests": 0,
+      "timestamp": "2026-09-02T11:07:51.409155+00:00"
+    }
+  },
+  "POST /api/v1/materials/topic": {
+    "status": "SUCCESS",
+    "data": {
+      "topic_id": "top_ca0eb57600",
+      "topic": "Limits, Continuity & Epsilon-Delta Definition",
+      "subject_category": "Mathematics",
+      "seed_summary": "Comprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'..",
+      "generated_chunks_count": 5,
+      "created_at": "2026-09-02T11:07:51.522850+00:00",
+      "status": "ready"
+    }
+  },
+  "POST /api/v1/materials/upload": {
+    "status": "SUCCESS",
+    "data": {
+      "document_id": "doc_4e03ca18a8",
+      "filename": "calculus_test.md",
+      "file_type": "md",
+      "file_size_bytes": 149,
+      "total_pages": 1,
+      "chunk_count": 1,
+      "extracted_summary": "Summary of calculus_test.md: # Calculus Limits\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+      "created_at": "2026-09-02T11:07:51.556536+00:00",
+      "status": "ready",
+      "metadata_extra": {
+        "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_4e03ca18a8_calculus_test.md",
+        "total_sections": 1
+      }
+    }
+  },
+  "GET /api/v1/materials/{doc_id}": {
+    "status": "SUCCESS",
+    "data": {
+      "document_id": "doc_4e03ca18a8",
+      "filename": "calculus_test.md",
+      "file_type": "md",
+      "file_size_bytes": 149,
+      "total_pages": 1,
+      "chunk_count": 1,
+      "extracted_summary": "Summary of calculus_test.md: # Calculus Limits\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+      "created_at": "2026-09-02T11:07:51.556536+00:00",
+      "status": "ready",
+      "metadata_extra": {
+        "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_4e03ca18a8_calculus_test.md",
+        "total_sections": 1
+      }
+    }
+  },
+  "GET /api/v1/materials": {
+    "status": "SUCCESS",
+    "data": {
+      "count": 2066,
+      "sample": [
+        {
+          "document_id": "doc_8cb0ff0b9c",
+          "filename": "biology.md",
+          "file_type": "md",
+          "file_size_bytes": 304,
+          "total_pages": 3,
+          "chunk_count": 3,
+          "extracted_summary": "Parametric Educational Analysis:\n- Thorough conceptual explanation grounded in standard curriculum principles.\n- Detailed breakdown addressing core mechanics, concrete examples, and diagnostic checks.\n- Formulated to facilitate structured comprehension and step-by-step mastery.",
+          "created_at": "2026-09-01T10:51:49.784096+00:00",
+          "status": "ready",
+          "metadata_extra": {
+            "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_8cb0ff0b9c_biology.md",
+            "total_sections": 3
+          }
+        },
+        {
+          "document_id": "doc_883fa657d7",
+          "filename": "dirty.txt",
+          "file_type": "txt",
+          "file_size_bytes": 63,
+          "total_pages": 1,
+          "chunk_count": 1,
+          "extracted_summary": "Summary of dirty.txt: Introduction to AI\u0000\u0000\u0001\u0002\u0003\u00ff\u00fe Advanced Neural Networks \u0000\nMore text.",
+          "created_at": "2026-08-31T19:36:01.692283+00:00",
+          "status": "ready",
+          "metadata_extra": {
+            "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_883fa657d7_dirty.txt",
+            "total_sections": 1
+          }
+        }
+      ]
+    }
+  },
+  "POST /api/v1/materials/query": {
+    "status": "SUCCESS",
+    "data": {
+      "query": "epsilon delta limit",
+      "target_id": "doc_4e03ca18a8",
+      "total_results": 1,
+      "results": [
+        {
+          "chunk_id": "chk_doc_4e03ca18a8_0000",
+          "document_id": "doc_4e03ca18a8",
+          "source_filename": "calculus_test.md",
+          "page_or_slide": 1,
+          "section_title": "Calculus Limits",
+          "text": "A limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+          "similarity_score": 0.7814,
+          "vector_score": 0.6357,
+          "bm25_score": 1.0,
+          "retrieval_method": "hybrid"
+        }
+      ],
+      "grounded_context": "1. [Source: calculus_test.md | Page/Slide 1 | Section: 'Calculus Limits']\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error."
+    }
+  },
+  "POST /api/v1/lessons/plan": {
+    "status": "SUCCESS",
+    "data": {
+      "plan_id": "plan_93bf4fdd6f",
+      "title": "Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "target_duration_sec": 900,
+      "level": "intermediate",
+      "language": "en",
+      "document_id": null,
+      "topic_id": "top_ca0eb57600",
+      "topic": "Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "subject_domain": "math",
+      "learner_profile": {
+        "student_id": "stu_test_001",
+        "level": "intermediate",
+        "language": "en",
+        "time_budget_min": 15,
+        "prior_knowledge": null,
+        "learning_goal": null,
+        "weak_concepts": [],
+        "preferred_visual_style": null
+      },
+      "modules": [
+        {
+          "segment_id": "seg_001",
+          "order": 1,
+          "segment_type": "avatar_intro",
+          "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Welcome to today's lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+          "visual_spec": null,
+          "checkpoint_question": null,
+          "concept_id": "intro",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_002",
+          "order": 2,
+          "segment_type": "visual_concept",
+          "title": "Topic Overview & Objectives",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Topic Overview & Objectives",
+            "bullet_points": [
+              "Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_003",
+          "order": 3,
+          "segment_type": "demonstration",
+          "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+          "duration_sec": 150,
+          "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Worked Mathematical Demonstration: Step-by-Step",
+            "bullet_points": [
+              "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+              "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+              "Step 3: Constant term derivative is 0",
+              "Result: f'(x) = 6x + 5"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "f(x) = 3x^2 + 5x - 4",
+              "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+              "f'(x) = 6x + 5"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+          },
+          "checkpoint_question": null,
+          "concept_id": "demo_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_004",
+          "order": 4,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Topic Overview & Objectives",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_1",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Topic Overview & Objectives",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_1",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_005",
+          "order": 5,
+          "segment_type": "visual_concept",
+          "title": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_2",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0001"
+          ]
+        },
+        {
+          "segment_id": "seg_006",
+          "order": 6,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_2",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_2",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_007",
+          "order": 7,
+          "segment_type": "visual_concept",
+          "title": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. in practice with clear derivations. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "in practice with clear derivations"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_3",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0002"
+          ]
+        },
+        {
+          "segment_id": "seg_008",
+          "order": 8,
+          "segment_type": "avatar_summary",
+          "title": "Lesson Summary & Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Fantastic job! In this lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition, we covered Topic Overview & Objectives, Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'., Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+          "visual_spec": {
+            "visual_type": "key_takeaways",
+            "subject_domain": "math",
+            "headline": "Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+            "bullet_points": [
+              "Topic Overview & Objectives",
+              "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": null
+          },
+          "checkpoint_question": null,
+          "concept_id": "summary",
+          "grounding_citations": []
+        }
+      ],
+      "total_actual_duration_sec": 900,
+      "prerequisite_refreshers": [],
+      "learning_objectives": [
+        "Understand core principles of Topic Overview & Objectives",
+        "Understand core principles of Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Understand core principles of Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Apply standard problem-solving patterns in Lesson on Limits, Continuity & Epsilon-Delta Definition"
+      ],
+      "created_at": "2026-09-02T11:07:51.862099+00:00",
+      "updated_at": null
+    }
+  },
+  "GET /api/v1/lessons/{plan_id}": {
+    "status": "SUCCESS",
+    "data": {
+      "plan_id": "plan_93bf4fdd6f",
+      "title": "Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "target_duration_sec": 900,
+      "level": "intermediate",
+      "language": "en",
+      "document_id": null,
+      "topic_id": "top_ca0eb57600",
+      "topic": "Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "subject_domain": "math",
+      "learner_profile": {
+        "student_id": "stu_test_001",
+        "level": "intermediate",
+        "language": "en",
+        "time_budget_min": 15,
+        "prior_knowledge": null,
+        "learning_goal": null,
+        "weak_concepts": [],
+        "preferred_visual_style": null
+      },
+      "modules": [
+        {
+          "segment_id": "seg_001",
+          "order": 1,
+          "segment_type": "avatar_intro",
+          "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Welcome to today's lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+          "visual_spec": null,
+          "checkpoint_question": null,
+          "concept_id": "intro",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_002",
+          "order": 2,
+          "segment_type": "visual_concept",
+          "title": "Topic Overview & Objectives",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Topic Overview & Objectives",
+            "bullet_points": [
+              "Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_003",
+          "order": 3,
+          "segment_type": "demonstration",
+          "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+          "duration_sec": 150,
+          "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Worked Mathematical Demonstration: Step-by-Step",
+            "bullet_points": [
+              "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+              "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+              "Step 3: Constant term derivative is 0",
+              "Result: f'(x) = 6x + 5"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "f(x) = 3x^2 + 5x - 4",
+              "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+              "f'(x) = 6x + 5"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+          },
+          "checkpoint_question": null,
+          "concept_id": "demo_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_004",
+          "order": 4,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Topic Overview & Objectives",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_1",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Topic Overview & Objectives",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_1",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_005",
+          "order": 5,
+          "segment_type": "visual_concept",
+          "title": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_2",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0001"
+          ]
+        },
+        {
+          "segment_id": "seg_006",
+          "order": 6,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_2",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_2",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_007",
+          "order": 7,
+          "segment_type": "visual_concept",
+          "title": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. in practice with clear derivations. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "in practice with clear derivations"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_3",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0002"
+          ]
+        },
+        {
+          "segment_id": "seg_008",
+          "order": 8,
+          "segment_type": "avatar_summary",
+          "title": "Lesson Summary & Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Fantastic job! In this lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition, we covered Topic Overview & Objectives, Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'., Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+          "visual_spec": {
+            "visual_type": "key_takeaways",
+            "subject_domain": "math",
+            "headline": "Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+            "bullet_points": [
+              "Topic Overview & Objectives",
+              "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": null
+          },
+          "checkpoint_question": null,
+          "concept_id": "summary",
+          "grounding_citations": []
+        }
+      ],
+      "total_actual_duration_sec": 900,
+      "prerequisite_refreshers": [],
+      "learning_objectives": [
+        "Understand core principles of Topic Overview & Objectives",
+        "Understand core principles of Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Understand core principles of Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Apply standard problem-solving patterns in Lesson on Limits, Continuity & Epsilon-Delta Definition"
+      ],
+      "created_at": "2026-09-02T11:07:51.862099+00:00",
+      "updated_at": null
+    }
+  },
+  "GET /api/v1/lessons/plan/{plan_id} (Frontend api.ts expectation)": {
+    "status": "SUCCESS",
+    "data": {
+      "status_code": 404,
+      "body": "{\"detail\":\"Not Found\"}"
+    }
+  },
+  "PUT /api/v1/lessons/{plan_id}": {
+    "status": "SUCCESS",
+    "data": {
+      "plan_id": "plan_93bf4fdd6f",
+      "title": "Updated Limits Lesson Title",
+      "target_duration_sec": 900,
+      "level": "intermediate",
+      "language": "en",
+      "document_id": null,
+      "topic_id": "top_ca0eb57600",
+      "topic": "Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "subject_domain": "math",
+      "learner_profile": {
+        "student_id": "stu_test_001",
+        "level": "intermediate",
+        "language": "en",
+        "time_budget_min": 15,
+        "prior_knowledge": null,
+        "learning_goal": null,
+        "weak_concepts": [],
+        "preferred_visual_style": null
+      },
+      "modules": [
+        {
+          "segment_id": "seg_001",
+          "order": 1,
+          "segment_type": "avatar_intro",
+          "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Welcome to today's lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+          "visual_spec": null,
+          "checkpoint_question": null,
+          "concept_id": "intro",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_002",
+          "order": 2,
+          "segment_type": "visual_concept",
+          "title": "Topic Overview & Objectives",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Topic Overview & Objectives",
+            "bullet_points": [
+              "Topic: Limits, Continuity & Epsilon-Delta Definition\nCategory: Mathematics\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_003",
+          "order": 3,
+          "segment_type": "demonstration",
+          "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+          "duration_sec": 150,
+          "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Worked Mathematical Demonstration: Step-by-Step",
+            "bullet_points": [
+              "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+              "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+              "Step 3: Constant term derivative is 0",
+              "Result: f'(x) = 6x + 5"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "f(x) = 3x^2 + 5x - 4",
+              "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+              "f'(x) = 6x + 5"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+          },
+          "checkpoint_question": null,
+          "concept_id": "demo_1",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0000"
+          ]
+        },
+        {
+          "segment_id": "seg_004",
+          "order": 4,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Topic Overview & Objectives",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_1",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Topic Overview & Objectives",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_1",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_005",
+          "order": 5,
+          "segment_type": "visual_concept",
+          "title": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Key Principles:\n- Definition and motivation of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_2",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0001"
+          ]
+        },
+        {
+          "segment_id": "seg_006",
+          "order": 6,
+          "segment_type": "checkpoint_question",
+          "title": "Understanding Check: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 60,
+          "script": "Let's pause here for a quick concept check on Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+          "visual_spec": null,
+          "checkpoint_question": {
+            "question_id": "chk_q_2",
+            "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+            "question_type": "mcq",
+            "options": [
+              "A) 15x^2 - 4",
+              "B) 15x^3 - 4x",
+              "C) 5x^2 - 4",
+              "D) 15x^2 - 4 + 7"
+            ],
+            "correct_answer": "A",
+            "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+            "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "difficulty": "medium",
+            "misconception_distractors": {
+              "B": "Multiplied coefficient without decreasing the power by 1.",
+              "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+              "D": "Kept the constant term instead of reducing it to 0."
+            }
+          },
+          "concept_id": "checkpoint_2",
+          "grounding_citations": []
+        },
+        {
+          "segment_id": "seg_007",
+          "order": 7,
+          "segment_type": "visual_concept",
+          "title": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+          "duration_sec": 170,
+          "script": "Now let's break down 'Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.'. The key concepts to master here are: Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'. in practice with clear derivations. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+          "visual_spec": {
+            "visual_type": "math_equation",
+            "subject_domain": "math",
+            "headline": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+            "bullet_points": [
+              "Concept: Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "Description:\nWorked walkthrough demonstrating 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'",
+              "in practice with clear derivations"
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [
+              "\\frac{d}{dx}[x^n] = n x^{n-1}",
+              "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+              "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+            ],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+          },
+          "checkpoint_question": null,
+          "concept_id": "concept_3",
+          "grounding_citations": [
+            "chk_top_ca0eb57600_0002"
+          ]
+        },
+        {
+          "segment_id": "seg_008",
+          "order": 8,
+          "segment_type": "avatar_summary",
+          "title": "Lesson Summary & Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+          "duration_sec": 60,
+          "script": "Fantastic job! In this lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition, we covered Topic Overview & Objectives, Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'., Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+          "visual_spec": {
+            "visual_type": "key_takeaways",
+            "subject_domain": "math",
+            "headline": "Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+            "bullet_points": [
+              "Topic Overview & Objectives",
+              "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+              "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'."
+            ],
+            "code_content": null,
+            "code_language": null,
+            "latex_equations": [],
+            "diagram_mermaid": null,
+            "timeline_events": [],
+            "table_headers": [],
+            "table_rows": [],
+            "callout_box": null
+          },
+          "checkpoint_question": null,
+          "concept_id": "summary",
+          "grounding_citations": []
+        }
+      ],
+      "total_actual_duration_sec": 900,
+      "prerequisite_refreshers": [],
+      "learning_objectives": [
+        "Understand core principles of Topic Overview & Objectives",
+        "Understand core principles of Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Understand core principles of Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "Apply standard problem-solving patterns in Lesson on Limits, Continuity & Epsilon-Delta Definition"
+      ],
+      "created_at": "2026-09-02T11:07:51.862099+00:00",
+      "updated_at": "2026-09-02T11:07:52.130257+00:00"
+    }
+  },
+  "PUT /api/v1/lessons/plan/{plan_id} (Frontend api.ts expectation)": {
+    "status": "SUCCESS",
+    "data": {
+      "status_code": 404,
+      "body": "{\"detail\":\"Not Found\"}"
+    }
+  },
+  "POST /api/v1/lessons/generate-video": {
+    "status": "SUCCESS",
+    "data": {
+      "task_id": "task_vid_8ade055e",
+      "plan_id": "plan_93bf4fdd6f",
+      "status": "processing",
+      "estimated_duration_sec": 24,
+      "websocket_stream_url": "/ws/v1/lessons/video-progress/task_vid_8ade055e"
+    }
+  },
+  "GET /api/v1/lessons/video-status/{task_id}": {
+    "status": "SUCCESS",
+    "data": {
+      "task_id": "task_vid_8ade055e",
+      "plan_id": "plan_93bf4fdd6f",
+      "lesson_id": "les_454f64e4",
+      "status": "completed",
+      "progress_percent": 100.0,
+      "current_stage": "ready",
+      "stages_completed": [
+        "tts_audio_synthesis",
+        "avatar_lip_sync",
+        "rendering_visual_slides",
+        "avatar_lip_sync",
+        "rendering_visual_slides",
+        "stitching_ffmpeg"
+      ],
+      "manifest_url": "/api/v1/video/manifest/les_454f64e4",
+      "video_url": "/api/v1/video/stream/les_454f64e4.mp4",
+      "error_message": null,
+      "created_at": "2026-09-02T11:07:52.165975+00:00",
+      "completed_at": "2026-09-02T11:10:06.402845+00:00"
+    }
+  },
+  "POST /api/v1/interactive/evaluate": {
+    "status": "SUCCESS",
+    "data": {
+      "is_correct": true,
+      "score": 0.95,
+      "feedback": "Outstanding! Your explanation demonstrates precise conceptual understanding of limits and rates of change.",
+      "misconception": null,
+      "misconception_detected": null,
+      "pedagogical_re_explanation": null,
+      "re_explanation": null,
+      "follow_up_question": null,
+      "can_resume_video": true,
+      "can_proceed": true,
+      "detected_language": "en"
+    }
+  },
+  "POST /api/v1/interactive/chat": {
+    "status": "SUCCESS",
+    "data": {
+      "session_id": "ses_cff4103e",
+      "reply": "AI Tutor Response to 'Can you explain why delta depends on epsilon?': The key takeaway is to verify boundary continuity and foundational definitions before computing intermediate steps.",
+      "language": "en",
+      "suggested_actions": [
+        "Resume video playback",
+        "Ask for a step-by-step example",
+        "Open lesson plan editor"
+      ],
+      "grounded_sources": [
+        "Core Course Syllabus"
+      ]
+    }
+  },
+  "POST /api/v1/interactive/switch-language": {
+    "status": "SUCCESS",
+    "data": {
+      "session_id": "ses_test_001",
+      "language": "hi",
+      "translated_summary": "\u0906\u092a\u0915\u0940 \u0938\u0940\u0916\u0928\u0947 \u0915\u0940 \u092d\u093e\u0937\u093e \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0940 \u0917\u0908 \u0939\u0948\u0964 \u0939\u092e \u092a\u093e\u0920 \u0915\u094b \u0938\u0939\u091c\u0924\u093e \u0938\u0947 \u091c\u093e\u0930\u0940 \u0930\u0916 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964",
+      "next_prompt": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092f\u0926\u093f \u0906\u092a\u0915\u0947 \u092a\u093e\u0938 \u0907\u0938 \u0935\u093f\u0937\u092f \u092a\u0930 \u0915\u094b\u0908 \u092a\u094d\u0930\u0936\u094d\u0928 \u0939\u0948, \u0924\u094b \u0915\u0943\u092a\u092f\u093e \u092c\u0947\u091d\u093f\u091d\u0915 \u092a\u0942\u091b\u0947\u0902\u0964",
+      "status": "switched"
+    }
+  },
+  "POST /api/v1/assessment/generate": {
+    "status": "SUCCESS",
+    "data": {
+      "quiz_id": "quiz_c62a9380",
+      "lesson_id": "plan_93bf4fdd6f",
+      "student_id": "stu_test_adaptive",
+      "title": "Post-Lesson Mastery Assessment: Updated Limits Lesson Title",
+      "questions": [
+        {
+          "question_id": "quiz_q1",
+          "type": "mcq",
+          "prompt": "Under what mathematical condition does a two-sided limit lim_{x->c} f(x) exist?",
+          "options": [
+            "A: Both left-hand and right-hand limits exist and are strictly equal",
+            "B: The function value f(c) must be strictly non-zero",
+            "C: The derivative f'(c) must be positive everywhere",
+            "D: The secant line slope must equal zero"
+          ],
+          "correct_option_index": 0,
+          "correct_answer_text": null,
+          "concept": "Foundational Limits",
+          "points": 1,
+          "explanation": "A two-sided limit exists if and only if both one-sided limits exist and agree."
+        },
+        {
+          "question_id": "quiz_q2",
+          "type": "mcq",
+          "prompt": "What is the geometric difference between a secant line and a tangent line?",
+          "options": [
+            "A: A secant line connects two points (average rate); a tangent touches at one point (instantaneous rate)",
+            "B: A secant line is always horizontal while a tangent line is always vertical",
+            "C: A secant line requires delta t -> 0, while a tangent line does not",
+            "D: There is no mathematical distinction between secant and tangent slopes"
+          ],
+          "correct_option_index": 0,
+          "correct_answer_text": null,
+          "concept": "Secant vs Tangent Slope Interpretation",
+          "points": 1,
+          "explanation": "The secant slope represents average rate of change over an interval, while the tangent slope is the instantaneous derivative."
+        },
+        {
+          "question_id": "quiz_q3",
+          "type": "short_answer",
+          "prompt": "State the formal epsilon-delta definition of a limit in your own words.",
+          "options": null,
+          "correct_option_index": null,
+          "correct_answer_text": "For every epsilon > 0, there exists a delta > 0 such that 0 < |x - c| < delta implies |f(x) - L| < epsilon.",
+          "concept": "Epsilon-Delta Definition",
+          "points": 1,
+          "explanation": "Epsilon controls the vertical tolerance around L, and delta controls the horizontal neighborhood around c."
+        }
+      ],
+      "total_points": 3,
+      "created_at": "2026-09-02T11:10:06.492432+00:00"
+    }
+  },
+  "POST /api/v1/assessment/submit": {
+    "status": "SUCCESS",
+    "data": {
+      "submission_id": "sub_8ea05933",
+      "quiz_id": "quiz_c62a9380",
+      "student_id": "stu_test_adaptive",
+      "lesson_id": "plan_93bf4fdd6f",
+      "score_percent": 33.3,
+      "total_points_earned": 1.0,
+      "total_points_possible": 3.0,
+      "strong_concepts": [
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "misconceptions_resolved": [
+        "Resolved secant line confusion via trip analogy"
+      ],
+      "misconceptions_identified": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "recommended_revision": "Review geometric tangent slope visualization",
+      "recommended_next_topics": [
+        {
+          "topic": "Product and Quotient Rules in Calculus",
+          "level": "intermediate",
+          "rationale": "Direct continuation of derivative differentiation rules.",
+          "prerequisite_concepts": [
+            "Foundational Limits",
+            "Derivative Definition"
+          ]
+        },
+        {
+          "topic": "Chain Rule for Composite Functions",
+          "level": "intermediate",
+          "rationale": "Essential prerequisite for trigonometric and exponential derivatives.",
+          "prerequisite_concepts": [
+            "Power Rule",
+            "Function Composition"
+          ]
+        }
+      ],
+      "suggested_next_topics": [
+        "Product and Quotient Rules in Calculus",
+        "Chain Rule for Composite Functions"
+      ],
+      "learning_report_summary": "Diagnostic Assessment completed with 33.3% mastery. You showed exceptional grasp of Epsilon-Delta Definition.",
+      "created_at": "2026-09-02T11:10:06.515632+00:00"
+    }
+  },
+  "GET /api/v1/assessment/report/{submission_id}": {
+    "status": "SUCCESS",
+    "data": {
+      "submission_id": "sub_8ea05933",
+      "quiz_id": "quiz_c62a9380",
+      "student_id": "stu_test_adaptive",
+      "lesson_id": "plan_93bf4fdd6f",
+      "score_percent": 33.3,
+      "total_points_earned": 1.0,
+      "total_points_possible": 3.0,
+      "strong_concepts": [
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "misconceptions_resolved": [
+        "Resolved secant line confusion via trip analogy"
+      ],
+      "misconceptions_identified": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "recommended_revision": "Review geometric tangent slope visualization",
+      "recommended_next_topics": [
+        {
+          "topic": "Product and Quotient Rules in Calculus",
+          "level": "intermediate",
+          "rationale": "Direct continuation of derivative differentiation rules.",
+          "prerequisite_concepts": [
+            "Foundational Limits",
+            "Derivative Definition"
+          ]
+        },
+        {
+          "topic": "Chain Rule for Composite Functions",
+          "level": "intermediate",
+          "rationale": "Essential prerequisite for trigonometric and exponential derivatives.",
+          "prerequisite_concepts": [
+            "Power Rule",
+            "Function Composition"
+          ]
+        }
+      ],
+      "suggested_next_topics": [
+        "Product and Quotient Rules in Calculus",
+        "Chain Rule for Composite Functions"
+      ],
+      "learning_report_summary": "Diagnostic Assessment completed with 33.3% mastery. You showed exceptional grasp of Epsilon-Delta Definition.",
+      "created_at": "2026-09-02T11:10:06.515632+00:00"
+    }
+  },
+  "GET /api/v1/profile/stu_test_adaptive": {
+    "status": "SUCCESS",
+    "data": {
+      "student_id": "stu_test_adaptive",
+      "name": "Learner",
+      "preferred_language": "en",
+      "preferred_level": "intermediate",
+      "total_lessons_completed": 1,
+      "average_mastery_percent": 33.3,
+      "mastery_by_subject": {},
+      "concept_mastery": {
+        "Epsilon-Delta Definition": 0.33299999999999996,
+        "Foundational Limits": 0.33299999999999996,
+        "Secant vs Tangent Slope Interpretation": 0.33299999999999996
+      },
+      "known_weak_areas": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "weak_areas": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "learning_history": [
+        {
+          "lesson_id": "plan_93bf4fdd6f",
+          "score": 33.3,
+          "strong_concepts": [
+            "Epsilon-Delta Definition"
+          ],
+          "weak_concepts": [
+            "Foundational Limits",
+            "Secant vs Tangent Slope Interpretation"
+          ],
+          "date": "2026-09-02T11:10:06.526717+00:00"
+        }
+      ],
+      "completed_lessons": [
+        "plan_93bf4fdd6f"
+      ],
+      "total_time_spent_min": 15,
+      "created_at": "2026-09-02T11:10:06.517783+00:00",
+      "updated_at": "2026-09-02T11:10:06.526772+00:00"
+    }
+  },
+  "PUT /api/v1/profile/stu_test_adaptive": {
+    "status": "SUCCESS",
+    "data": {
+      "student_id": "stu_test_adaptive",
+      "name": "Jane Doe",
+      "preferred_language": "en",
+      "preferred_level": "advanced",
+      "total_lessons_completed": 1,
+      "average_mastery_percent": 33.3,
+      "mastery_by_subject": {},
+      "concept_mastery": {
+        "Epsilon-Delta Definition": 0.33299999999999996,
+        "Foundational Limits": 0.33299999999999996,
+        "Secant vs Tangent Slope Interpretation": 0.33299999999999996
+      },
+      "known_weak_areas": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "weak_areas": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "learning_history": [
+        {
+          "lesson_id": "plan_93bf4fdd6f",
+          "score": 33.3,
+          "strong_concepts": [
+            "Epsilon-Delta Definition"
+          ],
+          "weak_concepts": [
+            "Foundational Limits",
+            "Secant vs Tangent Slope Interpretation"
+          ],
+          "date": "2026-09-02T11:10:06.526717+00:00"
+        }
+      ],
+      "completed_lessons": [
+        "plan_93bf4fdd6f"
+      ],
+      "total_time_spent_min": 15,
+      "created_at": "2026-09-02T11:10:06.517783+00:00",
+      "updated_at": "2026-09-02T11:10:06.590256+00:00"
+    }
+  },
+  "GET /api/v1/profile/stu_test_adaptive/recommendations": {
+    "status": "SUCCESS",
+    "data": [
+      {
+        "topic": "Foundational Refresher: Foundational Limits",
+        "level": "advanced",
+        "rationale": "Reinforce conceptual foundation based on your diagnostic feedback in 'Foundational Limits'.",
+        "prerequisite_concepts": [
+          "Foundational Limits"
+        ]
+      },
+      {
+        "topic": "Foundational Refresher: Secant vs Tangent Slope Interpretation",
+        "level": "advanced",
+        "rationale": "Reinforce conceptual foundation based on your diagnostic feedback in 'Secant vs Tangent Slope Interpretation'.",
+        "prerequisite_concepts": [
+          "Secant vs Tangent Slope Interpretation"
+        ]
+      }
+    ]
+  }
+}

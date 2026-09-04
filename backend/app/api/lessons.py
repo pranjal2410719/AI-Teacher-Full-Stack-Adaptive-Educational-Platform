@@ -55,6 +55,13 @@ async def generate_lesson_plan(request: LessonPlanCreateRequest) -> LessonPlan:
 
 
 @router.get(
+    "/plan/{plan_id}",
+    response_model=LessonPlan,
+    status_code=status.HTTP_200_OK,
+    summary="Fetch Saved Lesson Plan (Route Alias)",
+    description="Retrieves a previously synthesized lesson plan by plan_id."
+)
+@router.get(
     "/{plan_id}",
     response_model=LessonPlan,
     status_code=status.HTTP_200_OK,
@@ -73,6 +80,16 @@ async def get_lesson_plan(plan_id: str) -> LessonPlan:
     return plan
 
 
+@router.put(
+    "/plan/{plan_id}",
+    response_model=LessonPlan,
+    status_code=status.HTTP_200_OK,
+    summary="Update or Reorder Lesson Plan (Route Alias)",
+    description=(
+        "Enables learners and teachers to customize, reorder segments, modify titles, "
+        "or replace modules before video generation."
+    )
+)
 @router.put(
     "/{plan_id}",
     response_model=LessonPlan,

@@ -1,37 +1,43 @@
-# BRIEFING — 2026-09-01T15:43:45+05:30
+# BRIEFING — 2026-09-04T18:21:00Z
 
 ## Mission
-Coordinate and oversee the AI Teacher platform project execution, dispatch to teamwork_preview_orchestrator, monitor via crons, and conduct independent victory audit upon completion.
+Deliver the ApniHelp full-stack adaptive educational platform meeting all user requirements (R1: fast video generation ≤20s/min, R2: single 'Generate Video' button UI simplicity, R3: light theme palette with white, yellow, gray, and dark blue, R4: photorealistic AI teacher avatar, R5: ApniHelp branding across all titles and repositories) and acceptance criteria.
 
 ## 🔒 My Identity
 - Archetype: sentinel
 - Working directory: /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/sentinel
-- Orchestrator: d8bac91e-6a18-4a1e-9bfb-317c8d00d286 (orchestrator_r2)
-- Victory Auditor: 1fa994af-4c20-4f7d-b7b3-f10d070a64bf (victory_auditor_r2)
+- Orchestrator: 477f8a41-9a2f-4c40-a3cd-46b9e436709d
+- Active Orchestrator: d5ac3e16-1bfb-43ab-a157-4ec1f196f4ca (Generation 2)
+- Victory Auditor: [to be spawned on victory claim]
 
 ## 🔒 Key Constraints
 - No technical decisions — relay only
 - Victory Audit is MANDATORY before reporting completion
-- Route to General path (teamwork_preview_orchestrator)
-- Maintain cron-based monitoring of progress and liveness
-- Route according to Routing Decision Table once requirements are specified
+- Must route to teamwork_preview_orchestrator (General path)
+
+## Routing Decision
+- Selected Route: General (`teamwork_preview_orchestrator`)
+- Rationale: Multi-component full-stack adaptive educational platform spanning backend video pipelines, React UI, avatar generation, theme overhauls, and acceptance tests.
+
+## Background Crons
+- Progress Reporting: task-42 (*/8 * * * *)
+- Liveness Check: task-44 (*/10 * * * *)
 
 ## User Context
-- **Last user request**: AI Teacher Platform prompt with requirements R1 (ingest material/topic -> lesson plan), R2 (AI-avatar video with speech, diagrams, checkpoints, multilingual TTS), R3 (comprehensive docs with TOC, README, docs/ architecture diagram & API ref), and acceptance criteria (Docker, e2e/unit tests, run.sh video >=2m, spell-check, multilingual English/Hindi).
+- **Last user request**: ApniHelp educational platform requirements draft (R1-R5, Acceptance Criteria)
 - **Pending clarifications**: none
-- **Delivered results**: [none for current run]
+- **Delivered results**: none
 
 ## Project Status
-- **Phase**: auditing
+- **Phase**: in progress (orchestrator gen 2 dispatched: d5ac3e16-1bfb-43ab-a157-4ec1f196f4ca)
+- **Milestones**: M2 (Frontend single-button & light theme) and M3 (Infra/docs ApniHelp branding) verified complete. M1 (Backend Video Engine & Avatar) and M4 (E2E Verification Gate) actively executing.
 
 ## Victory Audit Status
-- **Triggered**: yes
+- **Triggered**: no
 - **Verdict**: pending
 - **Retry count**: 0
 
 ## Artifact Index
-- /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/ORIGINAL_REQUEST.md — Verbatim user request record
-- /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/sentinel/BRIEFING.md — Sentinel persistent working memory
-- /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/sentinel/handoff.md — Sentinel handoff report
-
-
+- /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/ORIGINAL_REQUEST.md — Original User Request
+- /home/dev/Desktop/projects/AI-InnovationHackathon/ORIGINAL_REQUEST.md — Workspace Original User Request
+- /home/dev/Desktop/projects/AI-InnovationHackathon/.agents/orchestrator_r3_gen2/ — Active Orchestrator workspace

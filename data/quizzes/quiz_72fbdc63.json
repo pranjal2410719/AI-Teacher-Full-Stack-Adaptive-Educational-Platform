@@ -1,0 +1,53 @@
+{
+  "quiz_id": "quiz_72fbdc63",
+  "lesson_id": "plan_1fd5965a45",
+  "student_id": "stu_e2e_auditor",
+  "title": "Post-Lesson Mastery Assessment: Mastering Photosynthesis and Cellular Respiration",
+  "questions": [
+    {
+      "question_id": "quiz_q1",
+      "type": "mcq",
+      "prompt": "Which cellular transport mechanism requires direct consumption of ATP energy currency?",
+      "options": [
+        "A: Active transport through protein pumps against the concentration gradient",
+        "B: Simple diffusion of oxygen gas across the phospholipid bilayer",
+        "C: Facilitated diffusion of glucose through passive carrier proteins",
+        "D: Osmotic water movement down the solute gradient"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Active Transport vs Diffusion",
+      "points": 1,
+      "explanation": "Active transport moves solutes against their electrochemical gradient and requires ATP hydrolysis."
+    },
+    {
+      "question_id": "quiz_q2",
+      "type": "mcq",
+      "prompt": "Which organelle is the primary site of cellular aerobic respiration and ATP generation?",
+      "options": [
+        "A: Mitochondria (cellular powerhouse)",
+        "B: Endoplasmic Reticulum",
+        "C: Golgi Apparatus",
+        "D: Lysosome"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Mitochondrial Energetics",
+      "points": 1,
+      "explanation": "Mitochondria produce the vast majority of cellular ATP via oxidative phosphorylation."
+    },
+    {
+      "question_id": "quiz_q3",
+      "type": "short_answer",
+      "prompt": "Identify two structural features present in plant cells that are absent in animal cells.",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Cell wall (cellulose) and Chloroplasts (photosynthesis), as well as a large central vacuole.",
+      "concept": "Plant vs Animal Cell Cytology",
+      "points": 1,
+      "explanation": "Plant cells possess rigid cellulose cell walls and photosynthetic chloroplasts."
+    }
+  ],
+  "total_points": 3,
+  "created_at": "2026-09-02T11:20:09.622011+00:00"
+}

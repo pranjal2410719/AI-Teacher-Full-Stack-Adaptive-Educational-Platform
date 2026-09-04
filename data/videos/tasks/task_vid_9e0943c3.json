@@ -1,0 +1,18 @@
+{
+  "task_id": "task_vid_9e0943c3",
+  "plan_id": "plan_ec78b4361d",
+  "lesson_id": "les_ce1bca1d",
+  "status": "processing",
+  "progress_percent": 43.8,
+  "current_stage": "rendering_visual_slides",
+  "stages_completed": [
+    "tts_audio_synthesis",
+    "avatar_lip_sync",
+    "rendering_visual_slides"
+  ],
+  "manifest_url": null,
+  "video_url": null,
+  "error_message": null,
+  "created_at": "2026-09-02T11:23:18.879008+00:00",
+  "completed_at": null
+}

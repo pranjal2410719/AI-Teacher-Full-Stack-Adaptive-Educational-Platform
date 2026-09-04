@@ -1,0 +1,281 @@
+{
+  "lesson_id": "les_0c052e26",
+  "video_id": "les_0c052e26",
+  "plan_id": "plan_27fc7a40d0",
+  "title": "Lesson on Differential Calculus: Product and Chain Rules",
+  "video_url": "/api/v1/video/stream/les_0c052e26.mp4",
+  "total_duration_sec": 201.79,
+  "duration_sec": 201.79,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Lesson on Differential Calculus: Product and Chain Rules",
+      "start_sec": 0.0,
+      "end_sec": 18.34,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.34,
+      "end_sec": 50.71,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 50.71,
+      "end_sec": 68.21,
+      "type": "SegmentType.DEMONSTRATION"
+    },
+    {
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 68.21,
+      "end_sec": 78.34,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 78.34,
+      "end_sec": 122.42,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 122.42,
+      "end_sec": 136.7,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Step-by-Step Mechanics and Examples in 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 136.7,
+      "end_sec": 172.73,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Lesson on Differential Calculus: Product and Chain Rules",
+      "start_sec": 172.73,
+      "end_sec": 201.79,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Lesson on Differential Calculus: Product and Chain Rules",
+      "start_sec": 0.0,
+      "end_sec": 18.34,
+      "duration_sec": 18.34,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_1af2e0517d8d2e95.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.34,
+      "end_sec": 50.71,
+      "duration_sec": 32.38,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_7ee1aef59e5dd99a.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.DEMONSTRATION",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 50.71,
+      "end_sec": 68.21,
+      "duration_sec": 17.5,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b3df49ae810413f3.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 68.21,
+      "end_sec": 78.34,
+      "duration_sec": 10.13,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_bc2af92dd332c525.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 78.34,
+      "end_sec": 122.42,
+      "duration_sec": 44.09,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_dd257200335543a5.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 122.42,
+      "end_sec": 136.7,
+      "duration_sec": 14.28,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_06_seg_006.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_253c74b20f079e6b.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Step-by-Step Mechanics and Examples in 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "start_sec": 136.7,
+      "end_sec": 172.73,
+      "duration_sec": 36.02,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_07_seg_007.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_fd961d337ed97933.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Lesson on Differential Calculus: Product and Chain Rules",
+      "start_sec": 172.73,
+      "end_sec": 201.79,
+      "duration_sec": 29.06,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_0c052e26_seg_08_seg_008.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_15919f844b6b9301.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 73.27,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 129.56,
+      "concept": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 73.27,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 129.56,
+      "concept": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Differential Calculus: Product and Chain Rules' in subject area: 'Mathematics'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    }
+  ],
+  "created_at": "2026-09-04T18:01:10.858614+00:00"
+}

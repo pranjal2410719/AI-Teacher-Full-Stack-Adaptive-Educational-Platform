@@ -1,0 +1,255 @@
+{
+  "plan_id": "plan_23b007631c",
+  "title": "Lesson on quantum notes.md",
+  "target_duration_sec": 900,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": "doc_d96bd351ad",
+  "topic_id": null,
+  "topic": "Lesson on quantum notes.md",
+  "subject_domain": "computer_science",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on quantum notes.md",
+      "duration_sec": 60,
+      "script": "Welcome to today's lesson on Lesson on quantum notes.md! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_doc_d96bd351ad_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Quantum Computing Basics",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Quantum Computing Basics'. The key concepts to master here are: Quantum computing harnesses the phenomena of quantum mechanics, such as superposition and entanglement.. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Quantum Computing Basics",
+        "bullet_points": [
+          "Quantum computing harnesses the phenomena of quantum mechanics, such as superposition and entanglement."
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_doc_d96bd351ad_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Quantum Computing Basics",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Live Code Execution & State Trace",
+        "bullet_points": [
+          "Input Array: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91], Target = 23",
+          "Iteration 1: Low = 0, High = 9, Mid = 4 (Val = 16) -> Search Right Half",
+          "Iteration 2: Low = 5, High = 9, Mid = 7 (Val = 56) -> Search Left Half",
+          "Iteration 3: Low = 5, High = 6, Mid = 5 (Val = 23) -> MATCH FOUND at Index 5"
+        ],
+        "code_content": "# Trace Output for Target = 23\n# Iteration 1: low=0, high=9, mid=4 (arr[4]=16) -> target > 16 (look right)\n# Iteration 2: low=5, high=9, mid=7 (arr[7]=56) -> target < 56 (look left)\n# Iteration 3: low=5, high=6, mid=5 (arr[5]=23) -> TARGET FOUND AT INDEX 5\nresult_index = 5\nprint(f'Element found in 3 comparisons!')",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Efficiency Win: Solved in 3 steps instead of 10 linear comparisons."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_doc_d96bd351ad_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Quantum Computing Basics",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Quantum Computing Basics. Why does binary search require the input array to be sorted beforehand?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "Why does binary search require the input array to be sorted beforehand?",
+        "question_type": "mcq",
+        "options": [
+          "A) To discard half of the remaining elements by comparing with the middle element",
+          "B) To make memory allocation faster",
+          "C) Because arrays cannot store unsorted numbers",
+          "D) To convert the array into a hash map"
+        ],
+        "correct_answer": "A",
+        "explanation": "Binary search relies on order to determine whether the target lies in the left or right partition.",
+        "concept": "Quantum Computing Basics",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Sorting does not change array memory allocation speed.",
+          "C": "Arrays can store unsorted elements."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Qubits and Superposition",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Qubits and Superposition'. The key concepts to master here are: Unlike classical bits which are 0 or 1, a qubit exists in a linear combination state: |psi> = alpha |0> + beta |1|.. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Qubits and Superposition",
+        "bullet_points": [
+          "Unlike classical bits which are 0 or 1, a qubit exists in a linear combination state: |psi> = alpha |0> + beta |1|."
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_doc_d96bd351ad_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Qubits and Superposition",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Qubits and Superposition. Why does binary search require the input array to be sorted beforehand?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "Why does binary search require the input array to be sorted beforehand?",
+        "question_type": "mcq",
+        "options": [
+          "A) To discard half of the remaining elements by comparing with the middle element",
+          "B) To make memory allocation faster",
+          "C) Because arrays cannot store unsorted numbers",
+          "D) To convert the array into a hash map"
+        ],
+        "correct_answer": "A",
+        "explanation": "Binary search relies on order to determine whether the target lies in the left or right partition.",
+        "concept": "Qubits and Superposition",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Sorting does not change array memory allocation speed.",
+          "C": "Arrays can store unsorted elements."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Quantum Entanglement",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Quantum Entanglement'. The key concepts to master here are: Entangled qubits exhibit correlated states regardless of physical separation distance.. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "code_snippet",
+        "subject_domain": "computer_science",
+        "headline": "Quantum Entanglement",
+        "bullet_points": [
+          "Entangled qubits exhibit correlated states regardless of physical separation distance."
+        ],
+        "code_content": "def find_maximum(numbers: list[int]) -> int:\n    if not numbers:\n        raise ValueError('List cannot be empty')\n    current_max = numbers[0]\n    for num in numbers[1:]:\n        if num > current_max:\n            current_max = num\n    return current_max",
+        "code_language": "python",
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Time Complexity: O(log N) logarithmic efficiency vs O(N) linear scan."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_doc_d96bd351ad_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Lesson on quantum notes.md",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Lesson on quantum notes.md, we covered Quantum Computing Basics, Qubits and Superposition, Quantum Entanglement. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "computer_science",
+        "headline": "Key Takeaways: Lesson on quantum notes.md",
+        "bullet_points": [
+          "Quantum Computing Basics",
+          "Qubits and Superposition",
+          "Quantum Entanglement"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Quantum Computing Basics",
+    "Understand core principles of Qubits and Superposition",
+    "Understand core principles of Quantum Entanglement",
+    "Apply standard problem-solving patterns in Lesson on quantum notes.md"
+  ],
+  "created_at": "2026-09-02T11:05:59.976146+00:00",
+  "updated_at": null
+}

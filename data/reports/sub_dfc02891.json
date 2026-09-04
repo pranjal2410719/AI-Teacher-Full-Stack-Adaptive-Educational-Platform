@@ -1,0 +1,38 @@
+{
+  "submission_id": "sub_dfc02891",
+  "quiz_id": "quiz_a0caddb8",
+  "student_id": "stu_empty_ans_12675b",
+  "lesson_id": "les_empty_test",
+  "score_percent": 0.0,
+  "total_points_earned": 0.0,
+  "total_points_possible": 2.0,
+  "strong_concepts": [],
+  "weak_concepts": [
+    "Foundational Principles",
+    "Practical Application"
+  ],
+  "misconceptions_resolved": [
+    "Resolved secant line confusion via trip analogy"
+  ],
+  "misconceptions_identified": [
+    "Foundational Principles",
+    "Practical Application"
+  ],
+  "recommended_revision": "Review geometric tangent slope visualization",
+  "recommended_next_topics": [
+    {
+      "topic": "Advanced Applications in Post-Lesson Mastery Assessment: Lesson les_empty_test",
+      "level": "intermediate",
+      "rationale": "Expand your conceptual mastery to multi-variable applications.",
+      "prerequisite_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ]
+    }
+  ],
+  "suggested_next_topics": [
+    "Advanced Applications in Post-Lesson Mastery Assessment: Lesson les_empty_test"
+  ],
+  "learning_report_summary": "Diagnostic Assessment completed with 0.0% mastery. You showed exceptional grasp of .",
+  "created_at": "2026-09-04T18:51:55.591838+00:00"
+}

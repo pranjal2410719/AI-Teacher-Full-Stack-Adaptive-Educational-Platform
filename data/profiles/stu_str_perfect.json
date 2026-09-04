@@ -1,0 +1,42 @@
+{
+  "student_id": "stu_str_perfect",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 1,
+  "average_mastery_percent": 100.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Principles": 1.0,
+    "Practical Application": 1.0,
+    "Advanced Application 3": 1.0,
+    "Secant vs Tangent Slope Interpretation": 1.0
+  },
+  "known_weak_areas": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "weak_areas": [
+    "Secant vs Tangent Slope Interpretation"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_str_test",
+      "score": 100.0,
+      "strong_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "weak_concepts": [
+        "Secant vs Tangent Slope Interpretation"
+      ],
+      "date": "2026-09-02T11:22:31.845388+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_str_test"
+  ],
+  "total_time_spent_min": 15,
+  "created_at": "2026-09-02T11:22:31.818910+00:00",
+  "updated_at": "2026-09-02T11:22:31.845430+00:00"
+}

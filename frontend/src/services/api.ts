@@ -61,6 +61,9 @@ export const api = {
     };
     document_id?: string;
     topic_id?: string;
+    topic?: string;
+    subject_domain?: string;
+    custom_instructions?: string;
   }): Promise<LessonPlan> {
     const res = await fetch(`${API_BASE}/lessons/plan`, {
       method: 'POST',
@@ -71,12 +74,12 @@ export const api = {
   },
 
   async getLessonPlan(planId: string): Promise<LessonPlan> {
-    const res = await fetch(`${API_BASE}/lessons/plan/${planId}`);
+    const res = await fetch(`${API_BASE}/lessons/${planId}`);
     return handleResponse<LessonPlan>(res);
   },
 
   async updateLessonPlan(planId: string, updatedPlan: Partial<LessonPlan>): Promise<LessonPlan> {
-    const res = await fetch(`${API_BASE}/lessons/plan/${planId}`, {
+    const res = await fetch(`${API_BASE}/lessons/${planId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedPlan),

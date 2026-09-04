@@ -3,7 +3,7 @@
   "name": "Learner",
   "preferred_language": "en",
   "preferred_level": "intermediate",
-  "total_lessons_completed": 16,
+  "total_lessons_completed": 29,
   "average_mastery_percent": 85.0,
   "mastery_by_subject": {},
   "concept_mastery": {
@@ -228,12 +228,181 @@
         "Practical Application"
       ],
       "date": "2026-09-01T11:06:18.278415+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:05:56.937385+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:12:34.893360+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:14:10.716012+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:18:41.653227+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:20:01.456964+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-02T11:22:30.987597+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:23:41.847262+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:25:25.854955+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:32:30.744596+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:38:54.058471+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:45:23.448890+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:48:13.074838+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:51:57.317706+00:00"
     }
   ],
   "completed_lessons": [
     "les_dict_ans"
   ],
-  "total_time_spent_min": 240,
+  "total_time_spent_min": 435,
   "created_at": "2026-08-31T19:57:50.233997+00:00",
-  "updated_at": "2026-09-01T11:06:18.278476+00:00"
+  "updated_at": "2026-09-04T18:51:57.317716+00:00"
 }

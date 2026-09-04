@@ -138,9 +138,139 @@
       "is_correct": false,
       "score": 0.35,
       "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:05:58.722347+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:12:36.836660+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:14:12.701141+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:18:44.085318+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:20:05.077541+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-02T11:22:32.736770+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:23:43.299546+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:25:26.526263+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:32:33.272104+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:38:58.118626+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:45:23.843462+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:48:13.435180+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
+    },
+    {
+      "timestamp": "2026-09-04T18:51:57.683341+00:00",
+      "question_id": "q_cs_01",
+      "student_answer": "A binary search tree always takes O(log n) time for lookup, it is impossible to be O(n).",
+      "concept": "Binary Search Tree Complexity",
+      "is_correct": false,
+      "score": 0.35,
+      "misconception": "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance."
     }
   ],
   "diagnosed_misconceptions": [
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
+    "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
     "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
     "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
     "Assuming a binary search tree always operates in logarithmic time regardless of insertion balance.",
@@ -160,5 +290,5 @@
   "resolved_misconceptions": [],
   "active_question_id": null,
   "created_at": "2026-08-31T19:55:41.481844+00:00",
-  "updated_at": "2026-09-01T11:06:20.412126+00:00"
+  "updated_at": "2026-09-04T18:51:57.683401+00:00"
 }

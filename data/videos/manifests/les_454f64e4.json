@@ -1,0 +1,273 @@
+{
+  "lesson_id": "les_454f64e4",
+  "video_id": "les_454f64e4",
+  "plan_id": "plan_93bf4fdd6f",
+  "title": "Updated Limits Lesson Title",
+  "video_url": "/api/v1/video/stream/les_454f64e4.mp4",
+  "total_duration_sec": 206.54,
+  "duration_sec": 206.54,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "start_sec": 0.0,
+      "end_sec": 18.82,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.82,
+      "end_sec": 51.5,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 51.5,
+      "end_sec": 69.0,
+      "type": "SegmentType.DEMONSTRATION"
+    },
+    {
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 69.0,
+      "end_sec": 79.13,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 79.13,
+      "end_sec": 124.56,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 124.56,
+      "end_sec": 139.25,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 139.25,
+      "end_sec": 176.59,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "start_sec": 176.59,
+      "end_sec": 206.54,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "start_sec": 0.0,
+      "end_sec": 18.82,
+      "duration_sec": 18.82,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_6c82af0e94c4793c.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Topic Overview & Objectives",
+      "start_sec": 18.82,
+      "end_sec": 51.5,
+      "duration_sec": 32.69,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_09b3a37bbe7fac17.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.DEMONSTRATION",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 51.5,
+      "end_sec": 69.0,
+      "duration_sec": 17.5,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b3df49ae810413f3.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 69.0,
+      "end_sec": 79.13,
+      "duration_sec": 10.13,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_bc2af92dd332c525.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 79.13,
+      "end_sec": 124.56,
+      "duration_sec": 45.43,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_8a9c14a4244d41e1.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 124.56,
+      "end_sec": 139.25,
+      "duration_sec": 14.69,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_06_seg_006.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_fc6c2c0876974839.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Step-by-Step Mechanics and Examples in 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "start_sec": 139.25,
+      "end_sec": 176.59,
+      "duration_sec": 37.34,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_07_seg_007.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_706107fdb0187ee0.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "start_sec": 176.59,
+      "end_sec": 206.54,
+      "duration_sec": 29.95,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_454f64e4_seg_08_seg_008.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_f643d0f8ff517fa7.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 74.06,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 131.9,
+      "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 74.06,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 131.9,
+      "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        },
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?"
+      }
+    }
+  ],
+  "created_at": "2026-09-02T11:10:06.401727+00:00"
+}

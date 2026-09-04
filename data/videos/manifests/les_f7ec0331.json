@@ -1,0 +1,401 @@
+{
+  "lesson_id": "les_f7ec0331",
+  "video_id": "les_f7ec0331",
+  "plan_id": "plan_bench_10min",
+  "title": "10-Minute Full-Length University Lecture",
+  "video_url": "/api/v1/video/stream/les_f7ec0331.mp4",
+  "total_duration_sec": 739.54,
+  "duration_sec": 739.54,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Course Introduction & Overview",
+      "start_sec": 0.0,
+      "end_sec": 40.7,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Calculus Differential Calculus",
+      "start_sec": 40.7,
+      "end_sec": 127.06,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Algorithms Binary Search & Complexity",
+      "start_sec": 127.06,
+      "end_sec": 208.25,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Cellular Morphology & Mitochondria",
+      "start_sec": 208.25,
+      "end_sec": 293.26,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Industrial Revolution Technological Evolution",
+      "start_sec": 293.26,
+      "end_sec": 382.32,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Calculus Differential Calculus",
+      "start_sec": 382.32,
+      "end_sec": 468.67,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Algorithms Binary Search & Complexity",
+      "start_sec": 468.67,
+      "end_sec": 549.86,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Cellular Morphology & Mitochondria",
+      "start_sec": 549.86,
+      "end_sec": 612.82,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Industrial Revolution Technological Evolution",
+      "start_sec": 612.82,
+      "end_sec": 701.89,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Synthesis & Core Takeaways",
+      "start_sec": 701.89,
+      "end_sec": 739.54,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "plan_bench_10min_seg_01",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Course Introduction & Overview",
+      "start_sec": 0.0,
+      "end_sec": 40.7,
+      "duration_sec": 40.7,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_01_plan_bench_10min_seg_01.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_8bb3b13ed00f95ed.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_02",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Calculus Differential Calculus",
+      "start_sec": 40.7,
+      "end_sec": 127.06,
+      "duration_sec": 86.35,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_02_plan_bench_10min_seg_02.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b80302c2510c4c71.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_03",
+      "order": 3,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Algorithms Binary Search & Complexity",
+      "start_sec": 127.06,
+      "end_sec": 208.25,
+      "duration_sec": 81.19,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_03_plan_bench_10min_seg_03.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_05255d53b81a3e4b.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_04",
+      "order": 4,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Cellular Morphology & Mitochondria",
+      "start_sec": 208.25,
+      "end_sec": 293.26,
+      "duration_sec": 85.01,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_04_plan_bench_10min_seg_04.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_2f0d9be94739fe97.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_05",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Industrial Revolution Technological Evolution",
+      "start_sec": 293.26,
+      "end_sec": 382.32,
+      "duration_sec": 89.06,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_05_plan_bench_10min_seg_05.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_55c7a03f4ecf07b7.mp3",
+      "visual_type": "VisualType.TIMELINE"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_06",
+      "order": 6,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Calculus Differential Calculus",
+      "start_sec": 382.32,
+      "end_sec": 468.67,
+      "duration_sec": 86.35,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_06_plan_bench_10min_seg_06.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b80302c2510c4c71.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_07",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Algorithms Binary Search & Complexity",
+      "start_sec": 468.67,
+      "end_sec": 549.86,
+      "duration_sec": 81.19,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_07_plan_bench_10min_seg_07.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_05255d53b81a3e4b.mp3",
+      "visual_type": "VisualType.CODE_SNIPPET"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_08",
+      "order": 8,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Cellular Morphology & Mitochondria",
+      "start_sec": 549.86,
+      "end_sec": 612.82,
+      "duration_sec": 62.96,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_08_plan_bench_10min_seg_08.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_2f0d9be94739fe97.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_09",
+      "order": 9,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Industrial Revolution Technological Evolution",
+      "start_sec": 612.82,
+      "end_sec": 701.89,
+      "duration_sec": 89.06,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_09_plan_bench_10min_seg_09.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_55c7a03f4ecf07b7.mp3",
+      "visual_type": "VisualType.TIMELINE"
+    },
+    {
+      "segment_id": "plan_bench_10min_seg_10",
+      "order": 10,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Synthesis & Core Takeaways",
+      "start_sec": 701.89,
+      "end_sec": 739.54,
+      "duration_sec": 37.66,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_f7ec0331_seg_10_plan_bench_10min_seg_10.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_7373be40111f4f18.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_q_plan_bench_10min_2",
+      "checkpoint_id": "chk_plan_bench_10min_seg_02",
+      "timestamp_sec": 83.88,
+      "concept": "Calculus Differential Calculus",
+      "question": {
+        "question_id": "q_plan_bench_10min_2",
+        "question_text": "What is the key principle of Calculus Differential Calculus?",
+        "prompt": "What is the key principle of Calculus Differential Calculus?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Calculus Differential Calculus.",
+        "concept": "Calculus Differential Calculus",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_4",
+      "checkpoint_id": "chk_plan_bench_10min_seg_04",
+      "timestamp_sec": 250.75,
+      "concept": "Cellular Morphology & Mitochondria",
+      "question": {
+        "question_id": "q_plan_bench_10min_4",
+        "question_text": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "prompt": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Cellular Morphology & Mitochondria.",
+        "concept": "Cellular Morphology & Mitochondria",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_6",
+      "checkpoint_id": "chk_plan_bench_10min_seg_06",
+      "timestamp_sec": 425.5,
+      "concept": "Calculus Differential Calculus",
+      "question": {
+        "question_id": "q_plan_bench_10min_6",
+        "question_text": "What is the key principle of Calculus Differential Calculus?",
+        "prompt": "What is the key principle of Calculus Differential Calculus?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Calculus Differential Calculus.",
+        "concept": "Calculus Differential Calculus",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_8",
+      "checkpoint_id": "chk_plan_bench_10min_seg_08",
+      "timestamp_sec": 581.34,
+      "concept": "Cellular Morphology & Mitochondria",
+      "question": {
+        "question_id": "q_plan_bench_10min_8",
+        "question_text": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "prompt": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Cellular Morphology & Mitochondria.",
+        "concept": "Cellular Morphology & Mitochondria",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_q_plan_bench_10min_2",
+      "checkpoint_id": "chk_plan_bench_10min_seg_02",
+      "timestamp_sec": 83.88,
+      "concept": "Calculus Differential Calculus",
+      "question": {
+        "question_id": "q_plan_bench_10min_2",
+        "question_text": "What is the key principle of Calculus Differential Calculus?",
+        "prompt": "What is the key principle of Calculus Differential Calculus?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Calculus Differential Calculus.",
+        "concept": "Calculus Differential Calculus",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_4",
+      "checkpoint_id": "chk_plan_bench_10min_seg_04",
+      "timestamp_sec": 250.75,
+      "concept": "Cellular Morphology & Mitochondria",
+      "question": {
+        "question_id": "q_plan_bench_10min_4",
+        "question_text": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "prompt": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Cellular Morphology & Mitochondria.",
+        "concept": "Cellular Morphology & Mitochondria",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_6",
+      "checkpoint_id": "chk_plan_bench_10min_seg_06",
+      "timestamp_sec": 425.5,
+      "concept": "Calculus Differential Calculus",
+      "question": {
+        "question_id": "q_plan_bench_10min_6",
+        "question_text": "What is the key principle of Calculus Differential Calculus?",
+        "prompt": "What is the key principle of Calculus Differential Calculus?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Calculus Differential Calculus.",
+        "concept": "Calculus Differential Calculus",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    },
+    {
+      "marker_id": "pm_q_plan_bench_10min_8",
+      "checkpoint_id": "chk_plan_bench_10min_seg_08",
+      "timestamp_sec": 581.34,
+      "concept": "Cellular Morphology & Mitochondria",
+      "question": {
+        "question_id": "q_plan_bench_10min_8",
+        "question_text": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "prompt": "What is the key principle of Cellular Morphology & Mitochondria?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Principle A",
+          "Principle B",
+          "Principle C",
+          "Principle D"
+        ],
+        "correct_answer": "Principle A",
+        "correct_option_index": 0,
+        "explanation": "Principle A is the core invariant of Cellular Morphology & Mitochondria.",
+        "concept": "Cellular Morphology & Mitochondria",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "created_at": "2026-09-04T18:29:40.748498+00:00"
+}

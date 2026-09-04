@@ -1,5 +1,5 @@
 """
-Demo & Sample Video Generation Pipeline for AI Teacher Platform.
+Demo & Sample Video Generation Pipeline for ApniHelp Platform.
 Generates an end-to-end, >= 2-minute hybrid educational video complete with
 talking avatar intro/summary segments, subject-aware visual slides (LaTeX / diagrams / code),
 and interactive pause checkpoints in English and Hindi.
@@ -426,7 +426,7 @@ async def run_demo_pipeline(
     5. Verifies duration >= 120s and interactive pause checkpoints
     """
     print("\n" + "=" * 70)
-    print(f"🎬 AI TEACHER SAMPLE DEMO VIDEO GENERATION PIPELINE")
+    print(f"🎬 APNIHELP SAMPLE DEMO VIDEO GENERATION PIPELINE")
     print("=" * 70)
     print(f"📌 Topic Domain : {topic_choice.upper()}")
     print(f"🌐 Language     : {'English (en)' if language == 'en' else 'Hindi (hi)'}")
@@ -517,7 +517,7 @@ async def run_demo_pipeline(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="AI Teacher Sample Demo Video Generator (>= 2 min video)")
+    parser = argparse.ArgumentParser(description="ApniHelp Sample Demo Video Generator (>= 2 min video)")
     parser.add_argument("--topic", type=str, default="calculus", choices=["calculus", "biology", "cs"], help="Topic domain")
     parser.add_argument("--language", type=str, default="en", choices=["en", "hi"], help="Language code (en or hi)")
     parser.add_argument("--output", type=str, default=None, help="Custom output video path")

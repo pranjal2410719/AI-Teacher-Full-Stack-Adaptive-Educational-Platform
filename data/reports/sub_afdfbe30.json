@@ -1,0 +1,50 @@
+{
+  "submission_id": "sub_afdfbe30",
+  "quiz_id": "quiz_72fbdc63",
+  "student_id": "stu_e2e_auditor",
+  "lesson_id": "plan_1fd5965a45",
+  "score_percent": 33.3,
+  "total_points_earned": 1.0,
+  "total_points_possible": 3.0,
+  "strong_concepts": [
+    "Plant vs Animal Cell Cytology"
+  ],
+  "weak_concepts": [
+    "Active Transport vs Diffusion",
+    "Mitochondrial Energetics"
+  ],
+  "misconceptions_resolved": [
+    "Resolved secant line confusion via trip analogy"
+  ],
+  "misconceptions_identified": [
+    "Active Transport vs Diffusion",
+    "Mitochondrial Energetics"
+  ],
+  "recommended_revision": "Review geometric tangent slope visualization",
+  "recommended_next_topics": [
+    {
+      "topic": "Cellular Respiration and Krebs Cycle",
+      "level": "intermediate",
+      "rationale": "Deep dive into mitochondrial ATP production.",
+      "prerequisite_concepts": [
+        "Cell Organelles",
+        "Active Transport"
+      ]
+    },
+    {
+      "topic": "Photosynthesis and Light Reactions in Chloroplasts",
+      "level": "intermediate",
+      "rationale": "Plant energetics complementary to animal respiration.",
+      "prerequisite_concepts": [
+        "Chloroplasts",
+        "Membrane Transport"
+      ]
+    }
+  ],
+  "suggested_next_topics": [
+    "Cellular Respiration and Krebs Cycle",
+    "Photosynthesis and Light Reactions in Chloroplasts"
+  ],
+  "learning_report_summary": "Diagnostic Assessment completed with 33.3% mastery. You showed exceptional grasp of Plant vs Animal Cell Cytology.",
+  "created_at": "2026-09-02T11:20:09.644517+00:00"
+}

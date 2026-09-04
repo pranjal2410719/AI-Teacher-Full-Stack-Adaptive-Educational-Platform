@@ -129,12 +129,17 @@ class VisualSpec(BaseModel):
 class CheckpointQuestion(BaseModel):
     """
     Formative assessment question triggering an in-lesson interactive pause check.
+    Supports bidirectional alignment between backend schema (question_text, question_type, correct_answer)
+    and frontend schema (prompt, type, correct_option_index).
     """
     question_id: str = Field(..., description="Unique question identifier")
-    question_text: str = Field(..., description="Prompt or query presented to the student")
-    question_type: str = Field(default="mcq", description="Question format: 'mcq' or 'short_answer'")
+    question_text: Optional[str] = Field(default=None, description="Prompt or query presented to the student")
+    prompt: Optional[str] = Field(default=None, description="Frontend alias for question text / prompt")
+    question_type: Optional[str] = Field(default="mcq", description="Question format: 'mcq' or 'short_answer'")
+    type: Optional[str] = Field(default="mcq", description="Frontend alias for question format: 'mcq' or 'short_answer'")
     options: List[str] = Field(default_factory=list, description="MCQ options if applicable (e.g. ['A) ...', 'B) ...'])")
-    correct_answer: str = Field(..., description="Correct answer text or option key")
+    correct_answer: Optional[str] = Field(default=None, description="Correct answer text or option key")
+    correct_option_index: Optional[int] = Field(default=None, description="0-indexed option index for frontend")
     explanation: str = Field(..., description="Pedagogical explanation of why the answer is correct")
     concept: str = Field(..., description="Specific concept or principle being tested")
     difficulty: str = Field(default="medium", description="Question difficulty: easy | medium | hard")
@@ -143,12 +148,82 @@ class CheckpointQuestion(BaseModel):
         description="Mapping of wrong answers to cognitive misconception diagnoses"
     )
 
-    @field_validator("question_text", "correct_answer", "concept")
+    @model_validator(mode="before")
     @classmethod
-    def validate_non_empty(cls, v: str) -> str:
-        if not v or not v.strip():
-            raise ValueError("Field cannot be empty.")
-        return v.strip()
+    def sync_pre_validation(cls, data: Any) -> Any:
+        if isinstance(data, dict):
+            # 1. Sync prompt <-> question_text
+            prompt = data.get("prompt")
+            q_text = data.get("question_text")
+            if prompt and not q_text:
+                data["question_text"] = prompt
+            elif q_text and not prompt:
+                data["prompt"] = q_text
+
+            # 2. Sync type <-> question_type
+            q_type = data.get("question_type")
+            t = data.get("type")
+            if t and not q_type:
+                data["question_type"] = t
+            elif q_type and not t:
+                data["type"] = q_type
+
+            # 3. Sync correct_option_index <-> correct_answer
+            corr_idx = data.get("correct_option_index")
+            corr_ans = data.get("correct_answer")
+            options = data.get("options", [])
+            if corr_idx is not None and not corr_ans and isinstance(options, list) and 0 <= corr_idx < len(options):
+                data["correct_answer"] = options[corr_idx]
+            elif corr_ans and corr_idx is None and isinstance(options, list) and len(options) > 0:
+                for idx, opt in enumerate(options):
+                    if str(corr_ans).strip().lower() in str(opt).strip().lower() or str(opt).strip().lower() in str(corr_ans).strip().lower():
+                        data["correct_option_index"] = idx
+                        break
+                if data.get("correct_option_index") is None:
+                    data["correct_option_index"] = 0
+        return data
+
+    @model_validator(mode="after")
+    def sync_and_validate(self) -> "CheckpointQuestion":
+        # 1. Sync prompt <-> question_text
+        if self.prompt and not self.question_text:
+            self.question_text = self.prompt
+        elif self.question_text and not self.prompt:
+            self.prompt = self.question_text
+
+        # 2. Sync type <-> question_type
+        if self.type and not self.question_type:
+            self.question_type = self.type
+        elif self.question_type and not self.type:
+            self.type = self.question_type
+
+        # 3. Sync correct_option_index <-> correct_answer
+        if self.correct_option_index is not None and not self.correct_answer:
+            if self.options and 0 <= self.correct_option_index < len(self.options):
+                self.correct_answer = self.options[self.correct_option_index]
+        elif self.correct_answer and self.correct_option_index is None and self.options:
+            for idx, opt in enumerate(self.options):
+                if str(self.correct_answer).strip().lower() in str(opt).strip().lower() or str(opt).strip().lower() in str(self.correct_answer).strip().lower():
+                    self.correct_option_index = idx
+                    break
+            if self.correct_option_index is None and len(self.options) > 0:
+                self.correct_option_index = 0
+
+        # 4. Enforce non-empty required fields
+        if not self.question_text or not self.question_text.strip():
+            raise ValueError("question_text or prompt cannot be empty.")
+        self.question_text = self.question_text.strip()
+        self.prompt = self.question_text
+
+        if not self.correct_answer or not self.correct_answer.strip():
+            raise ValueError("correct_answer cannot be empty.")
+        self.correct_answer = self.correct_answer.strip()
+
+        if not self.concept or not self.concept.strip():
+            raise ValueError("concept cannot be empty.")
+        self.concept = self.concept.strip()
+
+        return self
 
 
 class LessonSegmentPlan(BaseModel):

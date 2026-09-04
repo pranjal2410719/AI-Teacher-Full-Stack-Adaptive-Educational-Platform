@@ -1,4 +1,4 @@
-# 🎓 AI Teacher — Full-Stack Adaptive Educational Platform
+# 🎓 ApniHelp — Full-Stack Adaptive Educational Platform
 
 [![Build Status](https://img.shields.io/badge/Build-Passing-emerald.svg)](README.md)
 [![E2E Test Suite](https://img.shields.io/badge/E2E%20Tests-56%2F56%20Passed%20(100%25)-blue.svg)](TEST_READY.md)
@@ -8,7 +8,7 @@
 [![Video Engine](https://img.shields.io/badge/Video%20Pipeline-FFmpeg%20720p%2030fps-rose.svg)](docs/architecture.md#hybrid-video-generation-pipeline-r3)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
-An intelligent, full-stack educational web application built for the **AI Innovation Hackathon 2026**. AI Teacher ingests uploaded course materials (PDF, DOCX, PPTX, TXT) or free-form topics and delivers personalized, adaptive, multilingual lessons through a **hybrid neural video experience** — executing the authentic human teaching loop:
+An intelligent, full-stack educational web application built for the **AI Innovation Hackathon 2026**. ApniHelp ingests uploaded course materials (PDF, DOCX, PPTX, TXT) or free-form topics and delivers personalized, adaptive, multilingual lessons through a **hybrid neural video experience** — executing the authentic human teaching loop:
 
 $$\text{\bf Understand} \longrightarrow \text{\bf Plan} \longrightarrow \text{\bf Explain} \longrightarrow \text{\bf Demonstrate} \longrightarrow \text{\bf Question} \longrightarrow \text{\bf Evaluate} \longrightarrow \text{\bf Adapt} \longrightarrow \text{\bf Continue}$$
 
@@ -39,7 +39,7 @@ $$\text{\bf Understand} \longrightarrow \text{\bf Plan} \longrightarrow \text{\b
 
 ## 🌟 Key Innovations & Highlights
 
-1. **Hybrid Video Architecture**: Unlike monolithic avatar videos, AI Teacher uses a **hybrid approach**:
+1. **Hybrid Video Architecture**: Unlike monolithic avatar videos, ApniHelp uses a **hybrid approach**:
    - **Talking Avatar Teacher**: Audio-driven 2.5D dynamic viseme animation for greetings, concept transitions, and lesson summaries.
    - **Rich Subject-Aware Visual Slides**: Dynamic LaTeX mathematical derivations, syntax-highlighted code editor frames, anatomical cellular diagrams, and chronological history timelines.
 2. **In-Video Interactive Checkpoints**: The video automatically pauses at pedagogical intervals to test comprehension.
@@ -110,7 +110,7 @@ $$\text{\bf Understand} \longrightarrow \text{\bf Plan} \longrightarrow \text{\b
 
 ## 🏗️ System Architecture
 
-AI Teacher utilizes a modular 5-tier decoupled architecture:
+ApniHelp utilizes a modular 5-tier decoupled architecture:
 
 ![System Architecture](docs/architecture_diagram.png)
 
@@ -246,7 +246,7 @@ python3 tests_e2e/test_runner.py
 
 ```
 ================================================================================
-          AI TEACHER FULL-STACK E2E TEST SUITE RUNNER
+          APNIHELP FULL-STACK E2E TEST SUITE RUNNER
 ================================================================================
 Tier 1: Feature Coverage (R1 - R5)                [30/30]  PASS  (100.0%)
 Tier 2: Boundary & Corner Cases                   [18/18]  PASS  (100.0%)

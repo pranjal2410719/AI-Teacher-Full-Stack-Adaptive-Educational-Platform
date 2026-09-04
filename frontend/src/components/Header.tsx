@@ -20,84 +20,80 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenProfile,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 px-4 lg:px-8 py-3">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm px-4 lg:px-8 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setCurrentTab('ingest')}>
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-indigo-600 to-emerald-400 p-0.5 shadow-lg shadow-purple-500/20">
-            <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-purple-400" />
-            </div>
+          <div className="w-10 h-10 rounded-xl bg-blue-900 text-yellow-400 flex items-center justify-center shadow-sm">
+            <GraduationCap className="w-6 h-6 text-yellow-400" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-purple-400 via-indigo-200 to-emerald-300 bg-clip-text text-transparent">
-                AI Teacher
+              <span className="font-black text-xl tracking-tight text-blue-950">
+                ApniHelp
               </span>
-              <span className="text-[10px] font-semibold uppercase px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+              <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300">
                 Adaptive
               </span>
             </div>
-            <p className="text-xs text-slate-400 hidden sm:block">Full-Stack Human Teaching Loop</p>
+            <p className="text-xs text-slate-500 hidden sm:block">Full-Stack Adaptive Educational Platform</p>
           </div>
         </div>
 
         {/* Navigation Tabs */}
-        <nav className="hidden md:flex items-center gap-1 bg-slate-950/60 p-1 rounded-xl border border-slate-800/60 text-xs font-medium">
+        <nav className="hidden md:flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-gray-200 text-xs font-medium">
           <button
             onClick={() => setCurrentTab('ingest')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'ingest'
-                ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                ? 'bg-white text-blue-950 shadow-sm border border-gray-200 font-bold'
+                : 'text-slate-600 hover:text-blue-950 hover:bg-slate-200/60'
             }`}
           >
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>1. Ingestion</span>
+            <BookOpen className="w-3.5 h-3.5 text-blue-900" />
+            <span>Generate Video</span>
           </button>
-          <button
-            onClick={() => setCurrentTab('plan')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
-              currentTab === 'plan'
-                ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
-            }`}
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>2. Lesson Plan</span>
-          </button>
+          {currentTab === 'plan' && (
+            <button
+              onClick={() => setCurrentTab('plan')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all bg-white text-blue-950 shadow-sm border border-gray-200 font-bold"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-blue-900" />
+              <span>Lesson Plan</span>
+            </button>
+          )}
           <button
             onClick={() => setCurrentTab('video')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'video'
-                ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                ? 'bg-white text-blue-950 shadow-sm border border-gray-200 font-bold'
+                : 'text-slate-600 hover:text-blue-950 hover:bg-slate-200/60'
             }`}
           >
-            <PlayCircle className="w-3.5 h-3.5" />
-            <span>3. Video & Checks</span>
+            <PlayCircle className="w-3.5 h-3.5 text-blue-900" />
+            <span>Video & Checks</span>
           </button>
           <button
             onClick={() => setCurrentTab('quiz')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'quiz'
-                ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                ? 'bg-white text-blue-950 shadow-sm border border-gray-200 font-bold'
+                : 'text-slate-600 hover:text-blue-950 hover:bg-slate-200/60'
             }`}
           >
-            <Award className="w-3.5 h-3.5" />
-            <span>4. Quiz & Report</span>
+            <Award className="w-3.5 h-3.5 text-blue-900" />
+            <span>Quiz & Report</span>
           </button>
           <button
             onClick={() => setCurrentTab('analytics')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all ${
               currentTab === 'analytics'
-                ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 font-semibold'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                ? 'bg-white text-blue-950 shadow-sm border border-gray-200 font-bold'
+                : 'text-slate-600 hover:text-blue-950 hover:bg-slate-200/60'
             }`}
           >
-            <BarChart3 className="w-3.5 h-3.5" />
-            <span>5. Profile & Analytics</span>
+            <BarChart3 className="w-3.5 h-3.5 text-blue-900" />
+            <span>Profile & Analytics</span>
           </button>
         </nav>
 
@@ -106,23 +102,23 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Multilingual Switcher */}
           <button
             onClick={onToggleLanguage}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-xs text-slate-200 transition-colors shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 border border-gray-200 text-xs font-semibold text-slate-700 transition-colors shadow-sm"
             title="Switch Language (English / हिन्दी)"
           >
-            <Globe className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="font-semibold">{currentLanguage === 'en' ? 'EN' : 'हिन्दी'}</span>
+            <Globe className="w-3.5 h-3.5 text-blue-900" />
+            <span className="font-bold text-blue-950">{currentLanguage === 'en' ? 'EN' : 'हिन्दी'}</span>
           </button>
 
           {/* Profile Badge */}
           <button
             onClick={onOpenProfile}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-950/80 to-slate-900 border border-purple-800/40 hover:border-purple-700 text-xs text-slate-200 transition-all shadow-sm"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-50 border border-gray-200 text-xs text-slate-800 transition-all shadow-sm"
           >
-            <div className="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center text-[10px] font-bold text-white">
+            <div className="w-6 h-6 rounded-full bg-blue-900 text-yellow-400 flex items-center justify-center text-[10px] font-black">
               {profile?.name?.charAt(0) || 'L'}
             </div>
-            <span className="hidden sm:inline font-medium">{profile?.name || 'Learner'}</span>
-            <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono">
+            <span className="hidden sm:inline font-bold text-blue-950">{profile?.name || 'Learner'}</span>
+            <span className="text-[10px] px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 font-mono font-bold">
               {profile?.preferred_level || 'Intermediate'}
             </span>
           </button>

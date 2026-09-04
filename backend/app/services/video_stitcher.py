@@ -1,5 +1,5 @@
 """
-Video Stitcher & Assembly Service for AI Teacher Platform.
+Video Stitcher & Assembly Service for ApniHelp Platform.
 Assembles hybrid video segments (Avatar Intro -> Subject-Aware Concept Slides -> Avatar Outro),
 concatenates them via FFmpeg into a 1280x720 30fps H.264/AAC web-streamable MP4 (+faststart),
 and generates comprehensive VideoManifests with continuous chapters and pause checkpoint markers.
@@ -12,6 +12,7 @@ import math
 import logging
 import asyncio
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Optional, Dict, Any, List, Tuple, Callable
 from datetime import datetime, timezone
@@ -183,31 +184,31 @@ class VideoStitcher:
 
         try:
             # -------------------------------------------------------------
-            # Stage 1: Multilingual TTS Audio Synthesis
+            # Stage 1: Concurrent Multilingual TTS Audio Synthesis
             # -------------------------------------------------------------
             self.update_task_status(task_id, "processing", VideoStage.TTS_AUDIO_SYNTHESIS.value, 15.0)
-            logger.info(f"Task {task_id}: Stage 1 - Synthesizing TTS audio for plan {plan.plan_id}")
+            logger.info(f"Task {task_id}: Stage 1 - Synthesizing TTS audio concurrently for plan {plan.plan_id}")
 
-            audio_tracks: List[Tuple[Path, float]] = []
-            for i, module in enumerate(plan.modules):
-                script_text = (module.script or f"Section {i+1}: {module.title}").strip()
-                audio_path, duration = await self.tts.synthesize(
-                    text=script_text,
+            tts_coros = [
+                self.tts.synthesize(
+                    text=(module.script or f"Section {i+1}: {module.title}").strip(),
                     language=plan.language or "en",
                     voice=request.voice_preference,
                 )
-                audio_tracks.append((audio_path, duration))
+                for i, module in enumerate(plan.modules)
+            ]
+            audio_tracks: List[Tuple[Path, float]] = list(await asyncio.gather(*tts_coros))
 
             completed_stages = [VideoStage.TTS_AUDIO_SYNTHESIS.value]
             self.update_task_status(task_id, "processing", VideoStage.AVATAR_LIP_SYNC.value, 35.0, stages_completed=completed_stages)
 
             # -------------------------------------------------------------
-            # Stage 2 & 3: Render Avatar Clips and Subject-Aware Slides
+            # Stage 2 & 3: Parallel Render of Avatar Clips and Subject Slides
             # -------------------------------------------------------------
-            current_sec = 0.0
+            self.update_task_status(task_id, "processing", VideoStage.RENDERING_VISUAL_SLIDES.value, 40.0)
+            logger.info(f"Task {task_id}: Stages 2 & 3 - Parallel rendering {len(plan.modules)} segments across worker pool")
 
-            for i, module in enumerate(plan.modules):
-                audio_path, audio_dur = audio_tracks[i]
+            def _render_single_segment(i: int, module: LessonSegmentPlan, audio_path: Path, audio_dur: float) -> Tuple[int, Path]:
                 clip_path = self.clips_dir / f"{lesson_id}_seg_{i+1:02d}_{module.segment_id}.mp4"
                 seg_type = str(module.segment_type).lower()
 
@@ -218,8 +219,7 @@ class VideoStitcher:
                 )
 
                 if is_avatar:
-                    # Render 2.5D Audio-Driven Viseme Avatar Clip
-                    self.update_task_status(task_id, "processing", VideoStage.AVATAR_LIP_SYNC.value, 40.0 + (i / len(plan.modules)) * 30.0)
+                    # Render Photorealistic Audio-Driven Viseme Avatar Clip
                     self.avatar.generate_avatar_clip(
                         audio_path=audio_path,
                         output_path=clip_path,
@@ -229,7 +229,6 @@ class VideoStitcher:
                     )
                 else:
                     # Render Subject-Aware Visual Slide Video Clip
-                    self.update_task_status(task_id, "processing", VideoStage.RENDERING_VISUAL_SLIDES.value, 40.0 + (i / len(plan.modules)) * 30.0)
                     self.slide_render.render_slide_video(
                         spec=module.visual_spec,
                         title=module.title,
@@ -237,8 +236,32 @@ class VideoStitcher:
                         output_video_path=clip_path,
                         duration_sec=audio_dur,
                     )
+                return i, clip_path
 
-                segment_clips.append(clip_path)
+            loop = asyncio.get_running_loop()
+            max_workers = min(4, os.cpu_count() or 4)
+            with ThreadPoolExecutor(max_workers=max_workers) as pool:
+                render_tasks = [
+                    loop.run_in_executor(
+                        pool,
+                        _render_single_segment,
+                        i,
+                        module,
+                        audio_tracks[i][0],
+                        audio_tracks[i][1],
+                    )
+                    for i, module in enumerate(plan.modules)
+                ]
+                rendered_results = await asyncio.gather(*render_tasks)
+
+            # Sort by segment index to guarantee correct ordering
+            rendered_results.sort(key=lambda x: x[0])
+            segment_clips = [res[1] for res in rendered_results]
+
+            current_sec = 0.0
+            for i, module in enumerate(plan.modules):
+                audio_path, audio_dur = audio_tracks[i]
+                clip_path = segment_clips[i]
 
                 start_ts = round(current_sec, 2)
                 end_ts = round(current_sec + audio_dur, 2)
@@ -290,10 +313,10 @@ class VideoStitcher:
             completed_stages.extend([VideoStage.AVATAR_LIP_SYNC.value, VideoStage.RENDERING_VISUAL_SLIDES.value])
 
             # -------------------------------------------------------------
-            # Stage 4: FFmpeg Concat Demuxer & Faststart MP4 Assembly
+            # Stage 4: FFmpeg Concat Demuxer with Stream Copy (-c copy)
             # -------------------------------------------------------------
             self.update_task_status(task_id, "processing", VideoStage.STITCHING_FFMPEG.value, 85.0, stages_completed=completed_stages)
-            logger.info(f"Task {task_id}: Stage 4 - Concatenating {len(segment_clips)} clips into {output_video_path}")
+            logger.info(f"Task {task_id}: Stage 4 - Concatenating {len(segment_clips)} clips via stream copy into {output_video_path}")
 
             concat_file = self.clips_dir / f"concat_{lesson_id}.txt"
             concat_lines = [f"file '{clip.resolve()}'" for clip in segment_clips]
@@ -305,17 +328,33 @@ class VideoStitcher:
                 "-f", "concat",
                 "-safe", "0",
                 "-i", str(concat_file),
-                "-c:v", "libx264",
-                "-pix_fmt", "yuv420p",
-                "-r", "30",
-                "-preset", "ultrafast",
-                "-c:a", "aac",
-                "-b:a", "128k",
+                "-c", "copy",
                 "-movflags", "+faststart",
                 str(output_video_path),
             ]
 
             proc = subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+            if proc.returncode != 0:
+                err = proc.stderr.decode(errors="ignore")
+                logger.warning(f"FFmpeg stream copy concatenation failed ({err}), retrying with fast re-encode fallback.")
+                reencode_cmd = [
+                    self.ffmpeg_path,
+                    "-y",
+                    "-f", "concat",
+                    "-safe", "0",
+                    "-i", str(concat_file),
+                    "-c:v", "libx264",
+                    "-pix_fmt", "yuv420p",
+                    "-r", "30",
+                    "-preset", "ultrafast",
+                    "-c:a", "aac",
+                    "-b:a", "128k",
+                    "-movflags", "+faststart",
+                    str(output_video_path),
+                ]
+                proc = subprocess.run(reencode_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
             concat_file.unlink(missing_ok=True)
 
             if proc.returncode != 0:

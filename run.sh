@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# AI Teacher — Full-Stack Adaptive Educational Platform Launcher
+# ApniHelp — Full-Stack Adaptive Educational Platform Launcher
 # Supports:
 #   1. Web Server Mode:  FastAPI Core Server (8000) & Frontend UI (3000)
 #   2. Demo / Sample:    Automated >= 2-min hybrid video generation with checkpoints
@@ -35,7 +35,7 @@ MODE="${1:-start}"
 
 show_help() {
     echo "======================================================================"
-    echo " 🎓 AI Teacher — Full-Stack Adaptive Educational Platform"
+    echo " 🎓 ApniHelp — Full-Stack Adaptive Educational Platform"
     echo "======================================================================"
     echo "Usage:"
     echo "  ./run.sh                     Start FastAPI server (8000) and Frontend (3000)"
@@ -55,7 +55,7 @@ show_help() {
 
 run_demo() {
     echo "======================================================================"
-    echo " 🎬 Launching AI Teacher Demo Video Generator (>= 2 Minutes)"
+    echo " 🎬 Launching ApniHelp Demo Video Generator (>= 2 Minutes)"
     echo "======================================================================"
     if [ "$1" = "--demo" ] || [ "$1" = "demo" ] || [ "$1" = "--sample" ] || [ "$1" = "sample" ]; then
         shift
@@ -65,7 +65,7 @@ run_demo() {
 
 run_tests() {
     echo "======================================================================"
-    echo " 🧪 Running AI Teacher Backend & E2E Test Suite"
+    echo " 🧪 Running ApniHelp Backend & E2E Test Suite"
     echo "======================================================================"
     echo "[1/2] Running Backend Pytest Suite..."
     "$PYTHON" -m pytest backend/tests/ -v
@@ -78,7 +78,7 @@ run_tests() {
 
 run_servers() {
     echo "======================================================================"
-    echo " 🎓 AI Teacher — Full-Stack Educational Platform"
+    echo " 🎓 ApniHelp — Full-Stack Educational Platform"
     echo "======================================================================"
 
     # 1. Environment Verification
@@ -113,7 +113,7 @@ run_servers() {
     # Trap signals for clean termination
     cleanup() {
         echo ""
-        echo "Shutting down AI Teacher Platform..."
+        echo "Shutting down ApniHelp Platform..."
         kill "$BACKEND_PID" 2>/dev/null || true
         [ -n "$FRONTEND_PID" ] && kill "$FRONTEND_PID" 2>/dev/null || true
         exit 0
@@ -122,7 +122,7 @@ run_servers() {
 
     echo ""
     echo "======================================================================"
-    echo " ✅ AI Teacher Full-Stack Application is LIVE!"
+    echo " ✅ ApniHelp Full-Stack Application is LIVE!"
     echo " 👉 Web Application: http://localhost:3000"
     echo " 👉 Backend API Docs: http://localhost:8000/docs"
     echo " 👉 Health Endpoint: http://localhost:8000/api/v1/health"

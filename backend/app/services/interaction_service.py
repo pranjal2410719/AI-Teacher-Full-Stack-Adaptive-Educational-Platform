@@ -512,12 +512,12 @@ Respond strictly with valid JSON conforming to this schema:
         grounded_context = ""
         sources = []
         target_id = req.document_id or req.topic_id
-        if target_id and target_id in vector_store.indices:
+        if target_id and (target_id in vector_store.indices or vector_store.get_index(target_id) is not None):
             try:
-                rag_res = vector_store.query(target_id=target_id, query_text=msg, top_k=2)
-                if rag_res:
-                    sources = [f"{m.source_filename} (p.{m.page_or_slide})" for m in rag_res]
-                    grounded_context = "\n".join([m.text for m in rag_res])
+                rag_res = vector_store.query(query=msg, target_id=target_id, top_k=2)
+                if rag_res and rag_res.results:
+                    sources = [f"{m.source_filename} (p.{m.page_or_slide or 1})" for m in rag_res.results]
+                    grounded_context = "\n".join([m.text for m in rag_res.results])
             except Exception as e:
                 logger.warning(f"Vector search failed in tutor chat: {e}")
 

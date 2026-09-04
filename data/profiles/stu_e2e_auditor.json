@@ -1,0 +1,42 @@
+{
+  "student_id": "stu_e2e_auditor",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 1,
+  "average_mastery_percent": 33.3,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Plant vs Animal Cell Cytology": 0.33299999999999996,
+    "Active Transport vs Diffusion": 0.33299999999999996,
+    "Mitochondrial Energetics": 0.33299999999999996
+  },
+  "known_weak_areas": [
+    "Active Transport vs Diffusion",
+    "Mitochondrial Energetics"
+  ],
+  "weak_areas": [
+    "Active Transport vs Diffusion",
+    "Mitochondrial Energetics"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "plan_1fd5965a45",
+      "score": 33.3,
+      "strong_concepts": [
+        "Plant vs Animal Cell Cytology"
+      ],
+      "weak_concepts": [
+        "Active Transport vs Diffusion",
+        "Mitochondrial Energetics"
+      ],
+      "date": "2026-09-02T11:20:09.720674+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "plan_1fd5965a45"
+  ],
+  "total_time_spent_min": 15,
+  "created_at": "2026-09-02T11:20:09.645890+00:00",
+  "updated_at": "2026-09-02T11:20:09.720751+00:00"
+}

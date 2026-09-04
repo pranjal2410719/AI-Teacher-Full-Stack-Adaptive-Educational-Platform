@@ -1,0 +1,173 @@
+{
+  "platform": "ApniHelp",
+  "timestamp": "2026-09-04T18:40:50Z",
+  "total_tests": 23,
+  "passed": 23,
+  "failed": 0,
+  "skipped": 0,
+  "duration_sec": 348.1,
+  "all_passed": true,
+  "results": [
+    {
+      "test_id": "tests_e2e/test_r1_video_generation_speed.py::test_r1_performance_contract_formula",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0001,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r1_video_generation_speed.py::test_r1_video_generation_speed_5min",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 33.4008,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r1_video_generation_speed.py::test_r1_video_generation_speed_10min",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 146.3235,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r2_single_button_flow.py::test_r2_single_button_label_in_ingestion_view",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0009,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r2_single_button_flow.py::test_r2_legacy_multi_step_button_removed",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0028,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r2_single_button_flow.py::test_r2_direct_pipeline_chained_handler_in_app",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0005,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r2_single_button_flow.py::test_r2_button_loading_and_guard_states",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0014,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r2_single_button_flow.py::test_r2_backend_direct_pipeline_trigger_contract",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 118.252,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r3_light_visual_theme.py::test_r3_global_html_and_css_light_theme_roots",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0656,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r3_light_visual_theme.py::test_r3_absence_of_dark_slate_root_containers",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.2936,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r3_light_visual_theme.py::test_r3_light_theme_palette_presence_across_all_views",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.2355,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r3_light_visual_theme.py::test_r3_absence_of_legacy_purple_primary_buttons",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0817,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r3_light_visual_theme.py::test_r3_high_contrast_typography_on_light_surfaces",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0619,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r4_photorealistic_avatar.py::test_r4_avatar_asset_resolution_and_format",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.1333,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r4_photorealistic_avatar.py::test_r4_photorealistic_texture_variance_not_cartoon",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 3.2445,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r4_photorealistic_avatar.py::test_r4_avatar_audio_visual_speech_sync",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 25.3977,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r4_photorealistic_avatar.py::test_r4_dynamic_lip_sync_energy_envelope",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 4.5227,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_frontend_naming_consistency",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0382,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_backend_metadata_and_root_endpoint",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0703,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_rendered_media_watermarks_and_overlays",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0217,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_docker_compose_container_naming",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0098,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_launcher_script_banners",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0142,
+      "error": null
+    },
+    {
+      "test_id": "tests_e2e/test_r5_naming_consistency.py::test_r5_root_readme_title",
+      "tier": 6,
+      "status": "PASSED",
+      "duration_sec": 0.0095,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "lesson_id": "les_51a1f5dd",
+  "video_id": "les_51a1f5dd",
+  "plan_id": "plan_2b27ead740",
+  "title": "Lesson on explain xgboost regresiion",
+  "video_url": "/api/v1/video/stream/les_51a1f5dd.mp4",
+  "total_duration_sec": 200.16,
+  "duration_sec": 200.16,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Lesson on explain xgboost regresiion",
+      "start_sec": 0.0,
+      "end_sec": 17.18,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Topic Overview & Objectives",
+      "start_sec": 17.18,
+      "end_sec": 49.44,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 49.44,
+      "end_sec": 66.94,
+      "type": "SegmentType.DEMONSTRATION"
+    },
+    {
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 66.94,
+      "end_sec": 76.3,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 76.3,
+      "end_sec": 118.22,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 118.22,
+      "end_sec": 130.54,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Step-by-Step Mechanics and Examples in 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 130.54,
+      "end_sec": 165.84,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Lesson on explain xgboost regresiion",
+      "start_sec": 165.84,
+      "end_sec": 200.16,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Lesson on explain xgboost regresiion",
+      "start_sec": 0.0,
+      "end_sec": 17.18,
+      "duration_sec": 17.18,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_23b3928e2b329857.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Topic Overview & Objectives",
+      "start_sec": 17.18,
+      "end_sec": 49.44,
+      "duration_sec": 32.26,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_33206bab140436af.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.DEMONSTRATION",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 49.44,
+      "end_sec": 66.94,
+      "duration_sec": 17.5,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b3df49ae810413f3.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 66.94,
+      "end_sec": 76.3,
+      "duration_sec": 9.36,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_59a348d8e12d830a.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 76.3,
+      "end_sec": 118.22,
+      "duration_sec": 41.93,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_0aed2f75a1a3e475.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 118.22,
+      "end_sec": 130.54,
+      "duration_sec": 12.31,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_06_seg_006.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_4817f5f0d14d7ff7.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Step-by-Step Mechanics and Examples in 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "start_sec": 130.54,
+      "end_sec": 165.84,
+      "duration_sec": 35.3,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_07_seg_007.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_53330a070b7f2672.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Lesson on explain xgboost regresiion",
+      "start_sec": 165.84,
+      "end_sec": 200.16,
+      "duration_sec": 34.32,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_51a1f5dd_seg_08_seg_008.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_3a302a03f4b2b37a.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 71.62,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "prompt": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "correct_option_index": 2,
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 124.38,
+      "concept": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "prompt": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "correct_option_index": 2,
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 71.62,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "prompt": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "correct_option_index": 2,
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 124.38,
+      "concept": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "For f(x) = |x|, what is the value of f'(0)?",
+        "prompt": "For f(x) = |x|, what is the value of f'(0)?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 0",
+          "B) 1",
+          "C) Does not exist (left limit != right limit)",
+          "D) Infinity"
+        ],
+        "correct_answer": "C",
+        "correct_option_index": 2,
+        "explanation": "The derivative does not exist at a sharp cusp because the left derivative is -1 while the right derivative is +1.",
+        "concept": "Foundational Principles of 'explain xgboost regresiion' in subject area: 'Mathematics'.",
+        "difficulty": "hard",
+        "misconception_distractors": {
+          "A": "Assumed minimum point implies derivative is zero without checking differentiability.",
+          "B": "Only calculated the right-hand limit of the difference quotient.",
+          "D": "Confused non-differentiability with asymptotic vertical divergence."
+        }
+      }
+    }
+  ],
+  "created_at": "2026-09-04T17:12:51.832139+00:00"
+}

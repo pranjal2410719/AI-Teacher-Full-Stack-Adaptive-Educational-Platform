@@ -1,0 +1,145 @@
+{
+  "quiz_id": "quiz_17cd7f10",
+  "lesson_id": "les_bound_10",
+  "student_id": "stu_default",
+  "title": "Post-Lesson Mastery Assessment: Lesson les_bound_10",
+  "questions": [
+    {
+      "question_id": "quiz_q1",
+      "type": "mcq",
+      "prompt": "Which core principle is fundamental to understanding Lesson les_bound_10?",
+      "options": [
+        "A: Systematic decomposition from first principles and foundational definitions",
+        "B: Memorization without underlying conceptual mechanism",
+        "C: Arbitrary ad-hoc guessing",
+        "D: Ignoring boundary conditions"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Foundational Principles",
+      "points": 1,
+      "explanation": "First principles understanding provides a robust mental model."
+    },
+    {
+      "question_id": "quiz_q2",
+      "type": "short_answer",
+      "prompt": "Summarize the most important practical takeaway from Lesson les_bound_10.",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Understanding the core invariant and applying it to problem solving.",
+      "concept": "Practical Application",
+      "points": 1,
+      "explanation": "Application of theory to real-world scenarios."
+    },
+    {
+      "question_id": "quiz_q3",
+      "type": "mcq",
+      "prompt": "Conceptual Review Question 3 for Lesson les_bound_10",
+      "options": [
+        "A: Accurate theoretical invariant",
+        "B: Common distractor misconception",
+        "C: Inverted rule",
+        "D: Undefined edge"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Advanced Application 3",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q4",
+      "type": "short_answer",
+      "prompt": "Conceptual Review Question 4 for Lesson les_bound_10",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Key foundational concept explanation",
+      "concept": "Advanced Application 4",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q5",
+      "type": "mcq",
+      "prompt": "Conceptual Review Question 5 for Lesson les_bound_10",
+      "options": [
+        "A: Accurate theoretical invariant",
+        "B: Common distractor misconception",
+        "C: Inverted rule",
+        "D: Undefined edge"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Advanced Application 5",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q6",
+      "type": "short_answer",
+      "prompt": "Conceptual Review Question 6 for Lesson les_bound_10",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Key foundational concept explanation",
+      "concept": "Advanced Application 6",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q7",
+      "type": "mcq",
+      "prompt": "Conceptual Review Question 7 for Lesson les_bound_10",
+      "options": [
+        "A: Accurate theoretical invariant",
+        "B: Common distractor misconception",
+        "C: Inverted rule",
+        "D: Undefined edge"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Advanced Application 7",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q8",
+      "type": "short_answer",
+      "prompt": "Conceptual Review Question 8 for Lesson les_bound_10",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Key foundational concept explanation",
+      "concept": "Advanced Application 8",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q9",
+      "type": "mcq",
+      "prompt": "Conceptual Review Question 9 for Lesson les_bound_10",
+      "options": [
+        "A: Accurate theoretical invariant",
+        "B: Common distractor misconception",
+        "C: Inverted rule",
+        "D: Undefined edge"
+      ],
+      "correct_option_index": 0,
+      "correct_answer_text": null,
+      "concept": "Advanced Application 9",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    },
+    {
+      "question_id": "quiz_q10",
+      "type": "short_answer",
+      "prompt": "Conceptual Review Question 10 for Lesson les_bound_10",
+      "options": null,
+      "correct_option_index": null,
+      "correct_answer_text": "Key foundational concept explanation",
+      "concept": "Advanced Application 10",
+      "points": 1,
+      "explanation": "Choice A directly aligns with lesson objectives."
+    }
+  ],
+  "total_points": 10,
+  "created_at": "2026-09-02T11:22:30.952215+00:00"
+}

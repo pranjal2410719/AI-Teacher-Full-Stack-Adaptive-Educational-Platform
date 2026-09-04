@@ -1,0 +1,3 @@
+Persistence verification content. Stored in disk vector indices.
+
+Secondary concept line.

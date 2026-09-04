@@ -1,0 +1,21 @@
+........................................................................ [ 26%]
+........................................................................ [ 53%]
+........................................................................ [ 80%]
+...................................................                      [100%]
+=============================== warnings summary ===============================
+../../../.local/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /home/dev/.local/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+backend/tests/test_adversarial_m1.py::TestAdversarialFileIngestion::test_file_size_exceeding_limit
+  /home/dev/.local/lib/python3.14/site-packages/fastapi/routing.py:344: StarletteDeprecationWarning: 'HTTP_413_REQUEST_ENTITY_TOO_LARGE' is deprecated. Use 'HTTP_413_CONTENT_TOO_LARGE' instead.
+    return await dependant.call(**values)
+
+backend/tests/test_challenger_adaptive_loop.py::TestAdaptiveLoopAdversarial::test_invalid_payloads_error_handling
+backend/tests/test_interaction.py::test_api_interactive_validation_errors
+backend/tests/test_profile.py::test_api_assessment_not_found_and_errors
+  /home/dev/.local/lib/python3.14/site-packages/anyio/_backends/_asyncio.py:1029: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    result = context.run(func, *args)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+267 passed, 5 warnings in 155.87s (0:02:35)

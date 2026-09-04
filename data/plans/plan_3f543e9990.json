@@ -1,0 +1,272 @@
+{
+  "plan_id": "plan_3f543e9990",
+  "title": "Mastering Computer Networks",
+  "target_duration_sec": 900,
+  "level": "beginner",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_ed10a57ab2",
+  "topic": "Mastering Computer Networks",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "student_default",
+    "level": "beginner",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Mastering Computer Networks",
+      "duration_sec": 60,
+      "script": "Hello and welcome! Today, we are going to explore Mastering Computer Networks in a clear, intuitive, and fun way. We will use everyday analogies and visual breakdowns so you can grasp the fundamental ideas easily. Let's jump right in!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_ed10a57ab2_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Topic Overview & Objectives'. Here is the simple intuition behind it: Topic: Computer Networks\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Computer Networks' in subject area: 'General'... Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Computer Networks\nCategory: General\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Computer Networks' in subject area: 'General'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}",
+          "\\text{Rate of Change} = \\frac{\\Delta y}{\\Delta x}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_ed10a57ab2_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Worked Mathematical Demonstration: Step-by-Step",
+        "bullet_points": [
+          "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+          "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+          "Step 3: Constant term derivative is 0",
+          "Result: f'(x) = 6x + 5"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f(x) = 3x^2 + 5x - 4",
+          "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+          "f'(x) = 6x + 5"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_ed10a57ab2_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+        "question_type": "mcq",
+        "options": [
+          "A) 60 mph",
+          "B) 0 mph",
+          "C) 120 mph",
+          "D) 30 mph"
+        ],
+        "correct_answer": "A",
+        "explanation": "Steady rate of change is 60 miles divided by 1 hour, which equals 60 miles per hour.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Confused speed with acceleration.",
+          "C": "Multiplied time instead of dividing distance by time."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Foundational Principles of 'Computer Networks' in subject area: 'General'.'. Here is the simple intuition behind it: Concept: Foundational Principles of 'Computer Networks' in subject area: 'General'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Computer Networks' in subject area: 'General'.. Key Principles:\n- Definition and motivation of 'Computer Networks' in subject area: 'General'. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Computer Networks' in subject area: 'General'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Computer Networks' in subject area: 'General'.",
+          "Key Principles:\n- Definition and motivation of 'Computer Networks' in subject area: 'General'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}",
+          "\\text{Rate of Change} = \\frac{\\Delta y}{\\Delta x}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_ed10a57ab2_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Computer Networks' in subject area: 'General'.. If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "If a car travels 60 miles in 1 hour, what does the speedometer show when cruising at that steady pace?",
+        "question_type": "mcq",
+        "options": [
+          "A) 60 mph",
+          "B) 0 mph",
+          "C) 120 mph",
+          "D) 30 mph"
+        ],
+        "correct_answer": "A",
+        "explanation": "Steady rate of change is 60 miles divided by 1 hour, which equals 60 miles per hour.",
+        "concept": "Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+        "difficulty": "easy",
+        "misconception_distractors": {
+          "B": "Confused speed with acceleration.",
+          "C": "Multiplied time instead of dividing distance by time."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'.",
+      "duration_sec": 170,
+      "script": "Now let's take a look at 'Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'.'. Here is the simple intuition behind it: Concept: Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'. Description:\nWorked walkthrough demonstrating 'Computer Networks' in subject area: 'General'. in practice with clear derivations. Think of this like a helpful everyday tool that makes complex tasks simple and straightforward!",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'",
+          "Description:\nWorked walkthrough demonstrating 'Computer Networks' in subject area: 'General'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\text{Speed} = \\frac{\\text{Distance}}{\\text{Time}}",
+          "\\text{Rate of Change} = \\frac{\\Delta y}{\\Delta x}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_ed10a57ab2_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Mastering Computer Networks",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Mastering Computer Networks, we covered Topic Overview & Objectives, Foundational Principles of 'Computer Networks' in subject area: 'General'., Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Mastering Computer Networks",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+          "Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Computer Networks' in subject area: 'General'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Computer Networks' in subject area: 'General'.",
+    "Build intuitive foundational understanding of Mastering Computer Networks"
+  ],
+  "created_at": "2026-09-02T11:12:28.731701+00:00",
+  "updated_at": null
+}

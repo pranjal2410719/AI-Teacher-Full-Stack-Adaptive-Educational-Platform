@@ -1,0 +1,46 @@
+{
+  "student_id": "stu_persistent_4a5ac6",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 1,
+  "average_mastery_percent": 85.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {
+    "Foundational Limits": 0.85,
+    "Epsilon-Delta Definition": 0.85,
+    "Secant vs Tangent Slope Interpretation": 0.85
+  },
+  "known_weak_areas": [
+    "Foundational Limits",
+    "Secant vs Tangent Slope Interpretation",
+    "Epsilon-Delta Definition"
+  ],
+  "weak_areas": [
+    "Foundational Limits",
+    "Secant vs Tangent Slope Interpretation",
+    "Epsilon-Delta Definition"
+  ],
+  "learning_history": [
+    {
+      "lesson_id": "les_calculus_01",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Limits",
+        "Secant vs Tangent Slope Interpretation",
+        "Epsilon-Delta Definition"
+      ],
+      "date": "2026-09-04T18:45:37.029859+00:00"
+    }
+  ],
+  "completed_lessons": [
+    "les_calculus_01"
+  ],
+  "total_time_spent_min": 15,
+  "created_at": "2026-09-04T18:45:37.025321+00:00",
+  "updated_at": "2026-09-04T18:45:37.029866+00:00"
+}

@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.11%2B-yellow.svg)](https://www.python.org/)
 [![Node Version](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 
-This guide provides step-by-step instructions for launching, configuring, and deploying the **AI Teacher** platform across multiple environments: single-command development scripts, multi-container Docker Compose stacks, and manual local development.
+This guide provides step-by-step instructions for launching, configuring, and deploying the **ApniHelp** platform across multiple environments: single-command development scripts, multi-container Docker Compose stacks, and manual local development.
 
 ---
 
@@ -79,9 +79,9 @@ For completely isolated, reproducible container deployment, use Docker Compose.
 +-------------------------------------------------------------------------------+
 |                             DOCKER COMPOSE TOPOLOGY                           |
 +-------------------------------------------------------------------------------+
-|  • ai_teacher_frontend  ──► Port 3000 (React / Vite Web UI)                  |
-|  • ai_teacher_backend   ──► Port 8000 (FastAPI Core Server + FFmpeg Runtime)  |
-|  • ai_teacher_vectorstore ──► Port 19530 (Milvus 2.4.0 Vector Database)       |
+|  • apnihelp_frontend    ──► Port 3000 (React / Vite Web UI)                  |
+|  • apnihelp_backend     ──► Port 8000 (FastAPI Core Server + FFmpeg Runtime)  |
+|  • apnihelp_vectorstore ──► Port 19530 (Milvus 2.4.0 Vector Database)       |
 +-------------------------------------------------------------------------------+
 ```
 
@@ -104,9 +104,9 @@ docker-compose down
 
 | Service Name | Container Name | Port Mapping | Description |
 |---|---|---|---|
-| `backend` | `ai_teacher_backend` | `8000:8000` | Python 3.11 FastAPI server with system FFmpeg and mounted `/app/data` volume. |
-| `frontend` | `ai_teacher_frontend` | `3000:3000` | Node 18 production runtime serving React UI. |
-| `vectorstore` | `ai_teacher_vectorstore` | `19530:19530` | Milvus 2.4.0 standalone vector database. |
+| `backend` | `apnihelp_backend` | `8000:8000` | Python 3.11 FastAPI server with system FFmpeg and mounted `/app/data` volume. |
+| `frontend` | `apnihelp_frontend` | `3000:3000` | Node 18 production runtime serving React UI. |
+| `vectorstore` | `apnihelp_vectorstore` | `19530:19530` | Milvus 2.4.0 standalone vector database. |
 
 ---
 
@@ -150,7 +150,7 @@ The application is designed to operate out of the box with zero required environ
 
 ```ini
 # ==============================================================================
-# AI Teacher Platform Configuration (.env)
+# ApniHelp Platform Configuration (.env)
 # ==============================================================================
 
 # Free-Tier LLM Cloud Providers (Optional)
@@ -193,7 +193,7 @@ curl -s http://localhost:8000/api/v1/health | python3 -m json.tool
 ```json
 {
   "status": "healthy",
-  "app_name": "AI Teacher Core Platform",
+  "app_name": "ApniHelp Core Platform",
   "version": "1.0.0",
   "llm_provider": "offline_parametric",
   "tts_provider": "edge-tts",
@@ -212,7 +212,7 @@ Open your browser and navigate to:
 ```
 http://localhost:3000
 ```
-Confirm that the AI Teacher web application interface loads with the Document Dropzone, Learner Profile Setup, and Topic Ingest forms.
+Confirm that the ApniHelp web application interface loads with the Document Dropzone, Learner Profile Setup, and Topic Ingest forms.
 
 ### 3. Verify Interactive OpenAPI Documentation
 Interactive Swagger UI documentation is available at:

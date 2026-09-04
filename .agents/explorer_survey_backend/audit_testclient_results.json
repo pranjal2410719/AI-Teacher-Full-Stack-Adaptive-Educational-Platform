@@ -1,0 +1,536 @@
+{
+  "GET /api/v1/health": {
+    "status_code": 200,
+    "response": {
+      "status": "healthy",
+      "app_name": "AI Teacher Core Platform",
+      "version": "1.0.0",
+      "llm_provider": "offline_parametric",
+      "tts_provider": "edge-tts",
+      "avatar_engine": "viseme_2_5d",
+      "ffmpeg_available": true,
+      "indexed_documents_count": 2066,
+      "vector_store_active_indices": 0,
+      "total_lesson_plans": 1357,
+      "total_video_manifests": 0,
+      "timestamp": "2026-09-02T11:09:25.518949+00:00"
+    }
+  },
+  "POST /api/v1/materials/topic": {
+    "status_code": 200,
+    "response": {
+      "topic_id": "top_73a75ea1da",
+      "topic": "Limits, Continuity & Epsilon-Delta Definition",
+      "subject_category": "Mathematics",
+      "seed_summary": "Comprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Limits, Continuity & Epsilon-Delta Definition' in subject area: 'Mathematics'..",
+      "generated_chunks_count": 5,
+      "created_at": "2026-09-02T11:09:25.612423+00:00",
+      "status": "ready"
+    }
+  },
+  "POST /api/v1/materials/upload": {
+    "status_code": 200,
+    "response": {
+      "document_id": "doc_9a61b6c162",
+      "filename": "calculus_test.md",
+      "file_type": "md",
+      "file_size_bytes": 149,
+      "total_pages": 1,
+      "chunk_count": 1,
+      "extracted_summary": "Summary of calculus_test.md: # Calculus Limits\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+      "created_at": "2026-09-02T11:09:25.641998+00:00",
+      "status": "ready",
+      "metadata_extra": {
+        "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_9a61b6c162_calculus_test.md",
+        "total_sections": 1
+      }
+    }
+  },
+  "GET /api/v1/materials/{doc_id}": {
+    "status_code": 200,
+    "response": {
+      "document_id": "doc_9a61b6c162",
+      "filename": "calculus_test.md",
+      "file_type": "md",
+      "file_size_bytes": 149,
+      "total_pages": 1,
+      "chunk_count": 1,
+      "extracted_summary": "Summary of calculus_test.md: # Calculus Limits\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+      "created_at": "2026-09-02T11:09:25.641998+00:00",
+      "status": "ready",
+      "metadata_extra": {
+        "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_9a61b6c162_calculus_test.md",
+        "total_sections": 1
+      }
+    }
+  },
+  "GET /api/v1/materials": {
+    "status_code": 200,
+    "count": 2068,
+    "sample": [
+      {
+        "document_id": "doc_8cb0ff0b9c",
+        "filename": "biology.md",
+        "file_type": "md",
+        "file_size_bytes": 304,
+        "total_pages": 3,
+        "chunk_count": 3,
+        "extracted_summary": "Parametric Educational Analysis:\n- Thorough conceptual explanation grounded in standard curriculum principles.\n- Detailed breakdown addressing core mechanics, concrete examples, and diagnostic checks.\n- Formulated to facilitate structured comprehension and step-by-step mastery.",
+        "created_at": "2026-09-01T10:51:49.784096+00:00",
+        "status": "ready",
+        "metadata_extra": {
+          "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_8cb0ff0b9c_biology.md",
+          "total_sections": 3
+        }
+      },
+      {
+        "document_id": "doc_883fa657d7",
+        "filename": "dirty.txt",
+        "file_type": "txt",
+        "file_size_bytes": 63,
+        "total_pages": 1,
+        "chunk_count": 1,
+        "extracted_summary": "Summary of dirty.txt: Introduction to AI\u0000\u0000\u0001\u0002\u0003\u00ff\u00fe Advanced Neural Networks \u0000\nMore text.",
+        "created_at": "2026-08-31T19:36:01.692283+00:00",
+        "status": "ready",
+        "metadata_extra": {
+          "stored_path": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/uploads/doc_883fa657d7_dirty.txt",
+          "total_sections": 1
+        }
+      }
+    ]
+  },
+  "POST /api/v1/materials/query": {
+    "status_code": 200,
+    "response": {
+      "query": "epsilon delta limit",
+      "target_id": "doc_9a61b6c162",
+      "total_results": 1,
+      "results": [
+        {
+          "chunk_id": "chk_doc_9a61b6c162_0000",
+          "document_id": "doc_9a61b6c162",
+          "source_filename": "calculus_test.md",
+          "page_or_slide": 1,
+          "section_title": "Calculus Limits",
+          "text": "A limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error.",
+          "similarity_score": 0.7814,
+          "vector_score": 0.6357,
+          "bm25_score": 1.0,
+          "retrieval_method": "hybrid"
+        }
+      ],
+      "grounded_context": "1. [Source: calculus_test.md | Page/Slide 1 | Section: 'Calculus Limits']\nA limit is the value that a function approaches as the input approaches some value.\nFormal epsilon-delta definition controls error."
+    }
+  },
+  "POST /api/v1/lessons/plan": {
+    "status_code": 201,
+    "response_keys": [
+      "plan_id",
+      "title",
+      "target_duration_sec",
+      "level",
+      "language",
+      "document_id",
+      "topic_id",
+      "topic",
+      "subject_domain",
+      "learner_profile",
+      "modules",
+      "total_actual_duration_sec",
+      "prerequisite_refreshers",
+      "learning_objectives",
+      "created_at",
+      "updated_at"
+    ],
+    "sample_module": {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on Limits, Continuity & Epsilon-Delta Definition",
+      "duration_sec": 60,
+      "script": "Welcome to today's lesson on Lesson on Limits, Continuity & Epsilon-Delta Definition! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_73a75ea1da_0000"
+      ]
+    }
+  },
+  "GET /api/v1/lessons/{plan_id}": {
+    "status_code": 200,
+    "success": true
+  },
+  "GET /api/v1/lessons/plan/{plan_id} [Frontend api.ts]": {
+    "status_code": 404,
+    "success": false,
+    "error_detail": {
+      "detail": "Not Found"
+    }
+  },
+  "PUT /api/v1/lessons/{plan_id}": {
+    "status_code": 200,
+    "success": true
+  },
+  "PUT /api/v1/lessons/plan/{plan_id} [Frontend api.ts]": {
+    "status_code": 404,
+    "success": false,
+    "error_detail": {
+      "detail": "Not Found"
+    }
+  },
+  "GET /api/v1/lessons": {
+    "status_code": 200,
+    "count": 1358
+  },
+  "POST /api/v1/interactive/evaluate": {
+    "status_code": 200,
+    "response": {
+      "is_correct": false,
+      "score": 0.4,
+      "feedback": "Your response is partially incomplete. Let's break this concept down with a simple analogy.",
+      "misconception": "Incomplete grasp of foundational definition.",
+      "misconception_detected": "Incomplete grasp of foundational definition.",
+      "pedagogical_re_explanation": "Let's look at Foundational Limits from first principles: break it down into the core inputs, the transformation rule, and the expected outcome.",
+      "re_explanation": "Let's look at Foundational Limits from first principles: break it down into the core inputs, the transformation rule, and the expected outcome.",
+      "follow_up_question": {
+        "question_id": "q_gen_fu_2815",
+        "type": "short_answer",
+        "prompt": "Can you explain the primary purpose of Foundational Limits in one clear sentence?",
+        "options": null,
+        "correct_option_index": null,
+        "hint": "Focus on the most fundamental property."
+      },
+      "can_resume_video": false,
+      "can_proceed": false,
+      "detected_language": "en"
+    }
+  },
+  "POST /api/v1/interactive/chat": {
+    "status_code": 200,
+    "response": {
+      "session_id": "ses_fc07686d",
+      "reply": "AI Tutor Response to 'Explain what epsilon represents in intuitive terms.': The key takeaway is to verify boundary continuity and foundational definitions before computing intermediate steps.",
+      "language": "en",
+      "suggested_actions": [
+        "Resume video playback",
+        "Ask for a step-by-step example",
+        "Open lesson plan editor"
+      ],
+      "grounded_sources": [
+        "Core Course Syllabus"
+      ]
+    }
+  },
+  "POST /api/v1/interactive/switch-language": {
+    "status_code": 200,
+    "response": {
+      "session_id": "ses_audit_001",
+      "language": "hi",
+      "translated_summary": "\u0906\u092a\u0915\u0940 \u0938\u0940\u0916\u0928\u0947 \u0915\u0940 \u092d\u093e\u0937\u093e \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0940 \u0917\u0908 \u0939\u0948\u0964 \u0939\u092e \u092a\u093e\u0920 \u0915\u094b \u0938\u0939\u091c\u0924\u093e \u0938\u0947 \u091c\u093e\u0930\u0940 \u0930\u0916 \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964",
+      "next_prompt": "\u0928\u092e\u0938\u094d\u0924\u0947! \u092f\u0926\u093f \u0906\u092a\u0915\u0947 \u092a\u093e\u0938 \u0907\u0938 \u0935\u093f\u0937\u092f \u092a\u0930 \u0915\u094b\u0908 \u092a\u094d\u0930\u0936\u094d\u0928 \u0939\u0948, \u0924\u094b \u0915\u0943\u092a\u092f\u093e \u092c\u0947\u091d\u093f\u091d\u0915 \u092a\u0942\u091b\u0947\u0902\u0964",
+      "status": "switched"
+    }
+  },
+  "GET /api/v1/interactive/session/{session_id}": {
+    "status_code": 200,
+    "response": {
+      "session_id": "ses_audit_001",
+      "student_id": "stu_default",
+      "language": "hi",
+      "current_level": "intermediate",
+      "interaction_history": [
+        {
+          "timestamp": "2026-09-02T11:09:26.517594+00:00",
+          "question_id": "chk_001",
+          "student_answer": "Limits describe behaviour near a point, not necessarily at the point.",
+          "concept": "Foundational Limits",
+          "is_correct": false,
+          "score": 0.4,
+          "misconception": "Incomplete grasp of foundational definition."
+        }
+      ],
+      "diagnosed_misconceptions": [
+        "Incomplete grasp of foundational definition."
+      ],
+      "resolved_misconceptions": [],
+      "active_question_id": null,
+      "created_at": "2026-09-02T11:09:26.514304+00:00",
+      "updated_at": "2026-09-02T11:09:26.548794+00:00"
+    }
+  },
+  "POST /api/v1/assessment/generate": {
+    "status_code": 200,
+    "response": {
+      "quiz_id": "quiz_9edc9a93",
+      "lesson_id": "plan_990152f5a9",
+      "student_id": "stu_audit_learner",
+      "title": "Post-Lesson Mastery Assessment: Updated Title",
+      "questions": [
+        {
+          "question_id": "quiz_q1",
+          "type": "mcq",
+          "prompt": "Which core principle is fundamental to understanding Updated Title?",
+          "options": [
+            "A: Systematic decomposition from first principles and foundational definitions",
+            "B: Memorization without underlying conceptual mechanism",
+            "C: Arbitrary ad-hoc guessing",
+            "D: Ignoring boundary conditions"
+          ],
+          "correct_option_index": 0,
+          "correct_answer_text": null,
+          "concept": "Foundational Principles",
+          "points": 1,
+          "explanation": "First principles understanding provides a robust mental model."
+        },
+        {
+          "question_id": "quiz_q2",
+          "type": "short_answer",
+          "prompt": "Summarize the most important practical takeaway from Updated Title.",
+          "options": null,
+          "correct_option_index": null,
+          "correct_answer_text": "Understanding the core invariant and applying it to problem solving.",
+          "concept": "Practical Application",
+          "points": 1,
+          "explanation": "Application of theory to real-world scenarios."
+        },
+        {
+          "question_id": "quiz_q3",
+          "type": "mcq",
+          "prompt": "Conceptual Review Question 3 for Updated Title",
+          "options": [
+            "A: Accurate theoretical invariant",
+            "B: Common distractor misconception",
+            "C: Inverted rule",
+            "D: Undefined edge"
+          ],
+          "correct_option_index": 0,
+          "correct_answer_text": null,
+          "concept": "Advanced Application 3",
+          "points": 1,
+          "explanation": "Choice A directly aligns with lesson objectives."
+        }
+      ],
+      "total_points": 3,
+      "created_at": "2026-09-02T11:09:26.579411+00:00"
+    }
+  },
+  "POST /api/v1/assessment/submit": {
+    "status_code": 200,
+    "response": {
+      "submission_id": "sub_2256fa75",
+      "quiz_id": "quiz_9edc9a93",
+      "student_id": "stu_audit_learner",
+      "lesson_id": "plan_990152f5a9",
+      "score_percent": 85.0,
+      "total_points_earned": 2.55,
+      "total_points_possible": 3.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "misconceptions_resolved": [
+        "Resolved secant line confusion via trip analogy"
+      ],
+      "misconceptions_identified": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "recommended_revision": "Review geometric tangent slope visualization",
+      "recommended_next_topics": [
+        {
+          "topic": "Advanced Applications in Post-Lesson Mastery Assessment: Updated Title",
+          "level": "advanced",
+          "rationale": "Expand your conceptual mastery to multi-variable applications.",
+          "prerequisite_concepts": [
+            "Foundational Principles",
+            "Practical Application",
+            "Advanced Application 3"
+          ]
+        }
+      ],
+      "suggested_next_topics": [
+        "Advanced Applications in Post-Lesson Mastery Assessment: Updated Title"
+      ],
+      "learning_report_summary": "Diagnostic Assessment completed with 85.0% mastery. You showed exceptional grasp of Foundational Limits, Epsilon-Delta Definition.",
+      "created_at": "2026-09-02T11:09:26.601418+00:00"
+    }
+  },
+  "GET /api/v1/assessment/report/{submission_id}": {
+    "status_code": 200,
+    "response": {
+      "submission_id": "sub_2256fa75",
+      "quiz_id": "quiz_9edc9a93",
+      "student_id": "stu_audit_learner",
+      "lesson_id": "plan_990152f5a9",
+      "score_percent": 85.0,
+      "total_points_earned": 2.55,
+      "total_points_possible": 3.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "misconceptions_resolved": [
+        "Resolved secant line confusion via trip analogy"
+      ],
+      "misconceptions_identified": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "recommended_revision": "Review geometric tangent slope visualization",
+      "recommended_next_topics": [
+        {
+          "topic": "Advanced Applications in Post-Lesson Mastery Assessment: Updated Title",
+          "level": "advanced",
+          "rationale": "Expand your conceptual mastery to multi-variable applications.",
+          "prerequisite_concepts": [
+            "Foundational Principles",
+            "Practical Application",
+            "Advanced Application 3"
+          ]
+        }
+      ],
+      "suggested_next_topics": [
+        "Advanced Applications in Post-Lesson Mastery Assessment: Updated Title"
+      ],
+      "learning_report_summary": "Diagnostic Assessment completed with 85.0% mastery. You showed exceptional grasp of Foundational Limits, Epsilon-Delta Definition.",
+      "created_at": "2026-09-02T11:09:26.601418+00:00"
+    }
+  },
+  "GET /api/v1/profile/{id}": {
+    "status_code": 200,
+    "response": {
+      "student_id": "stu_audit_learner",
+      "name": "Learner",
+      "preferred_language": "en",
+      "preferred_level": "intermediate",
+      "total_lessons_completed": 1,
+      "average_mastery_percent": 85.0,
+      "mastery_by_subject": {},
+      "concept_mastery": {
+        "Foundational Limits": 0.85,
+        "Epsilon-Delta Definition": 0.85,
+        "Foundational Principles": 0.85,
+        "Practical Application": 0.85,
+        "Advanced Application 3": 0.85
+      },
+      "known_weak_areas": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "weak_areas": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "learning_history": [
+        {
+          "lesson_id": "plan_990152f5a9",
+          "score": 85.0,
+          "strong_concepts": [
+            "Foundational Limits",
+            "Epsilon-Delta Definition"
+          ],
+          "weak_concepts": [
+            "Foundational Principles",
+            "Practical Application",
+            "Advanced Application 3"
+          ],
+          "date": "2026-09-02T11:09:26.608400+00:00"
+        }
+      ],
+      "completed_lessons": [
+        "plan_990152f5a9"
+      ],
+      "total_time_spent_min": 15,
+      "created_at": "2026-09-02T11:09:26.602410+00:00",
+      "updated_at": "2026-09-02T11:09:26.608437+00:00"
+    }
+  },
+  "PUT /api/v1/profile/{id}": {
+    "status_code": 200,
+    "response": {
+      "student_id": "stu_audit_learner",
+      "name": "Alex Student",
+      "preferred_language": "hi",
+      "preferred_level": "advanced",
+      "total_lessons_completed": 1,
+      "average_mastery_percent": 85.0,
+      "mastery_by_subject": {},
+      "concept_mastery": {
+        "Foundational Limits": 0.85,
+        "Epsilon-Delta Definition": 0.85,
+        "Foundational Principles": 0.85,
+        "Practical Application": 0.85,
+        "Advanced Application 3": 0.85
+      },
+      "known_weak_areas": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "weak_areas": [
+        "Foundational Principles",
+        "Practical Application",
+        "Advanced Application 3"
+      ],
+      "learning_history": [
+        {
+          "lesson_id": "plan_990152f5a9",
+          "score": 85.0,
+          "strong_concepts": [
+            "Foundational Limits",
+            "Epsilon-Delta Definition"
+          ],
+          "weak_concepts": [
+            "Foundational Principles",
+            "Practical Application",
+            "Advanced Application 3"
+          ],
+          "date": "2026-09-02T11:09:26.608400+00:00"
+        }
+      ],
+      "completed_lessons": [
+        "plan_990152f5a9"
+      ],
+      "total_time_spent_min": 15,
+      "created_at": "2026-09-02T11:09:26.602410+00:00",
+      "updated_at": "2026-09-02T11:09:26.671776+00:00"
+    }
+  },
+  "GET /api/v1/profile/{id}/recommendations": {
+    "status_code": 200,
+    "response": [
+      {
+        "topic": "Foundational Refresher: Foundational Principles",
+        "level": "advanced",
+        "rationale": "Reinforce conceptual foundation based on your diagnostic feedback in 'Foundational Principles'.",
+        "prerequisite_concepts": [
+          "Foundational Principles"
+        ]
+      },
+      {
+        "topic": "Foundational Refresher: Practical Application",
+        "level": "advanced",
+        "rationale": "Reinforce conceptual foundation based on your diagnostic feedback in 'Practical Application'.",
+        "prerequisite_concepts": [
+          "Practical Application"
+        ]
+      }
+    ]
+  }
+}

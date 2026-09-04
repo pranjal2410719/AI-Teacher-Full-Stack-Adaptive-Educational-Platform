@@ -1,0 +1,161 @@
+{
+  "lesson_id": "les_72491998",
+  "video_id": "les_72491998",
+  "plan_id": "plan_demo_bio_hi_bf2e43",
+  "title": "\u0915\u094b\u0936\u093f\u0915\u0940\u092f \u091c\u0940\u0935 \u0935\u093f\u091c\u094d\u091e\u093e\u0928: \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u090f\u0935\u0902 \u0936\u094d\u0935\u0938\u0928 \u091a\u0915\u094d\u0930",
+  "video_url": "/api/v1/video/stream/les_72491998.mp4",
+  "total_duration_sec": 126.94,
+  "duration_sec": 126.94,
+  "language": "hi",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0914\u0930 \u0915\u094b\u0936\u093f\u0915\u0940\u092f \u0936\u094d\u0935\u0938\u0928 \u0915\u093e \u092a\u0930\u093f\u091a\u092f",
+      "start_sec": 0.0,
+      "end_sec": 30.6,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "\u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+      "start_sec": 30.6,
+      "end_sec": 60.58,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "\u0938\u0902\u0935\u093e\u0926 \u092a\u094d\u0930\u0936\u094d\u0928: \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0947 \u0909\u0924\u094d\u092a\u093e\u0926",
+      "start_sec": 60.58,
+      "end_sec": 73.99,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "\u092e\u093e\u0907\u091f\u094b\u0915\u0949\u0928\u094d\u0921\u094d\u0930\u093f\u092f\u093e \u0914\u0930 \u0915\u094b\u0936\u093f\u0915\u0940\u092f \u0936\u094d\u0935\u0938\u0928",
+      "start_sec": 73.99,
+      "end_sec": 102.94,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "\u092a\u093e\u0920 \u092a\u0941\u0928\u0930\u093e\u0935\u0932\u094b\u0915\u0928 \u0914\u0930 \u092e\u0942\u0932\u094d\u092f\u093e\u0902\u0915\u0928",
+      "start_sec": 102.94,
+      "end_sec": 126.94,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_01_hi_intro",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0914\u0930 \u0915\u094b\u0936\u093f\u0915\u0940\u092f \u0936\u094d\u0935\u0938\u0928 \u0915\u093e \u092a\u0930\u093f\u091a\u092f",
+      "start_sec": 0.0,
+      "end_sec": 30.6,
+      "duration_sec": 30.6,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_72491998_seg_01_seg_01_hi_intro.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_2c99eeffe4d63f28.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "seg_02_hi_chloroplast",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "\u0915\u094d\u0932\u094b\u0930\u094b\u092a\u094d\u0932\u093e\u0938\u094d\u091f \u0914\u0930 \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e",
+      "start_sec": 30.6,
+      "end_sec": 60.58,
+      "duration_sec": 29.98,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_72491998_seg_02_seg_02_hi_chloroplast.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_4d0d5bf32d2c5dd3.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "seg_03_hi_checkpoint1",
+      "order": 3,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "\u0938\u0902\u0935\u093e\u0926 \u092a\u094d\u0930\u0936\u094d\u0928: \u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0947 \u0909\u0924\u094d\u092a\u093e\u0926",
+      "start_sec": 60.58,
+      "end_sec": 73.99,
+      "duration_sec": 13.42,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_72491998_seg_03_seg_03_hi_checkpoint1.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_145f18303daa494b.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "seg_04_hi_respiration",
+      "order": 4,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "\u092e\u093e\u0907\u091f\u094b\u0915\u0949\u0928\u094d\u0921\u094d\u0930\u093f\u092f\u093e \u0914\u0930 \u0915\u094b\u0936\u093f\u0915\u0940\u092f \u0936\u094d\u0935\u0938\u0928",
+      "start_sec": 73.99,
+      "end_sec": 102.94,
+      "duration_sec": 28.94,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_72491998_seg_04_seg_04_hi_respiration.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_fa26a56d4fe6ccf7.mp3",
+      "visual_type": "VisualType.DIAGRAM"
+    },
+    {
+      "segment_id": "seg_05_hi_summary",
+      "order": 5,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "\u092a\u093e\u0920 \u092a\u0941\u0928\u0930\u093e\u0935\u0932\u094b\u0915\u0928 \u0914\u0930 \u092e\u0942\u0932\u094d\u092f\u093e\u0902\u0915\u0928",
+      "start_sec": 102.94,
+      "end_sec": 126.94,
+      "duration_sec": 24.0,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_72491998_seg_05_seg_05_hi_summary.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_cea2b58f1fa60735.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_q_bio_hi_01",
+      "checkpoint_id": "chk_seg_03_hi_checkpoint1",
+      "timestamp_sec": 67.29,
+      "concept": "Photosynthesis Products",
+      "question": {
+        "question_id": "q_bio_hi_01",
+        "question_text": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0915\u0947 \u092e\u0941\u0916\u094d\u092f \u0909\u0924\u094d\u092a\u093e\u0926 \u0915\u094c\u0928 \u0938\u0947 \u0939\u0948\u0902?",
+        "prompt": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0915\u0947 \u092e\u0941\u0916\u094d\u092f \u0909\u0924\u094d\u092a\u093e\u0926 \u0915\u094c\u0928 \u0938\u0947 \u0939\u0948\u0902?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "\u0917\u094d\u0932\u0942\u0915\u094b\u091c \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928",
+          "\u0915\u093e\u0930\u094d\u092c\u0928 \u0921\u093e\u0907\u0911\u0915\u094d\u0938\u093e\u0907\u0921 \u0914\u0930 \u091c\u0932",
+          "\u0928\u093e\u0907\u091f\u094d\u0930\u094b\u091c\u0928 \u0914\u0930 \u092a\u094d\u0930\u094b\u091f\u0940\u0928",
+          "\u092e\u0940\u0925\u0947\u0928 \u0914\u0930 \u0939\u093e\u0907\u0921\u094d\u0930\u094b\u091c\u0928"
+        ],
+        "correct_answer": "\u0917\u094d\u0932\u0942\u0915\u094b\u091c \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928",
+        "correct_option_index": 0,
+        "explanation": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u092e\u0947\u0902 \u0938\u0942\u0930\u094d\u092f \u0915\u0947 \u092a\u094d\u0930\u0915\u093e\u0936 \u0915\u0940 \u090a\u0930\u094d\u091c\u093e \u0926\u094d\u0935\u093e\u0930\u093e CO2 \u0914\u0930 \u091c\u0932 \u092e\u093f\u0932\u0915\u0930 \u0917\u094d\u0932\u0942\u0915\u094b\u091c (C6H12O6) \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928 (O2) \u0915\u093e \u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964",
+        "concept": "Photosynthesis Products",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_q_bio_hi_01",
+      "checkpoint_id": "chk_seg_03_hi_checkpoint1",
+      "timestamp_sec": 67.29,
+      "concept": "Photosynthesis Products",
+      "question": {
+        "question_id": "q_bio_hi_01",
+        "question_text": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0915\u0947 \u092e\u0941\u0916\u094d\u092f \u0909\u0924\u094d\u092a\u093e\u0926 \u0915\u094c\u0928 \u0938\u0947 \u0939\u0948\u0902?",
+        "prompt": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0940 \u092a\u094d\u0930\u0915\u094d\u0930\u093f\u092f\u093e \u0915\u0947 \u092e\u0941\u0916\u094d\u092f \u0909\u0924\u094d\u092a\u093e\u0926 \u0915\u094c\u0928 \u0938\u0947 \u0939\u0948\u0902?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "\u0917\u094d\u0932\u0942\u0915\u094b\u091c \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928",
+          "\u0915\u093e\u0930\u094d\u092c\u0928 \u0921\u093e\u0907\u0911\u0915\u094d\u0938\u093e\u0907\u0921 \u0914\u0930 \u091c\u0932",
+          "\u0928\u093e\u0907\u091f\u094d\u0930\u094b\u091c\u0928 \u0914\u0930 \u092a\u094d\u0930\u094b\u091f\u0940\u0928",
+          "\u092e\u0940\u0925\u0947\u0928 \u0914\u0930 \u0939\u093e\u0907\u0921\u094d\u0930\u094b\u091c\u0928"
+        ],
+        "correct_answer": "\u0917\u094d\u0932\u0942\u0915\u094b\u091c \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928",
+        "correct_option_index": 0,
+        "explanation": "\u092a\u094d\u0930\u0915\u093e\u0936 \u0938\u0902\u0936\u094d\u0932\u0947\u0937\u0923 \u092e\u0947\u0902 \u0938\u0942\u0930\u094d\u092f \u0915\u0947 \u092a\u094d\u0930\u0915\u093e\u0936 \u0915\u0940 \u090a\u0930\u094d\u091c\u093e \u0926\u094d\u0935\u093e\u0930\u093e CO2 \u0914\u0930 \u091c\u0932 \u092e\u093f\u0932\u0915\u0930 \u0917\u094d\u0932\u0942\u0915\u094b\u091c (C6H12O6) \u0914\u0930 \u0911\u0915\u094d\u0938\u0940\u091c\u0928 (O2) \u0915\u093e \u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964",
+        "concept": "Photosynthesis Products",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "created_at": "2026-09-04T18:26:34.304367+00:00"
+}

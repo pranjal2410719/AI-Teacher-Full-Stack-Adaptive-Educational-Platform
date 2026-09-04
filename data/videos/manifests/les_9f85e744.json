@@ -1,0 +1,73 @@
+{
+  "lesson_id": "les_9f85e744",
+  "video_id": "les_9f85e744",
+  "plan_id": "bench_plan_60s",
+  "title": "ApniHelp Calculus Derivatives",
+  "video_url": "/api/v1/video/stream/les_9f85e744.mp4",
+  "total_duration_sec": 19.61,
+  "duration_sec": 19.61,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Welcome to ApniHelp Calculus",
+      "start_sec": 0.0,
+      "end_sec": 6.48,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Derivative Formal Definition",
+      "start_sec": 6.48,
+      "end_sec": 13.32,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways",
+      "start_sec": 13.32,
+      "end_sec": 19.61,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "b_seg_01",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Welcome to ApniHelp Calculus",
+      "start_sec": 0.0,
+      "end_sec": 6.48,
+      "duration_sec": 6.48,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_9f85e744_seg_01_b_seg_01.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_aef06ce7035cfd0f.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "b_seg_02",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Derivative Formal Definition",
+      "start_sec": 6.48,
+      "end_sec": 13.32,
+      "duration_sec": 6.84,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_9f85e744_seg_02_b_seg_02.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_7a690a94fd3021b6.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "b_seg_03",
+      "order": 3,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways",
+      "start_sec": 13.32,
+      "end_sec": 19.61,
+      "duration_sec": 6.29,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_9f85e744_seg_03_b_seg_03.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_1bdf48dadf9f2691.mp3",
+      "visual_type": null
+    }
+  ],
+  "pause_markers": [],
+  "pause_checkpoints": [],
+  "created_at": "2026-09-04T18:09:54.060170+00:00"
+}

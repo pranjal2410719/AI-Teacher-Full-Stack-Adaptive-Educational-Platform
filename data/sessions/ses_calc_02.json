@@ -138,9 +138,139 @@
       "is_correct": false,
       "score": 0.3,
       "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:05:58.714903+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:12:36.829296+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:14:12.689114+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:18:44.075615+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:20:05.048681+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-02T11:22:32.728671+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:23:43.291219+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:25:26.521724+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:32:33.262400+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:38:58.100159+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:45:23.841266+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:48:13.432253+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:51:57.680853+00:00",
+      "question_id": "q_calc_02",
+      "student_answer": "The secant line slope gives the instantaneous speed right now at one point.",
+      "concept": "Secant vs Tangent Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
     }
   ],
   "diagnosed_misconceptions": [
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity.",
@@ -160,5 +290,5 @@
   "resolved_misconceptions": [],
   "active_question_id": null,
   "created_at": "2026-08-31T19:55:41.474841+00:00",
-  "updated_at": "2026-09-01T11:06:20.405016+00:00"
+  "updated_at": "2026-09-04T18:51:57.680874+00:00"
 }

@@ -1,0 +1,17 @@
+{
+  "student_id": "stu_never_seen_2b37ca47fd4d",
+  "name": "Learner",
+  "preferred_language": "en",
+  "preferred_level": "intermediate",
+  "total_lessons_completed": 0,
+  "average_mastery_percent": 0.0,
+  "mastery_by_subject": {},
+  "concept_mastery": {},
+  "known_weak_areas": [],
+  "weak_areas": [],
+  "learning_history": [],
+  "completed_lessons": [],
+  "total_time_spent_min": 0,
+  "created_at": "2026-09-04T18:51:55.575813+00:00",
+  "updated_at": "2026-09-04T18:51:55.575825+00:00"
+}
