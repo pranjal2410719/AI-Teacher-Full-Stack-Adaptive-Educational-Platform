@@ -1,0 +1,125 @@
+{
+  "lesson_id": "les_2ed2769b",
+  "video_id": "les_2ed2769b",
+  "plan_id": "plan_test_video_concise",
+  "title": "Calculus Limits Masterclass",
+  "video_url": "/api/v1/video/stream/les_2ed2769b.mp4",
+  "total_duration_sec": 12.31,
+  "duration_sec": 12.31,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction to Limits",
+      "start_sec": 0.0,
+      "end_sec": 3.55,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "The Limit Concept",
+      "start_sec": 3.55,
+      "end_sec": 7.54,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Summary & Next Steps",
+      "start_sec": 7.54,
+      "end_sec": 12.31,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_01",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction to Limits",
+      "start_sec": 0.0,
+      "end_sec": 3.55,
+      "duration_sec": 3.55,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_2ed2769b_seg_01_seg_01.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_20b08a0ecf830770.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    },
+    {
+      "segment_id": "seg_02",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "The Limit Concept",
+      "start_sec": 3.55,
+      "end_sec": 7.54,
+      "duration_sec": 3.98,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_2ed2769b_seg_02_seg_02.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_96cdfac2f80a7ebd.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_03",
+      "order": 3,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Summary & Next Steps",
+      "start_sec": 7.54,
+      "end_sec": 12.31,
+      "duration_sec": 4.78,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_2ed2769b_seg_03_seg_03.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_bb685688d8410a6e.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_q_lim_01",
+      "checkpoint_id": "chk_seg_02",
+      "timestamp_sec": 5.54,
+      "concept": "Limit Definition",
+      "question": {
+        "question_id": "q_lim_01",
+        "question_text": "What does a limit represent geometrically?",
+        "prompt": "What does a limit represent geometrically?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Approaching value",
+          "Exact derivative",
+          "Integral area",
+          "Undefined"
+        ],
+        "correct_answer": "Approaching value",
+        "correct_option_index": 0,
+        "explanation": "A limit describes the value a function approaches.",
+        "concept": "Limit Definition",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_q_lim_01",
+      "checkpoint_id": "chk_seg_02",
+      "timestamp_sec": 5.54,
+      "concept": "Limit Definition",
+      "question": {
+        "question_id": "q_lim_01",
+        "question_text": "What does a limit represent geometrically?",
+        "prompt": "What does a limit represent geometrically?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "Approaching value",
+          "Exact derivative",
+          "Integral area",
+          "Undefined"
+        ],
+        "correct_answer": "Approaching value",
+        "correct_option_index": 0,
+        "explanation": "A limit describes the value a function approaches.",
+        "concept": "Limit Definition",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "created_at": "2026-09-05T04:47:47.082305+00:00"
+}

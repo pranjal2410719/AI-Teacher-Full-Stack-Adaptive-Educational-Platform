@@ -1,0 +1,281 @@
+{
+  "lesson_id": "les_5f8a8ad2",
+  "video_id": "les_5f8a8ad2",
+  "plan_id": "plan_eaf18f7094",
+  "title": "Lesson on Binary Search Trees & Time Complexity",
+  "video_url": "/api/v1/video/stream/les_5f8a8ad2.mp4",
+  "total_duration_sec": 198.46,
+  "duration_sec": 198.46,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Introduction & Road Map: Lesson on Binary Search Trees & Time Complexity",
+      "start_sec": 0.0,
+      "end_sec": 17.93,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "Topic Overview & Objectives",
+      "start_sec": 17.93,
+      "end_sec": 49.87,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 49.87,
+      "end_sec": 67.37,
+      "type": "SegmentType.DEMONSTRATION"
+    },
+    {
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 67.37,
+      "end_sec": 77.5,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 77.5,
+      "end_sec": 120.72,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Understanding Check: Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 120.72,
+      "end_sec": 134.76,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 134.76,
+      "end_sec": 170.4,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Lesson Summary & Key Takeaways: Lesson on Binary Search Trees & Time Complexity",
+      "start_sec": 170.4,
+      "end_sec": 198.46,
+      "type": "SegmentType.AVATAR_SUMMARY"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Introduction & Road Map: Lesson on Binary Search Trees & Time Complexity",
+      "start_sec": 0.0,
+      "end_sec": 17.93,
+      "duration_sec": 17.93,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_01_seg_001.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_44d37dd744f4d536.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Topic Overview & Objectives",
+      "start_sec": 17.93,
+      "end_sec": 49.87,
+      "duration_sec": 31.94,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_02_seg_002.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_9030ef7aff672f59.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "SegmentType.DEMONSTRATION",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "start_sec": 49.87,
+      "end_sec": 67.37,
+      "duration_sec": 17.5,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_03_seg_003.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_b3df49ae810413f3.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "start_sec": 67.37,
+      "end_sec": 77.5,
+      "duration_sec": 10.13,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_04_seg_004.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_bc2af92dd332c525.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 77.5,
+      "end_sec": 120.72,
+      "duration_sec": 43.22,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_05_seg_005.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_56d9210ca7e50484.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Understanding Check: Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 120.72,
+      "end_sec": 134.76,
+      "duration_sec": 14.04,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_06_seg_006.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_baa74cf105de1f8b.mp3",
+      "visual_type": null
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "start_sec": 134.76,
+      "end_sec": 170.4,
+      "duration_sec": 35.64,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_07_seg_007.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_0f22a22da5054318.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "SegmentType.AVATAR_SUMMARY",
+      "title": "Lesson Summary & Key Takeaways: Lesson on Binary Search Trees & Time Complexity",
+      "start_sec": 170.4,
+      "end_sec": 198.46,
+      "duration_sec": 28.06,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_5f8a8ad2_seg_08_seg_008.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_3be2cc3dc66d05b7.mp3",
+      "visual_type": "VisualType.KEY_TAKEAWAYS"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 72.43,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 127.74,
+      "concept": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_chk_q_1",
+      "checkpoint_id": "chk_seg_004",
+      "timestamp_sec": 72.43,
+      "concept": "Topic Overview & Objectives",
+      "question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    },
+    {
+      "marker_id": "pm_chk_q_2",
+      "checkpoint_id": "chk_seg_006",
+      "timestamp_sec": 127.74,
+      "concept": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      }
+    }
+  ],
+  "created_at": "2026-09-04T20:09:23.403654+00:00"
+}

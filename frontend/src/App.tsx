@@ -9,6 +9,7 @@ import { SidePanelTutor } from './components/TutorChat/SidePanelTutor';
 import { QuizView } from './components/Assessment/QuizView';
 import { AnalyticsDashboard } from './components/Analytics/AnalyticsDashboard';
 import { api } from './services/api';
+import LoadingPopup from './components/LoadingPopup';
 import {
   LearnerProfile,
   LanguageCode,
@@ -59,6 +60,8 @@ export const App: React.FC = () => {
   const [videoCurrentStage, setVideoCurrentStage] = useState('');
   const [videoManifest, setVideoManifest] = useState<VideoManifest | null>(null);
   const [videoError, setVideoError] = useState<string | null>(null);
+  const [videoStartedAt, setVideoStartedAt] = useState<number | null>(null);
+  const [activeTaskId, setActiveTaskId] = useState<string | null>(null);
 
   // Topic prefill for parametric mode
   const [initialTopic, setInitialTopic] = useState('');
@@ -161,8 +164,81 @@ export const App: React.FC = () => {
   };
 
   // R2: Single 'Generate Video' button chained handler
+  const pollTaskUntilDone = async (
+    task_id: string,
+    plan: LessonPlan,
+  ): Promise<{ manifest: VideoManifest; lessonId: string }> => {
+    // Generous timeout: a long bilingual lesson with 8 segments and 5+ min of
+    // audio can take several minutes even with the optimized renderer.
+    const maxDurationMs = 5 * 60 * 1000;
+    const startTime = Date.now();
+    let pollFailures = 0;
+    const maxPollFailures = 12;
+
+    return new Promise<{ manifest: VideoManifest; lessonId: string }>((resolve, reject) => {
+      const interval = setInterval(async () => {
+        try {
+          if (Date.now() - startTime > maxDurationMs) {
+            clearInterval(interval);
+            reject(new Error('Video generation is taking longer than expected. The video may still finish on the server — check the Video & Checks tab in a moment.'));
+            return;
+          }
+
+          const status = await api.getVideoStatus(task_id);
+          pollFailures = 0;
+          setVideoProgressPercent(status.progress_percent || 50);
+          setVideoCurrentStage(status.current_stage || 'Synthesizing Neural Audio & Teacher Avatar...');
+
+          if (status.status === 'completed') {
+            clearInterval(interval);
+            setVideoProgressPercent(100);
+            setVideoCurrentStage('ready');
+            const lessonId = status.manifest_url?.split('/').pop() || plan.plan_id;
+            try {
+              const manifest = await api.getVideoManifest(lessonId);
+              resolve({ manifest, lessonId });
+            } catch {
+              // Fall back to a synthetic manifest so the player still loads.
+              const fallback: VideoManifest = {
+                lesson_id: lessonId,
+                plan_id: plan.plan_id,
+                video_url: `/api/v1/lessons/video/${lessonId}.mp4`,
+                total_duration_sec: plan.target_duration_sec,
+                language: plan.language,
+                chapters: plan.modules.map((m) => ({
+                  title: m.title,
+                  start_sec: 0,
+                  end_sec: m.duration_sec,
+                  type: m.segment_type,
+                })),
+                pause_markers: plan.modules
+                  .filter((m) => m.checkpoint_question)
+                  .map((m) => ({
+                    marker_id: `pm_${m.checkpoint_question!.question_id}`,
+                    timestamp_sec: m.duration_sec / 2,
+                    question: m.checkpoint_question!,
+                  })),
+              };
+              resolve({ manifest: fallback, lessonId });
+            }
+          } else if (status.status === 'failed') {
+            clearInterval(interval);
+            reject(new Error(status.error_message || 'Video generation failed on server.'));
+          }
+        } catch (pollErr: any) {
+          pollFailures++;
+          if (pollFailures >= maxPollFailures) {
+            clearInterval(interval);
+            reject(new Error('Lost connection to video generation service.'));
+          }
+        }
+      }, 1500);
+    });
+  };
+
   const handleGenerateVideo = async (payload: GenerateVideoPayload) => {
     setIsGeneratingVideo(true);
+    setVideoStartedAt(Date.now());
     setVideoError(null);
     setVideoProgressPercent(10);
     setVideoCurrentStage('Ingesting Material & Grounding Pedagogical Knowledge...');
@@ -218,79 +294,23 @@ export const App: React.FC = () => {
       setVideoCurrentStage('Synthesizing Neural Narration & Photorealistic AI Teacher Avatar...');
       setVideoProgressPercent(60);
       const { task_id } = await api.generateVideo(newPlan.plan_id);
+      setActiveTaskId(task_id);
 
       // 4. Poll task status until complete
-      let pollFailures = 0;
-      const maxPollFailures = 8;
-      const startTime = Date.now();
-      const maxDurationMs = 120000;
-
-      const interval = setInterval(async () => {
-        try {
-          if (Date.now() - startTime > maxDurationMs) {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError('Video generation timed out. Please try again.');
-            return;
-          }
-
-          const status = await api.getVideoStatus(task_id);
-          pollFailures = 0;
-          const pct = Math.max(60, Math.min(99, status.progress_percent || 70));
-          setVideoProgressPercent(pct);
-          setVideoCurrentStage(status.current_stage || 'Synthesizing Neural Audio & Teacher Avatar...');
-
-          if (status.status === 'completed') {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoProgressPercent(100);
-            setVideoCurrentStage('Video Lesson Ready!');
-
-            const lessonId = status.manifest_url?.split('/').pop() || newPlan.plan_id;
-            try {
-              const manifest = await api.getVideoManifest(lessonId);
-              setVideoManifest(manifest);
-              setCurrentTab('video');
-            } catch {
-              const fallbackManifest: VideoManifest = {
-                lesson_id: lessonId,
-                plan_id: newPlan.plan_id,
-                video_url: `/api/v1/lessons/video/${lessonId}.mp4`,
-                total_duration_sec: newPlan.target_duration_sec,
-                language: newPlan.language,
-                chapters: newPlan.modules.map((m) => ({
-                  title: m.title,
-                  start_sec: 0,
-                  end_sec: m.duration_sec,
-                  type: m.segment_type,
-                })),
-                pause_markers: newPlan.modules
-                  .filter((m) => m.checkpoint_question)
-                  .map((m) => ({
-                    marker_id: `pm_${m.checkpoint_question!.question_id}`,
-                    timestamp_sec: m.duration_sec / 2,
-                    question: m.checkpoint_question!,
-                  })),
-              };
-              setVideoManifest(fallbackManifest);
-              setCurrentTab('video');
-            }
-          } else if (status.status === 'failed') {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError(status.error_message || 'Video generation failed on server.');
-          }
-        } catch (pollErr) {
-          pollFailures++;
-          if (pollFailures >= maxPollFailures) {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError('Lost connection to video generation service.');
-          }
-        }
-      }, 1500);
+      try {
+        const { manifest } = await pollTaskUntilDone(task_id, newPlan);
+        setVideoManifest(manifest);
+        setIsGeneratingVideo(false);
+        setActiveTaskId(null);
+        setCurrentTab('video');
+      } catch (pollErr: any) {
+        setIsGeneratingVideo(false);
+        setActiveTaskId(null);
+        setVideoError(pollErr?.message || 'Video generation failed.');
+      }
     } catch (err: any) {
       setIsGeneratingVideo(false);
+      setActiveTaskId(null);
       setVideoError(err?.message || 'Failed to generate video lesson.');
       console.error('Generate video error:', err);
     }
@@ -299,83 +319,40 @@ export const App: React.FC = () => {
   const handleApproveAndGenerateVideo = async () => {
     if (!plan) return;
     setIsGeneratingVideo(true);
+    setVideoStartedAt(Date.now());
     setVideoError(null);
     setVideoProgressPercent(10);
     setVideoCurrentStage('Synthesizing Neural Audio & Photorealistic Teacher Avatar...');
 
     try {
       const { task_id } = await api.generateVideo(plan.plan_id);
-
-      let pollFailures = 0;
-      const maxPollFailures = 8;
-      const startTime = Date.now();
-      const maxDurationMs = 120000;
-
-      const interval = setInterval(async () => {
-        try {
-          if (Date.now() - startTime > maxDurationMs) {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError('Video generation timed out. Please try again.');
-            return;
-          }
-
-          const status = await api.getVideoStatus(task_id);
-          pollFailures = 0;
-          setVideoProgressPercent(status.progress_percent || 50);
-          setVideoCurrentStage(status.current_stage || 'Rendering Visual Slides & Audio...');
-
-          if (status.status === 'completed') {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            const lessonId = status.manifest_url?.split('/').pop() || plan.plan_id;
-            try {
-              const manifest = await api.getVideoManifest(lessonId);
-              setVideoManifest(manifest);
-              setCurrentTab('video');
-            } catch {
-              const fallbackManifest: VideoManifest = {
-                lesson_id: lessonId,
-                plan_id: plan.plan_id,
-                video_url: `/api/v1/lessons/video/${lessonId}.mp4`,
-                total_duration_sec: plan.target_duration_sec,
-                language: plan.language,
-                chapters: plan.modules.map((m) => ({
-                  title: m.title,
-                  start_sec: 0,
-                  end_sec: m.duration_sec,
-                  type: m.segment_type,
-                })),
-                pause_markers: plan.modules
-                  .filter((m) => m.checkpoint_question)
-                  .map((m) => ({
-                    marker_id: `pm_${m.checkpoint_question!.question_id}`,
-                    timestamp_sec: m.duration_sec / 2,
-                    question: m.checkpoint_question!,
-                  })),
-              };
-              setVideoManifest(fallbackManifest);
-              setCurrentTab('video');
-            }
-          } else if (status.status === 'failed') {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError(status.error_message || 'Video generation failed on server.');
-          }
-        } catch (pollErr) {
-          pollFailures++;
-          if (pollFailures >= maxPollFailures) {
-            clearInterval(interval);
-            setIsGeneratingVideo(false);
-            setVideoError('Lost connection to video generation service.');
-          }
-        }
-      }, 1500);
+      setActiveTaskId(task_id);
+      const { manifest } = await pollTaskUntilDone(task_id, plan);
+      setVideoManifest(manifest);
+      setIsGeneratingVideo(false);
+      setActiveTaskId(null);
+      setCurrentTab('video');
     } catch (err: any) {
       setIsGeneratingVideo(false);
+      setActiveTaskId(null);
       setVideoError(err?.message || 'Failed to trigger video generation.');
       console.error('Trigger video generation error:', err);
     }
+  };
+
+  const handleCancelVideoGeneration = () => {
+    // The backend continues processing the task; we just stop polling and
+    // let the user navigate away. They can check the Video & Checks tab
+    // later to see if the result landed.
+    setIsGeneratingVideo(false);
+    setActiveTaskId(null);
+    setVideoError('Generation cancelled. The task may still complete in the background — check the Video & Checks tab in a moment.');
+  };
+
+  const handleDismissLoadingPopup = () => {
+    // Allow closing the popup without cancelling — the user just wants to
+    // hide the modal. The polling continues silently.
+    setIsGeneratingVideo(false);
   };
 
   const handleSelectTopicFromDashboard = (topic: string) => {
@@ -396,6 +373,17 @@ export const App: React.FC = () => {
       />
 
       {/* Main Content Area */}
+      {isGeneratingVideo && (
+        <LoadingPopup
+          isOpen={true}
+          progressPercent={videoProgressPercent}
+          stage={videoCurrentStage}
+          startedAtMs={videoStartedAt ?? undefined}
+          maxDurationMs={5 * 60 * 1000}
+          onCancel={handleCancelVideoGeneration}
+          onDismiss={handleDismissLoadingPopup}
+        />
+      )}
       <main className="flex-1 pb-12">
         {/* Error Banners */}
         {planError && (

@@ -217,21 +217,21 @@ The `VideoManifest` coordinates continuous playback in the frontend while specif
 }
 ```
 
-### 5.4 2.5D Audio-Driven Viseme Avatar & Wav2Lip (R3)
+### 5.4 Avatar Engines: Pyrender (default), 2.5D Viseme, and Wav2Lip (R3)
 
-The avatar generator produces lifelike talking head video from audio and static portrait assets:
-1. **Audio Envelope Analysis**: The synthesized audio WAV file is sampled at 100ms intervals. Root-mean-square (RMS) energy is extracted and normalized to $[0.0, 1.0]$.
-2. **Phonetic Viseme Mapping**:
-   - $\text{RMS} < 0.05 \rightarrow$ `viseme_rest` (mouth closed)
-   - $0.05 \le \text{RMS} < 0.20 \rightarrow$ `viseme_slight` (subtle open)
-   - $0.20 \le \text{RMS} < 0.45 \rightarrow$ `viseme_open` (moderate open)
-   - $0.45 \le \text{RMS} < 0.70 \rightarrow$ `viseme_wide` (wide vowel)
-   - $\text{RMS} \ge 0.70 \rightarrow$ `viseme_o` (rounded plosive)
-3. **Natural Dynamics**:
-   - **Periodic Blinking**: A 150ms blink cycle triggers every 3.2 seconds.
-   - **Breathing Bobbing**: A vertical sine displacement $y(t) = 3 \cdot \sin(2\pi \cdot 0.3 \cdot t)$ simulates breathing posture.
-   - **Studio Equalizer HUD**: A dynamic audio waveform overlay displays in the lower corner to signify live speech.
-4. **Wav2Lip Hook**: When enabled via `AVATAR_ENGINE=wav2lip`, the system delegates frame synthesis to the local Wav2Lip GAN model.
+Three avatar engines are supported and selectable per environment:
+
+1. **`pyrender` off-screen renderer (default)** — `pyrender_avatar_service.py`
+   1. **GLB Loading**: Loads a Ready Player Me–compatible GLB from `data/avatars/default_teacher.glb`; if absent, generates an icosphere placeholder so the service works out-of-the-box.
+   2. **Audio Envelope Analysis**: Reuses `AvatarService.extract_audio_energy_envelope` (FFmpeg → 16 kHz mono PCM → RMS @ fps).
+   3. **Mouth Deformation**: A per-frame vertex-offset pass scales front-facing vertices by the RMS energy, producing a coarse lip-sync cue that the placeholder mesh can render without rig data.
+   4. **Headless Rendering**: `pyrender.OffscreenRenderer` with `PYOPENGL_PLATFORM=egl` (preferred) or `osmesa` fallback renders each frame off-screen at 1280×720 @ 30 fps. A singleton renderer + lock makes the service safe to reuse across worker threads.
+   5. **Branding & Encode**: ApniHelp banner + teacher name overlay are drawn with PIL on each PNG; the sequence is encoded to H.264/AAC MP4 with `ffmpeg` (`-preset ultrafast`, `-movflags +faststart`).
+
+2. **2.5D Audio-Driven Viseme Avatar** — `avatar_service.py` (legacy, high-speed)
+   The original photorealistic PIL pipeline: 5 phonetic viseme states from RMS, 3.2 s periodic blinking, breathing bobbing, and a live studio HUD. No 3D model dependency.
+
+3. **Wav2Lip CLI hook** — When `AVATAR_ENGINE=wav2lip`, the system delegates frame synthesis to the local Wav2Lip GAN model.
 
 ### 5.5 Subject-Aware Visual Slide Renderers (R3)
 

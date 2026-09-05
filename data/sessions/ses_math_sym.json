@@ -255,11 +255,20 @@
       "is_correct": true,
       "score": 0.95,
       "misconception": null
+    },
+    {
+      "timestamp": "2026-09-04T18:56:56.183603+00:00",
+      "question_id": "q_math_sym",
+      "student_answer": "lim_{x->0} (sin x)/x = 1 and \u0394y/\u0394x is average rate.",
+      "concept": "Calculus Limits",
+      "is_correct": true,
+      "score": 0.95,
+      "misconception": null
     }
   ],
   "diagnosed_misconceptions": [],
   "resolved_misconceptions": [],
   "active_question_id": null,
   "created_at": "2026-08-31T19:55:42.000415+00:00",
-  "updated_at": "2026-09-04T18:51:57.288918+00:00"
+  "updated_at": "2026-09-04T18:56:56.183627+00:00"
 }

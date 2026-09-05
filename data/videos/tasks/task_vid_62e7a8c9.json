@@ -1,0 +1,20 @@
+{
+  "task_id": "task_vid_62e7a8c9",
+  "plan_id": "plan_1a550bcf39",
+  "lesson_id": "les_bee1c910",
+  "status": "completed",
+  "progress_percent": 100.0,
+  "current_stage": "ready",
+  "stages_completed": [
+    "tts_audio_synthesis",
+    "rendering_visual_slides",
+    "avatar_lip_sync",
+    "rendering_visual_slides",
+    "stitching_ffmpeg"
+  ],
+  "manifest_url": "/api/v1/video/manifest/les_bee1c910",
+  "video_url": "/api/v1/video/stream/les_bee1c910.mp4",
+  "error_message": null,
+  "created_at": "2026-09-04T18:58:50.746436+00:00",
+  "completed_at": "2026-09-04T18:59:07.115286+00:00"
+}

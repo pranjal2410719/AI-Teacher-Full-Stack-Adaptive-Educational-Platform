@@ -40,7 +40,7 @@ $$\text{\bf Understand} \longrightarrow \text{\bf Plan} \longrightarrow \text{\b
 ## 🌟 Key Innovations & Highlights
 
 1. **Hybrid Video Architecture**: Unlike monolithic avatar videos, ApniHelp uses a **hybrid approach**:
-   - **Talking Avatar Teacher**: Audio-driven 2.5D dynamic viseme animation for greetings, concept transitions, and lesson summaries.
+   - **Off-Screen 3D Avatar Teacher**: Default `pyrender` + `trimesh` headless 3D renderer for talking avatar segments (GLB-driven, audio-synchronized mouth deformation). The legacy 2.5D PIL-based viseme pipeline is retained as a high-speed alternative.
    - **Rich Subject-Aware Visual Slides**: Dynamic LaTeX mathematical derivations, syntax-highlighted code editor frames, anatomical cellular diagrams, and chronological history timelines.
 2. **In-Video Interactive Checkpoints**: The video automatically pauses at pedagogical intervals to test comprehension.
 3. **Misconception Diagnosis & Scaffolding**: Deliberately wrong answers do not just return "Incorrect"; the system diagnoses the root misconception, provides a scaffolded real-world analogy, and verifies understanding with a targeted follow-up question.
@@ -83,7 +83,7 @@ $$\text{\bf Understand} \longrightarrow \text{\bf Plan} \longrightarrow \text{\b
 - **Interactive Plan Reviewer**: Allows students to inspect, reorder, or edit module scripts prior to video synthesis.
 
 ### R3: Hybrid Neural Video Pipeline
-- **2.5D Audio-Driven Viseme Avatar**: Real-time mouth viseme mapping from RMS audio energy, natural 3.2s periodic eye blinking, subtle breathing bobbing, and a live studio HUD. Includes Wav2Lip CLI support.
+- **Off-Screen 3D Avatar (pyrender + trimesh)**: The default avatar engine now uses `pyrender` with EGL for fully headless 3D rendering. GLB models (Ready Player Me–compatible) are loaded once; mouth deformation is driven from the audio RMS envelope; frames are encoded to 1280×720 30 fps H.264 MP4 via FFmpeg. The original high-speed **2.5D Audio-Driven Viseme Avatar** (RMS-driven visemes, 3.2 s eye blinking, breathing bobbing, studio HUD) remains available for low-latency use cases, and the optional **Wav2Lip CLI** backend is still selectable via `AVATAR_ENGINE=wav2lip`.
 - **Multilingual Neural TTS**: High-fidelity speech synthesis via Microsoft Edge Neural Voices (`en-US-GuyNeural`, `hi-IN-MadhurNeural`) with instant `gTTS` and local harmonic PCM fallback.
 - **Subject-Aware Slide Renderers**:
   - *Math*: LaTeX typeset equations and Matplotlib 2D function curve grapher.

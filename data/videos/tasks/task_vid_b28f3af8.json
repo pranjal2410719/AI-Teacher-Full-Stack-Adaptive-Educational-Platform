@@ -1,0 +1,20 @@
+{
+  "task_id": "task_vid_b28f3af8",
+  "plan_id": "plan_demo_calc_en_498b2e",
+  "lesson_id": "les_95547f0f",
+  "status": "completed",
+  "progress_percent": 100.0,
+  "current_stage": "ready",
+  "stages_completed": [
+    "tts_audio_synthesis",
+    "rendering_visual_slides",
+    "avatar_lip_sync",
+    "rendering_visual_slides",
+    "stitching_ffmpeg"
+  ],
+  "manifest_url": "/api/v1/video/manifest/les_95547f0f",
+  "video_url": "/api/v1/video/stream/les_95547f0f.mp4",
+  "error_message": null,
+  "created_at": "2026-09-04T18:56:57.557075+00:00",
+  "completed_at": "2026-09-04T18:57:09.266133+00:00"
+}

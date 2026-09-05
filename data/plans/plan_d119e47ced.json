@@ -1,0 +1,283 @@
+{
+  "plan_id": "plan_d119e47ced",
+  "title": "Lesson on Binary Search Trees & Time Complexity",
+  "target_duration_sec": 900,
+  "level": "intermediate",
+  "language": "en",
+  "document_id": null,
+  "topic_id": "top_6476eab722",
+  "topic": "Lesson on Binary Search Trees & Time Complexity",
+  "subject_domain": "math",
+  "learner_profile": {
+    "student_id": "stu_default",
+    "level": "intermediate",
+    "language": "en",
+    "time_budget_min": 15,
+    "prior_knowledge": null,
+    "learning_goal": null,
+    "weak_concepts": [],
+    "preferred_visual_style": null
+  },
+  "modules": [
+    {
+      "segment_id": "seg_001",
+      "order": 1,
+      "segment_type": "avatar_intro",
+      "title": "Introduction & Road Map: Lesson on Binary Search Trees & Time Complexity",
+      "duration_sec": 60,
+      "script": "Welcome to today's lesson on Lesson on Binary Search Trees & Time Complexity! We'll explore the core mechanics, practical implementation rules, and worked step-by-step examples. By the end of this lesson, you'll be able to apply these concepts confidently. Let's get started!",
+      "visual_spec": null,
+      "checkpoint_question": null,
+      "concept_id": "intro",
+      "grounding_citations": [
+        "chk_top_6476eab722_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_002",
+      "order": 2,
+      "segment_type": "visual_concept",
+      "title": "Topic Overview & Objectives",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Topic Overview & Objectives'. The key concepts to master here are: Topic: Binary Search Trees & Time Complexity\nCategory: Computer Science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'... Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Topic Overview & Objectives",
+        "bullet_points": [
+          "Topic: Binary Search Trees & Time Complexity\nCategory: Computer Science\n\nSummary:\nComprehensive educational foundation covering core definitions, principles, practical examples, and common misconceptions for 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_1",
+      "grounding_citations": [
+        "chk_top_6476eab722_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_003",
+      "order": 3,
+      "segment_type": "demonstration",
+      "title": "Walkthrough & Applied Demonstration: Topic Overview & Objectives",
+      "duration_sec": 150,
+      "script": "Let's now walk through a concrete, step-by-step demonstration. Follow along with the visual slide on screen. In step one, we define our inputs and baseline state; in step two, we execute the transformation rule; and in step three, we verify the output to confirm precision.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Worked Mathematical Demonstration: Step-by-Step",
+        "bullet_points": [
+          "Step 1: Identify the function f(x) = 3x^2 + 5x - 4",
+          "Step 2: Apply the power rule term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5",
+          "Step 3: Constant term derivative is 0",
+          "Result: f'(x) = 6x + 5"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "f(x) = 3x^2 + 5x - 4",
+          "f'(x) = \\frac{d}{dx}[3x^2] + \\frac{d}{dx}[5x] - \\frac{d}{dx}[4]",
+          "f'(x) = 6x + 5"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Verification Check: At x = 2, slope = 6(2) + 5 = 17."
+      },
+      "checkpoint_question": null,
+      "concept_id": "demo_1",
+      "grounding_citations": [
+        "chk_top_6476eab722_0000"
+      ]
+    },
+    {
+      "segment_id": "seg_004",
+      "order": 4,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Topic Overview & Objectives",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Topic Overview & Objectives. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_1",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Topic Overview & Objectives",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      },
+      "concept_id": "checkpoint_1",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_005",
+      "order": 5,
+      "segment_type": "visual_concept",
+      "title": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.'. The key concepts to master here are: Concept: Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'. Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.. Key Principles:\n- Definition and motivation of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+        "bullet_points": [
+          "Concept: Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'",
+          "Description:\nCore axioms, definitions, and mathematical/logical primitives underpinning 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+          "Key Principles:\n- Definition and motivation of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_2",
+      "grounding_citations": [
+        "chk_top_6476eab722_0001"
+      ]
+    },
+    {
+      "segment_id": "seg_006",
+      "order": 6,
+      "segment_type": "checkpoint_question",
+      "title": "Understanding Check: Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "duration_sec": 60,
+      "script": "Let's pause here for a quick concept check on Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.. What is the derivative of f(x) = 5x^3 - 4x + 7?",
+      "visual_spec": null,
+      "checkpoint_question": {
+        "question_id": "chk_q_2",
+        "question_text": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "prompt": "What is the derivative of f(x) = 5x^3 - 4x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "A) 15x^2 - 4",
+          "B) 15x^3 - 4x",
+          "C) 5x^2 - 4",
+          "D) 15x^2 - 4 + 7"
+        ],
+        "correct_answer": "A",
+        "correct_option_index": 0,
+        "explanation": "Applying the power rule: d/dx[5x^3] = 15x^2, d/dx[-4x] = -4, and the derivative of constant 7 is 0.",
+        "concept": "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+        "difficulty": "medium",
+        "misconception_distractors": {
+          "B": "Multiplied coefficient without decreasing the power by 1.",
+          "C": "Forgot to multiply the exponent 3 by coefficient 5.",
+          "D": "Kept the constant term instead of reducing it to 0."
+        }
+      },
+      "concept_id": "checkpoint_2",
+      "grounding_citations": []
+    },
+    {
+      "segment_id": "seg_007",
+      "order": 7,
+      "segment_type": "visual_concept",
+      "title": "Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+      "duration_sec": 170,
+      "script": "Now let's break down 'Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.'. The key concepts to master here are: Concept: Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'. Description:\nWorked walkthrough demonstrating 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'. in practice with clear derivations. Notice the direct relationship between the theoretical rule and how we apply it in standard problem solving.",
+      "visual_spec": {
+        "visual_type": "math_equation",
+        "subject_domain": "math",
+        "headline": "Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+        "bullet_points": [
+          "Concept: Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'",
+          "Description:\nWorked walkthrough demonstrating 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'",
+          "in practice with clear derivations"
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [
+          "\\frac{d}{dx}[x^n] = n x^{n-1}",
+          "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+          "\\text{Slope } m = \\frac{y_2 - y_1}{x_2 - x_1}"
+        ],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": "Key Math Rule: Differentiability requires continuity, but continuity does not guarantee differentiability."
+      },
+      "checkpoint_question": null,
+      "concept_id": "concept_3",
+      "grounding_citations": [
+        "chk_top_6476eab722_0002"
+      ]
+    },
+    {
+      "segment_id": "seg_008",
+      "order": 8,
+      "segment_type": "avatar_summary",
+      "title": "Lesson Summary & Key Takeaways: Lesson on Binary Search Trees & Time Complexity",
+      "duration_sec": 60,
+      "script": "Fantastic job! In this lesson on Lesson on Binary Search Trees & Time Complexity, we covered Topic Overview & Objectives, Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'., Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.. Keep these key takeaways and visual patterns in mind as you move on to the interactive assessment. Great work today!",
+      "visual_spec": {
+        "visual_type": "key_takeaways",
+        "subject_domain": "math",
+        "headline": "Key Takeaways: Lesson on Binary Search Trees & Time Complexity",
+        "bullet_points": [
+          "Topic Overview & Objectives",
+          "Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+          "Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'."
+        ],
+        "code_content": null,
+        "code_language": null,
+        "latex_equations": [],
+        "diagram_mermaid": null,
+        "timeline_events": [],
+        "table_headers": [],
+        "table_rows": [],
+        "callout_box": null
+      },
+      "checkpoint_question": null,
+      "concept_id": "summary",
+      "grounding_citations": []
+    }
+  ],
+  "total_actual_duration_sec": 900,
+  "prerequisite_refreshers": [],
+  "learning_objectives": [
+    "Understand core principles of Topic Overview & Objectives",
+    "Understand core principles of Foundational Principles of 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+    "Understand core principles of Step-by-Step Mechanics and Examples in 'Binary Search Trees & Time Complexity' in subject area: 'Computer Science'.",
+    "Apply standard problem-solving patterns in Lesson on Binary Search Trees & Time Complexity"
+  ],
+  "created_at": "2026-09-05T04:41:59.506792+00:00",
+  "updated_at": null
+}

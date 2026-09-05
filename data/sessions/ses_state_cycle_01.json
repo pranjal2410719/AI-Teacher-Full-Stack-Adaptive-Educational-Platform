@@ -507,6 +507,24 @@
       "is_correct": true,
       "score": 0.95,
       "misconception": null
+    },
+    {
+      "timestamp": "2026-09-04T18:56:56.197729+00:00",
+      "question_id": "q1",
+      "student_answer": "Secant line slope gives the instantaneous velocity.",
+      "concept": "Secant Slope",
+      "is_correct": false,
+      "score": 0.3,
+      "misconception": "Confusing average rate of change with instantaneous velocity."
+    },
+    {
+      "timestamp": "2026-09-04T18:56:56.198814+00:00",
+      "question_id": "q1_followup",
+      "student_answer": "When delta t shrinks to zero, secant slope becomes the tangent instantaneous speed.",
+      "concept": "Secant vs Tangent",
+      "is_correct": true,
+      "score": 0.95,
+      "misconception": null
     }
   ],
   "diagnosed_misconceptions": [],
@@ -538,9 +556,10 @@
     "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity.",
+    "Confusing average rate of change with instantaneous velocity.",
     "Confusing average rate of change with instantaneous velocity."
   ],
   "active_question_id": null,
   "created_at": "2026-08-31T19:55:42.045340+00:00",
-  "updated_at": "2026-09-04T18:51:57.301003+00:00"
+  "updated_at": "2026-09-04T18:56:56.198831+00:00"
 }

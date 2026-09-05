@@ -96,11 +96,9 @@ class AvatarService:
 
         if cache_key not in self._portrait_cache:
             filename = "teacher_portrait_male.png" if is_male else "teacher_portrait.png"
+            # Prioritize the configured avatar directory to ensure the original portrait is used
             candidates = [
-                self.avatar_dir / filename,
                 settings.avatar_dir / filename,
-                settings.project_root / "data" / "avatars" / filename,
-                settings.project_root / ".agents" / "explorer_r3_video_avatar" / filename,
             ]
             portrait_path = next((p for p in candidates if p.exists()), None)
             if portrait_path:

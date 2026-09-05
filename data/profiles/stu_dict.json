@@ -3,7 +3,7 @@
   "name": "Learner",
   "preferred_language": "en",
   "preferred_level": "intermediate",
-  "total_lessons_completed": 29,
+  "total_lessons_completed": 30,
   "average_mastery_percent": 85.0,
   "mastery_by_subject": {},
   "concept_mastery": {
@@ -397,12 +397,25 @@
         "Practical Application"
       ],
       "date": "2026-09-04T18:51:57.317706+00:00"
+    },
+    {
+      "lesson_id": "les_dict_ans",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "Foundational Principles",
+        "Practical Application"
+      ],
+      "date": "2026-09-04T18:56:56.220043+00:00"
     }
   ],
   "completed_lessons": [
     "les_dict_ans"
   ],
-  "total_time_spent_min": 435,
+  "total_time_spent_min": 450,
   "created_at": "2026-08-31T19:57:50.233997+00:00",
-  "updated_at": "2026-09-04T18:51:57.317716+00:00"
+  "updated_at": "2026-09-04T18:56:56.220052+00:00"
 }

@@ -3,7 +3,7 @@
   "name": "Learner",
   "preferred_language": "en",
   "preferred_level": "intermediate",
-  "total_lessons_completed": 3,
+  "total_lessons_completed": 4,
   "average_mastery_percent": 85.0,
   "mastery_by_subject": {},
   "concept_mastery": {
@@ -11,17 +11,26 @@
     "Epsilon-Delta Definition": 0.85,
     "Foundational Principles": 0.85,
     "Practical Application": 0.85,
-    "Advanced Application 3": 0.85
+    "Advanced Application 3": 0.85,
+    "BST Worst-Case Degeneracy": 0.85,
+    "Tree In-Order Traversal Invariant": 0.85,
+    "Self-Balancing Tree Invariants": 0.85
   },
   "known_weak_areas": [
     "Foundational Principles",
     "Practical Application",
-    "Advanced Application 3"
+    "Advanced Application 3",
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant",
+    "Self-Balancing Tree Invariants"
   ],
   "weak_areas": [
     "Foundational Principles",
     "Practical Application",
-    "Advanced Application 3"
+    "Advanced Application 3",
+    "BST Worst-Case Degeneracy",
+    "Tree In-Order Traversal Invariant",
+    "Self-Balancing Tree Invariants"
   ],
   "learning_history": [
     {
@@ -65,13 +74,28 @@
         "Advanced Application 3"
       ],
       "date": "2026-09-02T05:18:50.350715+00:00"
+    },
+    {
+      "lesson_id": "plan_eaf18f7094",
+      "score": 85.0,
+      "strong_concepts": [
+        "Foundational Limits",
+        "Epsilon-Delta Definition"
+      ],
+      "weak_concepts": [
+        "BST Worst-Case Degeneracy",
+        "Tree In-Order Traversal Invariant",
+        "Self-Balancing Tree Invariants"
+      ],
+      "date": "2026-09-04T20:11:29.057349+00:00"
     }
   ],
   "completed_lessons": [
     "plan_225c476627",
-    "les_default"
+    "les_default",
+    "plan_eaf18f7094"
   ],
-  "total_time_spent_min": 45,
+  "total_time_spent_min": 60,
   "created_at": "2026-09-01T03:08:52.193835+00:00",
-  "updated_at": "2026-09-04T17:10:53.341243+00:00"
+  "updated_at": "2026-09-04T20:11:29.057370+00:00"
 }

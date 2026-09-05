@@ -1,0 +1,143 @@
+{
+  "lesson_id": "les_ec9ec5ae",
+  "video_id": "les_ec9ec5ae",
+  "plan_id": "plan_demo_calc_en_c84103",
+  "title": "Calculus: Limits, Derivatives & The Fundamental Theorem",
+  "video_url": "/api/v1/video/stream/les_ec9ec5ae.mp4",
+  "total_duration_sec": 135.0,
+  "duration_sec": 135.0,
+  "language": "en",
+  "resolution": "1280x720",
+  "fps": 30,
+  "chapters": [
+    {
+      "title": "Welcome to Calculus: The Mathematics of Change",
+      "start_sec": 0.0,
+      "end_sec": 26.42,
+      "type": "SegmentType.AVATAR_INTRO"
+    },
+    {
+      "title": "The Derivative: Limits and Instantaneous Rates",
+      "start_sec": 26.42,
+      "end_sec": 70.12,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    },
+    {
+      "title": "Interactive Checkpoint: Differentiating Polynomials",
+      "start_sec": 70.12,
+      "end_sec": 93.09,
+      "type": "SegmentType.CHECKPOINT_QUESTION"
+    },
+    {
+      "title": "Integration & The Fundamental Theorem",
+      "start_sec": 93.09,
+      "end_sec": 135.0,
+      "type": "SegmentType.VISUAL_CONCEPT"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "seg_01_intro",
+      "order": 1,
+      "segment_type": "SegmentType.AVATAR_INTRO",
+      "title": "Welcome to Calculus: The Mathematics of Change",
+      "start_sec": 0.0,
+      "end_sec": 26.42,
+      "duration_sec": 26.42,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_ec9ec5ae_seg_01_seg_01_intro.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_6d9d0bb31e691774.mp3",
+      "visual_type": "VisualType.GENERAL_SLIDE"
+    },
+    {
+      "segment_id": "seg_02_derivatives",
+      "order": 2,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "The Derivative: Limits and Instantaneous Rates",
+      "start_sec": 26.42,
+      "end_sec": 70.12,
+      "duration_sec": 43.7,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_ec9ec5ae_seg_02_seg_02_derivatives.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_5ce31b15e725a806.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_03_checkpoint1",
+      "order": 3,
+      "segment_type": "SegmentType.CHECKPOINT_QUESTION",
+      "title": "Interactive Checkpoint: Differentiating Polynomials",
+      "start_sec": 70.12,
+      "end_sec": 93.09,
+      "duration_sec": 22.97,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_ec9ec5ae_seg_03_seg_03_checkpoint1.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_02cd2d3bb91888b1.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    },
+    {
+      "segment_id": "seg_04_integration",
+      "order": 4,
+      "segment_type": "SegmentType.VISUAL_CONCEPT",
+      "title": "Integration & The Fundamental Theorem",
+      "start_sec": 93.09,
+      "end_sec": 135.0,
+      "duration_sec": 41.9,
+      "video_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/videos/clips/les_ec9ec5ae_seg_04_seg_04_integration.mp4",
+      "audio_file": "/home/dev/Desktop/projects/AI-InnovationHackathon/data/audio/tts_36194064ca56a201.mp3",
+      "visual_type": "VisualType.MATH_EQUATION"
+    }
+  ],
+  "pause_markers": [
+    {
+      "marker_id": "pm_q_calc_diff_01",
+      "checkpoint_id": "chk_seg_03_checkpoint1",
+      "timestamp_sec": 81.6,
+      "concept": "Polynomial Differentiation",
+      "question": {
+        "question_id": "q_calc_diff_01",
+        "question_text": "What is the first derivative of f(x) = 3x^2 - 5x + 7?",
+        "prompt": "What is the first derivative of f(x) = 3x^2 - 5x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "6x - 5",
+          "3x - 5",
+          "6x + 7",
+          "6x^2 - 5"
+        ],
+        "correct_answer": "6x - 5",
+        "correct_option_index": 0,
+        "explanation": "Differentiating 3x^2 yields 6x, differentiating -5x yields -5, and the constant 7 differentiates to 0, giving f'(x) = 6x - 5.",
+        "concept": "Polynomial Differentiation",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "pause_checkpoints": [
+    {
+      "marker_id": "pm_q_calc_diff_01",
+      "checkpoint_id": "chk_seg_03_checkpoint1",
+      "timestamp_sec": 81.6,
+      "concept": "Polynomial Differentiation",
+      "question": {
+        "question_id": "q_calc_diff_01",
+        "question_text": "What is the first derivative of f(x) = 3x^2 - 5x + 7?",
+        "prompt": "What is the first derivative of f(x) = 3x^2 - 5x + 7?",
+        "question_type": "mcq",
+        "type": "mcq",
+        "options": [
+          "6x - 5",
+          "3x - 5",
+          "6x + 7",
+          "6x^2 - 5"
+        ],
+        "correct_answer": "6x - 5",
+        "correct_option_index": 0,
+        "explanation": "Differentiating 3x^2 yields 6x, differentiating -5x yields -5, and the constant 7 differentiates to 0, giving f'(x) = 6x - 5.",
+        "concept": "Polynomial Differentiation",
+        "difficulty": "medium",
+        "misconception_distractors": {}
+      }
+    }
+  ],
+  "created_at": "2026-09-05T05:01:51.160695+00:00"
+}
