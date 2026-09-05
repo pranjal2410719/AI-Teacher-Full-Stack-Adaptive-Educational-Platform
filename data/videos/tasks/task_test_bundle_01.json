@@ -1,7 +1,7 @@
 {
   "task_id": "task_test_bundle_01",
   "plan_id": "plan_test_video_concise",
-  "lesson_id": "les_967d7b1c",
+  "lesson_id": "les_bc281019",
   "status": "completed",
   "progress_percent": 100.0,
   "current_stage": "ready",
@@ -12,9 +12,9 @@
     "rendering_visual_slides",
     "stitching_ffmpeg"
   ],
-  "manifest_url": "/api/v1/video/manifest/les_967d7b1c",
-  "video_url": "/api/v1/video/stream/les_967d7b1c.mp4",
+  "manifest_url": "/api/v1/video/manifest/les_bc281019",
+  "video_url": "/api/v1/video/stream/les_bc281019.mp4",
   "error_message": null,
-  "created_at": "2026-09-05T06:23:35.203542+00:00",
-  "completed_at": "2026-09-05T06:23:37.678414+00:00"
+  "created_at": "2026-09-05T07:13:25.942247+00:00",
+  "completed_at": "2026-09-05T07:13:34.459843+00:00"
 }

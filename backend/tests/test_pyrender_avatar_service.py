@@ -1,24 +1,25 @@
 """
-Unit and integration tests for the off-screen ``PyrenderAvatarService``.
+Unit and integration tests for the ``PyrenderAvatarService`` shim.
 
-These tests exercise every layer of the new renderer:
-- placeholder GLB generation + mesh load,
-- procedural face geometry (head, eyes, nose, mouth, hair),
-- head-state pre-rendering and cache,
-- end-to-end MP4 clip generation (size + duration parity with audio),
-- ApniHelp branding consistency on a sampled frame,
-- graceful ``RuntimeError`` when ffmpeg fails.
+The shim keeps the public ``render_avatar_clip`` API so that
+``video_stitcher.py`` can call it unchanged, but delegates to the
+original high-speed 2.5D photorealistic viseme engine (see
+``AvatarService``) — there is no longer a procedural 3D head.
+
+These tests verify:
+- shim initialization and public attributes
+- end-to-end MP4 clip generation (size + duration parity with audio)
+- graceful ``RuntimeError`` when ffmpeg fails
+- that the rendered output contains the ApniHelp branding banner
+- that the shim does not import or call into the 3D mesh helpers
 """
 
 import os
 import io
-import shutil
 import subprocess
 from pathlib import Path
 
-import numpy as np
 import pytest
-import trimesh
 
 os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
 
@@ -26,8 +27,8 @@ from backend.app.config import settings  # noqa: E402
 from backend.app.services.pyrender_avatar_service import (  # noqa: E402
     PyrenderAvatarService,
     pyrender_avatar_service,
-    _build_face_components,
 )
+from backend.app.services.avatar_service import avatar_service  # noqa: E402
 from backend.app.services.tts_service import tts_service  # noqa: E402
 
 
@@ -42,7 +43,7 @@ def pyrender_service() -> PyrenderAvatarService:
 
 @pytest.fixture
 def isolated_avatar_dir(tmp_path: Path) -> Path:
-    """Provide a clean avatar directory so the placeholder creation path is tested."""
+    """Provide a clean avatar directory so init paths can be exercised."""
     avatar_dir = tmp_path / "avatars"
     avatar_dir.mkdir(parents=True, exist_ok=True)
     return avatar_dir
@@ -50,7 +51,7 @@ def isolated_avatar_dir(tmp_path: Path) -> Path:
 
 @pytest.fixture
 def fresh_service(isolated_avatar_dir: Path) -> PyrenderAvatarService:
-    """Create a service against an empty avatar dir to trigger placeholder creation."""
+    """Create a service against an isolated dir; legacy engine still runs."""
     return PyrenderAvatarService(avatar_dir=isolated_avatar_dir)
 
 
@@ -58,123 +59,49 @@ def fresh_service(isolated_avatar_dir: Path) -> PyrenderAvatarService:
 def synthesized_audio() -> tuple[Path, float]:
     """Generate a short, low-cost audio sample for clip rendering tests."""
     return tts_service.synthesize_sync(
-        "Quick pyrender avatar rendering test clip.",
+        "Quick avatar rendering test clip.",
         language="en",
     )
 
 
 # =============================================================================
-# 1. Initialization
+# 1. Initialization (shim)
 # =============================================================================
-def test_initialization_creates_placeholder_glb_when_missing(fresh_service, isolated_avatar_dir):
-    """When no default_teacher.glb is present, the service must create a procedural head."""
-    placeholder = isolated_avatar_dir / "default_teacher.glb"
-    assert placeholder.exists(), "Placeholder GLB must be generated on first init"
-    assert placeholder.stat().st_size > 0
+def test_service_initializes_with_isolated_avatar_dir(fresh_service, isolated_avatar_dir):
+    """A service built against a fresh avatar dir must still come up cleanly."""
+    assert fresh_service.avatar_dir == isolated_avatar_dir
+    assert fresh_service.avatar_dir.exists()
+    # The shim reports the canonical 1280x720 output size.
+    assert fresh_service.width == 1280
+    assert fresh_service.height == 720
+    assert fresh_service.fps == 30
 
 
-def test_initialization_reuses_existing_glb(isolated_avatar_dir):
-    """A pre-existing GLB must be respected (not overwritten) by the service."""
-    model_path = isolated_avatar_dir / "default_teacher.glb"
-    pre_existing = trimesh.creation.box(extents=[0.5, 0.5, 0.5])
-    pre_existing.visual.vertex_colors = [10, 20, 30, 255]
-    pre_existing.export(str(model_path))
-
-    service = PyrenderAvatarService(avatar_dir=isolated_avatar_dir)
-
-    assert service.model_path == model_path
-    # Mesh should still be loadable as a trimesh after init
-    assert isinstance(service.mesh, trimesh.Trimesh)
-    assert service.mesh.vertices.shape[0] > 0
+def test_service_exposes_legacy_engine_reference(fresh_service):
+    """The shim must hold a reference to the legacy AvatarService for delegation."""
+    assert fresh_service._avatar_engine is avatar_service
 
 
-def test_initialization_loads_mesh_with_vertices(pyrender_service):
-    """The mesh attribute must contain a populated vertex array."""
-    assert isinstance(pyrender_service.mesh, trimesh.Trimesh)
-    assert pyrender_service.mesh.vertices.shape[1] == 3
-    assert pyrender_service.mesh.vertices.shape[0] > 10
+def test_service_model_path_under_avatar_dir(fresh_service, isolated_avatar_dir):
+    """The ``model_path`` attribute is the legacy compat slot for the GLB path."""
+    assert fresh_service.model_path == isolated_avatar_dir / "default_teacher.glb"
 
 
 # =============================================================================
-# 2. Procedural face geometry
+# 2. 3D face helpers are removed
 # =============================================================================
-def test_build_face_components_returns_single_mesh():
-    """``_build_face_components`` must return a single concatenated trimesh."""
-    mesh = _build_face_components(open_amount=0.0, eyes_closed=False)
-    assert isinstance(mesh, trimesh.Trimesh)
-    # Head + hair + 2 ears + neck + collar + 3*2 eye parts + 2 eyelids +
-    # 2 brows + nose + 2 cheeks + chin + 2 mouth parts
-    assert mesh.vertices.shape[0] > 100, "Face mesh should have a substantial vertex count"
-
-
-@pytest.mark.parametrize("open_amount", [0.5, 1.0])
-def test_build_face_components_mouth_state_changes_geometry(open_amount):
-    """The mouth-open state must change the mesh compared to the closed state."""
-    closed = _build_face_components(open_amount=0.0, eyes_closed=False)
-    open_ = _build_face_components(open_amount=open_amount, eyes_closed=False)
-    # The open mouth drops the lower lip and exposes the inner cavity, so
-    # either the vertex count differs OR the vertices themselves differ.
-    if closed.vertices.shape == open_.vertices.shape:
-        assert not np.allclose(closed.vertices, open_.vertices), (
-            f"Mouth-open amount={open_amount} produced identical vertices to closed"
-        )
-    else:
-        # Different vertex count is itself a valid signal of geometry change
-        # (the open mouth adds the inner-cavity mesh).
-        assert open_.vertices.shape[0] > closed.vertices.shape[0]
-
-
-def test_build_face_components_eyes_closed_changes_geometry():
-    """The eyes-closed state must change the mesh compared to the open-eyes state."""
-    open_eyes = _build_face_components(open_amount=0.0, eyes_closed=False)
-    closed_eyes = _build_face_components(open_amount=0.0, eyes_closed=True)
-    if open_eyes.vertices.shape == closed_eyes.vertices.shape:
-        assert not np.allclose(open_eyes.vertices, closed_eyes.vertices), (
-            "Eyes-closed state should drop eyelids over the eyeballs"
-        )
-    else:
-        # Different vertex count is a valid signal of geometry change
-        assert closed_eyes.vertices.shape[0] != open_eyes.vertices.shape[0]
-
-
-def test_head_state_cache_populates_on_first_render(pyrender_service, tmp_path, monkeypatch):
-    """After rendering, the service must cache all 4 head states."""
-    # Bypass real ffmpeg; we only want to trigger state cache population.
-    class FakeStdin:
-        def write(self, data: bytes) -> None: pass
-        def close(self) -> None: pass
-
-    class FakeProc:
-        stdin = FakeStdin()
-        stdout = None
-        stderr = None
-        returncode = 0
-        def wait(self, timeout=None): return 0
-        def kill(self): pass
-
-    real_popen = subprocess.Popen
-    def fake_popen(cmd, *args, **kwargs):
-        if isinstance(cmd, list) and "rawvideo" in cmd:
-            return FakeProc()
-        return real_popen(cmd, *args, **kwargs)
-    monkeypatch.setattr(subprocess, "Popen", fake_popen)
-
-    audio, _ = tts_service.synthesize_sync("cache test", language="en")
-    out = tmp_path / "state_cache.mp4"
-    pyrender_service.render_avatar_clip(audio, out)
-
-    # All 4 (mouth_open, eyes_closed) combinations should be cached.
-    assert (False, False) in pyrender_service._state_cache
-    assert (True, False) in pyrender_service._state_cache
-    assert (False, True) in pyrender_service._state_cache
-    assert (True, True) in pyrender_service._state_cache
-    for img in pyrender_service._state_cache.values():
-        assert img.mode == "RGBA"
-        assert img.size[0] > 0 and img.size[1] > 0
+def test_no_procedural_face_helpers_exported():
+    """The 3D face construction helpers must no longer be exported."""
+    import backend.app.services.pyrender_avatar_service as mod
+    # These were the trimesh-based face builders in the previous iteration.
+    assert not hasattr(mod, "_build_face_components")
+    assert not hasattr(mod, "_build_head_base")
+    assert not hasattr(mod, "_build_eyeball")
+    assert not hasattr(mod, "_build_mouth")
 
 
 # =============================================================================
-# 3. End-to-end clip generation
+# 3. End-to-end clip generation (delegated to AvatarService)
 # =============================================================================
 def test_render_avatar_clip_produces_mp4(pyrender_service, synthesized_audio, tmp_path):
     """The renderer must produce a valid MP4 whose duration tracks the audio."""
@@ -185,7 +112,7 @@ def test_render_avatar_clip_produces_mp4(pyrender_service, synthesized_audio, tm
         audio_path=audio_path,
         output_path=output_path,
         persona="professor_alex",
-        subject_title="Pyrender Test",
+        subject_title="Avatar Test",
         teacher_name="Prof. Test Avatar",
     )
 
@@ -199,122 +126,88 @@ def test_render_avatar_clip_produces_mp4(pyrender_service, synthesized_audio, tm
     )
 
 
-def test_render_avatar_clip_does_not_write_intermediate_files(pyrender_service, synthesized_audio, tmp_path):
-    """The new pipe-based pipeline must not leave any frames_* directories behind."""
+def test_render_avatar_clip_uses_legacy_engine(pyrender_service, synthesized_audio, tmp_path, monkeypatch):
+    """The shim must call into the legacy ``AvatarService`` (not run a 3D scene)."""
     audio_path, _ = synthesized_audio
-    output_path = tmp_path / "pyrender_clip_cleanup.mp4"
-    pyrender_service.render_avatar_clip(audio_path=audio_path, output_path=output_path)
+    output_path = tmp_path / "pyrender_legacy_check.mp4"
 
-    leftover = list(output_path.parent.glob("frames_*"))
-    assert leftover == [], f"Renderer left intermediate frame directories: {leftover}"
-    # The single MP4 is the only artifact.
-    assert output_path.exists()
+    called: dict = {}
+
+    real_generate = avatar_service.generate_avatar_clip
+
+    def spy(audio_path, output_path, **kwargs):
+        called["yes"] = True
+        called["persona"] = kwargs.get("persona")
+        called["teacher_name"] = kwargs.get("teacher_name")
+        return real_generate(audio_path, output_path, **kwargs)
+
+    monkeypatch.setattr(avatar_service, "generate_avatar_clip", spy)
+
+    pyrender_service.render_avatar_clip(
+        audio_path=audio_path,
+        output_path=output_path,
+        persona="professor_alex",
+        teacher_name="Prof. Spy Check",
+    )
+
+    assert called.get("yes") is True
+    assert called.get("persona") == "professor_alex"
+    assert called.get("teacher_name") == "Prof. Spy Check"
 
 
 # =============================================================================
-# 4. Branding consistency
+# 4. Branding consistency — the legacy service paints the ApniHelp banner
+#    on every frame, so the output MP4 should contain the banner overlay.
 # =============================================================================
-def test_render_avatar_clip_branding_present(pyrender_service, synthesized_audio, tmp_path, monkeypatch):
-    """A sampled frame from the rendered clip must contain the teacher name banner.
-
-    We monkey-patch the ffmpeg ``Popen`` so we can capture the raw RGB24
-    frame stream the renderer writes to ffmpeg's stdin; the first frame is
-    saved next to the expected output for inspection.
-    """
+def test_render_avatar_clip_contains_apnihelp_branding(pyrender_service, synthesized_audio, tmp_path):
+    """A sampled frame must contain the ApniHelp lower-third banner."""
     from PIL import Image
+    import subprocess as sp
 
     audio_path, _ = synthesized_audio
     output_path = tmp_path / "pyrender_clip_brand.mp4"
-    sample = output_path.with_suffix(".png")
-
-    # Fake ``Popen`` that captures the first frame written to stdin instead of
-    # invoking the real ffmpeg.
-    class FakeStdin:
-        def __init__(self):
-            self._buf = bytearray()
-
-        def write(self, data: bytes) -> None:
-            self._buf.extend(data)
-
-        def close(self) -> None:
-            pass
-
-    fake_stdin = FakeStdin()
-
-    class FakeProc:
-        stdin = fake_stdin
-        stdout = None
-        stderr = None
-        returncode = 0
-
-        def wait(self, timeout=None):
-            # Save the first frame as a PNG for the test to inspect.
-            if fake_stdin._buf:
-                frame_size = pyrender_service.width * pyrender_service.height * 3
-                first_frame = bytes(fake_stdin._buf[:frame_size])
-                img = Image.frombytes(
-                    "RGB",
-                    (pyrender_service.width, pyrender_service.height),
-                    first_frame,
-                )
-                img.save(sample)
-                # Create a tiny valid MP4 placeholder so the output path "exists".
-                output_path.write_bytes(b"\x00")
-                self.returncode = 0
-            else:
-                # If we somehow got no frames, fail loudly so the test
-                # diagnostic is clear rather than silently producing no sample.
-                raise AssertionError(
-                    "Fake Popen never received any frame bytes on stdin; "
-                    "check that the renderer's per-frame loop is actually running."
-                )
-            return 0
-
-        def kill(self):
-            pass
-
-    real_popen = subprocess.Popen
-
-    def fake_popen(cmd, *args, **kwargs):
-        # ffmpeg cmd layout: ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", ...]
-        if isinstance(cmd, list) and "rawvideo" in cmd:
-            return FakeProc()
-        return real_popen(cmd, *args, **kwargs)
-
-    monkeypatch.setattr(subprocess, "Popen", fake_popen)
+    sample_path = tmp_path / "pyrender_clip_brand.png"
 
     pyrender_service.render_avatar_clip(
         audio_path=audio_path,
         output_path=output_path,
         teacher_name="Prof. Test Brand",
-        subject_title="Pyrender Branding",
+        subject_title="Avatar Branding",
     )
+    assert output_path.exists()
 
-    assert sample.exists(), "No sample frame was captured for branding inspection"
-    img = Image.open(sample)
-    banner_x, banner_y = 60, 600
-    fill_pixel = img.getpixel((banner_x + 100, banner_y + 40))
-    # Fill is (15, 23, 42) per the service; allow small AA deviation.
+    # Extract the middle frame as a PNG for inspection.
+    cmd = [
+        "ffmpeg", "-y", "-loglevel", "error",
+        "-ss", "00:00:00.5", "-i", str(output_path),
+        "-frames:v", "1", str(sample_path),
+    ]
+    sp.run(cmd, check=False)
+    assert sample_path.exists(), f"ffmpeg failed to extract a frame: {sample_path}"
+
+    img = Image.open(sample_path).convert("RGB")
+    # The banner sits at x in [60, 600], y in [600, 680] in the 1280x720
+    # frame. The fill colour is (15, 23, 42) per the legacy renderer.
+    fill_pixel = img.getpixel((100, 640))
     assert fill_pixel[0] < 60 and fill_pixel[1] < 60 and fill_pixel[2] < 80, (
         f"Banner fill color {fill_pixel} does not match expected dark slate"
     )
-    sample.unlink(missing_ok=True)
+    sample_path.unlink(missing_ok=True)
 
 
 # =============================================================================
 # 5. Error fallback
 # =============================================================================
-def test_render_avatar_clip_raises_on_ffmpeg_failure(pyrender_service, synthesized_audio, tmp_path, monkeypatch):
+def test_render_avatar_clip_raises_on_ffmpeg_failure(
+    pyrender_service, synthesized_audio, tmp_path, monkeypatch
+):
     """A non-zero ffmpeg return code must surface as a RuntimeError."""
     audio_path, _ = synthesized_audio
     output_path = tmp_path / "pyrender_clip_fail.mp4"
 
     class FakeStdin:
-        def write(self, data: bytes) -> None:
-            pass
-
-        def close(self) -> None:
-            pass
+        def write(self, data: bytes) -> None: pass
+        def close(self) -> None: pass
 
     class FailingProc:
         stdin = FakeStdin()
@@ -331,12 +224,10 @@ def test_render_avatar_clip_raises_on_ffmpeg_failure(pyrender_service, synthesiz
     real_popen = subprocess.Popen
 
     def fake_popen(cmd, *args, **kwargs):
-        # ffmpeg cmd layout: ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", ...]
+        # The legacy engine starts ffmpeg with rawvideo + libx264. Catch
+        # the encoding call to simulate failure.
         if isinstance(cmd, list) and "rawvideo" in cmd:
             return FailingProc()
-        # Audio PCM extraction in AvatarService still uses subprocess.run
-        # so it won't hit this branch; but be permissive in case ffmpeg is
-        # also called for any auxiliary purpose.
         return real_popen(cmd, *args, **kwargs)
 
     monkeypatch.setattr(subprocess, "Popen", fake_popen)
@@ -346,7 +237,9 @@ def test_render_avatar_clip_raises_on_ffmpeg_failure(pyrender_service, synthesiz
     assert "FFmpeg" in str(excinfo.value) or "ffmpeg" in str(excinfo.value)
 
 
-def test_render_avatar_clip_raises_when_ffmpeg_binary_missing(pyrender_service, synthesized_audio, tmp_path, monkeypatch):
+def test_render_avatar_clip_raises_when_ffmpeg_binary_missing(
+    pyrender_service, synthesized_audio, tmp_path, monkeypatch
+):
     """When the ffmpeg binary cannot be invoked, a clean error must propagate."""
     from backend.app.services import pyrender_avatar_service as mod
 
@@ -359,5 +252,5 @@ def test_render_avatar_clip_raises_when_ffmpeg_binary_missing(pyrender_service, 
     monkeypatch.setattr(mod.subprocess, "Popen", fake_ffmpeg)
 
     with pytest.raises(Exception):
-        # FileNotFoundError is acceptable here; we just must not silently succeed.
+        # FileNotFoundError is acceptable; we just must not silently succeed.
         pyrender_service.render_avatar_clip(audio_path=audio_path, output_path=output_path)

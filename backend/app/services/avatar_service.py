@@ -1,9 +1,25 @@
 """
-Photorealistic AI Teacher Avatar Service with Audio-Driven Viseme Compositing.
-Synthesizes speech-synchronized talking head video clips from photorealistic portraits
-using high-speed Region-of-Interest (ROI) viseme compositing, natural 3-frame eye blinking,
-dynamic audio RMS energy lip-sync, and ApniHelp branded presentation overlays.
-Includes pluggable Wav2Lip CLI backend.
+ApniHelp illustrated teacher avatar service.
+
+The avatar is a flat, cartoon-style 2D character drawn directly with PIL
+(no photograph, no 3D model, no portrait asset). The face is composed
+of vector-like shapes:
+
+  * oval head with a warm skin tone and a soft outline
+  * hair cap
+  * two large cartoon eyes (whites, irises, pupils, highlights) with a
+    natural periodic blink
+  * eyebrows that raise slightly when the mouth is open
+  * small triangular nose
+  * five-shape mouth (smile, slight, medium, wide, round-O) driven by
+    the audio RMS envelope for lip-sync
+  * cheek blush, neck, shirt collar
+
+The character sits in the upper portion of a 1280x720 frame; the lower
+third carries the ApniHelp banner with the teacher name and lesson
+title. The public ``render_avatar_frame`` and ``generate_avatar_clip``
+API is preserved so that ``video_stitcher.py`` and the
+``pyrender_avatar_service`` shim keep working unchanged.
 """
 
 import os
@@ -11,7 +27,7 @@ import math
 import logging
 import subprocess
 from pathlib import Path
-from typing import Optional, List, Tuple, Dict, Any
+from typing import Optional, Tuple
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -20,8 +36,68 @@ from backend.app.config import settings
 logger = logging.getLogger(__name__)
 
 
+# Branded palette
+BG_TOP_RGB    = (15, 23, 42)      # slate-900
+BG_BOT_RGB    = (30, 41, 59)      # slate-800
+ACCENT_RGB    = (234, 179, 8)     # amber-400 (live indicator)
+BANNER_BG_RGB = (15, 23, 42)
+BANNER_BORDER = (71, 85, 105)
+TITLE_RGB     = (255, 255, 255)
+SUBTITLE_RGB  = (203, 213, 225)
+WATERMARK_RGB = (100, 210, 170)
+
+# Teacher palette (warm, friendly)
+SKIN_RGB        = (244, 206, 178)   # warm peach
+SKIN_SHADE_RGB  = (224, 178, 150)   # soft shadow on the face
+OUTLINE_RGB     = (50, 38, 30)      # dark brown outline
+HAIR_RGB        = (62, 38, 26)      # dark brown
+HAIR_HIGHLIGHT  = (110, 78, 60)
+EYE_WHITE_RGB   = (252, 252, 250)
+IRIS_RGB        = (95, 60, 35)      # warm brown iris
+PUPIL_RGB       = (15, 10, 5)
+EYEBROW_RGB     = (60, 40, 28)
+NOSE_RGB        = (210, 160, 130)
+LIP_RGB         = (210, 100, 95)
+LIP_DARK_RGB    = (90, 30, 30)
+TOOTH_RGB       = (252, 250, 245)
+TONGUE_RGB      = (210, 90, 90)
+CHEEK_RGB       = (240, 170, 160)
+SHIRT_RGB       = (40, 70, 110)
+SHIRT_DARK_RGB  = (24, 48, 80)
+
+
+# Anchor coordinates for the illustrated character on a 1280x720 frame
+HEAD_CX = 640
+HEAD_CY = 290
+HEAD_RX = 175   # half-width of the head ellipse
+HEAD_RY = 215   # half-height of the head ellipse
+
+# Eyes (relative to head center)
+EYE_OFFSET_X = 60       # horizontal distance from head center
+EYE_OFFSET_Y = -30      # vertical offset (above center)
+EYE_RX = 28             # eye width (radius x)
+EYE_RY = 32             # eye height (radius y)
+IRIS_R = 16
+PUPIL_R = 8
+
+# Eyebrows sit just above the eyes
+BROW_OFFSET_Y = -65
+BROW_LEN = 50
+BROW_THICK = 8
+
+# Nose (small triangle just below eye line)
+NOSE_OFFSET_Y = 25
+NOSE_W = 16
+NOSE_H = 22
+
+# Mouth — the centre of the mouth moves slightly with the head
+MOUTH_OFFSET_Y = 110
+MOUTH_BASE_W = 70
+MOUTH_BASE_H = 30
+
+
 class AvatarService:
-    """High-speed Photorealistic Audio-Reactive Viseme Avatar Generator & Wav2Lip Adapter."""
+    """Illustrated 2D teacher character with audio-driven lip-sync."""
 
     def __init__(self, avatar_dir: Optional[Path] = None):
         self.avatar_dir = Path(avatar_dir) if avatar_dir else settings.avatar_dir
@@ -31,21 +107,18 @@ class AvatarService:
         self.width = 1280
         self.height = 720
         self.fps = 30
-        self._portrait_cache: Dict[str, Image.Image] = {}
 
+    # ------------------------------------------------------------------
+    # Audio analysis
+    # ------------------------------------------------------------------
     def extract_audio_energy_envelope(self, audio_path: Path, fps: int = 30) -> np.ndarray:
-        """
-        Decodes audio into 16kHz mono PCM and computes per-frame RMS energy.
-        Returns normalized 1D numpy array of length = total_frames.
-        """
+        """Decodes audio into 16 kHz mono PCM and returns a normalized
+        per-frame RMS energy array (length = total_frames)."""
         sample_rate = 16000
         cmd = [
-            self.ffmpeg_path,
-            "-v", "error",
+            self.ffmpeg_path, "-v", "error",
             "-i", str(audio_path),
-            "-f", "s16le",
-            "-ac", "1",
-            "-ar", str(sample_rate),
+            "-f", "s16le", "-ac", "1", "-ar", str(sample_rate),
             "pipe:1",
         ]
         try:
@@ -53,173 +126,68 @@ class AvatarService:
             audio_samples = np.frombuffer(raw_pcm, dtype=np.int16).astype(np.float32)
         except Exception as e:
             logger.warning(f"Audio PCM extraction failed for {audio_path}: {e}, using synthetic envelope.")
-            total_samples = sample_rate * 3
-            audio_samples = np.zeros(total_samples, dtype=np.float32)
+            audio_samples = np.zeros(sample_rate * 3, dtype=np.float32)
 
         total_audio_sec = len(audio_samples) / float(sample_rate)
         total_frames = max(1, int(math.ceil(total_audio_sec * fps)))
         samples_per_frame = int(sample_rate / fps)
-
         envelope = np.zeros(total_frames, dtype=np.float32)
         for f in range(total_frames):
             start = f * samples_per_frame
             end = min(len(audio_samples), start + samples_per_frame)
             if start < len(audio_samples) and end > start:
                 chunk = audio_samples[start:end]
-                rms = np.sqrt(np.mean(chunk ** 2))
-                envelope[f] = rms
-
-        # Normalize envelope to [0.0, 1.0]
-        max_val = np.max(envelope) if len(envelope) > 0 else 0.0
+                envelope[f] = np.sqrt(np.mean(chunk ** 2))
+        max_val = float(np.max(envelope)) if len(envelope) else 0.0
         if max_val > 100.0:
             envelope = envelope / max_val
         else:
             envelope = np.clip(envelope / 2000.0, 0.0, 1.0)
-
-        # Smooth envelope with exponential moving average (alpha=0.4)
         smoothed = np.zeros_like(envelope)
         curr = 0.0
         for i, val in enumerate(envelope):
             curr = 0.4 * val + 0.6 * curr
             smoothed[i] = curr
-
         return smoothed
 
-    def _resolve_base_portrait(self, persona: str = "professor_alex") -> Tuple[Image.Image, Dict[str, Any]]:
-        """
-        Resolves cached photorealistic AI teacher portrait and facial landmark coordinates.
-        Supports Dr. Sarah Vance (female) and Prof. Alexander Vance (male).
-        """
-        p_str = str(persona).lower()
-        is_male = any(k in p_str for k in ["alex", "male", "madhur", "man"])
-        cache_key = "male" if is_male else "female"
-
-        if cache_key not in self._portrait_cache:
-            filename = "teacher_portrait_male.png" if is_male else "teacher_portrait.png"
-            # Prioritize the configured avatar directory to ensure the original portrait is used
-            candidates = [
-                settings.avatar_dir / filename,
-            ]
-            portrait_path = next((p for p in candidates if p.exists()), None)
-            if portrait_path:
-                img = Image.open(portrait_path).convert("RGB")
-                if img.size != (self.width, self.height):
-                    img = img.resize((self.width, self.height), Image.Resampling.LANCZOS)
-            else:
-                # High quality studio backdrop fallback
-                img = Image.new("RGB", (self.width, self.height), (18, 24, 38))
-                draw = ImageDraw.Draw(img)
-                for y in range(0, self.height, 4):
-                    ratio = y / float(self.height)
-                    draw.line([(0, y), (self.width, y)], fill=(int(18 + 12 * ratio), int(24 + 18 * ratio), int(38 + 24 * ratio)), width=4)
-            self._portrait_cache[cache_key] = img
-
-        base_img = self._portrait_cache[cache_key]
-
-        if is_male:
-            geo = {
-                "key": "male",
-                "default_name": "Prof. Alexander Vance",
-                "mx": 670,
-                "my": 252,
-                "lex": 620,
-                "rex": 725,
-                "ey": 185,
-                "skin_tone": (135, 95, 75),
-                "lip_tone": (130, 40, 50),
-            }
-        else:
-            geo = {
-                "key": "female",
-                "default_name": "Dr. Sarah Vance",
-                "mx": 690,
-                "my": 248,
-                "lex": 645,
-                "rex": 770,
-                "ey": 185,
-                "skin_tone": (155, 110, 95),
-                "lip_tone": (145, 50, 60),
-            }
-
-        return base_img, geo
-
-    def render_avatar_frame(
-        self,
-        frame_idx: int,
-        total_frames: int,
-        energy: float,
-        persona: str = "professor_alex",
-        subject_title: str = "AI Teaching Lecture",
-        teacher_name: str = "Prof. Alexander Vance",
-    ) -> Image.Image:
-        """
-        Renders a single 1280x720 RGB frame for the photorealistic AI teacher avatar
-        with audio RMS-energy driven viseme mouth compositing, natural 3-frame eye blinking,
-        subtle head bobbing, audio equalizer visualizer HUD, and ApniHelp lower-third branding.
-        """
-        t = frame_idx / float(self.fps)
-        base_img, geo = self._resolve_base_portrait(persona)
-
-        # Subtle sinusoidal head bobbing (micro-motion)
-        bob_y = int(1.2 * math.sin(2.0 * math.pi * 0.5 * t))
-        bob_x = int(0.6 * math.sin(2.0 * math.pi * 0.25 * t))
-
-        img = base_img.copy()
+    # ------------------------------------------------------------------
+    # Background and branding
+    # ------------------------------------------------------------------
+    def _gradient_backdrop(self) -> Image.Image:
+        img = Image.new("RGB", (self.width, self.height), BG_TOP_RGB)
         draw = ImageDraw.Draw(img)
+        top = np.array(BG_TOP_RGB, dtype=np.int16)
+        bot = np.array(BG_BOT_RGB, dtype=np.int16)
+        for y in range(self.height):
+            t = y / max(1, self.height - 1)
+            color = tuple((top * (1 - t) + bot * t).astype(int).tolist())
+            draw.line([(0, y), (self.width, y)], fill=color)
+        return img
 
-        mx = geo["mx"] + bob_x
-        my = geo["my"] + bob_y
-        lex = geo["lex"] + bob_x
-        rex = geo["rex"] + bob_x
-        ey = geo["ey"] + bob_y
+    def _draw_banner(self, draw: ImageDraw.ImageDraw, teacher_name: str, subject_title: str) -> None:
+        banner_x, banner_y = 60, 600
+        draw.rounded_rectangle(
+            [banner_x, banner_y, banner_x + 540, banner_y + 80],
+            radius=10, fill=BANNER_BG_RGB, outline=BANNER_BORDER, width=2,
+        )
+        draw.ellipse([banner_x + 20, banner_y + 22, banner_x + 36, banner_y + 38], fill=ACCENT_RGB)
+        draw.text((banner_x + 48, banner_y + 14), teacher_name, fill=TITLE_RGB)
+        draw.text((banner_x + 48, banner_y + 42), f"ApniHelp • {subject_title}", fill=SUBTITLE_RGB)
 
-        # Natural 3-Frame Periodic Eye Blinking (once every ~3.2s)
-        blink_period = 96
-        is_blinking = (frame_idx % blink_period) < 3
-        if is_blinking:
-            lid_color = geo["skin_tone"]
-            draw.arc([lex - 24, ey - 7, lex + 24, ey + 7], start=0, end=180, fill=lid_color, width=4)
-            draw.arc([rex - 24, ey - 7, rex + 24, ey + 7], start=0, end=180, fill=lid_color, width=4)
+    def _draw_watermark(self, draw: ImageDraw.ImageDraw) -> None:
+        draw.rounded_rectangle(
+            [self.width - 165, 18, self.width - 30, 52],
+            radius=6, fill=BANNER_BG_RGB,
+        )
+        draw.text((self.width - 145, 26), "ApniHelp", fill=WATERMARK_RGB)
 
-        # Audio RMS-Energy Driven Phonetic Viseme Mouth Compositing
-        # States: closed/smile_rest (< 0.12), slight_open (0.12-0.35), wide_open (0.35-0.65), round_o (0.65-0.82), wide_open_stressed (>= 0.82)
-        if energy < 0.12:
-            # Viseme 0: Closed / Resting Mouth / Gentle Smile from portrait
-            pass
-        elif energy < 0.35:
-            # Viseme 1: Slightly Open (m/b/p transition and modest consonants)
-            open_h = int(4 + 6 * ((energy - 0.12) / 0.23))
-            draw.ellipse([mx - 15, my - open_h // 2, mx + 15, my + open_h // 2], fill=(55, 18, 22))
-            draw.line([(mx - 10, my - open_h // 2 + 1), (mx + 10, my - open_h // 2 + 1)], fill=(240, 240, 245), width=2)
-        elif energy < 0.65:
-            # Viseme 2: Wide Open (conversational open vowels 'e', 'a', 'i')
-            open_h = int(10 + 8 * ((energy - 0.35) / 0.30))
-            draw.ellipse([mx - 20, my - open_h // 2, mx + 20, my + open_h // 2], fill=(45, 15, 20))
-            # Upper teeth
-            draw.rectangle([mx - 14, my - open_h // 2, mx + 14, my - open_h // 2 + 3], fill=(245, 245, 248))
-            # Tongue
-            draw.ellipse([mx - 10, my + open_h // 2 - 5, mx + 10, my + open_h // 2], fill=(190, 75, 85))
-        elif energy < 0.82:
-            # Viseme 3: Round 'O' / 'U' shape
-            open_h = int(14 + 6 * ((energy - 0.65) / 0.17))
-            draw.ellipse([mx - 12, my - open_h // 2, mx + 12, my + open_h // 2], fill=(30, 10, 15))
-            draw.ellipse([mx - 14, my - open_h // 2 - 2, mx + 14, my + open_h // 2 + 2], outline=geo["lip_tone"], width=2)
-        else:
-            # Viseme 4: Wide Open Stressed (exclamations / stressed open syllables)
-            open_h = int(18 + 8 * min(1.0, (energy - 0.82) / 0.18))
-            draw.ellipse([mx - 24, my - open_h // 2, mx + 24, my + open_h // 2], fill=(40, 12, 18))
-            # Upper teeth
-            draw.rectangle([mx - 16, my - open_h // 2, mx + 16, my - open_h // 2 + 4], fill=(245, 245, 248))
-            # Tongue
-            draw.ellipse([mx - 12, my + open_h // 2 - 7, mx + 12, my + open_h // 2], fill=(200, 80, 90))
-
-        # Studio HUD: Audio Equalizer Visualizer Bars
-        eq_x = 980
-        eq_y = 660
-        num_bars = 16
-        bar_width = 12
-        bar_gap = 5
-        draw.rounded_rectangle([eq_x - 20, eq_y - 60, eq_x + num_bars * (bar_width + bar_gap) + 15, eq_y + 20], radius=8, fill=(15, 23, 42), outline=(51, 65, 85), width=1)
+    def _draw_equalizer(self, draw: ImageDraw.ImageDraw, energy: float, t: float) -> None:
+        eq_x, eq_y = 980, 660
+        num_bars, bar_width, bar_gap = 16, 12, 5
+        draw.rounded_rectangle(
+            [eq_x - 20, eq_y - 60, eq_x + num_bars * (bar_width + bar_gap) + 15, eq_y + 20],
+            radius=8, fill=BANNER_BG_RGB, outline=BANNER_BORDER, width=1,
+        )
         for b in range(num_bars):
             harmonic_mod = 0.5 + 0.5 * math.sin(2.0 * math.pi * (0.8 * t + b * 0.15))
             bar_h = max(4, int(45 * energy * harmonic_mod + 4 * math.sin(t * 5 + b)))
@@ -232,196 +200,380 @@ class AvatarService:
             )
             draw.rounded_rectangle([bx, by, bx + bar_width, eq_y], radius=3, fill=col)
 
-        # Lower Third Presentation Banner (ApniHelp Theme)
-        banner_x = 60
-        banner_y = 600
-        draw.rounded_rectangle([banner_x, banner_y, banner_x + 540, banner_y + 80], radius=10, fill=(15, 23, 42), outline=(51, 65, 85), width=2)
-        # Amber/Yellow glowing live indicator
-        draw.ellipse([banner_x + 20, banner_y + 22, banner_x + 36, banner_y + 38], fill=(234, 179, 8))
-        # Text Callouts
-        disp_name = teacher_name if teacher_name and teacher_name != "Prof. Alexander Vance" else geo["default_name"]
-        draw.text((banner_x + 48, banner_y + 14), disp_name, fill=(255, 255, 255))
-        draw.text((banner_x + 48, banner_y + 42), f"ApniHelp • {subject_title}", fill=(203, 213, 225))
+    # ------------------------------------------------------------------
+    # Character drawing helpers
+    # ------------------------------------------------------------------
+    def _draw_shirt(self, draw: ImageDraw.ImageDraw) -> None:
+        """Shoulders + collar under the head."""
+        # Two shoulder blobs forming a trapezoid
+        left  = [(HEAD_CX - 250, 720), (HEAD_CX - 90, 580), (HEAD_CX - 50, 580), (HEAD_CX - 110, 720)]
+        right = [(HEAD_CX + 250, 720), (HEAD_CX + 90, 580), (HEAD_CX + 50, 580), (HEAD_CX + 110, 720)]
+        draw.polygon(left,  fill=SHIRT_RGB, outline=OUTLINE_RGB)
+        draw.polygon(right, fill=SHIRT_RGB, outline=OUTLINE_RGB)
+        # V-neck collar (a small darker triangle)
+        draw.polygon(
+            [
+                (HEAD_CX - 60, 600),
+                (HEAD_CX + 60, 600),
+                (HEAD_CX + 30, 660),
+                (HEAD_CX - 30, 660),
+            ],
+            fill=SKIN_RGB, outline=OUTLINE_RGB,
+        )
+        # Tie / shirt placket
+        draw.rectangle([HEAD_CX - 8, 600, HEAD_CX + 8, 720], fill=SHIRT_DARK_RGB, outline=OUTLINE_RGB)
 
-        # Watermark Badge (ApniHelp Branding)
-        draw.rounded_rectangle([self.width - 165, 18, self.width - 30, 52], radius=6, fill=(15, 23, 42))
-        draw.text((self.width - 145, 26), "ApniHelp", fill=(100, 210, 170))
+    def _draw_hair(self, draw: ImageDraw.ImageDraw) -> None:
+        """Hair cap on top of the head."""
+        # A wide arc that follows the top of the head
+        hair_box = [
+            HEAD_CX - HEAD_RX - 10, HEAD_CY - HEAD_RY - 20,
+            HEAD_CX + HEAD_RX + 10, HEAD_CY + 40,
+        ]
+        draw.pieslice(hair_box, start=200, end=340, fill=HAIR_RGB, outline=OUTLINE_RGB)
+        # Side hair tufts
+        draw.ellipse(
+            [HEAD_CX - HEAD_RX - 15, HEAD_CY - HEAD_RY + 60,
+             HEAD_CX - HEAD_RX + 30, HEAD_CY + 30],
+            fill=HAIR_RGB, outline=OUTLINE_RGB,
+        )
+        draw.ellipse(
+            [HEAD_CX + HEAD_RX - 30, HEAD_CY - HEAD_RY + 60,
+             HEAD_CX + HEAD_RX + 15, HEAD_CY + 30],
+            fill=HAIR_RGB, outline=OUTLINE_RGB,
+        )
+        # Hair highlight (a thin curved line on top)
+        draw.arc(
+            [HEAD_CX - 100, HEAD_CY - HEAD_RY - 10,
+             HEAD_CX + 100, HEAD_CY - HEAD_RY + 60],
+            start=200, end=320, fill=HAIR_HIGHLIGHT, width=4,
+        )
 
+    def _draw_ears(self, draw: ImageDraw.ImageDraw) -> None:
+        for side in (-1, +1):
+            ex = HEAD_CX + side * (HEAD_RX - 5)
+            ey = HEAD_CY + 10
+            draw.ellipse([ex - 22, ey - 30, ex + 22, ey + 40], fill=SKIN_RGB, outline=OUTLINE_RGB)
+            # Inner ear curve
+            draw.arc(
+                [ex - 12, ey - 15, ex + 12, ey + 25],
+                start=270 if side < 0 else 90,
+                end=90 if side < 0 else 270,
+                fill=SKIN_SHADE_RGB, width=3,
+            )
+
+    def _draw_face_base(self, draw: ImageDraw.ImageDraw) -> None:
+        """Head + cheek shading + cheeks."""
+        # Head
+        draw.ellipse(
+            [HEAD_CX - HEAD_RX, HEAD_CY - HEAD_RY,
+             HEAD_CX + HEAD_RX, HEAD_CY + HEAD_RY],
+            fill=SKIN_RGB, outline=OUTLINE_RGB, width=3,
+        )
+        # Soft cheek shading on the right (light from the left)
+        draw.chord(
+            [HEAD_CX - HEAD_RX + 10, HEAD_CY - 20,
+             HEAD_CX + HEAD_RX - 10, HEAD_CY + HEAD_RY - 20],
+            start=300, end=60, fill=SKIN_SHADE_RGB,
+        )
+        # Blush dots
+        for side in (-1, +1):
+            cx = HEAD_CX + side * 110
+            cy = HEAD_CY + 60
+            draw.ellipse([cx - 18, cy - 12, cx + 18, cy + 12], fill=CHEEK_RGB)
+
+    def _draw_eyebrows(self, draw: ImageDraw.ImageDraw, raise_amount: float = 0.0) -> None:
+        """Slightly curved eyebrows; raise them when mouth is open."""
+        brow_y = HEAD_CY + EYE_OFFSET_Y + BROW_OFFSET_Y - int(raise_amount * 8)
+        for side in (-1, +1):
+            cx = HEAD_CX + side * EYE_OFFSET_X
+            # Slight curve
+            draw.line(
+                [(cx - BROW_LEN // 2, brow_y + 4),
+                 (cx, brow_y - 4),
+                 (cx + BROW_LEN // 2, brow_y + 4)],
+                fill=EYEBROW_RGB, width=BROW_THICK,
+            )
+
+    def _draw_eyes(
+        self, draw: ImageDraw.ImageDraw, blink_amount: float = 0.0
+    ) -> None:
+        """Open or partially closed eyes (driven by blink_amount 0..1)."""
+        # As blink approaches 1, the eye height shrinks to a thin slit
+        eye_h = max(2, int(EYE_RY * (1.0 - blink_amount)))
+        for side in (-1, +1):
+            cx = HEAD_CX + side * EYE_OFFSET_X
+            cy = HEAD_CY + EYE_OFFSET_Y
+            # Eye white
+            draw.ellipse(
+                [cx - EYE_RX, cy - eye_h,
+                 cx + EYE_RX, cy + eye_h],
+                fill=EYE_WHITE_RGB, outline=OUTLINE_RGB, width=2,
+            )
+            # Iris (only when eye is mostly open)
+            if eye_h > EYE_RY * 0.4:
+                iris_r = max(2, int(IRIS_R * (1.0 - blink_amount * 0.5)))
+                draw.ellipse(
+                    [cx - iris_r, cy - iris_r,
+                     cx + iris_r, cy + iris_r],
+                    fill=IRIS_RGB, outline=OUTLINE_RGB, width=1,
+                )
+                # Pupil
+                pupil_r = max(1, int(PUPIL_R * (1.0 - blink_amount * 0.7)))
+                draw.ellipse(
+                    [cx - pupil_r, cy - pupil_r,
+                     cx + pupil_r, cy + pupil_r],
+                    fill=PUPIL_RGB,
+                )
+                # Highlight (small white dot)
+                if eye_h > EYE_RY * 0.6:
+                    draw.ellipse(
+                        [cx - iris_r // 2, cy - iris_r,
+                         cx - iris_r // 4, cy - iris_r + iris_r // 2],
+                        fill=EYE_WHITE_RGB,
+                    )
+            else:
+                # Eye is mostly closed — draw the eyelid line
+                draw.line(
+                    [(cx - EYE_RX, cy), (cx + EYE_RX, cy)],
+                    fill=OUTLINE_RGB, width=3,
+                )
+
+    def _draw_nose(self, draw: ImageDraw.ImageDraw) -> None:
+        """Small triangular nose."""
+        nx = HEAD_CX
+        ny = HEAD_CY + NOSE_OFFSET_Y
+        # Triangle
+        draw.polygon(
+            [(nx - NOSE_W // 2, ny - NOSE_H // 2),
+             (nx + NOSE_W // 2, ny - NOSE_H // 2),
+             (nx, ny + NOSE_H // 2)],
+            fill=(0, 0, 0, 0),  # transparent fill (we'll draw outline only)
+        )
+        # The above is invisible (RGBA 0 alpha) so we use a tinted fill:
+        draw.polygon(
+            [(nx - NOSE_W // 2, ny - NOSE_H // 2),
+             (nx + NOSE_W // 2, ny - NOSE_H // 2),
+             (nx, ny + NOSE_H // 2)],
+            fill=SKIN_SHADE_RGB, outline=OUTLINE_RGB,
+        )
+        # Nostril dots
+        for side in (-1, +1):
+            draw.ellipse(
+                [nx + side * 5 - 2, ny + NOSE_H // 2 - 4,
+                 nx + side * 5 + 2, ny + NOSE_H // 2],
+                fill=OUTLINE_RGB,
+            )
+
+    def _draw_mouth(self, draw: ImageDraw.ImageDraw, energy: float) -> None:
+        """Lip-sync mouth. 5 shapes driven by audio energy.
+
+        0.00 - 0.08 : closed gentle smile
+        0.08 - 0.25 : slight opening (small dark oval)
+        0.25 - 0.50 : medium opening (oval with teeth + tongue)
+        0.50 - 0.75 : wide opening (big oval, teeth + tongue)
+        0.75 - 1.00 : round O shape (small circle)
+        """
+        mx = HEAD_CX
+        my = HEAD_CY + MOUTH_OFFSET_Y
+        # Subtle mouth follows head bob
+        my += int(1.2 * math.sin(2.0 * math.pi * 0.5 * (energy + 0.5)))
+
+        if energy < 0.08:
+            # Closed gentle smile
+            smile_w = 70
+            draw.arc(
+                [mx - smile_w, my - 18, mx + smile_w, my + 18],
+                start=20, end=160, fill=LIP_RGB, width=5,
+            )
+        elif energy < 0.25:
+            # Slight open
+            open_w = 28 + int(8 * (energy - 0.08) / 0.17)
+            open_h = 10
+            draw.ellipse(
+                [mx - open_w, my - open_h, mx + open_w, my + open_h],
+                fill=LIP_DARK_RGB, outline=LIP_RGB, width=3,
+            )
+            # Top teeth sliver
+            draw.rectangle(
+                [mx - open_w + 4, my - open_h + 1, mx + open_w - 4, my - open_h + 4],
+                fill=TOOTH_RGB,
+            )
+        elif energy < 0.50:
+            # Medium open
+            t = (energy - 0.25) / 0.25
+            open_w = 36 + int(10 * t)
+            open_h = 18 + int(8 * t)
+            draw.ellipse(
+                [mx - open_w, my - open_h, mx + open_w, my + open_h],
+                fill=LIP_DARK_RGB, outline=LIP_RGB, width=3,
+            )
+            # Upper teeth
+            draw.rectangle(
+                [mx - open_w + 5, my - open_h + 1, mx + open_w - 5, my - open_h + 5],
+                fill=TOOTH_RGB,
+            )
+            # Tongue
+            draw.ellipse(
+                [mx - open_w // 2, my + open_h - 9,
+                 mx + open_w // 2, my + open_h - 1],
+                fill=TONGUE_RGB,
+            )
+        elif energy < 0.75:
+            # Wide open (the "ah" shape)
+            t = (energy - 0.50) / 0.25
+            open_w = 46 + int(10 * t)
+            open_h = 28 + int(10 * t)
+            draw.ellipse(
+                [mx - open_w, my - open_h, mx + open_w, my + open_h],
+                fill=LIP_DARK_RGB, outline=LIP_RGB, width=3,
+            )
+            draw.rectangle(
+                [mx - open_w + 6, my - open_h + 1, mx + open_w - 6, my - open_h + 6],
+                fill=TOOTH_RGB,
+            )
+            draw.ellipse(
+                [mx - open_w // 2 - 2, my + open_h - 12,
+                 mx + open_w // 2 + 2, my + open_h - 1],
+                fill=TONGUE_RGB,
+            )
+        else:
+            # Round O shape (the "oh" sound)
+            t = min(1.0, (energy - 0.75) / 0.25)
+            r = int(18 + 8 * t)
+            draw.ellipse(
+                [mx - r, my - r, mx + r, my + r],
+                fill=LIP_DARK_RGB, outline=LIP_RGB, width=4,
+            )
+
+    # ------------------------------------------------------------------
+    # Public API
+    # ------------------------------------------------------------------
+    def render_avatar_frame(
+        self,
+        frame_idx: int,
+        total_frames: int,
+        energy: float,
+        persona: str = "professor_alex",  # API compat; unused
+        subject_title: str = "AI Teaching Lecture",
+        teacher_name: str = "Prof. Alexander Vance",
+    ) -> Image.Image:
+        """Render one 1280x720 RGB frame of the illustrated teacher.
+
+        The frame contains:
+          * gradient backdrop
+          * illustrated cartoon teacher (head, hair, eyes, eyebrows, nose,
+            mouth) in the upper 2/3 of the frame
+          * ApniHelp banner + watermark in the lower 2/3
+          * audio-driven equalizer in the bottom-right
+        """
+        # 1) Background + branding
+        img = self._gradient_backdrop()
+        draw = ImageDraw.Draw(img)
+        self._draw_watermark(draw)
+
+        # 2) Compute animation parameters
+        t = frame_idx / float(self.fps) if self.fps else 0.0
+        # Subtle head bob
+        bob_y = int(1.5 * math.sin(2.0 * math.pi * 0.5 * t))
+        bob_x = int(0.8 * math.sin(2.0 * math.pi * 0.25 * t))
+
+        # 3) Shirt first (so the head sits on top)
+        #    Temporarily shift the global head anchor for the bob
+        global HEAD_CX, HEAD_CY
+        orig_cx, orig_cy = HEAD_CX, HEAD_CY
+        HEAD_CX += bob_x
+        HEAD_CY += bob_y
+        try:
+            self._draw_shirt(draw)
+            self._draw_hair(draw)
+            self._draw_face_base(draw)
+            self._draw_ears(draw)
+            self._draw_eyebrows(draw, raise_amount=energy)
+            self._draw_eyes(draw, blink_amount=self._blink_amount(frame_idx))
+            self._draw_nose(draw)
+            self._draw_mouth(draw, energy)
+        finally:
+            HEAD_CX, HEAD_CY = orig_cx, orig_cy
+
+        # 4) Banner + equalizer
+        self._draw_banner(draw, teacher_name, subject_title)
+        self._draw_equalizer(draw, energy, t)
         return img
+
+    @staticmethod
+    def _blink_amount(frame_idx: int, period: int = 96, closure: int = 4) -> float:
+        """Periodic blink: a short closure once every ``period`` frames."""
+        phase = frame_idx % period
+        if phase >= period - closure:
+            # Triangular envelope: 0 → 1 → 0 over `closure` frames
+            t = (phase - (period - closure)) / float(closure)
+            return 1.0 - abs(t - 0.5) * 2
+        return 0.0
 
     def generate_avatar_clip(
         self,
         audio_path: Path,
         output_path: Path,
-        persona: str = "professor_alex",
+        persona: str = "professor_alex",  # API compat; unused
         subject_title: str = "AI Teacher Lecture",
         teacher_name: str = "Prof. Alexander Vance",
     ) -> Path:
-        """
-        Synthesizes an authentic talking avatar MP4 clip synchronized to the provided TTS audio.
-        Uses photorealistic ROI viseme compositing at 30fps with FFmpeg rawvideo pipe.
-        """
+        """Render a 1280x720 30fps MP4 of the illustrated teacher, mixed
+        with the supplied TTS audio. The audio RMS envelope drives the
+        mouth shape (5 viseme states) and the equalizer bars."""
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Check for pluggable Wav2Lip backend if requested and model checkpoint present
-        wav2lip_model = Path(settings.project_root) / "models" / "wav2lip" / "wav2lip_gan.pth"
-        if settings.avatar_engine == "wav2lip" and wav2lip_model.exists():
-            try:
-                logger.info(f"Using pluggable Wav2Lip backend at {wav2lip_model}")
-                return self._run_wav2lip(audio_path, output_path)
-            except Exception as e:
-                logger.warning(f"Wav2Lip backend failed ({e}), falling back to Photorealistic Viseme engine.")
-
-        # Primary High-Speed Photorealistic Viseme Engine
         envelope = self.extract_audio_energy_envelope(audio_path, fps=self.fps)
         total_frames = len(envelope)
 
-        # Standardized encoding matching slide videos: 1280x720, 30fps, yuv420p, aac 44.1kHz stereo
         cmd = [
-            self.ffmpeg_path,
-            "-y",
-            "-f", "rawvideo",
-            "-vcodec", "rawvideo",
+            self.ffmpeg_path, "-y",
+            "-f", "rawvideo", "-vcodec", "rawvideo",
             "-s", f"{self.width}x{self.height}",
-            "-pix_fmt", "rgb24",
-            "-r", str(self.fps),
+            "-pix_fmt", "rgb24", "-r", str(self.fps),
             "-i", "-",
             "-i", str(audio_path),
-            "-c:v", "libx264",
-            "-pix_fmt", "yuv420p",
-            "-r", str(self.fps),
-            "-preset", "ultrafast",
-            "-tune", "zerolatency",
-            "-crf", "26",
-            "-threads", "2",
-            "-c:a", "aac",
-            "-ar", "44100",
-            "-ac", "2",
-            "-b:a", "128k",
-            "-shortest",
-            "-movflags", "+faststart",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(self.fps),
+            "-preset", "ultrafast", "-tune", "zerolatency",
+            "-crf", "26", "-threads", "2",
+            "-c:a", "aac", "-ar", "44100", "-ac", "2", "-b:a", "128k",
+            "-shortest", "-movflags", "+faststart",
             str(output_path),
         ]
-
         proc = subprocess.Popen(
-            cmd,
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
         )
-
-        base_img, geo = self._resolve_base_portrait(persona)
-        # Pre-render static base frame with ApniHelp lower-third & watermark
-        static_canvas = base_img.copy()
-        draw_static = ImageDraw.Draw(static_canvas)
-        banner_x = 60
-        banner_y = 600
-        draw_static.rounded_rectangle([banner_x, banner_y, banner_x + 540, banner_y + 80], radius=10, fill=(15, 23, 42), outline=(51, 65, 85), width=2)
-        draw_static.ellipse([banner_x + 20, banner_y + 22, banner_x + 36, banner_y + 38], fill=(234, 179, 8))
-        disp_name = teacher_name if teacher_name and teacher_name != "Prof. Alexander Vance" else geo["default_name"]
-        draw_static.text((banner_x + 48, banner_y + 14), disp_name, fill=(255, 255, 255))
-        draw_static.text((banner_x + 48, banner_y + 42), f"ApniHelp • {subject_title}", fill=(203, 213, 225))
-        draw_static.rounded_rectangle([self.width - 165, 18, self.width - 30, 52], radius=6, fill=(15, 23, 42))
-        draw_static.text((self.width - 145, 26), "ApniHelp", fill=(100, 210, 170))
-
-        # Rest crops for high-speed ROI refreshing
-        mx, my = geo["mx"], geo["my"]
-        lex, rex, ey = geo["lex"], geo["rex"], geo["ey"]
-        mouth_rest = static_canvas.crop((mx - 32, my - 16, mx + 32, my + 16))
-        eye_l_rest = static_canvas.crop((lex - 26, ey - 10, lex + 26, ey + 10))
-        eye_r_rest = static_canvas.crop((rex - 26, ey - 10, rex + 26, ey + 10))
-
-        # Equalizer background box
-        eq_x, eq_y = 980, 660
-        num_bars = 16
-        bar_width, bar_gap = 12, 5
-        draw_static.rounded_rectangle([eq_x - 20, eq_y - 60, eq_x + num_bars * (bar_width + bar_gap) + 15, eq_y + 20], radius=8, fill=(15, 23, 42), outline=(51, 65, 85), width=1)
-        hud_box_rest = static_canvas.crop((eq_x - 20, eq_y - 60, eq_x + num_bars * (bar_width + bar_gap) + 15, eq_y + 20))
-
-        canvas = static_canvas.copy()
-        draw_dyn = ImageDraw.Draw(canvas)
-
-        for f in range(total_frames):
-            energy = float(envelope[f])
-            t = f / float(self.fps)
-
-            # Restore base crops
-            canvas.paste(mouth_rest, (mx - 32, my - 16))
-            if (f % 96) == 3:  # Blink just ended
-                canvas.paste(eye_l_rest, (lex - 26, ey - 10))
-                canvas.paste(eye_r_rest, (rex - 26, ey - 10))
-
-            # Dynamic viseme compositing
-            if energy < 0.12:
-                pass
-            elif energy < 0.35:
-                open_h = int(4 + 6 * ((energy - 0.12) / 0.23))
-                draw_dyn.ellipse([mx - 15, my - open_h // 2, mx + 15, my + open_h // 2], fill=(55, 18, 22))
-                draw_dyn.line([(mx - 10, my - open_h // 2 + 1), (mx + 10, my - open_h // 2 + 1)], fill=(240, 240, 245), width=2)
-            elif energy < 0.65:
-                open_h = int(10 + 8 * ((energy - 0.35) / 0.30))
-                draw_dyn.ellipse([mx - 20, my - open_h // 2, mx + 20, my + open_h // 2], fill=(45, 15, 20))
-                draw_dyn.rectangle([mx - 14, my - open_h // 2, mx + 14, my - open_h // 2 + 3], fill=(245, 245, 248))
-                draw_dyn.ellipse([mx - 10, my + open_h // 2 - 5, mx + 10, my + open_h // 2], fill=(190, 75, 85))
-            elif energy < 0.82:
-                open_h = int(14 + 6 * ((energy - 0.65) / 0.17))
-                draw_dyn.ellipse([mx - 12, my - open_h // 2, mx + 12, my + open_h // 2], fill=(30, 10, 15))
-                draw_dyn.ellipse([mx - 14, my - open_h // 2 - 2, mx + 14, my + open_h // 2 + 2], outline=geo["lip_tone"], width=2)
-            else:
-                open_h = int(18 + 8 * min(1.0, (energy - 0.82) / 0.18))
-                draw_dyn.ellipse([mx - 24, my - open_h // 2, mx + 24, my + open_h // 2], fill=(40, 12, 18))
-                draw_dyn.rectangle([mx - 16, my - open_h // 2, mx + 16, my - open_h // 2 + 4], fill=(245, 245, 248))
-                draw_dyn.ellipse([mx - 12, my + open_h // 2 - 7, mx + 12, my + open_h // 2], fill=(200, 80, 90))
-
-            # Dynamic 3-frame eye blinking
-            if (f % 96) < 3:
-                lid_color = geo["skin_tone"]
-                draw_dyn.arc([lex - 24, ey - 7, lex + 24, ey + 7], start=0, end=180, fill=lid_color, width=4)
-                draw_dyn.arc([rex - 24, ey - 7, rex + 24, ey + 7], start=0, end=180, fill=lid_color, width=4)
-
-            # Equalizer bars
-            canvas.paste(hud_box_rest, (eq_x - 20, eq_y - 60))
-            for b in range(num_bars):
-                harmonic_mod = 0.5 + 0.5 * math.sin(2.0 * math.pi * (0.8 * t + b * 0.15))
-                bar_h = max(4, int(45 * energy * harmonic_mod + 4 * math.sin(t * 5 + b)))
-                bx = eq_x + b * (bar_width + bar_gap)
-                by = eq_y - bar_h
-                col = (
-                    int(50 + 180 * (b / num_bars)),
-                    int(180 + 75 * (1.0 - b / num_bars)),
-                    int(230),
+        assert proc.stdin is not None
+        try:
+            for f in range(total_frames):
+                energy = float(envelope[f])
+                img = self.render_avatar_frame(
+                    frame_idx=f, total_frames=total_frames, energy=energy,
+                    subject_title=subject_title, teacher_name=teacher_name,
                 )
-                draw_dyn.rectangle([bx, by, bx + bar_width, eq_y], fill=col)
-
-            proc.stdin.write(canvas.tobytes())
-
-        proc.stdin.close()
-        proc.wait()
-
-        if proc.returncode != 0:
-            err = proc.stderr.read().decode(errors="ignore")
-            logger.error(f"FFmpeg avatar rendering failed with return code {proc.returncode}: {err}")
-            raise RuntimeError(f"FFmpeg avatar rendering failed: {err}")
-
-        return output_path
-
-    def _run_wav2lip(self, audio_path: Path, output_path: Path) -> Path:
-        """Pluggable hook to execute Wav2Lip neural inference when weights are installed."""
-        face_img = self.avatar_dir / "teacher_portrait.png"
-        if not face_img.exists():
-            base_frame = self.render_avatar_frame(0, 30, 0.0)
-            base_frame.save(str(face_img))
-
-        cmd = [
-            "python3", "inference_wav2lip.py",
-            "--checkpoint_path", str(Path(settings.project_root) / "models/wav2lip/wav2lip_gan.pth"),
-            "--face", str(face_img),
-            "--audio", str(audio_path),
-            "--outfile", str(output_path),
-        ]
-        subprocess.run(cmd, check=True)
-        return output_path
+                proc.stdin.write(img.tobytes())
+            proc.stdin.close()
+            proc.wait()
+            if proc.returncode != 0:
+                err = proc.stderr.read().decode(errors="ignore") if proc.stderr else ""
+                logger.error(f"FFmpeg avatar rendering failed: {err}")
+                raise RuntimeError(f"FFmpeg avatar rendering failed: {err}")
+            return output_path
+        except Exception:
+            try:
+                proc.kill()
+            except Exception:
+                pass
+            raise
+        finally:
+            for stream in (proc.stdout, proc.stderr):
+                try:
+                    if stream is not None:
+                        stream.close()
+                except Exception:
+                    pass
 
 
 avatar_service = AvatarService()

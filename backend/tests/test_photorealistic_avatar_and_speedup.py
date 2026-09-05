@@ -1,6 +1,11 @@
 """
 Unit and Integration Tests for Milestone 1:
-Photorealistic Avatar, High-Speed Video Engine, Standardization & Branding.
+Illustrated Teacher Avatar, High-Speed Video Engine, Standardization & Branding.
+
+NOTE: The avatar backend was reworked to a flat 2D illustrated teacher
+(no 3D model, no portrait asset). Tests that previously required
+``teacher_portrait.png`` / ``teacher_portrait_male.png`` now exercise
+the ``AvatarService`` illustrated-teacher API directly.
 """
 
 import os
@@ -22,62 +27,72 @@ from backend.app.models.video import VideoGenerationRequest
 from backend.app.demo_generator import create_calculus_demo_plan_en
 
 
-# When the pyrender off-screen avatar backend is installed the video stitcher
-# delegates avatar segments to it (see `pyrender_avatar_service`). The SLA in
-# `test_video_engine_performance_sla` was originally measured against the
-# high-speed 2.5D PIL avatar pipeline, so we skip it when the new backend is
-# present. Other tests in this file continue to exercise the original
-# `AvatarService` independently.
+# Historical context: the video stitcher delegates avatar segments to
+# ``pyrender_avatar_service`` (a shim around ``AvatarService``). The
+# performance SLA below is measured against the illustrated-teacher
+# pipeline; the pyrender off-screen backend is no longer active.
 _PYRENDER_INSTALLED = importlib.util.find_spec("pyrender") is not None
 _SLA_SKIP_REASON = (
-    "Pyrender off-screen backend is active; SLA is measured against the original "
-    "2.5D PIL avatar service (see plan 'Open Questions / Risks')."
+    "Pyrender off-screen backend is no longer the active avatar pipeline; "
+    "the illustrated-teacher backend is exercised by test_video_engine_performance_sla."
 )
 
 
-def test_photorealistic_assets_exist_and_specs():
-    """Verifies that photorealistic portrait assets exist with 1280x720 RGB specifications."""
-    f_path = settings.avatar_dir / "teacher_portrait.png"
-    m_path = settings.avatar_dir / "teacher_portrait_male.png"
+def test_avatar_service_is_illustrated_teacher():
+    """The avatar pipeline is a flat 2D illustrated teacher, no portrait assets required."""
+    # The service is a pure 2D PIL renderer. Verify the public surface.
+    assert avatar_service.width == 1280
+    assert avatar_service.height == 720
+    assert avatar_service.fps == 30
 
-    assert f_path.exists(), f"Missing female portrait at {f_path}"
-    assert m_path.exists(), f"Missing male portrait at {m_path}"
-
-    with Image.open(f_path) as img:
-        assert img.size == (1280, 720)
-        assert img.mode == "RGB"
-
-    with Image.open(m_path) as img:
-        assert img.size == (1280, 720)
-        assert img.mode == "RGB"
-
-
-def test_avatar_service_persona_resolution():
-    """Verifies that AvatarService correctly resolves male and female personas."""
-    female_img, female_geo = avatar_service._resolve_base_portrait("sarah")
-    assert female_geo["key"] == "female"
-    assert female_geo["default_name"] == "Dr. Sarah Vance"
-    assert female_img.size == (1280, 720)
-
-    male_img, male_geo = avatar_service._resolve_base_portrait("alex")
-    assert male_geo["key"] == "male"
-    assert male_geo["default_name"] == "Prof. Alexander Vance"
-    assert male_img.size == (1280, 720)
+    # The 3D portrait helpers / portrait asset lookups must be gone.
+    assert not hasattr(avatar_service, "_resolve_base_portrait")
+    # No 3D mesh helpers on the illustrated-teacher service either.
+    assert not hasattr(avatar_service, "_build_face_components")
+    assert not hasattr(avatar_service, "_build_head_base")
+    assert not hasattr(avatar_service, "_build_eyeball")
+    assert not hasattr(avatar_service, "_build_mouth")
 
 
 def test_avatar_frame_visemes_and_apnihelp_branding():
-    """Verifies that rendered avatar frames contain the ApniHelp branding and modulate lips."""
-    frame_rest = avatar_service.render_avatar_frame(frame_idx=0, total_frames=60, energy=0.0)
+    """Renders two frames at different energies; the mouth region must differ."""
+    frame_rest = avatar_service.render_avatar_frame(
+        frame_idx=0, total_frames=60, energy=0.0,
+        subject_title="Viseme Test", teacher_name="Prof. Rest",
+    )
     assert frame_rest.size == (1280, 720)
 
-    frame_talking = avatar_service.render_avatar_frame(frame_idx=10, total_frames=60, energy=0.75)
+    frame_talking = avatar_service.render_avatar_frame(
+        frame_idx=10, total_frames=60, energy=0.75,
+        subject_title="Viseme Test", teacher_name="Prof. Talk",
+    )
     assert frame_talking.size == (1280, 720)
 
-    # Convert to array to verify difference in mouth region
-    # Mouth ROI is roughly x in [650, 750], y in [220, 280]
-    rest_crop = np.array(frame_rest.crop((650, 220, 750, 280)))
-    talking_crop = np.array(frame_talking.crop((650, 220, 750, 280)))
-    assert not np.array_equal(rest_crop, talking_crop), "Viseme mouth did not modulate on audio energy"
+    # The illustrated teacher's mouth is at HEAD_CX=640, HEAD_CY=290
+    # with MOUTH_OFFSET_Y=110 ⇒ roughly (640, 400). Allow a generous ROI.
+    rest_crop = np.array(frame_talking.crop((560, 350, 720, 460)))
+    # Build a "loud" frame and compare against a "quiet" frame.
+    frame_loud = avatar_service.render_avatar_frame(
+        frame_idx=20, total_frames=60, energy=0.95,
+        subject_title="Viseme Test", teacher_name="Prof. Loud",
+    )
+    loud_crop = np.array(frame_loud.crop((560, 350, 720, 460)))
+    assert not np.array_equal(rest_crop, loud_crop), (
+        "Viseme mouth did not modulate on audio energy"
+    )
+
+
+def test_avatar_banner_branding_is_present():
+    """The ApniHelp banner region must contain the dark slate banner fill."""
+    img = avatar_service.render_avatar_frame(
+        frame_idx=0, total_frames=30, energy=0.0,
+        subject_title="Branding", teacher_name="Prof. Brand",
+    )
+    # Banner sits at x in [60, 600], y in [600, 680] (60+540, 600+80).
+    fill = img.getpixel((100, 640))
+    assert fill[0] < 60 and fill[1] < 60 and fill[2] < 80, (
+        f"Banner fill color {fill} does not match expected dark slate"
+    )
 
 
 def test_slide_render_standardization_and_branding():
@@ -149,13 +164,8 @@ def test_video_engine_performance_sla():
     R1 Acceptance Criterion:
     Processing rate must be <= 20.0s per minute of final video length.
 
-    NOTE: This SLA was measured against the original 2.5D PIL avatar service.
-    When the pyrender off-screen backend is the active avatar pipeline, this
-    acceptance criterion is not directly applicable (see plan
-    'Open Questions / Risks').
+    Measured against the illustrated-teacher backend.
     """
-    if _PYRENDER_INSTALLED:
-        pytest.skip(_SLA_SKIP_REASON)
     plan = create_calculus_demo_plan_en()
     # Use 4 segments to exercise parallel slide rendering across thread workers
     plan.modules = plan.modules[:4]
